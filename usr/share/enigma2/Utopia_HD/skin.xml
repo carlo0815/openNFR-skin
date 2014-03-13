@@ -732,7 +732,7 @@
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <widget source="title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showNever" enableWrapAround="1" backgroundPixmap="Utopia_HD/menu/butselect.png" selectionPixmap="Utopia_HD/menu/sel660x35.png" transparent="1">
+    <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showNever" enableWrapAround="1" backgroundPixmap="Utopia_HD/menu/butselect.png" selectionPixmap="Utopia_HD/menu/sel700x35.png" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (51, 2), size = (600, 38), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -1224,27 +1224,27 @@
     <widget source="ServiceEvent" render="EmptyEpg" emptyText="Event data unavailable" position="820,410" size="400,25" font="Regular;22" foregroundColor="yellow" backgroundColor="background2" transparent="1">
       <convert type="ServiceName">Name</convert>
     </widget>
-    <widget source="ServiceEvent" render="EmptyEpg" emptyText="Event data unavailable" position="820,438" size="400,35" font="Regular;20" foregroundColor="red" backgroundColor="background2" transparent="1">
+    <widget source="ServiceEvent" render="EmptyEpg" emptyText="Event data unavailable" position="820,438" size="400,50" font="Regular;20" foregroundColor="red" backgroundColor="background2" transparent="1">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget source="ServiceEvent" render="Label" position="820,475" size="67,22" font="Regular;19" backgroundColor="background2" transparent="1">
+    <widget source="ServiceEvent" render="Label" position="820,500" size="67,22" font="Regular;19" backgroundColor="unfcc000" transparent="1" foregroundColor="unfcc000">
       <convert type="EventTime">StartTime</convert>
       <convert type="ClockToText">
       </convert>
     </widget>
-    <widget source="ServiceEvent" render="Label" position="1143,475" size="75,22" font="Regular;19" backgroundColor="background2" transparent="1">
+    <widget source="ServiceEvent" render="Label" position="1146,500" size="75,22" font="Regular;19" backgroundColor="unfcc000" transparent="1" foregroundColor="unfcc000">
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Format: %H:%M</convert>
     </widget>
-    <widget source="ServiceEvent" render="Progress" pixmap="Utopia_HD/progress_r.png" position="905,480" size="220,10" borderWidth="2" borderColor="darkgrey" zPosition="1" transparent="1">
+    <widget source="ServiceEvent" render="Progress" pixmap="Utopia_HD/progress_r.png" position="905,506" size="220,10" borderWidth="2" borderColor="darkgrey" zPosition="1" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
-    <widget source="ServiceEvent" render="RunningText" position="800,500" zPosition="1" size="440,155" font="Regular; 20" halign="center" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" backgroundColor="transparent" alphatest="on">
+    <widget source="ServiceEvent" render="RunningText" position="800,534" zPosition="1" size="440,118" font="Regular; 20" halign="center" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" backgroundColor="transparent" alphatest="on" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
-    <widget source="session.CurrentService" render="PiconProv" position="972,341" size="100,60" zPosition="2" transparent="1" alphatest="blend" >
-	<convert type="ServiceName2">Provider</convert>
-	</widget>
+    <widget source="session.CurrentService" render="PiconProv" position="972,341" size="100,60" zPosition="2" transparent="1" alphatest="blend">
+      <convert type="ServiceName2">Provider</convert>
+    </widget>
     <widget source="ServiceEvent" render="Picon2" position="832,341" size="100,60" zPosition="2" transparent="1" alphatest="blend" />
     <widget source="ServiceEvent" render="NextEvent2" position="65,580" size="685,60" font="Regular;18" foregroundColor="white" backgroundColor="black" noWrap="1" transparent="1" zPosition="2" halign="center" />
     <widget source="ServiceEvent" render="Label" position="433,96" size="325,21" font="Regular; 17" backgroundColor="background" transparent="1" halign="center" noWrap="1" valign="center" text="19.2E  1:0:1:6D66:437:1:C00000:0:0:0" foregroundColor="cyan1" zPosition="3">
@@ -9174,8 +9174,8 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <ePixmap position="1220,670" size="30,30" pixmap="Utopia_HD/buttons/key_right.png" alphatest="blend" />
   </screen>
   <!-- Wizards -->
-  <screen name="DefaultSatLists" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
-    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back3.png" />
+  <screen name="DefaultSatLists" position="center,2" size="1280,720" title="Welcome..." flags="wfNoBorder">
+    <ePixmap position="center,2" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back3.png" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -9183,9 +9183,9 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <eLabel text="DefaultSatLists" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="wizard" position="500,120" size="110,174" pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="Utopia_HD/buttons/red.png" position="500,305" size="30,30" alphatest="blend" />
-    <widget name="languagetext" position="535,305" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
+    <widget name="wizard" position="291,90" size="305,287" pixmap="Utopia_HD/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/red.png" position="339,387" size="30,30" alphatest="blend" />
+    <widget name="languagetext" position="379,390" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
     <widget name="text" position="670,120" size="540,300" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget source="list" render="Listbox" position="510,430" size="700,160" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
       <convert type="TemplatedMultiContent">
@@ -9197,8 +9197,8 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     </widget>
     <widget name="config" position="510,430" size="700,160" itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
   </screen>
-  <screen name="DefaultWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
-    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back3.png" />
+  <screen name="DefaultWizard" position="center,2" size="1280,720" title="Welcome..." flags="wfNoBorder">
+    <ePixmap position="center,2" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back3.png" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -9206,9 +9206,9 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <eLabel text="DefaultWizard" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="wizard" position="500,120" size="110,174" pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="Utopia_HD/buttons/red.png" position="500,305" size="30,30" alphatest="blend" />
-    <widget name="languagetext" position="535,305" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
+    <widget name="wizard" position="291,90" size="305,287" pixmap="Utopia_HD/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/red.png" position="339,387" size="30,30" alphatest="blend" />
+    <widget name="languagetext" position="379,390" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
     <widget name="text" position="670,120" size="540,300" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget source="list" render="Listbox" position="510,430" size="700,160" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
       <convert type="TemplatedMultiContent">
@@ -9220,8 +9220,8 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     </widget>
     <widget name="config" position="510,430" size="700,160" itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
   </screen>
-  <screen name="DreamPackageWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
-    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back3.png" />
+  <screen name="DreamPackageWizard" position="center,2" size="1280,720" title="Welcome..." flags="wfNoBorder">
+    <ePixmap position="center,2" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back3.png" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -9229,9 +9229,9 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <eLabel text="DreamPackageWizard" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="wizard" position="500,120" size="110,174" pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="Utopia_HD/buttons/red.png" position="500,305" size="30,30" alphatest="blend" />
-    <widget name="languagetext" position="535,305" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
+    <widget name="wizard" position="291,90" size="305,287" pixmap="Utopia_HD/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/red.png" position="339,387" size="30,30" alphatest="blend" />
+    <widget name="languagetext" position="379,390" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
     <widget name="text" position="670,120" size="540,300" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget source="list" render="Listbox" position="510,430" size="700,160" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
       <convert type="TemplatedMultiContent">
@@ -9243,8 +9243,8 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     </widget>
     <widget name="config" position="510,430" size="700,160" itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
   </screen>
-  <screen name="ImageWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
-    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back3.png" />
+  <screen name="ImageWizard" position="center,2" size="1280,720" title="Welcome..." flags="wfNoBorder">
+    <ePixmap position="center,2" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back3.png" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -9252,14 +9252,14 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <eLabel text="ImageWizard" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="rc" position="175,115" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend" />
+    <widget name="rc" position="105,115" size="110,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend" />
     <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
     <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
     <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
     <widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
-    <widget name="wizard" position="500,120" size="110,174" pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="Utopia_HD/buttons/red.png" position="500,305" size="30,30" alphatest="blend" />
-    <widget name="languagetext" position="535,305" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
+    <widget name="wizard" position="291,90" size="305,287" pixmap="Utopia_HD/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/red.png" position="339,387" size="30,30" alphatest="blend" />
+    <widget name="languagetext" position="379,390" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
     <widget name="text" position="670,120" size="540,300" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget source="list" render="Listbox" position="510,430" size="700,160" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
       <convert type="TemplatedMultiContent">
@@ -9271,8 +9271,8 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     </widget>
     <widget name="config" position="510,430" size="700,160" itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
   </screen>
-  <screen name="LanguageWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
-    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back3.png" />
+  <screen name="LanguageWizard" position="center,2" size="1280,720" title="Welcome..." flags="wfNoBorder">
+    <ePixmap position="center,2" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back3.png" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -9280,12 +9280,12 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <eLabel text="LanguageWizard" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="rc" position="175,115" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend" />
+    <widget name="rc" position="105,115" size="110,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend" />
     <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
     <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
     <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
     <widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
-    <widget name="wizard" position="500,120" size="110,174" pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
+    <widget name="wizard" position="291,90" size="305,287" pixmap="Utopia_HD/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
     <widget name="text" position="670,120" size="540,300" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget source="languages" render="Listbox" position="510,430" size="700,180" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
       <convert type="TemplatedMultiContent">
@@ -9299,8 +9299,8 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
 			</convert>
     </widget>
   </screen>
-  <screen name="NetworkWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
-    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back3.png" />
+  <screen name="NetworkWizard" position="center,2" size="1280,720" title="Welcome..." flags="wfNoBorder">
+    <ePixmap position="center,2" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back3.png" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -9308,14 +9308,14 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <eLabel text="NetworkWizard" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="rc" position="175,115" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend" />
+    <widget name="rc" position="105,115" size="110,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend" />
     <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
     <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
     <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
     <widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
-    <widget name="wizard" position="500,120" size="110,174" pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="Utopia_HD/buttons/red.png" position="500,305" size="30,30" alphatest="blend" />
-    <widget name="languagetext" position="535,305" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
+    <widget name="wizard" position="291,90" size="305,287" pixmap="Utopia_HD/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/red.png" position="339,387" size="30,30" alphatest="blend" />
+    <widget name="languagetext" position="379,390" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
     <widget name="text" position="670,120" size="540,300" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget source="list" render="Listbox" position="510,430" size="700,160" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
       <convert type="TemplatedMultiContent">
@@ -9327,8 +9327,8 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     </widget>
     <widget name="config" position="510,430" size="700,160" itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
   </screen>
-  <screen name="StartWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
-    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back3.png" />
+  <screen name="StartWizard" position="center,2" size="1280,720" title="Welcome..." flags="wfNoBorder">
+    <ePixmap position="center,2" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back3.png" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -9336,14 +9336,14 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <eLabel text="StartWizard" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="rc" position="175,115" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend" />
+    <widget name="rc" position="105,115" size="110,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend" />
     <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
     <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
     <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
     <widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
-    <widget name="wizard" position="500,120" size="110,174" pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="Utopia_HD/buttons/red.png" position="500,305" size="30,30" alphatest="blend" />
-    <widget name="languagetext" position="535,305" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
+    <widget name="wizard" position="291,90" size="305,287" pixmap="Utopia_HD/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/red.png" position="339,387" size="30,30" alphatest="blend" />
+    <widget name="languagetext" position="379,390" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
     <widget name="text" position="670,120" size="540,300" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget source="list" render="Listbox" position="510,430" size="700,160" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
       <convert type="TemplatedMultiContent">
@@ -9355,8 +9355,8 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     </widget>
     <widget name="config" position="510,430" size="700,160" itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
   </screen>
-  <screen name="VideoWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder">
-    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back3.png" />
+  <screen name="VideoWizard" position="center,2" size="1280,720" title="Welcome..." flags="wfNoBorder">
+    <ePixmap position="center,2" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back3.png" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -9364,16 +9364,16 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <eLabel text="VideoWizard" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="rc" position="175,115" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend" />
+    <widget name="rc" position="105,115" size="110,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend" />
     <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
     <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
     <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
     <widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
-    <widget name="wizard" position="500,120" size="110,174" pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="Utopia_HD/buttons/red.png" position="500,305" size="30,30" alphatest="blend" />
-    <widget name="languagetext" position="535,305" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
+    <widget name="wizard" position="291,90" size="305,287" pixmap="Utopia_HD/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/red.png" position="339,387" size="30,30" alphatest="blend" />
+    <widget name="languagetext" position="379,390" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
     <widget name="text" position="670,120" size="540,300" font="Regular;22" backgroundColor="background" transparent="1" />
-    <widget name="portpic" position="510,435" size="128,128" zPosition="10" transparent="1" alphatest="blend" />
+    <widget name="portpic" position="543,449" size="128,128" zPosition="10" transparent="1" alphatest="blend" />
     <widget source="list" render="Listbox" position="700,430" size="510,160" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
@@ -10157,7 +10157,6 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <ePixmap pixmap="Utopia_HD/buttons/red.png" position=" 70,670" size="30,30" alphatest="on" />
     <ePixmap pixmap="Utopia_HD/buttons/green.png" position="360,670" size="30,30" alphatest="on" />
   </screen>
-
   <screen name="CamSelectMenu" position="0,0" size="1280,720" title="Select Cam and press OK to activate" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back1.png" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
@@ -10238,7 +10237,6 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <widget source="key_red" render="Label" position="105,672" size="240,24" zPosition="1" font="Regular;20" backgroundColor="black" transparent="1" />
     <widget source="key_green" render="Label" position="395,672" size="240,24" zPosition="1" font="Regular;20" backgroundColor="black" transparent="1" />
   </screen>
-
   <screen name="BitrateViewer" position="0,0" size="1280,720" title="VTI Bitrate Viewer" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back1.png" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
@@ -10281,7 +10279,6 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <ePixmap pixmap="Utopia_HD/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <widget name="cancel" position="105,672" size="240,24" zPosition="1" font="Regular;20" backgroundColor="black" transparent="1" />
   </screen>
-
   <screen name="BackupSuite" position="0,0" size="1280,720" title="VTI Sub Menu" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back1.png" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
@@ -10969,7 +10966,6 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <ePixmap position="845,618" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
     <ePixmap position="870,390" size="128,128" zPosition="2" pixmap="Utopia_HD/icons/setup.png" transparent="1" alphatest="blend" />
   </screen>
-
   <screen name="DeviceManager2" position="0,0" size="1280,720" title="VTI DeviceManager2" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back1.png" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
@@ -14356,9 +14352,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="ServiceInfo2">xAll</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="45,365" size="405,26" font="Regular; 20" backgroundColor="background" transparent="1" halign="center" noWrap="1" valign="top" text="V: 16123kb/s A: 136kb/s" foregroundColor="cyan1" zPosition="4">
-  <convert type="Bitrate2">
-  </convert>
-</widget>
+      <convert type="Bitrate2">
+      </convert>
+    </widget>
     <eLabel text="Framerate:" zPosition="4" position="250,339" size="130,26" font="Regular; 20" halign="left" valign="center" transparent="1" backgroundColor="background" foregroundColor="orange" />
     <widget source="session.CurrentService" render="Label" text="25 fps" zPosition="4" position="370,339" size="80,26" font="Regular; 20" halign="left" valign="center" backgroundColor="background" transparent="1">
       <convert type="ServiceInfo">Framerate</convert>
@@ -14480,5 +14476,4 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="1100,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_exit.png" alphatest="blend" />
     <ePixmap position="1000,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_ok.png" alphatest="blend" />
   </screen>
-
 </skin>
