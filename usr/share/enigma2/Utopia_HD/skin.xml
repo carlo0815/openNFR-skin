@@ -763,11 +763,15 @@
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="menu" render="Pixmap" pixmap="Utopia_HD/menu/timer.png" position="943,430" size="150,150" alphatest="blend">
-      <convert type="MenuEntryCompare">timer_edit</convert>
+      <convert type="MenuEntryCompare">timer_menu</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="menu" render="Pixmap" pixmap="Utopia_HD/menu/media.png" position="943,430" size="150,150" alphatest="blend">
       <convert type="MenuEntryCompare">media_player</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="menu" render="Pixmap" pixmap="Utopia_HD/menu/picture.png" position="943,430" size="150,150" alphatest="blend">
+      <convert type="MenuEntryCompare">picture_player</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="menu" render="Pixmap" pixmap="Utopia_HD/menu/dvd.png" position="943,430" size="150,150" alphatest="blend">
