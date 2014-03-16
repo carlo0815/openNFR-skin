@@ -1,5 +1,5 @@
 <skin>
-  <!-- Utopia_HD sKIn by Maggy for NFR images  OE 2.0 -->
+  <!-- Utopia_HD Mod Skin by Maggy for NFR images  OE 2.0 -->
   <output id="0">
     <resolution xres="1280" yres="720" bpp="32" />
   </output>
@@ -150,16 +150,13 @@
     <ePixmap position="1,12" zPosition="-1" size="1280,175" pixmap="Utopia_HD/infobar.png" borderWidth="0" borderColor="transparent" />
     <ePixmap pixmap="Utopia_HD/date_bg.png" position="45,55" size="200,34" zPosition="1" alphatest="blend" />
     <ePixmap pixmap="Utopia_HD/clock_bg.png" position="1040,55" size="200,34" zPosition="1" alphatest="blend" />
-    <widget source="global.CurrentTime" render="Label" position="1068,51" size="60,40" font="DIGI; 35" halign="right" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
+    <widget source="global.CurrentTime" render="Label" position="1060,45" size="60,40" font="DIGI; 35" halign="right" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
       <convert type="ClockToText">Format:%H</convert>
     </widget>
-    <widget source="global.CurrentTime" render="Label" position="1153,51" size="60,40" font="DIGI; 35" halign="left" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
+    <widget source="global.CurrentTime" render="Label" position="1161,45" size="60,40" font="DIGI; 35" halign="left" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
       <convert type="ClockToText">Format:%M</convert>
     </widget>
-    <widget source="global.CurrentTime" render="Label" position="1188,51" size="35,28" font="DIGI; 20" halign="left" backgroundColor="backtop" transparent="1" valign="top" foregroundColor="cyan1" zPosition="3">
-      <convert type="ClockToText">Format::%S</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="FixedLabel" text=":" font="DIGI; 35" position="1132,55" size="20,30" halign="center" zPosition="3" valign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1">
+    <widget source="global.CurrentTime" render="FixedLabel" text=":" font="DIGI; 35" position="1132,47" size="20,30" halign="center" zPosition="3" valign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1">
       <convert type="BlinkingClockDots">
       </convert>
       <convert type="ConditionalShowHide">Blink</convert>
@@ -167,10 +164,10 @@
     <widget source="global.CurrentTime" render="Label" position="79,56" size="150,28" font="Regular; 25" halign="left" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
       <convert type="ClockToText">Format:%d.%m.%Y</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="586,24" size="85,24" font="Arial; 20" halign="left" valign="top" noWrap="1" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+    <widget source="session.CurrentService" render="Label" position="586,22" size="100,44" font="DIGI; 35" valign="top" noWrap="1" backgroundColor="backtop" transparent="1" halign="center" foregroundColor="cyan1">
       <convert type="ExtendedServiceInfo">ServiceNumber</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="460,63" size="365,28" font="LCD; 27" valign="top" noWrap="1" backgroundColor="backtop" transparent="1" halign="center" foregroundColor="cyan1">
+    <widget source="session.CurrentService" render="Label" position="455,63" size="365,28" font="LCD; 27" valign="top" noWrap="1" backgroundColor="backtop" transparent="1" halign="center" foregroundColor="cyan1">
       <convert type="ServiceName">Name</convert>
     </widget>
     <eLabel text="SNR:" position="467,48" size="35,18" font="LCD; 16" valign="center" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
@@ -233,8 +230,8 @@
       <convert type="MaggyCryptInfo">BisEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <eLabel text="Vu+ Series" position="675,25" size="90,20" font="Regular; 18" valign="center" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
-    <eLabel text="CH:" position="545,25" size="35,20" font="Regular; 16" valign="center" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
+    <eLabel text=" " position="675,25" size="90,20" font="Regular; 18" valign="center" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
+    <eLabel text="CH:" position="549,27" size="35,20" font="Regular; 16" valign="center" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
     <ePixmap pixmap="Utopia_HD/icons/ico_dolby_off.png" position="125,22" size="70,25" zPosition="1" alphatest="blend" />
     <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_dolby_on.png" position="125,22" size="70,25" zPosition="2" alphatest="blend">
       <convert type="ServiceInfo">IsMultichannel</convert>
@@ -265,15 +262,15 @@
     <widget source="session.RecordState" render="Pixmap" pixmap="Utopia_HD/icons/ico_rec_on.png" position="1090,22" size="70,25" zPosition="2" alphatest="blend">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
-    <ePixmap pixmap="Utopia_HD/icons/subtitle_off.png" position="1170,22" size="70,25" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/subtitle_on.png" position="1170,22" zPosition="1" size="70,25" alphatest="blend">
+    <ePixmap pixmap="Utopia_HD/icons/subtitle_off.png" position="1170,22" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/subtitle_on.png" position="1170,22" zPosition="2" size="70,25" alphatest="blend">
       <convert type="ServiceInfo">SubservicesAvailable</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <!-- Red button, Hbbtv (only if record is not on red, for now) -->
-    <ePixmap pixmap="Utopia_HD/icons/hbbtv_off.png" position="175,117" size="75,35" alphatest="blend" />
-    <widget source="HbbtvApplication" render="Pixmap" pixmap="Utopia_HD/icons/hbbtv_on.png" position="175,117" size="75,35" zPosition="1" alphatest="on">
-      <convert type="ConditionalShowHide" />
+    <ePixmap pixmap="Utopia_HD/icons/hbbtv_off.png" position="175,117" size="75,35" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/hbbtv_on.png" position="175,117" size="75,35" zPosition="2" alphatest="on">
+      <convert type="ServiceInfo">HasHBBTV</convert>
+	  <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.FrontendInfo" render="FixedLabel" text="DVB-S" position="800,25" size="60,20" font="Regular; 16" backgroundColor="backtop" transparent="1" halign="left" foregroundColor="cyan1">
       <convert type="FrontendInfo">TYPE</convert>
@@ -692,7 +689,7 @@
     <ePixmap position="270,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_exit.png" transparent="1" alphatest="blend" />
     <ePixmap position="370,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_help.png" transparent="1" alphatest="blend" />
     <ePixmap position="870,390" size="128,128" zPosition="2" pixmap="Utopia_HD/icons/setup.png" transparent="1" alphatest="blend" />
-    <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
+    <ePixmap position="845,595" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
   </screen>
   <screen name="Menu" position="0,0" size="1280,720" title="Main menu" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2.png" />
@@ -724,7 +721,7 @@
     <widget source="session.Event_Now" render="Progress" pixmap="Utopia_HD/menu/tl.png" position="838,335" size="373,3" zPosition="3" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
-    <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
+    <ePixmap position="845,590" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -741,7 +738,7 @@
 			</convert>
     </widget>
     <widget source="menu" render="Pixmap" pixmap="Utopia_HD/menu/vtimenu.png" position="943,430" size="150,150" alphatest="blend">
-      <convert type="MenuEntryCompare">vti_menu</convert>
+      <convert type="MenuEntryCompare">info_panel</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="menu" render="Pixmap" pixmap="Utopia_HD/menu/shutdown.png" position="943,430" size="150,150" alphatest="blend">
@@ -797,7 +794,7 @@
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back1.png" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
-    <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" alphatest="blend" />
+    <ePixmap position="845,590" size="350,44" pixmap="Utopia_HD/menu/db.png" alphatest="blend" />
     <widget source="session.CurrentService" render="Label" position="845,361" size="360,34" zPosition="2" font="Regular; 24" halign="center" noWrap="1" transparent="1" foregroundColor="cyan1" backgroundColor="background">
       <convert type="ServiceName">Name</convert>
     </widget>
