@@ -1062,7 +1062,7 @@
     <widget name="AboutScrollLabel" scrollbarMode="showOnDemand" font="Regular;23" position="65,98" size="715,540" backgroundColor="black" foregroundColor="white" transparent="1" render="Listbox" />
     <ePixmap position="835,440" size="370,140" zPosition="2" pixmap="Utopia_HD/maggy.png" transparent="1" alphatest="blend" />
     <ePixmap position="845,618" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
-    <eLabel text="About LX-2" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtopt" transparent="1" foregroundColor="cyan1" />
+    <eLabel text="About" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtopt" transparent="1" foregroundColor="cyan1" />
   </screen>
   <screen name="UpdatePluginMenu" position="0,0" size="1280,720" title="Softwaremanager..." zPosition="1" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2.png" />
