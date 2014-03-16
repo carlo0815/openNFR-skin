@@ -10158,7 +10158,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back1.png" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
-    <ePixmap position="943,430" zPosition="-9" size="150,150" pixmap="Utopia_HD/menu/vti.png" transparent="1" alphatest="blend" />
+    <ePixmap position="943,430" zPosition="-9" size="150,150" pixmap="Utopia_HD/menu/nfr.png" transparent="1" alphatest="blend" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -10199,7 +10199,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back1.png" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
@@ -10239,7 +10239,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -10281,7 +10281,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -10321,7 +10321,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -10350,7 +10350,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -10390,7 +10390,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -10428,7 +10428,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -10456,7 +10456,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back1.png" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
     <widget source="title" render="Label" position="65,17" size="720,43" font="Regular; 35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
@@ -10515,7 +10515,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     </widget>
     <eLabel text="NTP-Server Contenant Selection" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget name="menu" position="65,98" size="715,540" itemHeight="30" selectionPixmap="Utopia_HD/menu/sel715x48.png" scrollbarMode="showOnDemand" transparent="1" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
   </screen>
   <screen name="SelectCountry" position="0,0" size="1280,720" title="NTP-Server Country Selection" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back1.png" />
@@ -10538,7 +10538,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     </widget>
     <eLabel text="NTP-Server Country Selection" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget name="countrymenu" position="65,98" size="715,540" itemHeight="30" selectionPixmap="Utopia_HD/menu/sel715x48.png" scrollbarMode="showOnDemand" transparent="1" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
   </screen>
   <screen name="ManualFancontrol" position="0,0" size="1280,720" title="Fancontrol Settings in Standby mode" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back1.png" />
@@ -10567,7 +10567,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <ePixmap pixmap="Utopia_HD/buttons/key_green.png" position="360,670" size="30,30" alphatest="blend" />
     <widget source="key_red" render="Label" position="105,672" size="260,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <widget source="key_green" render="Label" position="395,672" size="260,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
   </screen>
   <!-- TempFanControl By Maggy -->
   <screen name="TempFanControl" position="0,0" size="1280,720" title="Fan Control" flags="wfNoBorder">
@@ -10680,7 +10680,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <widget name="slider" position="70,200" size="670,40" backgroundColor="background" />
     <widget name="status" position="70,280" zPosition="1" size="670,40" font="Regular;24" halign="left" backgroundColor="background" transparent="1" />
     <widget source="info" render="Label" position="70,560" zPosition="1" size="670,40" font="Regular;24" halign="left" backgroundColor="background" transparent="1" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
   </screen>
   <screen name="FPGAUpgrade" position="0,0" size="1280,720" title="FPGA Upgrade" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back1.png" />
@@ -10711,9 +10711,9 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <ePixmap pixmap="Utopia_HD/buttons/key_blue.png" position="940,670" size="30,30" alphatest="on" />
     <widget source="key_red" render="Label" position="105,672" size="260,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <widget source="key_green" render="Label" position="395,672" size="260,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <!--<widget source="key_yellow" render="Label" position="685,672" size="260,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />-->
+    <!--<widget source="key_yellow" render="Label" position="685,menu/nfr.png672" size="260,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />-->
     <widget source="key_blue" render="Label" position="975,672" size="260,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
   </screen>
   <screen name="FPUpgrade" position="0,0" size="1280,720" title="FP upgrade required" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2.png" />
@@ -10758,7 +10758,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <widget source="key_blue" render="Label" position="105,672" zPosition="1" size="300,25" font="Regular;20" halign="left" valign="center" transparent="1" />
     <widget name="file_list" position="65,98" size="715,480" selectionPixmap="Utopia_HD/menu/sel715x48.png" scrollbarMode="showOnDemand" transparent="1" />
     <widget source="status" render="Label" position="70,595" zPosition="1" size="670,40" font="Regular;18" halign="center" valign="center" backgroundColor="black" transparent="1" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" alphatest="blend" transparent="1" />
   </screen>
   <!-- Firmware Upgrade by Maggy -->
@@ -10788,7 +10788,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <widget source="key_green" render="Label" position="365,672" zPosition="1" size="155,25" font="Regular;20" halign="left" valign="center" transparent="1" />
     <widget name="config" zPosition="2" position="70,105" itemHeight="36" size="670,40" scrollbarMode="showOnDemand" transparent="1" />
     <widget source="status" render="Label" position="70,160" zPosition="1" size="700,470" font="Regular;20" halign="center" valign="center" backgroundColor="black" transparent="1" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
   </screen>
   <screen name="Blindscan" position="0,0" size="1280,720" title="Blindscan" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back1.png" />
@@ -10819,7 +10819,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <widget source="key_red" render="Label" position="105,672" size="260,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <widget source="key_green" render="Label" position="395,672" size="260,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <widget source="key_blue" render="Label" position="975,672" size="260,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
   </screen>
   <screen name="SatBlindscanState" position="0,0" size="1280,720" title="Satellite Blindscan" zPosition="1" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2.png" />
@@ -10881,7 +10881,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
 {"template": [ MultiContentEntryPixmapAlphaTest(pos = (4, 2), size = (48, 48), png = 2), MultiContentEntryText(pos = (60, 12), size = (500, 24), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), ], "fonts": [gFont("Regular", 22),gFont("Regular", 16)], "itemHeight": 52 }
 </convert>
     </widget>
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
   </screen>
   <screen name="PanelPassword" position="0,0" size="1280,720" title="Change password for VTI Panel" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back1.png" />
@@ -10910,7 +10910,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <widget render="Label" source="key_green" position="285,672" size="140,25" zPosition="5" valign="center" halign="center" backgroundColor="black" font="Regular;21" transparent="1" />
     <widget render="Label" source="key_yellow" position="465,672" size="140,25" zPosition="5" valign="center" halign="center" backgroundColor="black" font="Regular;21" transparent="1" />
     <widget name="config" zPosition="2" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
   </screen>
   <screen name="InputPanelPassword" position="0,0" size="1280,720" title="Change password for VTI Panel" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back1.png" />
@@ -10937,7 +10937,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <widget render="Label" source="key_red" position="105,672" size="140,25" zPosition="5" valign="center" halign="left" backgroundColor="black" font="Regular;21" transparent="1" />
     <widget render="Label" source="key_green" position="285,672" size="140,25" zPosition="5" valign="center" halign="left" backgroundColor="black" font="Regular;21" transparent="1" />
     <widget name="config" zPosition="2" position="65,98" size="710,540" scrollbarMode="showOnDemand" transparent="1" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
   </screen>
   <screen name="BhpTunerServer" position="0,0" size="1280,720" title="BH Tuner Server Panel" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2.png" />
@@ -10968,7 +10968,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -11138,7 +11138,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -11169,7 +11169,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -11196,7 +11196,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -11223,7 +11223,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -11254,7 +11254,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -11285,7 +11285,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -11312,7 +11312,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -11339,7 +11339,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -11370,7 +11370,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="839,98" size="370,210" zPosition="-8" />
     <ePixmap position="845,605" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/vti.png" alphatest="blend" transparent="1" />
+    <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -11445,7 +11445,7 @@ config.plugins.merlinEpgCenter.titleColorSelected.setValue(0x00ffffff)
     <widget name="text1" position="70,415" size="700,80" font="Regular;32" halign="center" valign="center" transparent="1" />
     <widget name="text2" position="70,510" size="700,120" font="Regular;18" halign="center" valign="center" transparent="1" />
     <ePixmap position="845,605" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="943,430" size="150,150" zPosition="2" pixmap="Utopia_HD/menu/vti.png" transparent="1" alphatest="blend" />
+    <ePixmap position="943,430" size="150,150" zPosition="2" pixmap="Utopia_HD/menu/nfr.png" transparent="1" alphatest="blend" />
   </screen>
   <screen name="MessageBoxGenuine" position="350,120" size="500,450" title="Message">
     <widget name="text" position="65,8" size="420,28" font="Regular;22" />
