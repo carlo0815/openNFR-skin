@@ -737,8 +737,8 @@
 				}
 			</convert>
     </widget>
-    <widget source="menu" render="Pixmap" pixmap="Utopia_HD/menu/vtimenu.png" position="943,430" size="150,150" alphatest="blend">
-      <convert type="MenuEntryCompare">info_panel</convert>
+    <widget source="menu" render="Pixmap" pixmap="Utopia_HD/menu/nfrmenu.png" position="943,430" size="150,150" alphatest="blend">
+      <convert type="MenuEntryCompare">Infopanel</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="menu" render="Pixmap" pixmap="Utopia_HD/menu/shutdown.png" position="943,430" size="150,150" alphatest="blend">
