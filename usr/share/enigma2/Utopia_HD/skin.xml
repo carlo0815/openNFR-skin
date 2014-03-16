@@ -391,7 +391,7 @@
     <ePixmap pixmap="Utopia_HD/dey_bg.png" position="422,78" size="200,34" zPosition="1" alphatest="blend" />
     <ePixmap pixmap="Utopia_HD/dey_bg.png" position="663,78" size="200,34" zPosition="1" alphatest="blend" />
     <ePixmap pixmap="Utopia_HD/date_bg.png" position="945,475" size="200,34" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Label" position="586,539" size="85,24" font="Arial; 20" halign="left" valign="top" noWrap="1" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+    <widget source="session.CurrentService" render="Label" position="586,536" size="100,44" font="DIGI; 35" halign="center" valign="top" noWrap="1" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ExtendedServiceInfo">ServiceNumber</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="75,35" size="500,35" font="Regular; 28" valign="center" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
@@ -406,16 +406,13 @@
     <widget source="global.CurrentTime" render="Label" position="157,475" size="165,28" font="Regular; 25" halign="center" backgroundColor="backtop" transparent="1" zPosition="3" foregroundColor="cyan1">
       <convert type="ClockToText">Format:%A</convert>
     </widget>
-    <widget source="global.CurrentTime" render="Label" position="573,470" size="60,40" font="DIGI; 35" halign="right" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
+    <widget source="global.CurrentTime" render="Label" position="563,465" size="60,40" font="DIGI; 35" halign="right" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
       <convert type="ClockToText">Format:%H</convert>
     </widget>
-    <widget source="global.CurrentTime" render="Label" position="654,470" size="60,40" font="DIGI; 35" halign="left" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
+    <widget source="global.CurrentTime" render="Label" position="664,465" size="60,40" font="DIGI; 35" halign="left" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
       <convert type="ClockToText">Format:%M</convert>
     </widget>
-    <widget source="global.CurrentTime" render="Label" position="690,470" size="35,28" font="DIGI; 20" halign="left" backgroundColor="backtop" transparent="1" valign="top" foregroundColor="cyan1" zPosition="3">
-      <convert type="ClockToText">Format::%S</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="FixedLabel" text=":" font="DIGI; 35" position="635,475" size="20,30" halign="center" zPosition="3" valign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1">
+    <widget source="global.CurrentTime" render="FixedLabel" text=":" font="DIGI; 35" position="635,468" size="20,30" halign="center" zPosition="3" valign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1">
       <convert type="BlinkingClockDots">
       </convert>
       <convert type="ConditionalShowHide">Blink</convert>
@@ -423,7 +420,7 @@
     <widget source="global.CurrentTime" render="Label" position="980,475" size="145,28" font="Regular; 25" halign="left" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
       <convert type="ClockToText">Format:%d.%m.%Y</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="460,578" size="365,28" font="LCD; 27" valign="top" noWrap="1" backgroundColor="backtop" transparent="1" halign="center" foregroundColor="cyan1">
+    <widget source="session.CurrentService" render="Label" position="455,578" size="365,28" font="LCD; 27" valign="top" noWrap="1" backgroundColor="backtop" transparent="1" halign="center" foregroundColor="cyan1">
       <convert type="ServiceName">Name</convert>
     </widget>
     <eLabel text="SNR:" position="467,563" size="35,18" font="LCD; 16" valign="center" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
@@ -486,8 +483,8 @@
       <convert type="MaggyCryptInfo">BisEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <eLabel text="Vu+ Series" position="675,540" size="90,20" font="Regular; 18" valign="center" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
-    <eLabel text="CH:" position="545,540" size="35,20" font="Regular; 16" valign="center" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
+    <eLabel text=" " position="675,540" size="90,20" font="Regular; 18" valign="center" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
+    <eLabel text="CH:" position="549,543" size="35,20" font="Regular; 16" valign="center" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
     <ePixmap pixmap="Utopia_HD/icons/ico_dolby_off.png" position="125,537" size="70,25" zPosition="1" alphatest="blend" />
     <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_dolby_on.png" position="125,537" size="70,25" zPosition="2" alphatest="blend">
       <convert type="ServiceInfo">IsMultichannel</convert>
