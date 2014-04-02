@@ -675,7 +675,6 @@
     <ePixmap position="center,center" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
-    <widget source="title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -683,12 +682,12 @@
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <widget name="menu" position="65,98" size="710,540" itemHeight="30" font="Regular;24" scrollbarMode="showOnDemand" transparent="1" />
-    <ePixmap pixmap="Utopia_HD/buttons/key_blue.png" position="70,670" size="30,30" alphatest="blend" />
-    <ePixmap position="170,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_ok.png" transparent="1" alphatest="blend" />
-    <ePixmap position="270,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_exit.png" transparent="1" alphatest="blend" />
-    <ePixmap position="370,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_help.png" transparent="1" alphatest="blend" />
+    <ePixmap position="65,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_ok.png" transparent="1" alphatest="blend" />
+    <ePixmap position="165,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_exit.png" transparent="1" alphatest="blend" />
+    <ePixmap position="265,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_help.png" transparent="1" alphatest="blend" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="Utopia_HD/icons/setup.png" transparent="1" alphatest="blend" />
     <ePixmap position="848,596" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
+    <eLabel position="65,17" size="720,43" transparent="1" font="Regular; 35" backgroundColor="backtop" foregroundColor="cyan1" text="Sortable Menu" />
   </screen>
   <screen name="Menu" position="0,0" size="1280,720" title="Main menu" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
@@ -10490,7 +10489,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="sublist" position="449,98" size="335,500" backgroundPixmap="Utopia_HD/menu/sel_bg-fs8.png" selectionPixmap="Utopia_HD/menu/sel_fg-fs8.png" backgroundColor="black" itemHeight="50" transparent="1" />
     <eLabel position="441,98" size="2,500" backgroundColor="darkgrey" zPosition="3" />
     <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" backgroundColor="transparent" zPosition="1" />
-	    <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
+    <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget name="description" position="839,476" size="373,110" zPosition="1" font="Regular;22" halign="center" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <ePixmap pixmap="Utopia_HD/buttons/key_red.png" position="70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="Utopia_HD/buttons/key_green.png" position="380,670" size="30,30" alphatest="blend" />
