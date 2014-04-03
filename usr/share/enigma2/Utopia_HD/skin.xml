@@ -1381,11 +1381,13 @@
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <widget name="text" position="837,95" size="375,214" font="Regular;22" halign="center" transparent="1" />
-    <widget name="list" position="65,81" size="700,570" itemHeight="35" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1" />
+    <widget name="list" position="65,98" size="715,525" itemHeight="35" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1" />
     <ePixmap position="870,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_ok.png" transparent="1" alphatest="blend" />
     <ePixmap position="930,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_menu.png" transparent="1" alphatest="blend" />
     <ePixmap position="990,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_exit.png" transparent="1" alphatest="blend" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="Utopia_HD/icons/setup.png" transparent="1" alphatest="blend" />
+    <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
+    <widget source="session.VideoPicture" render="Pig" position="837,95" zPosition="-8" size="375,214" />
   </screen>
   <screen name="Console" position="0,0" size="1280,720" title="Command execution..." flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
@@ -3724,7 +3726,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
     <eLabel text="Wireless Network AP Scan..." position="65,17" size="700,43" font="Regular; 35" backgroundColor="black" transparent="1" foregroundColor="cyan1" />
-    <ePixmap pixmap="Utopia_HD/icons/setup.png" position="32,41" size="40,40" alphatest="blend" transparent="1" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
@@ -7522,7 +7523,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="session.Event_Now" render="Progress" pixmap="Utopia_HD/menu/tl.png" position="838,335" size="373,3" zPosition="3" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
-    <widget name="menu" position="65,98" size="715,540" scrollbarMode="showOnDemand" selectionPixmap="Utopia_HD/menu/sel701x30.png" backgroundColor="transpBlack" transparent="1" />
+    <widget name="menu" position="65,98" size="715,540" scrollbarMode="showOnDemand" backgroundColor="transpBlack" transparent="1" />
     <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
   </screen>
   <screen name="CCcamInfoServerMenu" position="0,0" size="1280,720" title="CCcam Info" flags="wfNoBorder">
@@ -10603,7 +10604,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="text" position="702,592" size="519,60" zPosition="1" font="Regular;20" halign="center" valign="center" foregroundColor="green" transparent="0" />
     <eLabel name="new eLabel" position="684,71" size="2,588" zPosition="5" foregroundColor="unc0c0c0" backgroundColor="darkgrey" />
     <ePixmap name="new ePixmap" position="671,72" size="26,588" zPosition="5" pixmap="Utopia_HD/menu/chanbar5.png" alphatest="blend" />
-    <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
   </screen>
   <screen name="PluginDeinstall" position="center,center" size="1280,720" title="Deinstalliere Plugins" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back3.png" />
@@ -10624,7 +10624,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="text" position="702,592" size="519,60" zPosition="1" font="Regular;20" halign="center" valign="center" foregroundColor="green" transparent="0" />
     <eLabel name="new eLabel" position="684,71" size="2,588" zPosition="5" foregroundColor="unc0c0c0" backgroundColor="darkgrey" />
     <ePixmap name="new ePixmap" position="671,72" size="26,588" zPosition="5" pixmap="Utopia_HD/menu/chanbar5.png" alphatest="blend" />
-    <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
   </screen>
   <screen name="ScriptRunner" position="center,center" size="1280,720" title="Job Manager" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
@@ -11712,5 +11711,168 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="key_info" render="Label" position="1009,674" zPosition="5" size="214,26" valign="center" halign="left" font="Regular; 22" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="backtop" />
     <ePixmap position="972,672" size="30,30" pixmap="Utopia_HD/buttons/key_info.png" alphatest="blend" zPosition="5" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
+  </screen>
+  <screen name="FindService" position="center,center" size="1280,720" title="FindService" flags="wfNoBorder">
+    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
+    <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <eLabel text="FindService" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
+    <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
+    <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
+    <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
+    <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
+    <ePixmap position="950,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="Utopia_HD/menu/opennfr_info.png" position="836,99" size="370,210" zPosition="0" alphatest="blend" transparent="1" />
+    <widget name="servicelist" position="65,98" size="715,540" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1" zPosition="1" />
+  </screen>
+  <screen name="OscamInfoMenu" position="center,center" size="1280,720" title="OscamInfoMenu" flags="wfNoBorder">
+    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
+    <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <eLabel text="OscamInfoMenu" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
+    <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
+    <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
+    <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
+    <ePixmap position="950,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="Utopia_HD/menu/opennfr_info.png" position="836,99" size="370,210" zPosition="0" alphatest="blend" transparent="1" />
+    <widget name="mainmenu" position="65,98" size="715,540" foregroundColor="white" backgroundColor="backtop" transparent="1" />
+  </screen>
+  <screen name="oscECMInfo" position="center,center" size="1280,720" title="oscECMInfo" flags="wfNoBorder">
+    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
+    <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <eLabel text="oscECMInfo" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
+    <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
+    <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
+    <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
+    <ePixmap position="950,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="Utopia_HD/menu/opennfr_info.png" position="836,99" size="370,210" zPosition="0" alphatest="blend" transparent="1" />
+    <widget name="output" position="65,98" size="715,540" foregroundColor="white" backgroundColor="backtop" transparent="1" />
+  </screen>
+  <screen name="OscamInfoConfigScreen" position="center,center" size="1280,720" title="OscamInfoConfigScreen" flags="wfNoBorder">
+    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
+    <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <ePixmap pixmap="Utopia_HD/buttons/key_red.png" position="70,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/key_green.png" position="380,670" size="30,30" alphatest="blend" />
+    <widget source="key_red" render="Label" position="105,672" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_green" render="Label" position="419,672" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <eLabel text="OscamInfoConfigScreen" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
+    <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
+    <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
+    <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
+    <ePixmap position="950,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="Utopia_HD/menu/opennfr_info.png" position="836,99" size="370,210" zPosition="0" alphatest="blend" transparent="1" />
+    <widget name="config" position="65,98" size="715,250" foregroundColor="white" backgroundColor="backtop" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="status" position="65,390" size="715,240" foregroundColor="white" backgroundColor="backtop" transparent="1" />
+  </screen>
+  <screen name="oscEntitlements" position="center,center" size="1280,720" title="Client Info" flags="wfNoBorder">
+    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
+    <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <eLabel text="Client Info" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
+    <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
+    <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
+    <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
+    <ePixmap position="950,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="Utopia_HD/menu/opennfr_info.png" position="836,99" size="370,210" zPosition="0" alphatest="blend" transparent="1" />
+    <widget source="output" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"templates":
+					{"default": (55,[
+							MultiContentEntryText(pos = (0, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+							MultiContentEntryText(pos = (90, 1), size = (150, 24), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+							MultiContentEntryText(pos = (250, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+							MultiContentEntryText(pos = (290, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+							MultiContentEntryText(pos = (330, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+							MultiContentEntryText(pos = (370, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+							MultiContentEntryText(pos = (410, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+							MultiContentEntryText(pos = (480, 1), size = (70, 24), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+							MultiContentEntryText(pos = (550, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 8), # index 8 is reshare
+							MultiContentEntryText(pos = (0, 25), size = (700, 24), font=1, flags = RT_HALIGN_LEFT, text = 9), # index 9 is providers
+													]),
+					"HD": (55,[
+							MultiContentEntryText(pos = (0, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+							MultiContentEntryText(pos = (90, 1), size = (150, 24), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+							MultiContentEntryText(pos = (250, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+							MultiContentEntryText(pos = (290, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+							MultiContentEntryText(pos = (330, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+							MultiContentEntryText(pos = (370, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+							MultiContentEntryText(pos = (410, 1), size = (40, 24), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+							MultiContentEntryText(pos = (480, 1), size = (70, 24), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+							MultiContentEntryText(pos = (550, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 8), # index 8 is reshare
+							MultiContentEntryText(pos = (630, 1), size = (1024, 50), font=1, flags = RT_HALIGN_LEFT, text = 9), # index 9 is providers
+
+												]),
+					},
+					"fonts": [gFont("Regular", 18),gFont("Regular", 14),gFont("Regular", 24),gFont("Regular", 20)],
+					"itemHeight": 56
+				}
+				</convert>
+    </widget>
+  </screen>
+  <screen name="oscReaderStats" position="center,center" size="1280,720" title="Client Info" flags="wfNoBorder">
+    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
+    <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <eLabel text="Client Info" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
+    <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
+    <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
+    <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
+    <ePixmap position="950,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="Utopia_HD/menu/opennfr_info.png" position="836,99" size="370,210" zPosition="0" alphatest="blend" transparent="1" />
+    <widget source="output" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"templates":
+					{"default": (25,[
+							MultiContentEntryText(pos = (0, 1), size = (100, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+							MultiContentEntryText(pos = (100, 1), size = (50, 24), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+							MultiContentEntryText(pos = (150, 1), size = (150, 24), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+							MultiContentEntryText(pos = (300, 1), size = (60, 24), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+							MultiContentEntryText(pos = (360, 1), size = (60, 24), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+							MultiContentEntryText(pos = (420, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+							MultiContentEntryText(pos = (510, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+							MultiContentEntryText(pos = (590, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+							]),
+					"HD": (25,[
+							MultiContentEntryText(pos = (0, 1), size = (200, 24), font=1, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+							MultiContentEntryText(pos = (200, 1), size = (70, 24), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+							MultiContentEntryText(pos = (300, 1), size = (220, 24), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+							MultiContentEntryText(pos = (540, 1), size = (80, 24), font=1, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+							MultiContentEntryText(pos = (630, 1), size = (80, 24), font=1, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+							MultiContentEntryText(pos = (720, 1), size = (130, 24), font=1, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+							MultiContentEntryText(pos = (840, 1), size = (130, 24), font=1, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+							MultiContentEntryText(pos = (970, 1), size = (100, 24), font=1, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+							]),
+					},
+					"fonts": [gFont("Regular", 14),gFont("Regular", 18),gFont("Regular", 24),gFont("Regular", 20)],
+					"itemHeight": 26
+				}
+				</convert>
+    </widget>
   </screen>
 </skin>
