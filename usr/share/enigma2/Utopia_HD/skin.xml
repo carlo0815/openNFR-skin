@@ -3052,8 +3052,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <screen name="RdsInfoDisplay" position="0,0" size="1280,720" zPosition="-2" backgroundColor="transparent" flags="wfNoBorder">
     <widget name="RassLogo" pixmap="skin_default/icons/rass_logo.png" position="100,585" size="50,21" />
-    <widget name="RadioText" position="100,620" size="1080,30" font="Regular;24" noWrap="1" backgroundColor="rds_text_bg" shadowOffset="-2,-2" shadowColor="transpBlack" />
-    <widget name="RtpText" position="100,650" size="1080,30" font="Regular;24" halign="right" noWrap="1" backgroundColor="rds_text_bg" shadowOffset="-2,-2" shadowColor="transpBlack" />
+    <widget name="RadioText" position="center,644" size="1080,30" font="Regular;24" noWrap="1" backgroundColor="rds_text_bg" shadowOffset="-2,-2" shadowColor="transpBlack" transparent="1" />
+    <widget name="RtpText" position="center,674" size="1080,30" font="Regular;24" halign="center" noWrap="1" backgroundColor="rds_text_bg" shadowOffset="-2,-2" shadowColor="transpBlack" transparent="1" />
   </screen>
   <screen name="RecordPathsSettings" position="0,0" size="1280,720" title="Recording paths..." flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
