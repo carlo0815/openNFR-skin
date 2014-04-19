@@ -2132,35 +2132,35 @@
   </screen>
   <screen name="MediaPlayer" position="0,0" size="1280,720" title="MediaPlayer" backgroundColor="background" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back-media.png" />
-    <ePixmap position="60,100" zPosition="1" size="420,526" pixmap="Utopia_HD/menu/player_bg.png" transparent="1" alphatest="blend" />
-    <ePixmap position="480,389" zPosition="1" size="740,237" pixmap="Utopia_HD/menu/player1_bg.png" transparent="1" alphatest="blend" />
+    <ePixmap position="292,87" zPosition="-1" size="930,237" pixmap="Utopia_HD/menu/player_bg.png" transparent="1" alphatest="blend" />
+    <ePixmap position="630,413" zPosition="-1" size="590,237" pixmap="Utopia_HD/menu/player1_bg.png" transparent="1" alphatest="blend" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
     <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
-    <widget name="filelist" position="81,118" size="380,485" itemHeight="25" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background2" selectionPixmap="Utopia_HD/menu/select.png" transparent="1" />
-    <widget name="coverArt" position="1020,105" size="200,200" pixmap="Utopia_HD/no_coverArt.png" transparent="1" alphatest="blend" />
-    <widget name="artisttext" position="490,120" size="120,25" font="Regular;22" valign="top" foregroundColor="grey" backgroundColor="background" transparent="1" />
-    <widget name="artist" position="620,120" size="400,25" font="Regular;22" valign="top" backgroundColor="background" transparent="1" />
-    <widget name="albumtext" position="490,155" size="120,25" font="Regular;22" valign="top" foregroundColor="grey" backgroundColor="background" transparent="1" />
-    <widget name="album" position="620,155" size="400,25" font="Regular;22" valign="top" backgroundColor="background" transparent="1" />
-    <widget name="yeartext" position="490,190" size="120,25" font="Regular;22" valign="top" foregroundColor="grey" backgroundColor="background" transparent="1" />
-    <widget name="year" position="620,190" size="400,25" font="Regular;22" valign="top" backgroundColor="background" transparent="1" />
-    <widget name="genretext" position="490,225" size="120,25" font="Regular;22" valign="top" foregroundColor="grey" backgroundColor="background" transparent="1" />
-    <widget name="genre" position="620,225" size="350,25" font="Regular;22" valign="top" backgroundColor="background" transparent="1" />
-    <eLabel name="nowPlaying" position="605,255" size="250,25" font="Regular;22" valign="top" text="Aktuelle Wiedergabe :" foregroundColor="yellow" backgroundColor="background" transparent="1" />
-    <widget name="title" position="490,284" size="470,45" font="Regular;22" halign="center" backgroundColor="background" transparent="1" />
-    <eLabel text="P L A Y L I S T" position="500,355" size="200,30" font="Regular;24" foregroundColor="cyan" backgroundColor="background" transparent="1" />
+    <widget name="filelist" position="306,100" size="899,210" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background2" transparent="1" />
+    <widget name="coverArt" position="81,87" size="200,200" pixmap="Utopia_HD/no_coverArt.png" transparent="1" alphatest="blend" />
+    <widget name="artisttext" position="81,371" size="120,25" font="Regular;22" valign="top" foregroundColor="grey" backgroundColor="background" transparent="1" />
+    <widget name="artist" position="209,371" size="400,25" font="Regular;22" valign="top" backgroundColor="background" transparent="1" />
+    <widget name="albumtext" position="81,404" size="120,25" font="Regular;22" valign="top" foregroundColor="grey" backgroundColor="background" transparent="1" />
+    <widget name="album" position="209,404" size="400,25" font="Regular;22" valign="top" backgroundColor="background" transparent="1" />
+    <widget name="yeartext" position="81,440" size="120,25" font="Regular;22" valign="top" foregroundColor="grey" backgroundColor="background" transparent="1" />
+    <widget name="year" position="209,440" size="400,25" font="Regular;22" valign="top" backgroundColor="background" transparent="1" />
+    <widget name="genretext" position="81,475" size="120,25" font="Regular;22" valign="top" foregroundColor="grey" backgroundColor="background" transparent="1" />
+    <widget name="genre" position="208,475" size="400,25" font="Regular;22" valign="top" backgroundColor="background" transparent="1" />
+    <eLabel name="nowPlaying" position="81,532" size="530,25" font="Regular;22" valign="top" text="Aktuelle Wiedergabe :" foregroundColor="yellow" backgroundColor="background" transparent="1" halign="center" />
+    <widget name="title" position="81,571" size="530,45" font="Regular;22" halign="center" backgroundColor="background" transparent="1" />
+    <eLabel text="P L A Y L I S T" position="648,369" size="200,30" font="Regular;24" foregroundColor="cyan" backgroundColor="background" transparent="1" />
     <!--<eLabel position="500,396" size="720,2" backgroundColor="grey" />-->
-    <widget name="playlist" position="498,406" size="705,200" itemHeight="25" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" selectionPixmap="Utopia_HD/menu/select.png" transparent="1" />
+    <widget name="playlist" position="642,425" size="560,210" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1" />
     <widget name="repeat" pixmaps="Utopia_HD/repeat_off.png,Utopia_HD/repeat_on.png" position="1020,672" size="70,30" transparent="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Label" position="755,340" size="119,32" zPosition="2" font="DIGI; 32" halign="right" backgroundColor="black" noWrap="1" transparent="1">
+    <widget source="session.CurrentService" render="Label" position="918,359" size="119,32" zPosition="2" font="DIGI; 32" halign="right" backgroundColor="black" noWrap="1" transparent="1">
       <convert type="ServicePosition">Position,ShowHours</convert>
     </widget>
-    <eLabel text="/" position="876,346" size="24,32" zPosition="2" font="Regular; 32" halign="center" backgroundColor="black" transparent="1" />
-    <widget source="session.CurrentService" render="Label" position="899,340" size="119,32" zPosition="2" font="DIGI; 32" halign="right" backgroundColor="black" noWrap="1" transparent="1">
+    <eLabel text="/" position="1049,359" size="24,32" zPosition="2" font="Regular; 32" halign="center" backgroundColor="black" transparent="1" />
+    <widget source="session.CurrentService" render="Label" position="1081,359" size="119,32" zPosition="2" font="DIGI; 32" halign="right" backgroundColor="black" noWrap="1" transparent="1">
       <convert type="ServicePosition">Length,ShowHours</convert>
     </widget>
     <widget source="session.CurrentService" render="Progress" pixmap="Utopia_HD/p_bar.png" position="273,680" size="648,10" zPosition="1" transparent="1">
@@ -2168,7 +2168,7 @@
     </widget>
     <ePixmap position="1120,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_menu.png" transparent="1" alphatest="blend" />
     <ePixmap position="1200,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_help.png" transparent="1" alphatest="blend" />
-    <ePixmap position="730,331" size="310,60" zPosition="0" pixmap="Utopia_HD/menu/mediaplclock.png" transparent="1" alphatest="blend" />
+    <ePixmap position="909,343" size="310,60" zPosition="0" pixmap="Utopia_HD/menu/mediaplclock.png" transparent="1" alphatest="blend" />
   </screen>
   <screen name="DirectoryBrowser" position="0,0" size="1280,720" title="Directorybrowser" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
