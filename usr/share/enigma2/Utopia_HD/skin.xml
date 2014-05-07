@@ -11875,4 +11875,19 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				</convert>
     </widget>
   </screen>
+  <screen name="EventViewSimple" position="center,350" size="980,350" title="EventViewSimple" flags="wfNoBorder">
+    <ePixmap position="0,0" zPosition="-10" size="980,350" pixmap="Utopia_HD/menu/event.png" />
+    <widget source="global.CurrentTime" render="Label" position="864,8" size="100,28" font="Regular; 20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="544,8" size="320,28" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <widget source="Title" render="Label" position="18,8" size="400,28" font="Regular;22" valign="center" halign="left" noWrap="1" foregroundColor="cyan1" backgroundColor="backtop" transparent="1" />
+    <widget name="duration" position="31,313" size="150,22" font="Regular;22" foregroundColor="white" backgroundColor="backtop" transparent="1" noWrap="1" valign="top" halign="left" />
+    <widget name="FullDescription" position="31,92" size="919,205" font="Regular; 21" foregroundColor="white" backgroundColor="backtop" transparent="1" />
+    <widget source="Service" render="Label" position="811,313" size="140,24" font="Regular;20" halign="right" backgroundColor="background" transparent="1">
+      <convert type="MovieInfo">FileSize</convert>
+    </widget>
+  </screen>
 </skin>
