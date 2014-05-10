@@ -1219,7 +1219,7 @@
     </widget>
     <widget source="Title" render="Label" position="65,17" size="720,43" font="Regular; 35" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <eLabel position="65,119" size="688,2" backgroundColor="grey" />
-    <widget name="list" position="65,124" zPosition="3" size="715,450" scrollbarMode="showOnDemand" serviceItemHeight="30" serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;23" colorServiceDescription="myblue" selectionPixmap="Utopia_HD/menu/selc715x48.png" transparent="1" />
+    <widget name="list" position="65,124" zPosition="3" size="715,450" scrollbarMode="showOnDemand" serviceItemHeight="30" serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;23" colorServiceDescription="myblue"  transparent="1" />
     <widget source="ServiceEvent" render="EmptyEpg" emptyText="Event data unavailable" position="820,420" size="400,25" font="Regular;22" foregroundColor="yellow" backgroundColor="background2" transparent="1">
       <convert type="ServiceName">Name</convert>
     </widget>
