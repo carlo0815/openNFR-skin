@@ -7268,7 +7268,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <eLabel text="Extra Message Box" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" selectionPixmap="skin_default/sel_50.png" transparent="1" zPosition="1">
+    <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1" zPosition="1">
       <convert type="TemplatedMultiContent">
                       {"template": [
                              MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (48, 48), png = 0),
