@@ -595,9 +595,9 @@
     <widget source="session.CurrentService" render="Label" position="27,25" size="500,35" font="Regular; 28" valign="center" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ServiceName">Provider</convert>
     </widget>
-    <ePixmap pixmap="Utopia_HD/dey_bg.png" position="374,68" size="200,34" zPosition="1" alphatest="blend" />
-    <eLabel text="Now:" position="46,105" size="70,28" zPosition="2" font="Regular; 24" transparent="1" backgroundColor="background" foregroundColor="orange" />
-    <widget source="session.Event_Now" render="Label" position="116,105" size="458,28" font="Regular; 24" halign="left" backgroundColor="backtop" transparent="1">
+    <ePixmap pixmap="Utopia_HD/dey_bg.png" position="205,68" size="200,34" zPosition="1" alphatest="blend" />
+    <eLabel text="Now:" position="225,70" size="160,28" zPosition="2" font="Regular; 24" transparent="1" backgroundColor="background" foregroundColor="orange" halign="center" />
+    <widget source="session.Event_Now" render="Label" position="47,105" size="526,28" font="Regular; 24" halign="center" backgroundColor="backtop" transparent="1" foregroundColor="cyan">
       <convert type="EventName">Name</convert>
     </widget>
     <widget source="session.Event_Now" render="Label" position="46,142" size="527,302" font="Regular; 24" zPosition="1" backgroundColor="backtop" foregroundColor="white" transparent="1">
@@ -626,18 +626,18 @@
     <widget source="session.Event_Next" render="Label" position="623,142" size="527,302" font="Regular; 24" zPosition="1" backgroundColor="backtop" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
-    <widget source="session.Event_Next" render="Label" position="694,105" size="457,28" font="Regular; 24" halign="left" backgroundColor="backtop" transparent="1">
+    <widget source="session.Event_Next" render="Label" position="624,105" size="527,28" font="Regular; 24" halign="center" backgroundColor="backtop" transparent="1" foregroundColor="cyan">
       <convert type="EventName">Name</convert>
     </widget>
-    <eLabel text="Next:" position="623,105" size="70,28" zPosition="2" font="Regular; 24" foregroundColor="cyan1" transparent="1" backgroundColor="backtop" />
-    <ePixmap pixmap="Utopia_HD/dey_bg.png" position="621,68" size="200,34" zPosition="1" alphatest="blend" />
+    <eLabel text="Next:" position="812,70" size="160,28" zPosition="2" font="Regular; 24" foregroundColor="unff0000" transparent="1" backgroundColor="backtop" halign="center" />
+    <ePixmap pixmap="Utopia_HD/dey_bg.png" position="790,68" size="200,34" zPosition="1" alphatest="blend" />
     <widget source="session.CurrentService" render="Label" position="562,25" size="605,35" backgroundColor="background" font="Regular; 28" halign="center" noWrap="1" transparent="1" zPosition="1">
       <convert type="ServiceName2">%S</convert>
       <convert type="ServiceName2">%F %p %Y %f %M %s</convert>
       <convert type="ServiceName2">%R</convert>
       <convert type="ConverterRotator">3</convert>
     </widget>
-    <ePixmap position="8,10" zPosition="-1" size="1180,500" pixmap="Utopia_HD/back.png" />
+    <ePixmap position="8,10" zPosition="-1" size="1181,500" pixmap="Utopia_HD/back.png" />
   </screen>
   <!-- Ecm Info -->
   <screen name="EcmInfoScreen" flags="wfNoBorder" position="600,150" size="600, 80" zPosition="1" backgroundColor="transparent">
@@ -1216,7 +1216,7 @@
     <widget source="ServiceEvent" render="EmptyEpg" emptyText="Event data unavailable" position="820,420" size="400,25" font="Regular;22" foregroundColor="yellow" backgroundColor="background2" transparent="1">
       <convert type="ServiceName">Name</convert>
     </widget>
-    <widget source="ServiceEvent" render="EmptyEpg" emptyText="Event data unavailable" position="820,445" size="400,50" font="Regular;20" foregroundColor="red" backgroundColor="background2" transparent="1">
+    <widget source="ServiceEvent" render="EmptyEpg" emptyText="Event data unavailable" position="820,445" size="400,50" font="Regular;20" foregroundColor="unff6600" backgroundColor="unff6600" transparent="1">
       <convert type="EventName">Name</convert>
     </widget>
     <widget source="ServiceEvent" render="Label" position="820,500" size="67,22" font="Regular;19" backgroundColor="unfcc000" transparent="1" foregroundColor="unfcc000">
