@@ -148,503 +148,496 @@
     <color name="WindowTitleForeground" color="white" />
     <color name="WindowTitleBackground" color="black" />
   </windowstyle>
-  <screen name="InfoBar" position="center,525" size="1280,185" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
-    <ePixmap position="1,12" zPosition="-1" size="1280,175" pixmap="Utopia_HD/infobar.png" borderWidth="0" borderColor="transparent" />
-    <ePixmap pixmap="Utopia_HD/date_bg.png" position="45,55" size="200,34" zPosition="1" alphatest="blend" />
-    <ePixmap pixmap="Utopia_HD/clock_bg.png" position="1040,55" size="200,34" zPosition="1" alphatest="blend" />
-    <widget source="global.CurrentTime" render="Label" position="1060,45" size="60,40" font="DIGI; 35" halign="right" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
+  <screen name="InfoBar" position="35,10" size="1280,720" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
+    <ePixmap position="0,515" zPosition="-1" size="1195,175" pixmap="Utopia_HD/infobar.png" borderWidth="0" borderColor="transparent" />
+    <ePixmap pixmap="Utopia_HD/date_bg.png" position="11,559" size="200,34" zPosition="1" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/clock_bg.png" position="983,559" size="200,34" zPosition="1" alphatest="blend" />
+    <widget source="global.CurrentTime" render="Label" position="1014,558" size="60,28" font="DIGI; 25" halign="center" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
       <convert type="ClockToText">Format:%H</convert>
     </widget>
-    <widget source="global.CurrentTime" render="Label" position="1161,45" size="60,40" font="DIGI; 35" halign="left" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
+    <widget source="global.CurrentTime" render="Label" position="1094,558" size="60,28" font="DIGI; 25" halign="center" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
       <convert type="ClockToText">Format:%M</convert>
     </widget>
-    <widget source="global.CurrentTime" render="FixedLabel" text=":" font="DIGI; 35" position="1132,47" size="20,30" halign="center" zPosition="3" valign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1">
+    <widget source="global.CurrentTime" render="FixedLabel" text=":" font="DIGI; 25" position="1074,558" size="20,28" halign="center" zPosition="3" valign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1">
       <convert type="BlinkingClockDots">
       </convert>
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
-    <widget source="global.CurrentTime" render="Label" position="79,56" size="150,28" font="Regular; 25" halign="left" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
+    <widget source="global.CurrentTime" render="Label" position="37,558" size="150,28" font="DIGI; 25" halign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
       <convert type="ClockToText">Format:%d.%m.%Y</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="586,22" size="100,44" font="DIGI; 35" valign="top" noWrap="1" backgroundColor="backtop" transparent="1" halign="center" foregroundColor="cyan1">
+    <widget source="session.CurrentService" render="Label" position="549,528" size="100,26" font="DIGI; 24" valign="center" noWrap="1" backgroundColor="backtop" transparent="1" halign="center" foregroundColor="cyan1">
       <convert type="ExtendedServiceInfo">ServiceNumber</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="455,63" size="365,28" font="LCD; 27" valign="top" noWrap="1" backgroundColor="backtop" transparent="1" halign="center" foregroundColor="cyan1">
+    <widget source="session.CurrentService" render="Label" position="439,566" size="320,26" font="LCD; 24" valign="center" noWrap="1" backgroundColor="backtop" transparent="1" halign="center">
       <convert type="ServiceName">Name</convert>
     </widget>
-    <eLabel text="SNR:" position="467,48" size="35,18" font="LCD; 16" valign="center" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
-    <widget source="session.FrontendStatus" render="Label" position="496,46" zPosition="4" size="50,18" halign="center" font="LCD; 16" foregroundColor="cyan1" transparent="1" backgroundColor="black">
+    <eLabel text="SNR:" position="1090,654" size="35,18" font="LCD; 16" valign="center" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
+    <widget source="session.FrontendStatus" render="Label" position="1126,654" zPosition="4" size="50,18" halign="center" font="LCD; 16" foregroundColor="cyan1" transparent="1" backgroundColor="black">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
-    <ePixmap pixmap="Utopia_HD/snr_bg.png" position="500,46" size="110,20" zPosition="2" alphatest="blend" />
-    <widget source="session.FrontendStatus" render="Progress" position="500,46" size="110,20" zPosition="3" pixmap="Utopia_HD/snr.png" transparent="1">
-      <convert type="FrontendInfo">SNR</convert>
-    </widget>
-    <eLabel text="AGC:" position="679,48" size="35,18" font="LCD; 16" valign="center" foregroundColor="yellow" backgroundColor="background" transparent="1" />
-    <widget source="session.FrontendStatus" render="Label" position="707,46" zPosition="4" size="50,18" font="LCD; 16" halign="center" foregroundColor="yellow" backgroundColor="black" transparent="1">
+    <eLabel text="AGC:" position="993,654" size="35,18" font="LCD; 16" valign="center" foregroundColor="yellow" backgroundColor="background" transparent="1" />
+    <widget source="session.FrontendStatus" render="Label" position="1028,654" zPosition="4" size="50,18" font="LCD; 16" halign="center" foregroundColor="yellow" backgroundColor="black" transparent="1">
       <convert type="FrontendInfo">AGC</convert>
     </widget>
-    <ePixmap pixmap="Utopia_HD/snr_bg.png" position="710,46" size="110,20" zPosition="2" alphatest="blend" />
-    <widget source="session.FrontendStatus" render="Progress" position="710,46" size="110,20" zPosition="3" pixmap="Utopia_HD/agc.png" transparent="1">
-      <convert type="FrontendInfo">AGC</convert>
-    </widget>
-    <widget source="session.CurrentService" render="MaggyPiconEmu" path="Utopia_HD/piconCam/" position="285,58" size="115,27" transparent="1" alphatest="blend" zPosition="3">
+    <widget source="session.CurrentService" render="MaggyPiconEmu" path="Utopia_HD/piconCam/" position="236,563" size="115,27" transparent="1" alphatest="blend" zPosition="3">
       <convert type="MaggyEmuName">
       </convert>
     </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Betacrypt.png" position="885,57" size="115,27" zPosition="5" transparent="1" alphatest="blend">
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Betacrypt.png" position="835,563" size="115,27" zPosition="5" transparent="1" alphatest="blend">
       <convert type="MaggyCryptInfo">BetaEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/DRE-crypt.png" position="885,57" size="115,27" zPosition="7" transparent="1" alphatest="blend">
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/DRE-crypt.png" position="835,563" size="115,27" zPosition="7" transparent="1" alphatest="blend">
       <convert type="MaggyCryptInfo">DreamEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/irdeto.png" position="885,57" size="115,27" zPosition="7" transparent="1" alphatest="blend">
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/irdeto.png" position="835,563" size="115,27" zPosition="7" transparent="1" alphatest="blend">
       <convert type="MaggyCryptInfo">IrdEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Seca.png" position="885,57" size="115,27" zPosition="7" transparent="1" alphatest="blend">
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Seca.png" position="835,563" size="115,27" zPosition="7" transparent="1" alphatest="blend">
       <convert type="MaggyCryptInfo">SecaEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Viaccess.png" position="885,57" size="115,27" zPosition="7" transparent="1" alphatest="blend">
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Viaccess.png" position="835,563" size="115,27" zPosition="7" transparent="1" alphatest="blend">
       <convert type="MaggyCryptInfo">ViaEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Nagravision.png" position="885,57" size="115,27" zPosition="7" transparent="1" alphatest="blend">
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Nagravision.png" position="835,563" size="115,27" zPosition="7" transparent="1" alphatest="blend">
       <convert type="MaggyCryptInfo">NagraEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Cryptoworks.png" position="885,57" size="115,27" zPosition="7" transparent="1" alphatest="blend">
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Cryptoworks.png" position="835,563" size="115,27" zPosition="7" transparent="1" alphatest="blend">
       <convert type="MaggyCryptInfo">CrwEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Videoguard.png" position="885,57" size="115,27" zPosition="7" transparent="1" alphatest="blend">
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Videoguard.png" position="835,563" size="115,27" zPosition="7" transparent="1" alphatest="blend">
       <convert type="MaggyCryptInfo">NdsEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/conax.png" position="885,57" size="115,27" zPosition="7" transparent="1" alphatest="blend">
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/conax.png" position="835,563" size="115,27" zPosition="7" transparent="1" alphatest="blend">
       <convert type="MaggyCryptInfo">ConaxEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/biss.png" position="885,57" size="115,20" zPosition="7" transparent="1" alphatest="blend">
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/biss.png" position="835,563" size="115,27" zPosition="7" transparent="1" alphatest="blend">
       <convert type="MaggyCryptInfo">BisEcm</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <eLabel text=" " position="675,25" size="90,20" font="Regular; 18" valign="center" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
-    <eLabel text="CH:" position="549,27" size="35,20" font="Regular; 16" valign="center" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
-    <ePixmap pixmap="Utopia_HD/icons/ico_dolby_off.png" position="125,22" size="70,25" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_dolby_on.png" position="125,22" size="70,25" zPosition="2" alphatest="blend">
+    <ePixmap pixmap="Utopia_HD/icons/ico_dolby_off.png" position="56,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_dolby_on.png" position="56,526" size="70,25" zPosition="2" alphatest="blend">
       <convert type="ServiceInfo">IsMultichannel</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <ePixmap pixmap="Utopia_HD/icons/ico_format_off.png" position="205,22" size="70,25" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_format_on.png" position="205,22" size="70,25" zPosition="2" alphatest="blend">
+    <ePixmap pixmap="Utopia_HD/icons/ico_format_off.png" position="136,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_format_on.png" position="136,526" size="70,25" zPosition="2" alphatest="blend">
       <convert type="ServiceInfo">IsWidescreen</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <ePixmap pixmap="Utopia_HD/icons/ico_txt_off.png" position="285,22" size="70,25" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_txt_on.png" position="285,22" size="70,25" zPosition="2" alphatest="blend">
+    <ePixmap pixmap="Utopia_HD/icons/ico_txt_off.png" position="214,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_txt_on.png" position="214,526" size="70,25" zPosition="2" alphatest="blend">
       <convert type="ServiceInfo">HasTelext</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <ePixmap pixmap="Utopia_HD/icons/ico_hd_off.png" position="930,22" size="70,25" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_hd_on.png" position="930,22" size="70,25" zPosition="2" alphatest="blend">
+    <ePixmap pixmap="Utopia_HD/icons/ico_hd_off.png" position="294,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_hd_on.png" position="294,526" size="70,25" zPosition="2" alphatest="blend">
       <convert type="ServiceInfo">VideoWidth</convert>
       <convert type="ValueRange">721,1980</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <ePixmap pixmap="Utopia_HD/icons/ico_crypt_off.png" position="1010,22" size="70,25" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_crypt_on.png" position="1010,22" size="70,25" zPosition="2" alphatest="blend">
+    <ePixmap pixmap="Utopia_HD/icons/ico_crypt_off.png" position="915,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_crypt_on.png" position="915,526" size="70,25" zPosition="2" alphatest="blend">
       <convert type="ServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <ePixmap pixmap="Utopia_HD/icons/ico_rec_off.png" position="1090,22" size="70,25" zPosition="1" alphatest="blend" />
-    <widget source="session.RecordState" render="Pixmap" pixmap="Utopia_HD/icons/ico_rec_on.png" position="1090,22" size="70,25" zPosition="2" alphatest="blend">
+    <ePixmap pixmap="Utopia_HD/icons/ico_rec_off.png" position="995,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.RecordState" render="Pixmap" pixmap="Utopia_HD/icons/ico_rec_on.png" position="995,526" size="70,25" zPosition="2" alphatest="blend">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
-    <ePixmap pixmap="Utopia_HD/icons/subtitle_off.png" position="1170,22" size="70,25" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/subtitle_on.png" position="1170,22" zPosition="2" size="70,25" alphatest="blend">
+    <ePixmap pixmap="Utopia_HD/icons/subtitle_off.png" position="1076,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/subtitle_on.png" position="1076,526" zPosition="2" size="70,25" alphatest="blend">
       <convert type="ServiceInfo">SubservicesAvailable</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <ePixmap pixmap="Utopia_HD/icons/hbbtv_off.png" position="175,117" size="75,35" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/hbbtv_on.png" position="175,117" size="75,35" zPosition="2" alphatest="on">
-      <convert type="ServiceInfo">HasHBBTV</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="DVB-S" position="800,25" size="60,20" font="Regular; 16" backgroundColor="backtop" transparent="1" halign="left" foregroundColor="cyan1">
+    <widget source="session.FrontendInfo" render="FixedLabel" text="DVB-S" position="836,529" size="60,20" font="Regular; 16" backgroundColor="backtop" transparent="1" halign="left" foregroundColor="cyan1">
       <convert type="FrontendInfo">TYPE</convert>
       <convert type="ValueRange">0,0</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="DVB-C" position="800,25" size="60,20" font="Regular; 16" backgroundColor="backtop" transparent="1" halign="left" foregroundColor="cyan1">
+    <widget source="session.FrontendInfo" render="FixedLabel" text="DVB-C" position="836,529" size="60,20" font="Regular; 16" backgroundColor="backtop" transparent="1" halign="left" foregroundColor="cyan1">
       <convert type="FrontendInfo">TYPE</convert>
       <convert type="ValueRange">1,1</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="DVB-T" position="800,25" size="60,20" font="Regular; 16" backgroundColor="backtop" transparent="1" halign="left" foregroundColor="cyan1">
+    <widget source="session.FrontendInfo" render="FixedLabel" text="DVB-T" position="836,529" size="60,20" font="Regular; 16" backgroundColor="backtop" transparent="1" halign="left" foregroundColor="cyan1">
       <convert type="FrontendInfo">TYPE</convert>
       <convert type="ValueRange">2,2</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <!--TUNER STATUS A -->
-    <ePixmap alphatest="blend" pixmap="Utopia_HD/tuner/icon_a_no.png" size="30,30" position="1100,100" zPosition="1" />
-    <widget source="session.TunerInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_a_akt.png" size="30,30" position="1100,100" zPosition="2" alphatest="blend">
+    <ePixmap alphatest="blend" pixmap="Utopia_HD/tuner/icon_a_no.png" size="30,30" position="990,601" zPosition="1" />
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_a_akt.png" size="30,30" position="990,601" zPosition="2" alphatest="blend">
       <convert type="TunerInfo">TunerUseMask</convert>
       <convert type="ValueBitTest">1</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_a.png" size="30,30" position="1100,100" zPosition="3" alphatest="blend">
+    <widget source="session.FrontendInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_a.png" size="30,30" position="990,601" zPosition="3" alphatest="blend">
       <convert type="FrontendInfo">NUMBER</convert>
       <convert type="ValueRange">0,0</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <!--TUNER STATUS B  -->
-    <ePixmap alphatest="blend" pixmap="Utopia_HD/tuner/icon_b_no.png" size="30,30" position="1155,100" zPosition="1" />
-    <widget source="session.TunerInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_b_akt.png" size="30,30" position="1155,100" zPosition="2" alphatest="blend">
+    <ePixmap alphatest="blend" pixmap="Utopia_HD/tuner/icon_b_no.png" size="30,30" position="1046,601" zPosition="1" />
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_b_akt.png" size="30,30" position="1046,601" zPosition="2" alphatest="blend">
       <convert type="TunerInfo">TunerUseMask</convert>
       <convert type="ValueBitTest">2</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_b.png" size="30,30" position="1155,100" zPosition="3" alphatest="blend">
+    <widget source="session.FrontendInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_b.png" size="30,30" position="1046,601" zPosition="3" alphatest="blend">
       <convert type="FrontendInfo">NUMBER</convert>
       <convert type="ValueRange">1,1</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <!-- TUNER STATUS C -->
-    <ePixmap alphatest="blend" pixmap="Utopia_HD/tuner/icon_c_no.png" size="30,30" position="1100,140" zPosition="1" />
-    <widget source="session.TunerInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_c_akt.png" size="30,30" position="1100,140" zPosition="2" alphatest="blend">
+    <ePixmap alphatest="blend" pixmap="Utopia_HD/tuner/icon_c_no.png" size="30,30" position="1100,601" zPosition="1" />
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_c_akt.png" size="30,30" position="1100,601" zPosition="2" alphatest="blend">
       <convert type="TunerInfo">TunerUseMask</convert>
       <convert type="ValueBitTest">4</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_c.png" size="30,30" position="1100,140" zPosition="3" alphatest="blend">
+    <widget source="session.FrontendInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_c.png" size="30,30" position="1100,601" zPosition="3" alphatest="blend">
       <convert type="FrontendInfo">NUMBER</convert>
       <convert type="ValueRange">2,2</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <!-- TUNER STATUS D -->
-    <ePixmap alphatest="blend" pixmap="Utopia_HD/tuner/icon_d_no.png" size="30,30" position="1155,140" zPosition="1" />
-    <widget source="session.TunerInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_d_akt.png" size="30,30" position="1155,140" zPosition="2" alphatest="blend">
+    <ePixmap alphatest="blend" pixmap="Utopia_HD/tuner/icon_d_no.png" size="30,30" position="1151,601" zPosition="1" />
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_d_akt.png" size="30,30" position="1151,601" zPosition="2" alphatest="blend">
       <convert type="TunerInfo">TunerUseMask</convert>
       <convert type="ValueBitTest">8</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_d.png" size="30,30" position="1155,140" zPosition="3" alphatest="blend">
+    <widget source="session.FrontendInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_d.png" size="30,30" position="1151,601" zPosition="3" alphatest="blend">
       <convert type="FrontendInfo">NUMBER</convert>
       <convert type="ValueRange">3,3</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <!-- TunerInfo end -->
-    <widget source="session.CurrentService" render="Picon" position="64,103" zPosition="4" size="100,60" transparent="1" alphatest="blend">
+    <widget source="session.CurrentService" render="Picon" position="55,607" zPosition="4" size="100,60" transparent="1" alphatest="blend">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget source="session.Event_Now" render="Label" position="253,97" size="75,28" font="Arial; 24" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1" zPosition="1">
+    <widget source="session.Event_Now" render="Label" position="240,602" size="75,28" font="Arial; 24" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1" zPosition="1">
       <convert type="EventTime">StartTime</convert>
       <convert type="ClockToText">Default</convert>
     </widget>
-    <eLabel text="-" position="327,97" size="15,28" font="Arial; 24" halign="center" backgroundColor="background" transparent="1" foregroundColor="cyan1" zPosition="1" />
-    <widget source="session.Event_Now" render="Label" position="342,97" size="75,28" font="Arial; 24" halign="left" backgroundColor="background" transparent="1" foregroundColor="cyan1" zPosition="1">
+    <eLabel text="-" position="315,602" size="15,28" font="Arial; 24" halign="center" backgroundColor="background" transparent="1" foregroundColor="cyan1" zPosition="1" />
+    <widget source="session.Event_Now" render="Label" position="331,602" size="75,28" font="Arial; 24" halign="left" backgroundColor="background" transparent="1" foregroundColor="cyan1" zPosition="1">
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Default</convert>
     </widget>
-    <widget source="session.Event_Now" render="Label" position="417,97" size="530,28" font="Regular; 24" halign="left" backgroundColor="background" transparent="1" foregroundColor="cyan1" zPosition="1">
+    <widget source="session.Event_Now" render="Label" position="406,602" size="460,28" font="Regular; 24" halign="left" backgroundColor="background" transparent="1" foregroundColor="cyan1" zPosition="1">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget source="session.Event_Now" render="Label" position="940,97" size="113,28" font="Regular; 24" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1" zPosition="1">
+    <widget source="session.Event_Now" render="Label" position="869,602" size="113,28" font="Regular; 24" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1" zPosition="1">
       <convert type="EventTime">Remaining</convert>
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
-    <widget source="session.Event_Now" render="Progress" pixmap="Utopia_HD/progress_r.png" position="303,131" size="708,8" zPosition="7" transparent="1">
+    <widget source="session.Event_Now" render="Progress" pixmap="Utopia_HD/progress_r.png" position="282,635" size="662,8" zPosition="7" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
-    <widget source="session.Event_Next" render="Label" position="253,146" size="75,28" font="Arial; 24" halign="right" backgroundColor="background" foregroundColor="grey2" transparent="1" noWrap="1" zPosition="1">
+    <widget source="session.Event_Next" render="Label" position="240,649" size="75,28" font="Arial; 24" halign="right" backgroundColor="background" foregroundColor="grey2" transparent="1" noWrap="1" zPosition="1">
       <convert type="EventTime">StartTime</convert>
       <convert type="ClockToText">Default</convert>
     </widget>
-    <eLabel text="-" position="327,146" size="15,28" font="Arial; 24" halign="center" backgroundColor="background" foregroundColor="grey2" transparent="1" noWrap="1" zPosition="1" />
-    <widget source="session.Event_Next" render="Label" position="342,146" size="75,28" font="Arial; 24" halign="left" backgroundColor="background" foregroundColor="grey2" transparent="1" noWrap="1" zPosition="1">
+    <eLabel text="-" position="315,649" size="15,28" font="Arial; 24" halign="center" backgroundColor="background" foregroundColor="grey2" transparent="1" noWrap="1" zPosition="1" />
+    <widget source="session.Event_Next" render="Label" position="330,649" size="75,28" font="Arial; 24" halign="left" backgroundColor="background" foregroundColor="grey2" transparent="1" noWrap="1" zPosition="1">
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Default</convert>
     </widget>
-    <widget source="session.Event_Next" render="Label" position="417,146" size="530,28" font="Regular; 24" halign="left" backgroundColor="background" foregroundColor="grey2" transparent="1" zPosition="1">
+    <widget source="session.Event_Next" render="Label" position="405,649" size="460,28" font="Regular; 24" halign="left" backgroundColor="background" foregroundColor="grey2" transparent="1" zPosition="1">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget source="session.Event_Next" render="Label" position="940,146" size="113,28" font="Regular; 24" halign="right" backgroundColor="background" foregroundColor="grey2" transparent="1" zPosition="1">
+    <widget source="session.Event_Next" render="Label" position="869,649" size="113,28" font="Regular; 24" halign="right" backgroundColor="background" foregroundColor="grey2" transparent="1" zPosition="1">
       <convert type="EventTime">Duration</convert>
       <convert type="ClockToText">InMinutes</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="420,25" size="55,20" font="Regular; 16" halign="right" backgroundColor="black" transparent="1" foregroundColor="cyan1">
+    <widget source="session.CurrentService" render="Label" position="170,602" size="55,20" font="Regular; 16" halign="center" backgroundColor="black" transparent="1">
       <convert type="ServiceInfo">VideoWidth</convert>
     </widget>
-    <eLabel text="x" position="475,25" size="10,20" font="Regular; 16" halign="center" backgroundColor="black" transparent="1" foregroundColor="cyan1" />
-    <widget source="session.CurrentService" render="Label" position="485,25" size="55,20" font="Regular; 16" halign="left" backgroundColor="black" transparent="1" foregroundColor="cyan1">
+    <eLabel text="x" position="192,626" size="10,20" font="Regular; 16" halign="center" backgroundColor="black" transparent="1" />
+    <widget source="session.CurrentService" render="Label" position="170,652" size="55,20" font="Regular; 16" halign="center" backgroundColor="black" transparent="1">
       <convert type="ServiceInfo">VideoHeight</convert>
     </widget>
+    <!-- wifi -->
+    <!-- wifi end-->
   </screen>
   <!-- SecondInfoBar -->
-  <screen name="SecondInfoBar" position="0,10" size="1280,720" title="Second Infobar" backgroundColor="transparent" flags="wfNoBorder">
-    <ePixmap position="1,527" zPosition="-1" size="1280,175" pixmap="Utopia_HD/infobar.png" borderWidth="0" borderColor="transparent" />
-    <ePixmap position="53,20" zPosition="-1" size="1180,500" pixmap="Utopia_HD/back.png" />
-    <ePixmap pixmap="Utopia_HD/clock_bg.png" position="543,475" size="200,34" zPosition="1" alphatest="blend" />
-    <ePixmap pixmap="Utopia_HD/dey_bg.png" position="140,475" size="200,34" zPosition="1" alphatest="blend" />
-    <ePixmap pixmap="Utopia_HD/dey_bg.png" position="422,78" size="200,34" zPosition="1" alphatest="blend" />
-    <ePixmap pixmap="Utopia_HD/dey_bg.png" position="663,78" size="200,34" zPosition="1" alphatest="blend" />
-    <ePixmap pixmap="Utopia_HD/date_bg.png" position="945,475" size="200,34" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Label" position="586,536" size="100,44" font="DIGI; 35" halign="center" valign="top" noWrap="1" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+  <screen name="SecondInfoBar" position="35,10" size="1280,720" title="Second Infobar" backgroundColor="transparent" flags="wfNoBorder">
+    <ePixmap position="0,515" zPosition="-1" size="1195,175" pixmap="Utopia_HD/infobar.png" borderWidth="0" borderColor="transparent" />
+    <ePixmap pixmap="Utopia_HD/date_bg.png" position="11,559" size="200,34" zPosition="1" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/clock_bg.png" position="983,559" size="200,34" zPosition="1" alphatest="blend" />
+    <widget source="global.CurrentTime" render="Label" position="1014,558" size="60,28" font="DIGI; 25" halign="center" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
+      <convert type="ClockToText">Format:%H</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="1094,558" size="60,28" font="DIGI; 25" halign="center" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
+      <convert type="ClockToText">Format:%M</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="FixedLabel" text=":" font="DIGI; 25" position="1074,558" size="20,28" halign="center" zPosition="3" valign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1">
+      <convert type="BlinkingClockDots">
+      </convert>
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="37,558" size="150,28" font="DIGI; 25" halign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
+      <convert type="ClockToText">Format:%d.%m.%Y</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="549,528" size="100,26" font="DIGI; 24" valign="center" noWrap="1" backgroundColor="backtop" transparent="1" halign="center" foregroundColor="cyan1">
       <convert type="ExtendedServiceInfo">ServiceNumber</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="75,35" size="500,35" font="Regular; 28" valign="center" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+    <widget source="session.CurrentService" render="Label" position="439,566" size="320,26" font="LCD; 24" valign="center" noWrap="1" backgroundColor="backtop" transparent="1" halign="center">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <eLabel text="SNR:" position="1090,654" size="35,18" font="LCD; 16" valign="center" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
+    <widget source="session.FrontendStatus" render="Label" position="1126,654" zPosition="4" size="50,18" halign="center" font="LCD; 16" foregroundColor="cyan1" transparent="1" backgroundColor="black">
+      <convert type="FrontendInfo">SNR</convert>
+    </widget>
+    <eLabel text="AGC:" position="993,654" size="35,18" font="LCD; 16" valign="center" foregroundColor="yellow" backgroundColor="background" transparent="1" />
+    <widget source="session.FrontendStatus" render="Label" position="1028,654" zPosition="4" size="50,18" font="LCD; 16" halign="center" foregroundColor="yellow" backgroundColor="black" transparent="1">
+      <convert type="FrontendInfo">AGC</convert>
+    </widget>
+    <widget source="session.CurrentService" render="MaggyPiconEmu" path="Utopia_HD/piconCam/" position="236,563" size="115,27" transparent="1" alphatest="blend" zPosition="3">
+      <convert type="MaggyEmuName">
+      </convert>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Betacrypt.png" position="835,563" size="115,27" zPosition="5" transparent="1" alphatest="blend">
+      <convert type="MaggyCryptInfo">BetaEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/DRE-crypt.png" position="835,563" size="115,27" zPosition="7" transparent="1" alphatest="blend">
+      <convert type="MaggyCryptInfo">DreamEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/irdeto.png" position="835,563" size="115,27" zPosition="7" transparent="1" alphatest="blend">
+      <convert type="MaggyCryptInfo">IrdEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Seca.png" position="835,563" size="115,27" zPosition="7" transparent="1" alphatest="blend">
+      <convert type="MaggyCryptInfo">SecaEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Viaccess.png" position="835,563" size="115,27" zPosition="7" transparent="1" alphatest="blend">
+      <convert type="MaggyCryptInfo">ViaEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Nagravision.png" position="835,563" size="115,27" zPosition="7" transparent="1" alphatest="blend">
+      <convert type="MaggyCryptInfo">NagraEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Cryptoworks.png" position="835,563" size="115,27" zPosition="7" transparent="1" alphatest="blend">
+      <convert type="MaggyCryptInfo">CrwEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Videoguard.png" position="835,563" size="115,27" zPosition="7" transparent="1" alphatest="blend">
+      <convert type="MaggyCryptInfo">NdsEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/conax.png" position="835,563" size="115,27" zPosition="7" transparent="1" alphatest="blend">
+      <convert type="MaggyCryptInfo">ConaxEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/biss.png" position="835,563" size="115,27" zPosition="7" transparent="1" alphatest="blend">
+      <convert type="MaggyCryptInfo">BisEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="Utopia_HD/icons/ico_dolby_off.png" position="56,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_dolby_on.png" position="56,526" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">IsMultichannel</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="Utopia_HD/icons/ico_format_off.png" position="136,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_format_on.png" position="136,526" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">IsWidescreen</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="Utopia_HD/icons/ico_txt_off.png" position="214,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_txt_on.png" position="214,526" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">HasTelext</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="Utopia_HD/icons/ico_hd_off.png" position="294,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_hd_on.png" position="294,526" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">VideoWidth</convert>
+      <convert type="ValueRange">721,1980</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="Utopia_HD/icons/ico_crypt_off.png" position="915,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_crypt_on.png" position="915,526" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">IsCrypted</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="Utopia_HD/icons/ico_rec_off.png" position="995,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.RecordState" render="Pixmap" pixmap="Utopia_HD/icons/ico_rec_on.png" position="995,526" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
+    <ePixmap pixmap="Utopia_HD/icons/subtitle_off.png" position="1076,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/subtitle_on.png" position="1076,526" zPosition="2" size="70,25" alphatest="blend">
+      <convert type="ServiceInfo">SubservicesAvailable</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="FixedLabel" text="DVB-S" position="836,529" size="60,20" font="Regular; 16" backgroundColor="backtop" transparent="1" halign="left" foregroundColor="cyan1">
+      <convert type="FrontendInfo">TYPE</convert>
+      <convert type="ValueRange">0,0</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="FixedLabel" text="DVB-C" position="836,529" size="60,20" font="Regular; 16" backgroundColor="backtop" transparent="1" halign="left" foregroundColor="cyan1">
+      <convert type="FrontendInfo">TYPE</convert>
+      <convert type="ValueRange">1,1</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="FixedLabel" text="DVB-T" position="836,529" size="60,20" font="Regular; 16" backgroundColor="backtop" transparent="1" halign="left" foregroundColor="cyan1">
+      <convert type="FrontendInfo">TYPE</convert>
+      <convert type="ValueRange">2,2</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <!--TUNER STATUS A -->
+    <ePixmap alphatest="blend" pixmap="Utopia_HD/tuner/icon_a_no.png" size="30,30" position="990,601" zPosition="1" />
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_a_akt.png" size="30,30" position="990,601" zPosition="2" alphatest="blend">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">1</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_a.png" size="30,30" position="990,601" zPosition="3" alphatest="blend">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">0,0</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <!--TUNER STATUS B  -->
+    <ePixmap alphatest="blend" pixmap="Utopia_HD/tuner/icon_b_no.png" size="30,30" position="1046,601" zPosition="1" />
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_b_akt.png" size="30,30" position="1046,601" zPosition="2" alphatest="blend">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">2</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_b.png" size="30,30" position="1046,601" zPosition="3" alphatest="blend">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">1,1</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <!-- TUNER STATUS C -->
+    <ePixmap alphatest="blend" pixmap="Utopia_HD/tuner/icon_c_no.png" size="30,30" position="1100,601" zPosition="1" />
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_c_akt.png" size="30,30" position="1100,601" zPosition="2" alphatest="blend">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">4</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_c.png" size="30,30" position="1100,601" zPosition="3" alphatest="blend">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">2,2</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <!-- TUNER STATUS D -->
+    <ePixmap alphatest="blend" pixmap="Utopia_HD/tuner/icon_d_no.png" size="30,30" position="1151,601" zPosition="1" />
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_d_akt.png" size="30,30" position="1151,601" zPosition="2" alphatest="blend">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">8</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_d.png" size="30,30" position="1151,601" zPosition="3" alphatest="blend">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">3,3</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <!-- TunerInfo end -->
+    <widget source="session.CurrentService" render="Picon" position="55,607" zPosition="4" size="100,60" transparent="1" alphatest="blend">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="240,602" size="75,28" font="Arial; 24" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1" zPosition="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <eLabel text="-" position="315,602" size="15,28" font="Arial; 24" halign="center" backgroundColor="background" transparent="1" foregroundColor="cyan1" zPosition="1" />
+    <widget source="session.Event_Now" render="Label" position="331,602" size="75,28" font="Arial; 24" halign="left" backgroundColor="background" transparent="1" foregroundColor="cyan1" zPosition="1">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="406,602" size="460,28" font="Regular; 24" halign="left" backgroundColor="background" transparent="1" foregroundColor="cyan1" zPosition="1">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="869,602" size="113,28" font="Regular; 24" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1" zPosition="1">
+      <convert type="EventTime">Remaining</convert>
+      <convert type="RemainingToText">InMinutes</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Progress" pixmap="Utopia_HD/progress_r.png" position="282,635" size="662,8" zPosition="7" transparent="1">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="240,649" size="75,28" font="Arial; 24" halign="right" backgroundColor="background" foregroundColor="grey2" transparent="1" noWrap="1" zPosition="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <eLabel text="-" position="315,649" size="15,28" font="Arial; 24" halign="center" backgroundColor="background" foregroundColor="grey2" transparent="1" noWrap="1" zPosition="1" />
+    <widget source="session.Event_Next" render="Label" position="330,649" size="75,28" font="Arial; 24" halign="left" backgroundColor="background" foregroundColor="grey2" transparent="1" noWrap="1" zPosition="1">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="405,649" size="460,28" font="Regular; 24" halign="left" backgroundColor="background" foregroundColor="grey2" transparent="1" zPosition="1">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="869,649" size="113,28" font="Regular; 24" halign="right" backgroundColor="background" foregroundColor="grey2" transparent="1" zPosition="1">
+      <convert type="EventTime">Duration</convert>
+      <convert type="ClockToText">InMinutes</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="170,602" size="55,20" font="Regular; 16" halign="center" backgroundColor="black" transparent="1">
+      <convert type="ServiceInfo">VideoWidth</convert>
+    </widget>
+    <eLabel text="x" position="192,626" size="10,20" font="Regular; 16" halign="center" backgroundColor="black" transparent="1" />
+    <widget source="session.CurrentService" render="Label" position="170,652" size="55,20" font="Regular; 16" halign="center" backgroundColor="black" transparent="1">
+      <convert type="ServiceInfo">VideoHeight</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="27,25" size="500,35" font="Regular; 28" valign="center" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ServiceName">Provider</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="600,35" size="605,35" backgroundColor="background" font="Regular; 28" halign="center" noWrap="1" transparent="1" zPosition="1">
+    <ePixmap pixmap="Utopia_HD/dey_bg.png" position="374,68" size="200,34" zPosition="1" alphatest="blend" />
+    <eLabel text="Now:" position="46,105" size="70,28" zPosition="2" font="Regular; 24" transparent="1" backgroundColor="background" foregroundColor="orange" />
+    <widget source="session.Event_Now" render="Label" position="116,105" size="458,28" font="Regular; 24" halign="left" backgroundColor="backtop" transparent="1">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="46,142" size="527,302" font="Regular; 24" zPosition="1" backgroundColor="backtop" foregroundColor="white" transparent="1">
+      <convert type="EventName">ExtendedDescription</convert>
+    </widget>
+    <ePixmap pixmap="Utopia_HD/dey_bg.png" position="46,455" size="200,34" zPosition="1" alphatest="blend" />
+    <widget source="global.CurrentTime" render="Label" position="64,457" size="165,28" font="LCD; 25" halign="center" backgroundColor="backtop" transparent="1" zPosition="3" foregroundColor="cyan1">
+      <convert type="ClockToText">Format:%A</convert>
+    </widget>
+    <ePixmap pixmap="Utopia_HD/clock_bg.png" position="497,455" size="200,34" zPosition="1" alphatest="blend" />
+    <widget source="global.CurrentTime" render="Label" position="523,457" size="60,28" font="LCD; 25" halign="center" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
+      <convert type="ClockToText">Format:%H</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="FixedLabel" text=":" font="LCD; 25" position="588,451" size="20,28" halign="center" zPosition="3" valign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1">
+      <convert type="BlinkingClockDots">
+      </convert>
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="615,457" size="60,28" font="LCD; 25" halign="center" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
+      <convert type="ClockToText">Format:%M</convert>
+    </widget>
+    <ePixmap pixmap="Utopia_HD/date_bg.png" position="950,455" size="200,34" zPosition="1" alphatest="blend" />
+    <widget source="global.CurrentTime" render="Label" position="979,457" size="145,28" font="LCD; 25" halign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
+      <convert type="ClockToText">Format:%d.%m.%Y</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="623,142" size="527,302" font="Regular; 24" zPosition="1" backgroundColor="backtop" transparent="1">
+      <convert type="EventName">ExtendedDescription</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="694,105" size="457,28" font="Regular; 24" halign="left" backgroundColor="backtop" transparent="1">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <eLabel text="Next:" position="623,105" size="70,28" zPosition="2" font="Regular; 24" foregroundColor="cyan1" transparent="1" backgroundColor="backtop" />
+    <ePixmap pixmap="Utopia_HD/dey_bg.png" position="621,68" size="200,34" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Label" position="562,25" size="605,35" backgroundColor="background" font="Regular; 28" halign="center" noWrap="1" transparent="1" zPosition="1">
       <convert type="ServiceName2">%S</convert>
       <convert type="ServiceName2">%F %p %Y %f %M %s</convert>
       <convert type="ServiceName2">%R</convert>
       <convert type="ConverterRotator">3</convert>
     </widget>
-    <widget source="global.CurrentTime" render="Label" position="157,475" size="165,28" font="Regular; 25" halign="center" backgroundColor="backtop" transparent="1" zPosition="3" foregroundColor="cyan1">
-      <convert type="ClockToText">Format:%A</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="563,465" size="60,40" font="DIGI; 35" halign="right" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
-      <convert type="ClockToText">Format:%H</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="664,465" size="60,40" font="DIGI; 35" halign="left" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
-      <convert type="ClockToText">Format:%M</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="FixedLabel" text=":" font="DIGI; 35" position="635,468" size="20,30" halign="center" zPosition="3" valign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1">
-      <convert type="BlinkingClockDots">
-      </convert>
-      <convert type="ConditionalShowHide">Blink</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="980,475" size="145,28" font="Regular; 25" halign="left" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
-      <convert type="ClockToText">Format:%d.%m.%Y</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="455,578" size="365,28" font="LCD; 27" valign="top" noWrap="1" backgroundColor="backtop" transparent="1" halign="center" foregroundColor="cyan1">
-      <convert type="ServiceName">Name</convert>
-    </widget>
-    <eLabel text="SNR:" position="467,563" size="35,18" font="LCD; 16" valign="center" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
-    <widget source="session.FrontendStatus" render="Label" position="496,561" zPosition="4" size="50,18" halign="center" font="LCD; 16" foregroundColor="cyan1" transparent="1" backgroundColor="black">
-      <convert type="FrontendInfo">SNR</convert>
-    </widget>
-    <ePixmap pixmap="Utopia_HD/snr_bg.png" position="500,561" size="110,20" zPosition="2" alphatest="blend" />
-    <widget source="session.FrontendStatus" render="Progress" position="500,561" size="110,20" zPosition="3" pixmap="Utopia_HD/snr.png" transparent="1">
-      <convert type="FrontendInfo">SNR</convert>
-    </widget>
-    <eLabel text="AGC:" position="679,563" size="35,18" font="LCD; 16" valign="center" foregroundColor="yellow" backgroundColor="background" transparent="1" />
-    <widget source="session.FrontendStatus" render="Label" position="707,561" zPosition="4" size="50,18" font="LCD; 16" halign="center" foregroundColor="yellow" backgroundColor="black" transparent="1">
-      <convert type="FrontendInfo">AGC</convert>
-    </widget>
-    <ePixmap pixmap="Utopia_HD/snr_bg.png" position="710,561" size="110,20" zPosition="2" alphatest="blend" />
-    <widget source="session.FrontendStatus" render="Progress" position="710,561" size="110,20" zPosition="3" pixmap="Utopia_HD/agc.png" transparent="1">
-      <convert type="FrontendInfo">AGC</convert>
-    </widget>
-    <widget source="session.CurrentService" render="MaggyPiconEmu" path="Utopia_HD/piconCam/" position="285,573" size="115,27" transparent="1" alphatest="blend" zPosition="3">
-      <convert type="MaggyEmuName">
-      </convert>
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Betacrypt.png" position="885,573" size="115,27" zPosition="5" transparent="1" alphatest="blend">
-      <convert type="MaggyCryptInfo">BetaEcm</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/DRE-crypt.png" position="885,573" size="115,27" zPosition="7" transparent="1" alphatest="blend">
-      <convert type="MaggyCryptInfo">DreamEcm</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/irdeto.png" position="885,573" size="115,27" zPosition="7" transparent="1" alphatest="blend">
-      <convert type="MaggyCryptInfo">IrdEcm</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Seca.png" position="885,572" size="115,27" zPosition="7" transparent="1" alphatest="blend">
-      <convert type="MaggyCryptInfo">SecaEcm</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Viaccess.png" position="885,573" size="115,27" zPosition="7" transparent="1" alphatest="blend">
-      <convert type="MaggyCryptInfo">ViaEcm</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Nagravision.png" position="885,573" size="115,27" zPosition="7" transparent="1" alphatest="blend">
-      <convert type="MaggyCryptInfo">NagraEcm</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Cryptoworks.png" position="885,573" size="115,27" zPosition="7" transparent="1" alphatest="blend">
-      <convert type="MaggyCryptInfo">CrwEcm</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/Videoguard.png" position="885,573" size="115,27" zPosition="7" transparent="1" alphatest="blend">
-      <convert type="MaggyCryptInfo">NdsEcm</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/conax.png" position="885,573" size="115,27" zPosition="7" transparent="1" alphatest="blend">
-      <convert type="MaggyCryptInfo">ConaxEcm</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/crypt/biss.png" position="885,573" size="115,27" zPosition="7" transparent="1" alphatest="blend">
-      <convert type="MaggyCryptInfo">BisEcm</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <eLabel text=" " position="675,540" size="90,20" font="Regular; 18" valign="center" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
-    <eLabel text="CH:" position="549,543" size="35,20" font="Regular; 16" valign="center" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
-    <ePixmap pixmap="Utopia_HD/icons/ico_dolby_off.png" position="125,537" size="70,25" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_dolby_on.png" position="125,537" size="70,25" zPosition="2" alphatest="blend">
-      <convert type="ServiceInfo">IsMultichannel</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap pixmap="Utopia_HD/icons/ico_format_off.png" position="205,537" size="70,25" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_format_on.png" position="205,537" size="70,25" zPosition="2" alphatest="blend">
-      <convert type="ServiceInfo">IsWidescreen</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap pixmap="Utopia_HD/icons/ico_txt_off.png" position="285,537" size="70,25" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_txt_on.png" position="285,537" size="70,25" zPosition="2" alphatest="blend">
-      <convert type="ServiceInfo">HasTelext</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap pixmap="Utopia_HD/icons/ico_hd_off.png" position="930,537" size="70,25" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_hd_on.png" position="930,537" size="70,25" zPosition="2" alphatest="blend">
-      <convert type="ServiceInfo">VideoWidth</convert>
-      <convert type="ValueRange">721,1980</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap pixmap="Utopia_HD/icons/ico_crypt_off.png" position="1010,537" size="70,25" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/ico_crypt_on.png" position="1010,537" size="70,25" zPosition="2" alphatest="blend">
-      <convert type="ServiceInfo">IsCrypted</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap pixmap="Utopia_HD/icons/ico_rec_off.png" position="1090,537" size="70,25" zPosition="1" alphatest="blend" />
-    <widget source="session.RecordState" render="Pixmap" pixmap="Utopia_HD/icons/ico_rec_on.png" position="1090,537" size="70,25" zPosition="2" alphatest="blend">
-      <convert type="ConditionalShowHide">Blink</convert>
-    </widget>
-    <ePixmap pixmap="Utopia_HD/icons/subtitle_off.png" position="1170,537" size="70,25" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="Utopia_HD/icons/subtitle_on.png" position="1170,537" zPosition="1" size="70,25" alphatest="blend">
-      <convert type="ServiceInfo">SubservicesAvailable</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="DVB-S" position="800,540" size="60,20" font="Regular; 16" backgroundColor="backtop" transparent="1" halign="left" foregroundColor="cyan1">
-      <convert type="FrontendInfo">TYPE</convert>
-      <convert type="ValueRange">0,0</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="DVB-C" position="800,540" size="60,20" font="Regular; 16" backgroundColor="backtop" transparent="1" halign="left" foregroundColor="cyan1">
-      <convert type="FrontendInfo">TYPE</convert>
-      <convert type="ValueRange">1,1</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="DVB-T" position="800,540" size="60,20" font="Regular; 16" backgroundColor="backtop" transparent="1" halign="left" foregroundColor="cyan1">
-      <convert type="FrontendInfo">TYPE</convert>
-      <convert type="ValueRange">2,2</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <!--TUNER STATUS A -->
-    <ePixmap alphatest="blend" pixmap="Utopia_HD/tuner/icon_a_no.png" size="30,30" position="1100,615" zPosition="1" />
-    <widget source="session.TunerInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_a_akt.png" size="30,30" position="1100,615" zPosition="2" alphatest="blend">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">1</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_a.png" size="30,30" position="1100,615" zPosition="3" alphatest="blend">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">0,0</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <!--TUNER STATUS B  -->
-    <ePixmap alphatest="blend" pixmap="Utopia_HD/tuner/icon_b_no.png" size="30,30" position="1155,615" zPosition="1" />
-    <widget source="session.TunerInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_b_akt.png" size="30,30" position="1155,615" zPosition="2" alphatest="blend">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">2</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_b.png" size="30,30" position="1155,615" zPosition="3" alphatest="blend">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">1,1</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <!-- TUNER STATUS C -->
-    <ePixmap alphatest="blend" pixmap="Utopia_HD/tuner/icon_c_no.png" size="30,30" position="1100,655" zPosition="1" />
-    <widget source="session.TunerInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_c_akt.png" size="30,30" position="1100,655" zPosition="2" alphatest="blend">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">4</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_c.png" size="30,30" position="1100,655" zPosition="3" alphatest="blend">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">2,2</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <!-- TUNER STATUS D -->
-    <ePixmap alphatest="blend" pixmap="Utopia_HD/tuner/icon_d_no.png" size="30,30" position="1155,655" zPosition="1" />
-    <widget source="session.TunerInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_d_akt.png" size="30,30" position="1155,655" zPosition="2" alphatest="blend">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">8</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="Pixmap" pixmap="Utopia_HD/tuner/icon_d.png" size="30,30" position="1155,655" zPosition="3" alphatest="blend">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">3,3</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <!-- TunerInfo end -->
-    <widget source="session.CurrentService" render="Picon" position="64,618" zPosition="4" size="100,60" transparent="1" alphatest="blend">
-      <convert type="ServiceName">Reference</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Label" position="253,612" size="75,28" font="Arial; 24" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1">
-      <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <eLabel text="-" position="327,612" size="15,28" font="Arial; 24" halign="center" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
-    <widget source="session.Event_Now" render="Label" position="342,612" size="75,28" font="Arial; 24" halign="left" backgroundColor="background" transparent="1" foregroundColor="cyan1">
-      <convert type="EventTime">EndTime</convert>
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Label" position="417,612" size="530,28" font="Regular; 24" halign="left" backgroundColor="background" transparent="1" foregroundColor="cyan1">
-      <convert type="EventName">Name</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Label" position="940,612" size="113,28" font="Regular; 24" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1">
-      <convert type="EventTime">Remaining</convert>
-      <convert type="RemainingToText">InMinutes</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Progress" pixmap="Utopia_HD/progress_r.png" position="303,646" size="708,8" zPosition="7" transparent="1">
-      <convert type="EventTime">Progress</convert>
-    </widget>
-    <widget source="session.Event_Next" render="Label" position="253,661" size="75,28" font="Arial; 24" halign="right" backgroundColor="background" foregroundColor="grey2" transparent="1" noWrap="1">
-      <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <eLabel text="-" position="327,661" size="15,28" font="Arial; 24" halign="center" backgroundColor="background" foregroundColor="grey2" transparent="1" noWrap="1" />
-    <widget source="session.Event_Next" render="Label" position="342,661" size="75,28" font="Arial; 24" halign="left" backgroundColor="background" foregroundColor="grey2" transparent="1" noWrap="1">
-      <convert type="EventTime">EndTime</convert>
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="session.Event_Next" render="Label" position="417,661" size="530,28" font="Regular; 24" halign="left" backgroundColor="background" foregroundColor="grey2" transparent="1">
-      <convert type="EventName">Name</convert>
-    </widget>
-    <widget source="session.Event_Next" render="Label" position="940,661" size="113,28" font="Regular; 24" halign="right" backgroundColor="background" foregroundColor="grey2" transparent="1">
-      <convert type="EventTime">Duration</convert>
-      <convert type="ClockToText">InMinutes</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="420,540" size="55,20" font="Regular; 16" halign="right" backgroundColor="black" transparent="1" foregroundColor="cyan1">
-      <convert type="ServiceInfo">VideoWidth</convert>
-    </widget>
-    <eLabel text="x" position="475,540" size="10,20" font="Regular; 16" halign="center" backgroundColor="black" transparent="1" foregroundColor="cyan1" />
-    <widget source="session.CurrentService" render="Label" position="485,540" size="55,20" font="Regular; 16" halign="left" backgroundColor="black" transparent="1" foregroundColor="cyan1">
-      <convert type="ServiceInfo">VideoHeight</convert>
-    </widget>
-    <eLabel text="Now:" position="90,115" size="70,28" zPosition="2" font="Regular; 24" transparent="1" backgroundColor="background" foregroundColor="orange" />
-    <eLabel text="Next:" position="665,115" size="70,28" zPosition="2" font="Regular; 24" foregroundColor="cyan1" transparent="1" backgroundColor="backtop" />
-    <widget source="session.Event_Now" render="Label" position="160,115" size="458,28" font="Regular; 24" halign="left" backgroundColor="backtop" transparent="1">
-      <convert type="EventName">Name</convert>
-    </widget>
-    <widget source="session.Event_Next" render="Label" position="735,115" size="457,28" font="Regular; 24" halign="left" backgroundColor="backtop" transparent="1">
-      <convert type="EventName">Name</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Label" position="92,153" size="527,302" font="Regular; 24" zPosition="1" backgroundColor="backtop" foregroundColor="white" transparent="1">
-      <convert type="EventName">ExtendedDescription</convert>
-    </widget>
-    <widget source="session.Event_Next" render="Label" position="667,153" size="527,302" font="Regular; 24" zPosition="1" backgroundColor="backtop" transparent="1">
-      <convert type="EventName">ExtendedDescription</convert>
-    </widget>
+    <ePixmap position="8,10" zPosition="-1" size="1180,500" pixmap="Utopia_HD/back.png" />
   </screen>
   <!-- Ecm Info -->
   <screen name="EcmInfoScreen" flags="wfNoBorder" position="600,150" size="600, 80" zPosition="1" backgroundColor="transparent">
@@ -2270,18 +2263,18 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="848,596" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="Utopia_HD/icons/setup.png" transparent="1" alphatest="blend" />
   </screen>
-  <screen name="MoviePlayer" position="center,535" size="1280,200" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
+  <screen name="MoviePlayer" position="35,525" size="1280,175" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-1" size="1280,200" pixmap="Utopia_HD/infobar2.png" />
-    <widget source="session.CurrentService" render="Label" position="442,8" size="400,28" font="Regular; 24" valign="top" noWrap="1" backgroundColor="black" transparent="1">
+    <widget source="session.CurrentService" render="Label" position="410,12" size="379,28" font="LCD; 22" valign="center" noWrap="1" backgroundColor="black" transparent="1" halign="center" foregroundColor="unc6e0f3">
       <convert type="ServiceName">Name</convert>
     </widget>
-    <widget source="global.CurrentTime" render="Label" position="1160,4" size="75,25" font="Regular;23" halign="left" backgroundColor="backtop" transparent="1">
+    <widget source="global.CurrentTime" render="Label" position="155,9" size="75,28" font="LCD; 25" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
-    <widget source="global.CurrentTime" render="Label" position="240,4" size="110,22" font="Regular;18" halign="right" backgroundColor="backtop" foregroundColor="grey" transparent="1">
+    <widget source="global.CurrentTime" render="Label" position="23,9" size="110,28" font="LCD; 25" halign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1">
       <convert type="ClockToText">Format:%d.%m.%Y</convert>
     </widget>
-    <widget source="global.CurrentTime" render="Label" position="1225,4" size="35,25" font="Regular;17" valign="top" halign="left" backgroundColor="grey" transparent="1">
+    <widget source="global.CurrentTime" render="Label" position="235,12" size="35,28" font="Regular; 17" valign="top" halign="left" backgroundColor="grey" transparent="1" foregroundColor="unc6e0f3">
       <convert type="ClockToText">Format::%S</convert>
     </widget>
     <ePixmap pixmap="Utopia_HD/icons/ico_dolby_off.png" position="895,10" size="70,25" zPosition="1" alphatest="blend" />
@@ -2300,11 +2293,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="ValueRange">721,1980</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" font="Regular;18" position="570,40" size="55,18" halign="right" foregroundColor="yellow" backgroundColor="black" transparent="1">
+    <widget source="session.CurrentService" render="Label" font="Regular;18" position="545,51" size="55,18" halign="right" foregroundColor="yellow" backgroundColor="black" transparent="1">
       <convert type="ServiceInfo">VideoWidth</convert>
     </widget>
-    <eLabel text="x" font="Regular;18" position="625,40" size="15,18" halign="center" foregroundColor="yellow" backgroundColor="black" transparent="1" />
-    <widget source="session.CurrentService" render="Label" font="Regular;18" position="640,40" size="55,18" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1">
+    <eLabel text="x" font="Regular;18" position="600,51" size="15,18" halign="center" foregroundColor="yellow" backgroundColor="black" transparent="1" />
+    <widget source="session.CurrentService" render="Label" font="Regular;18" position="615,51" size="55,18" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1">
       <convert type="ServiceInfo">VideoHeight</convert>
     </widget>
     <widget source="session.RecordState" render="Pixmap" pixmap="Utopia_HD/icons/ico_rec_on.png" position="882,10" size="33,20" zPosition="3" alphatest="blend">
@@ -2713,37 +2706,37 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <eLabel text="Network test..." position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget name="Adaptertext" position=" 70,120" size="400,25" zPosition="1" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget name="Adapter" position=" 70,150" size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="background" transparent="1" />
-    <widget name="AdapterInfo_OK" position="535,136" size=" 30,30" pixmap="Utopia_HD/buttons/green.png" zPosition="2" alphatest="blend" />
+    <widget name="AdapterInfo_OK" position="515,136" size=" 30,30" pixmap="Utopia_HD/buttons/green.png" zPosition="2" alphatest="blend" />
     <widget name="AdapterInfo_Text" position="550,131" size="200,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,grey,#ffffff" backgroundColor="background" transparent="1" />
-    <widget name="AdapterInfo" position="550,130" size="200,35" pixmaps="Utopia_HD/menu/lan-seloff.png,Utopia_HD/menu/lan-sel.png" zPosition="1" alphatest="blend" />
+    <widget name="AdapterInfo" position="550,130" size="200,35" pixmaps="Utopia_HD/menu/lan-seloff.png,Utopia_HD/menu/lan-sel.png" zPosition="1" alphatest="blend" transparent="1" />
     <eLabel position=" 70,185" size="670,2" backgroundColor="darkgrey" />
     <widget name="Networktext" position=" 70,200" size="400,25" zPosition="1" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget name="Network" position=" 70,230" size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="background" transparent="1" />
-    <widget name="NetworkInfo_Check" position="535,216" size=" 30,30" pixmaps="Utopia_HD/buttons/green.png,Utopia_HD/buttons/red.png" zPosition="2" alphatest="blend" />
+    <widget name="NetworkInfo_Check" position="515,216" size=" 30,30" pixmaps="Utopia_HD/buttons/green.png,Utopia_HD/buttons/red.png" zPosition="2" alphatest="blend" />
     <widget name="NetworkInfo_Text" position="550,211" size="200,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,grey,#ffffff" backgroundColor="background" transparent="1" />
-    <widget name="NetworkInfo" position="550,210" size="200,35" pixmaps="Utopia_HD/menu/lan-seloff.png,Utopia_HD/menu/lan-sel.png" zPosition="1" alphatest="blend" />
+    <widget name="NetworkInfo" position="550,210" size="200,35" pixmaps="Utopia_HD/menu/lan-seloff.png,Utopia_HD/menu/lan-sel.png" zPosition="1" alphatest="blend" transparent="1" />
     <eLabel position=" 70,265" size="670,2" backgroundColor="darkgrey" />
     <widget name="Dhcptext" position=" 70,280" size="400,25" zPosition="1" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget name="Dhcp" position=" 70,310" size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="background" transparent="1" />
-    <widget name="DhcpInfo_Check" position="535,296" size=" 30,30" pixmaps="Utopia_HD/buttons/green.png,Utopia_HD/buttons/red.png" zPosition="2" alphatest="blend" />
+    <widget name="DhcpInfo_Check" position="515,296" size=" 30,30" pixmaps="Utopia_HD/buttons/green.png,Utopia_HD/buttons/red.png" zPosition="2" alphatest="blend" />
     <widget name="DhcpInfo_Text" position="550,290" size="200,35" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,grey,#ffffff" backgroundColor="background" transparent="1" />
     <widget name="DhcpInfo" position="550,290" size="200,35" pixmaps="Utopia_HD/menu/lan-seloff.png,Utopia_HD/menu/lan-sel.png" zPosition="1" alphatest="blend" />
     <eLabel position=" 70,345" size="670,2" backgroundColor="darkgrey" />
     <widget name="IPtext" position=" 70,360" size="400,25" zPosition="1" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget name="IP" position=" 70,390" size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="background" transparent="1" />
-    <widget name="IPInfo_Check" position="535,376" size=" 30,30" pixmaps="Utopia_HD/buttons/green.png,Utopia_HD/buttons/red.png" zPosition="2" alphatest="blend" />
+    <widget name="IPInfo_Check" position="515,376" size=" 30,30" pixmaps="Utopia_HD/buttons/green.png,Utopia_HD/buttons/red.png" zPosition="2" alphatest="blend" />
     <widget name="IPInfo_Text" position="550,371" size="200,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,grey,#ffffff" backgroundColor="background" transparent="1" />
     <widget name="IPInfo" position="550,370" size="200,35" pixmaps="Utopia_HD/menu/lan-seloff.png,Utopia_HD/menu/lan-sel.png" zPosition="1" alphatest="blend" />
     <eLabel position=" 70,425" size="670,2" backgroundColor="darkgrey" />
     <widget name="DNStext" position=" 70,440" size="400,25" zPosition="1" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget name="DNS" position=" 70,470" size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="background" transparent="1" />
-    <widget name="DNSInfo_Check" position="535,456" size=" 30,30" pixmaps="Utopia_HD/buttons/green.png,Utopia_HD/buttons/red.png" zPosition="2" alphatest="blend" />
+    <widget name="DNSInfo_Check" position="515,456" size=" 30,30" pixmaps="Utopia_HD/buttons/green.png,Utopia_HD/buttons/red.png" zPosition="2" alphatest="blend" />
     <widget name="DNSInfo_Text" position="550,451" size="200,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,grey,#ffffff" backgroundColor="background" transparent="1" />
     <widget name="DNSInfo" position="550,450" size="200,35" pixmaps="Utopia_HD/menu/lan-seloff.png,Utopia_HD/menu/lan-sel.png" zPosition="1" alphatest="blend" />
     <eLabel position=" 70,505" size="700,2" backgroundColor="darkgrey" />
     <widget name="EditSettings_Text" position="450,531" size="300,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="grey,grey,#ffffff" backgroundColor="background" transparent="1" />
     <widget name="EditSettingsButton" position="450,530" size="300,35" pixmaps="Utopia_HD/menu/lan-seloff.png,Utopia_HD/menu/lan-sel300.png" zPosition="2" alphatest="blend" />
-    <widget name="InfoText" position="70,113" size="700,387" zPosition="25" font="Regular;22" valign="center" halign="center" />
+    <widget name="InfoText" position="70,113" size="700,387" zPosition="25" font="Regular;22" valign="center" halign="center" transparent="0" />
     <ePixmap pixmap="Utopia_HD/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="Utopia_HD/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="Utopia_HD/buttons/yellow.png" position="650,670" size="30,30" alphatest="blend" />
@@ -2959,7 +2952,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
-    <widget name="tabbar" position="100,95" size="450,35" zPosition="1" pixmaps="Utopia_HD/epg_now.png,Utopia_HD/epg_next.png,Utopia_HD/epg_more.png" alphatest="blend" />
+    <widget name="tabbar" position="101,95" size="450,35" zPosition="1" pixmaps="Utopia_HD/epg_now.png,Utopia_HD/epg_next.png,Utopia_HD/epg_more.png" alphatest="blend" transparent="1" />
     <widget source="plugins" render="Label" position="100,98" size="150,25" zPosition="3" font="Regular;19" halign="center" foregroundColor="yellow" backgroundColor="background" transparent="1" />
     <widget source="extensions" render="Label" position="250,98" size="150,25" zPosition="3" font="Regular;19" halign="center" foregroundColor="yellow" backgroundColor="background" transparent="1" />
     <widget source="eventinfo" render="Label" position="400,98" size="150,25" zPosition="3" font="Regular;19" halign="center" foregroundColor="yellow" backgroundColor="background" transparent="1" />
@@ -4155,7 +4148,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="Utopia_HD/buttons/menu.png" position="832,357" size="30,30" alphatest="blend" />
     <widget source="hint" render="Label" position="869,358" size="350,25" font="Regular;20" halign="left" backgroundColor="background" transparent="1" />
     <widget source="title_label" render="Label" position="70,115" size="700,56" font="Regular;23" backgroundColor="background" transparent="1" />
-    <widget name="error_label" position="65,98" size="710,440" zPosition="3" font="Regular;20" backgroundColor="background" />
+    <widget name="error_label" position="65,98" size="710,440" zPosition="3" font="Regular;20" backgroundColor="background" transparent="1" />
     <eLabel position="70,185" size="700,2" backgroundColor="grey" />
     <widget source="titles" render="Listbox" position="70,195" size="700,360" scrollbarMode="showOnDemand" transparent="1">
       <convert type="TemplatedMultiContent">
@@ -4921,7 +4914,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <eLabel text="YouTube Add Playlist Dialog" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
-    <widget name="config" position="70,104" size="700,530" scrollbarMode="showOnDemand" />
+    <widget name="config" position="70,104" size="700,530" scrollbarMode="showOnDemand" transparent="1" />
     <ePixmap name="red" position="70,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/red.png" transparent="1" alphatest="on" />
     <ePixmap name="green" position="250,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/green.png" transparent="1" alphatest="on" />
     <ePixmap name="yellow" position="430,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/yellow.png" transparent="1" alphatest="on" />
@@ -4944,7 +4937,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <eLabel text="YouTube Entry Context Menu" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
-    <widget name="menu" position="70,104" size="700,530" scrollbarMode="showOnDemand" />
+    <widget name="menu" position="70,104" size="700,530" scrollbarMode="showOnDemand" transparent="1" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="Utopia_HD/icons/setup.png" transparent="1" alphatest="blend" />
   </screen>
   <screen name="YouTubeVideoDetailsScreen" position="0,0" size="1280,720" title="Video Details" transparent="0" flags="wfNoBorder">
@@ -4962,26 +4955,26 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="video_thumbnail_1" position="80,310" size="130,97" alphatest="on" />
     <widget name="video_thumbnail_2" position="80,410" size="130,97" alphatest="on" />
     <widget name="video_thumbnail_3" position="80,510" size="130,97" alphatest="on" />
-    <widget name="label_video_duration" position="250,210" size="95,20" font="Regular;20" halign="right" />
-    <widget name="video_duration" position="350,210" size="90,20" valign="left" font="Regular;20" />
-    <widget name="label_video_rating_average" position="445,210" size="95,20" font="Regular;20" halign="right" />
+    <widget name="label_video_duration" position="250,210" size="95,20" font="Regular;20" halign="right" transparent="1" />
+    <widget name="video_duration" position="350,210" size="90,20" valign="left" font="Regular;20" transparent="1" />
+    <widget name="label_video_rating_average" position="445,210" size="95,20" font="Regular;20" halign="right" transparent="1" />
     <widget name="starsbg" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/YouTubePlayer/starsbar_empty.png" position="545,210" zPosition="0" size="100,20" transparent="1" alphatest="on" />
     <widget name="stars" position="545,210" size="100,20" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/YouTubePlayer/starsbar_filled.png" transparent="1" />
-    <widget name="label_video_statistics_view_count" position="250,230" size="95,20" font="Regular;20" halign="right" />
-    <widget name="video_statistics_view_count" position="350,230" size="90,20" valign="left" font="Regular;20" />
-    <widget name="label_video_numraters" position="445,230" size="95,20" font="Regular;20" halign="right" />
-    <widget name="video_numraters" position="545,230" size="105,20" valign="left" font="Regular;20" />
-    <widget name="label_video_statistics_favorite_count" position="250,250" size="95,20" font="Regular;20" halign="right" />
-    <widget name="video_statistics_favorite_count" position="350,250" size="90,20" valign="left" font="Regular;20" />
-    <widget name="label_video_published_on" position="445,250" size="95,20" font="Regular;20" halign="right" />
-    <widget name="video_published_on" position="545,250" size="105,20" valign="left" font="Regular;20" />
-    <widget name="label_video_author" position="250,270" size="95,20" font="Regular;20" halign="right" />
-    <widget name="video_author" position="350,270" size="300,20" valign="left" font="Regular;20" />
-    <widget name="label_video_category" position="250,290" size="95,20" font="Regular;20" halign="right" />
-    <widget name="video_category" position="350,290" size="300,20" valign="left" font="Regular;20" />
-    <widget name="label_video_tags" position="250,310" size="95,20" font="Regular;20" halign="right" />
-    <widget name="video_tags" position="350,310" size="300,60" valign="left" font="Regular;20" />
-    <widget name="video_description" position="350,390" size="400,210" font="Regular;20" />
+    <widget name="label_video_statistics_view_count" position="250,230" size="95,20" font="Regular;20" halign="right" transparent="1" />
+    <widget name="video_statistics_view_count" position="350,230" size="90,20" valign="left" font="Regular;20" transparent="1" />
+    <widget name="label_video_numraters" position="445,230" size="95,20" font="Regular;20" halign="right" transparent="1" />
+    <widget name="video_numraters" position="545,230" size="105,20" valign="left" font="Regular;20" transparent="1" />
+    <widget name="label_video_statistics_favorite_count" position="250,250" size="95,20" font="Regular;20" halign="right" transparent="1" />
+    <widget name="video_statistics_favorite_count" position="350,250" size="90,20" valign="left" font="Regular;20" transparent="1" />
+    <widget name="label_video_published_on" position="445,250" size="95,20" font="Regular;20" halign="right" transparent="1" />
+    <widget name="video_published_on" position="545,250" size="105,20" valign="left" font="Regular;20" transparent="1" />
+    <widget name="label_video_author" position="250,270" size="95,20" font="Regular;20" halign="right" transparent="1" />
+    <widget name="video_author" position="350,270" size="300,20" valign="left" font="Regular;20" transparent="1" />
+    <widget name="label_video_category" position="250,290" size="95,20" font="Regular;20" halign="right" transparent="1" />
+    <widget name="video_category" position="350,290" size="300,20" valign="left" font="Regular;20" transparent="1" />
+    <widget name="label_video_tags" position="251,310" size="95,20" font="Regular;20" halign="right" transparent="1" />
+    <widget name="video_tags" position="350,310" size="300,60" valign="left" font="Regular;20" transparent="1" />
+    <widget name="video_description" position="350,390" size="400,210" font="Regular;20" transparent="1" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="Utopia_HD/icons/setup.png" transparent="1" alphatest="blend" />
   </screen>
   <screen name="YouTubeListScreen" position="0,0" size="1280,720" title="YouTube Videos" transparent="0" flags="wfNoBorder">
@@ -4996,11 +4989,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <eLabel text="YouTube List Screen" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="label_total_results" position="70,120" size="160,30" font="Regular;20" halign="right" />
-    <widget name="total_results" position="250,120" size="110,30" font="Regular;20" />
-    <widget name="label_currently_shown" position="380,120" size="110,30" font="Regular;20" halign="right" />
-    <widget name="currently_shown" position="510,120" size="160,30" font="Regular;20" />
-    <widget name="list" position="70,170" size="700,470" scrollbarMode="showOnDemand" />
+    <widget name="label_total_results" position="70,120" size="160,30" font="Regular;20" halign="right" transparent="1" />
+    <widget name="total_results" position="250,120" size="110,30" font="Regular;20" transparent="1" />
+    <widget name="label_currently_shown" position="380,120" size="110,30" font="Regular;20" halign="right" transparent="1" />
+    <widget name="currently_shown" position="510,120" size="160,30" font="Regular;20" transparent="1" />
+    <widget name="list" position="70,170" size="700,470" scrollbarMode="showOnDemand" transparent="1" />
     <ePixmap name="key_red" position="70,670" zPosition="1" size="30,30" pixmap="Utopia_HD/buttons/red.png" transparent="1" alphatest="on" />
     <ePixmap name="key_green" position="310,670" zPosition="1" size="30,30" pixmap="Utopia_HD/buttons/green.png" transparent="1" alphatest="on" />
     <widget name="red" position="105,672" size="200,25" font="Regular;19" valign="center" halign="center" transparent="1" zPosition="2" />
@@ -5019,7 +5012,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <eLabel text="YouTube Playlist Screen" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="list" position="70,104" size="700,530" scrollbarMode="showOnDemand" />
+    <widget name="list" position="70,104" size="700,530" scrollbarMode="showOnDemand" transparent="1" />
     <ePixmap name="key_red" position="70,670" zPosition="1" size="30,30" pixmap="Utopia_HD/buttons/red.png" transparent="1" alphatest="on" />
     <ePixmap name="key_green" position="310,670" zPosition="1" size="30,30" pixmap="Utopia_HD/buttons/green.png" transparent="1" alphatest="on" />
     <widget name="red" position="105,672" size="200,25" font="Regular;19" valign="center" halign="center" transparent="1" zPosition="2" />
@@ -5038,7 +5031,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <eLabel text="YouTube Search Dialog" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="config" position="70,104" size="700,530" scrollbarMode="showOnDemand" />
+    <widget name="config" position="70,104" size="700,530" scrollbarMode="showOnDemand" transparent="1" />
     <ePixmap name="red" position="70,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/red.png" transparent="1" alphatest="on" />
     <ePixmap name="green" position="250,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/green.png" transparent="1" alphatest="on" />
     <ePixmap name="yellow" position="430,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/yellow.png" transparent="1" alphatest="on" />
@@ -5060,7 +5053,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
-    <widget source="menu" render="Listbox" position="70,104" size="700,530" scrollbarMode="showOnDemand">
+    <widget source="menu" render="Listbox" position="70,104" size="700,530" scrollbarMode="showOnDemand" transparent="1">
       <convert type="StringList" />
     </widget>
     <eLabel text="YouTube Standard-Feeds" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
@@ -5078,7 +5071,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <eLabel text="Edit YouTube User-Profiles" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="config" position="70,104" size="700,530" scrollbarMode="showOnDemand" />
+    <widget name="config" position="70,104" size="700,530" scrollbarMode="showOnDemand" transparent="1" />
     <ePixmap name="red" position="70,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/red.png" transparent="1" alphatest="on" />
     <ePixmap name="green" position="250,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/green.png" transparent="1" alphatest="on" />
     <ePixmap name="yellow" position="430,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/yellow.png" transparent="1" alphatest="on" />
@@ -5101,8 +5094,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <eLabel text="YouTube User-Profiles" position="65,16" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="label_info" position="70,104" size="700,42" halign="center" valign="center" font="Regular;21" />
-    <widget name="userlist" position="70,165" size="700,460" scrollbarMode="showOnDemand" />
+    <widget name="label_info" position="70,104" size="700,42" halign="center" valign="center" font="Regular;21" transparent="1" />
+    <widget name="userlist" position="70,165" size="700,460" scrollbarMode="showOnDemand" transparent="1" />
     <ePixmap name="red" position="70,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/red.png" transparent="1" alphatest="on" />
     <ePixmap name="green" position="250,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/green.png" transparent="1" alphatest="on" />
     <ePixmap name="yellow" position="430,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/yellow.png" transparent="1" alphatest="on" />
@@ -5425,8 +5418,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <widget name="headertext" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="statustext" position="center,99" size="1140,400" zPosition="1" font="Regular;22" halign="center" valign="center" backgroundColor="black" transparent="0" />
-    <widget name="list" position="center,99" size="1140,400" zPosition="2" scrollbarMode="showOnDemand" backgroundColor="black" transparent="0" />
+    <widget name="statustext" position="center,99" size="1140,400" zPosition="1" font="Regular;22" halign="center" valign="center" backgroundColor="black" transparent="1" />
+    <widget name="list" position="center,99" size="1140,400" zPosition="2" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" />
     <eLabel position=" 70,510" size="1140,2" backgroundColor="grey" />
     <widget name="cover" position=" 70,515" size="110,110" backgroundColor="background" alphatest="blend" />
     <widget name="titel" position="210,520" size="880,25" font="Regular;20" backgroundColor="background" transparent="1" />
@@ -5750,7 +5743,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <eLabel text="IPKGSource" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="text" position="65,98" size="718,25" zPosition="3" font="Regular;22" foregroundColor="white" backgroundColor="background" />
+    <widget name="text" position="65,98" size="718,25" zPosition="3" font="Regular;22" foregroundColor="white" backgroundColor="background" transparent="1" />
     <ePixmap pixmap="Utopia_HD/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="Utopia_HD/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
     <widget source="key_red" render="Label" position="105,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
@@ -6301,8 +6294,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="Title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <widget source="job_name" render="Label" position="70,104" size="700,60" font="Regular;28" backgroundColor="background" transparent="1" />
     <widget source="job_task" render="Label" position="70,190" size="700,27" font="Regular;24" backgroundColor="background" transparent="1" />
-    <widget source="job_progress" render="Progress" position="70,242" size="710,32" borderWidth="2" backgroundColor="background" />
-    <widget source="job_progress" render="Label" position="70,242" size="700,30" font="Regular;27" backgroundColor="background" zPosition="2" halign="center" transparent="1">
+    <widget source="job_progress" render="Progress" position="70,242" size="710,32" borderWidth="2" backgroundColor="background" transparent="1" />
+    <widget source="job_progress" render="Label" position="70,243" size="700,30" font="Regular;27" backgroundColor="background" zPosition="2" halign="center" transparent="1">
       <convert type="ProgressToText" />
     </widget>
     <widget source="job_status" render="Label" position="70,295" size="480,26" font="Regular;23" foregroundColor="yellow" backgroundColor="background" transparent="1" />
@@ -7082,8 +7075,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <eLabel position="70,270" size="670,2" backgroundColor="grey" />
     <eLabel position="70,545" size="670,2" backgroundColor="grey" />
     <eLabel text="FPGA Upgrade" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="name" position="70,120" size="670,40" font="Regular;24" halign="left" valign="bottom" />
-    <widget name="slider" position="70,200" size="670,40" backgroundColor="background" />
+    <widget name="name" position="70,120" size="670,40" font="Regular;24" halign="left" valign="bottom" transparent="1" />
+    <widget name="slider" position="70,200" size="670,40" backgroundColor="background" transparent="1" />
     <widget name="status" position="70,280" zPosition="1" size="670,40" font="Regular;24" halign="left" backgroundColor="background" transparent="1" />
     <widget source="info" render="Label" position="70,560" zPosition="1" size="670,40" font="Regular;24" halign="left" backgroundColor="background" transparent="1" />
     <ePixmap position="943,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
@@ -7442,7 +7435,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="lab1" position="65,98" size="100,24" font="Regular;20" valign="center" transparent="1" />
     <widget name="labdisabled" position="184,98" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="red" zPosition="1" />
     <widget name="labactive" position="184,98" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="green" zPosition="2" />
-    <widget name="lab2" position="392,98" size="150,24" font="Regular;20" valign="center" transparent="0" />
+    <widget name="lab2" position="392,98" size="150,24" font="Regular;20" valign="center" transparent="1" />
     <widget name="labstop" position="680,98" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="red" zPosition="1" />
     <widget name="labrun" position="680,98" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="green" zPosition="2" />
     <widget name="config" position="65,98" scrollbarMode="showOnDemand" size="715,540" transparent="1" />
@@ -8291,7 +8284,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="Title" render="Label" position="65,17" size="730,43" font="Regular;35" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <ePixmap pixmap="Utopia_HD/buttons/red.png" position="70,670" size="30,30" alphatest="blend" />
     <widget source="key_red" render="Label" position="105,672" zPosition="1" size="140,25" font="Regular;20" halign="center" valign="center" backgroundColor="black" transparent="1" />
-    <widget name="info" position="70,104" size="700,45" halign="center" valign="center" font="Regular; 22" />
+    <widget name="info" position="70,104" size="700,45" halign="center" valign="center" font="Regular; 22" transparent="1" />
     <widget name="changelog" position="70,170" size="700,455" halign="top" valign="left" font="Regular;20" transparent="1" />
     <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="Utopia_HD/icons/setup.png" transparent="1" alphatest="blend" />
@@ -8637,7 +8630,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <widget source="Title" render="Label" position="65,17" size="730,43" font="Regular;35" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
-    <eLabel position="70,104" zPosition="1" size="700,530" backgroundColor="black" />
+    <eLabel position="70,104" zPosition="1" size="700,530" backgroundColor="black" transparent="1" />
     <ePixmap position="635,670" zPosition="2" size="30,30" pixmap="Utopia_HD/buttons/key_info.png" alphatest="blend" />
     <widget name="picture" position="160,112" zPosition="2" size="550,500" />
     <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
@@ -8654,7 +8647,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <widget source="Title" render="Label" position="65,17" size="730,43" font="Regular;35" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
-    <eLabel position="70,104" zPosition="1" size="700,530" backgroundColor="black" />
+    <eLabel position="70,104" zPosition="1" size="700,530" backgroundColor="black" transparent="1" />
     <ePixmap position="300,670" zPosition="2" size="30,30" pixmap="Utopia_HD/buttons/key_left.png" alphatest="blend" />
     <ePixmap position="428,670" zPosition="2" size="30,30" pixmap="Utopia_HD/buttons/key_exit.png" alphatest="blend" />
     <ePixmap position="555,670" zPosition="2" size="30,30" pixmap="Utopia_HD/buttons/key_right.png" alphatest="blend" />
@@ -8676,7 +8669,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="hmenu" position="65,98" zPosition="1" size="700,325" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="thumbnail" position="70,445" zPosition="2" size="300,150" />
     <widget name="thumbland" position="470,444" zPosition="2" size="300,150" />
-    <widget name="statuslabel" position="70,610" zPosition="2" size="710,25" font="Regular; 20" halign="left" />
+    <widget name="statuslabel" position="70,610" zPosition="2" size="710,25" font="Regular; 20" halign="left" transparent="1" />
     <ePixmap position="570,670" zPosition="2" size="30,30" pixmap="Utopia_HD/buttons/key_menu.png" alphatest="blend" />
     <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="Utopia_HD/icons/setup.png" transparent="1" alphatest="blend" />
@@ -9151,7 +9144,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="key_green" render="Label" position="285,672" zPosition="1" size="140,25" valign="center" halign="center" font="Regular;21" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
     <widget source="key_yellow" render="Label" position="465,672" zPosition="1" size="140,25" valign="center" halign="center" font="Regular;21" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
     <widget source="key_blue" render="Label" position="645,672" zPosition="1" size="140,25" valign="center" halign="center" font="Regular;21" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
-    <widget name="tabbar" position="100,104" size="450,35" zPosition="1" pixmaps="Utopia_HD/epg_now.png,Utopia_HD/epg_next.png,Utopia_HD/epg_more.png" alphatest="blend" />
+    <widget name="tabbar" position="100,104" size="450,35" zPosition="1" pixmaps="Utopia_HD/epg_now.png,Utopia_HD/epg_next.png,Utopia_HD/epg_more.png" alphatest="blend" transparent="1" />
     <widget source="plugins" render="Label" position="100,110" size="150,25" zPosition="3" font="Regular;19" halign="center" foregroundColor="yellow" backgroundColor="background" transparent="1" />
     <widget source="extensions" render="Label" position="250,110" size="150,25" zPosition="3" font="Regular;19" halign="center" foregroundColor="yellow" backgroundColor="background" transparent="1" />
     <widget source="eventinfo" render="Label" position="400,110" size="150,25" zPosition="3" font="Regular;19" halign="center" foregroundColor="yellow" backgroundColor="background" transparent="1" />
@@ -9172,10 +9165,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
-    <widget source="wait" render="Label" position="70,104" size="700,35" valign="center" font="Regular; 25" />
-    <widget source="progress" render="Progress" position="70,170" size="700,20" />
-    <widget source="eta" render="Label" position="70,200" size="300,40" font="Regular; 25" />
-    <widget source="speed" render="Label" position="438,200" size="300,40" halign="right" font="Regular; 25" />
+    <widget source="wait" render="Label" position="71,104" size="700,35" valign="center" font="Regular; 25" transparent="1" />
+    <widget source="progress" render="Progress" position="70,170" size="700,20" transparent="1" />
+    <widget source="eta" render="Label" position="70,200" size="300,40" font="Regular; 25" transparent="1" />
+    <widget source="speed" render="Label" position="438,200" size="300,40" halign="right" font="Regular; 25" transparent="1" />
     <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="Utopia_HD/icons/setup.png" transparent="1" alphatest="blend" />
   </screen>
@@ -9294,7 +9287,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="key_green" render="Label" position="300,672" zPosition="1" size="160,25" font="Regular;20" halign="center" valign="center" backgroundColor="black" transparent="1" />
     <widget source="key_yellow" render="Label" position="500,672" zPosition="1" size="160,25" font="Regular;20" halign="center" valign="center" backgroundColor="black" transparent="1" />
     <widget source="key_blue" render="Label" position="700,672" zPosition="1" size="200,25" font="Regular;20" halign="center" valign="center" backgroundColor="black" transparent="1" />
-    <widget name="directory" position="70,98" size="700,30" valign="center" font="Regular;22" />
+    <widget name="directory" position="70,98" size="700,30" valign="center" font="Regular;22" transparent="1" />
     <widget name="filelist" position="70,138" zPosition="1" size="700,495" scrollbarMode="showOnDemand" transparent="1" />
     <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="Utopia_HD/icons/setup.png" transparent="1" alphatest="blend" />
@@ -9383,12 +9376,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
-    <eLabel position="70,98" size="700,540" backgroundColor="background" zPosition="-5" />
+    <eLabel position="70,98" size="700,540" backgroundColor="background" zPosition="-5" transparent="1" />
     <widget name="tipptitle" position="70,98" size="260,25" foregroundColor="yellow" font="Regular; 20" backgroundColor="background" shadowColor="#000000" shadowOffset="-2,-2" zPosition="1" halign="left" transparent="1" />
     <widget name="ziehungtitle" position="335,98" size="180,25" foregroundColor="yellow" font="Regular; 20" backgroundColor="background" shadowColor="#000000" shadowOffset="-2,-2" zPosition="1" halign="center" transparent="1" />
     <widget name="spiel77title" position="520,98" size="120,25" foregroundColor="yellow" font="Regular; 20" backgroundColor="background" shadowColor="#000000" shadowOffset="-2,-2" zPosition="1" halign="center" transparent="1" />
     <widget name="super6title" position="645,98" size="125,25" foregroundColor="yellow" font="Regular; 20" backgroundColor="background" shadowColor="#000000" shadowOffset="-2,-2" zPosition="1" halign="center" transparent="1" />
-    <widget name="tipplist" position="70,130" size="700,505" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="tipplist" position="71,130" size="700,505" scrollbarMode="showOnDemand" transparent="1" />
     <ePixmap name="red" position="70,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/red.png" transparent="1" alphatest="on" />
     <ePixmap name="green" position="270,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/green.png" transparent="1" alphatest="on" />
     <ePixmap name="yellow" position="470,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/yellow.png" transparent="1" alphatest="on" />
@@ -9413,7 +9406,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
-    <eLabel position="70,98" size="700,540" backgroundColor="background" zPosition="-5" />
+    <eLabel position="70,98" size="700,540" backgroundColor="background" zPosition="-5" transparent="1" />
     <widget name="config" position="70,98" size="700,500" scrollbarMode="showOnDemand" transparent="1" />
     <ePixmap name="red" position="70,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/red.png" transparent="1" alphatest="on" />
     <ePixmap name="green" position="270,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/green.png" transparent="1" alphatest="on" />
@@ -10599,9 +10592,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="key_blue" position="505,672" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
     <widget source="Title" render="Label" position="65,17" size="700,43" zPosition="1" halign="left" font="Regular; 35" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <widget name="list" position="65,88" size="600,546" itemHeight="49" foregroundColor="white" backgroundColor="black" transparent="1" scrollbarMode="showOnDemand" zPosition="2" enableWrapAround="1" />
-    <widget name="status" position="702,128" size="518,442" scrollbarMode="showNever" font="Regular;16" halign="center" noWrap="1" transparent="0" />
-    <eLabel name="" position="702,88" size="517,30" font="Regular; 22" text="Liste der zu Installierenden Plugins" zPosition="3" halign="center" />
-    <widget name="text" position="702,592" size="519,60" zPosition="1" font="Regular;20" halign="center" valign="center" foregroundColor="green" transparent="0" />
+    <widget name="status" position="702,128" size="518,442" scrollbarMode="showNever" font="Regular;16" halign="center" noWrap="1" transparent="1" />
+    <eLabel name="" position="702,88" size="517,30" font="Regular; 22" text="Liste der zu Installierenden Plugins" zPosition="3" halign="center" transparent="1" />
+    <widget name="text" position="702,592" size="519,60" zPosition="1" font="Regular;20" halign="center" valign="center" foregroundColor="green" transparent="1" />
     <eLabel name="new eLabel" position="684,71" size="2,588" zPosition="5" foregroundColor="unc0c0c0" backgroundColor="darkgrey" />
     <ePixmap name="new ePixmap" position="671,72" size="26,588" zPosition="5" pixmap="Utopia_HD/menu/chanbar5.png" alphatest="blend" />
   </screen>
@@ -10619,9 +10612,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="key_blue" position="505,672" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
     <widget source="Title" render="Label" position="65,17" size="700,43" zPosition="1" halign="left" font="Regular; 35" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <widget name="list" position="65,88" size="600,546" itemHeight="49" foregroundColor="white" backgroundColor="black" transparent="1" scrollbarMode="showOnDemand" zPosition="2" enableWrapAround="1" />
-    <widget name="status" position="702,128" size="518,442" scrollbarMode="showNever" font="Regular;16" halign="center" noWrap="1" transparent="0" />
-    <eLabel name="" position="702,88" size="517,30" font="Regular; 22" text="Liste der zu Deinstallierenden Plugins" zPosition="3" halign="center" />
-    <widget name="text" position="702,592" size="519,60" zPosition="1" font="Regular;20" halign="center" valign="center" foregroundColor="green" transparent="0" />
+    <widget name="status" position="702,128" size="518,442" scrollbarMode="showNever" font="Regular;16" halign="center" noWrap="1" transparent="1" />
+    <eLabel name="" position="702,88" size="517,30" font="Regular; 22" text="Liste der zu Deinstallierenden Plugins" zPosition="3" halign="center" transparent="1" />
+    <widget name="text" position="702,592" size="519,60" zPosition="1" font="Regular;20" halign="center" valign="center" foregroundColor="green" transparent="1" />
     <eLabel name="new eLabel" position="684,71" size="2,588" zPosition="5" foregroundColor="unc0c0c0" backgroundColor="darkgrey" />
     <ePixmap name="new ePixmap" position="671,72" size="26,588" zPosition="5" pixmap="Utopia_HD/menu/chanbar5.png" alphatest="blend" />
   </screen>
@@ -10638,7 +10631,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="key_red" position="105,672" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
     <widget name="key_green" position="419,672" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
     <eLabel text="Job Manager" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="list" position="65,152" size="720,491" scrollbarMode="showOnDemand" />
+    <widget name="list" position="65,152" size="720,491" scrollbarMode="showOnDemand" transparent="1" />
     <applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(25)
 		</applet>
@@ -11454,9 +11447,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
     <ePixmap position="950,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="Utopia_HD/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
-    <widget name="lab1" position="238,181" size="200,30" font="Regular;20" valign="center" transparent="0" />
-    <widget name="labactive" position="449,181" size="250,30" font="Regular;20" valign="center" transparent="0" />
-    <widget name="lab2" position="238,238" size="200,30" font="Regular;20" valign="center" transparent="0" />
+    <widget name="lab1" position="238,181" size="200,30" font="Regular;20" valign="center" transparent="1" />
+    <widget name="labactive" position="449,181" size="250,30" font="Regular;20" valign="center" transparent="1" />
+    <widget name="lab2" position="238,238" size="200,30" font="Regular;20" valign="center" transparent="1" />
     <widget name="labstop" position="449,238" size="250,30" font="Regular;20" valign="center" halign="center" backgroundColor="red" />
     <widget name="labrun" position="449,238" size="250,30" zPosition="1" font="Regular;20" valign="center" halign="center" backgroundColor="green" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
@@ -11545,7 +11538,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
     <ePixmap position="950,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="Utopia_HD/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
-    <widget name="config" position="65,98" size="715,500" enableWrapAround="1" scrollbarMode="showOnDemand" />
+    <widget name="config" position="65,98" size="715,500" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="labelExitsave" position="65,612" size="715,25" halign="center" font="Regular;20" transparent="1" foregroundColor="cyan1" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
   </screen>
