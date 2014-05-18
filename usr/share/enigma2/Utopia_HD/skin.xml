@@ -110,7 +110,7 @@
     <color name="ListboxMarkedBackground" color="black" />
     <color name="ListboxMarkedForeground" color="orange" />
     <color name="ListboxMarkedAndSelectedBackground" color="background" />
-    <color name="ListboxMarkedAndSelectedForeground" color="un800000" />
+    <color name="ListboxMarkedAndSelectedForeground" color="cyan" />
     <color name="WindowTitleForeground" color="white" />
     <color name="WindowTitleBackground" color="black" />
     <borderset name="bsWindow">
@@ -1213,10 +1213,10 @@
     <widget source="Title" render="Label" position="65,17" size="720,43" font="Regular; 35" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <eLabel position="65,119" size="688,2" backgroundColor="grey" />
     <widget name="list" position="65,124" zPosition="3" size="715,450" scrollbarMode="showOnDemand" serviceItemHeight="30" serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;23" colorServiceDescription="myblue" transparent="1" />
-    <widget source="ServiceEvent" render="EmptyEpg" emptyText="Event data unavailable" position="820,420" size="400,25" font="Regular;22" foregroundColor="yellow" backgroundColor="background2" transparent="1">
+    <widget source="ServiceEvent" render="EmptyEpg" emptyText="Event data unavailable" position="820,420" size="400,25" font="Regular;22" foregroundColor="yellow" backgroundColor="yellow" transparent="1">
       <convert type="ServiceName">Name</convert>
     </widget>
-    <widget source="ServiceEvent" render="EmptyEpg" emptyText="Event data unavailable" position="820,445" size="400,50" font="Regular;20" foregroundColor="unff6600" backgroundColor="unff6600" transparent="1">
+    <widget source="ServiceEvent" render="EmptyEpg" emptyText="Event data unavailable" position="820,445" size="400,50" font="Regular;20" foregroundColor="white" backgroundColor="white" transparent="1">
       <convert type="EventName">Name</convert>
     </widget>
     <widget source="ServiceEvent" render="Label" position="820,500" size="67,22" font="Regular;19" backgroundColor="unfcc000" transparent="1" foregroundColor="unfcc000">
@@ -1801,9 +1801,6 @@
     </widget>
     <eLabel position="65,130" size="720,2" backgroundColor="grey" />
     <widget name="list" position="65,140" size="720,500" zPosition="3" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1" />
-    <widget source="Event" render="Label" position="805,360" size="430,289" font="Regular; 22" foregroundColor="grey" backgroundColor="background2" transparent="1">
-      <convert type="EventName">ExtendedDescription</convert>
-    </widget>
     <ePixmap pixmap="Utopia_HD/buttons/key_red.png" position="70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="Utopia_HD/buttons/key_green.png" position="252,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="Utopia_HD/buttons/key_yellow.png" position="440,670" size="30,30" alphatest="blend" />
@@ -1816,6 +1813,9 @@
     <ePixmap position="920,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_info.png" transparent="1" alphatest="blend" />
     <ePixmap position="1000,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_right.png" transparent="1" alphatest="blend" />
     <ePixmap position="1080,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_menu.png" transparent="1" alphatest="blend" />
+    <widget source="Event" render="RunningText" position="805,349" zPosition="1" size="440,295" font="Regular; 20" halign="center" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" backgroundColor="transparent" alphatest="on" transparent="1">
+      <convert type="EventName">ExtendedDescription</convert>
+    </widget>
   </screen>
   <screen name="EPGSelectionMulti" position="0,0" size="1280,720" title="EPG Selection" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2.png" />
@@ -1837,7 +1837,7 @@
     <widget name="more_text" position="370,97" size="150,25" zPosition="3" text="MORE" font="Regular;20" halign="center" backgroundColor="background" transparent="1" />
     <widget name="date" position="530,97" size="235,24" font="Regular;20" valign="center" halign="center" transparent="1" />
     <widget name="list" position="65,142" size="720,500" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1" />
-    <widget source="Event" render="Label" position="805,360" size="430,295" font="Regular;20" foregroundColor="grey" backgroundColor="background2" transparent="1">
+    <widget source="Event" render="RunningText" position="805,349" zPosition="1" size="440,295" font="Regular; 20" halign="center" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" backgroundColor="transparent" alphatest="on" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <ePixmap pixmap="Utopia_HD/buttons/key_red.png" position="70,670" size="30,30" alphatest="blend" />
@@ -1852,7 +1852,7 @@
     <ePixmap position="920,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_info.png" transparent="1" alphatest="blend" />
     <ePixmap position="1010,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_menu.png" transparent="1" alphatest="blend" />
   </screen>
-  <screen name="GraphMultiEPG" position="0,0" size="1280,720" title="Electronic Program Guide" flags="wfNoBorder">
+  <screen name="GraphicalEPGPIG" position="0,0" size="1280,720" title="Electronic Program Guide" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back3.png" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
@@ -1861,25 +1861,25 @@
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <eLabel text="Electronic Program Guide" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget source="Event" render="Label" position="70,85" size="700, 28" font="Regular;22" foregroundColor="cyan" backgroundColor="background2" transparent="1">
+    <widget source="Event" render="Label" position="70,74" size="700,24" font="Regular;22" foregroundColor="cyan" backgroundColor="background2" transparent="1">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget source="Event" render="Label" position="780,85" size=" 65, 22" font="Regular;19" halign="right" backgroundColor="background2" transparent="1">
+    <widget source="Event" render="Label" position="812,221" size=" 65, 22" font="Regular;19" halign="right" backgroundColor="background2" transparent="1">
       <convert type="EventTime">StartTime</convert>
       <convert type="ClockToText">Format:%H:%M </convert>
     </widget>
-    <widget source="Event" render="Label" position="1115,85" size=" 80, 22" font="Regular;19" backgroundColor="background2" transparent="1">
+    <widget source="Event" render="Label" position="1109,221" size=" 80, 22" font="Regular;19" backgroundColor="background2" transparent="1">
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Format:- %H:%M</convert>
     </widget>
-    <widget source="Event" render="Progress" pixmap="Utopia_HD/progress_r.png" position="855,90" size="250,9" borderWidth="2" borderColor="white" zPosition="1" transparent="1">
+    <widget source="Event" render="Progress" pixmap="Utopia_HD/progress_r.png" position="886,228" size="211,9" borderWidth="2" borderColor="white" zPosition="1" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
-    <widget source="Event" render="Label" position="70,120" size="1160,120" font="Regular;19" foregroundColor="grey" backgroundColor="background2" transparent="1">
+    <widget source="Event" render="RunningText" position="70,99" zPosition="1" size="701,144" font="Regular; 20" halign="center" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" backgroundColor="transparent" alphatest="on" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <eLabel position="70,245" size="1160,2" backgroundColor="grey" />
-    <widget name="timeline_text" position="center,250" size="1280,25" selectionDisabled="1" transparent="1" />
+    <widget name="timeline_text" position="69,252" size="1280,25" selectionDisabled="1" transparent="1" />
     <eLabel position="70,280" size="1160,2" backgroundColor="grey" />
     <widget name="list" position="70,288" size="1160,365" itemHeight="60" EntryBorderColor="grey" EntryBackgroundColor="#2f4974" EntryBackgroundColorSelected="#688cbf" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="timeline_now" position="0,288" zPosition="2" size="19,365" pixmap="Utopia_HD/timeline-now.png" alphatest="blend" />
@@ -1890,6 +1890,8 @@
     <ePixmap position="840,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_ok.png" transparent="1" alphatest="blend" />
     <ePixmap position="920,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_info.png" transparent="1" alphatest="blend" />
     <ePixmap position="1005,670" size="30,30" zPosition="10" pixmap="Utopia_HD/buttons/key_menu.png" transparent="1" alphatest="blend" />
+    <eLabel position="813,75" zPosition="3" size="375,141" backgroundColor="unff000000" />
+    <widget source="session.VideoPicture" render="Pig" position="813,75" zPosition="-8" size="375,141" />
   </screen>
   <screen name="clockDisplay" position="420,230" size="340,260">
     <widget name="okbutton" position="20,20" size="300,40" backgroundColor="darkgrey" transparent="1" />
@@ -2268,13 +2270,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="session.CurrentService" render="Label" position="410,12" size="379,28" font="LCD; 22" valign="center" noWrap="1" backgroundColor="black" transparent="1" halign="center" foregroundColor="unc6e0f3">
       <convert type="ServiceName">Name</convert>
     </widget>
-    <widget source="global.CurrentTime" render="Label" position="155,9" size="75,28" font="LCD; 25" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+    <widget source="global.CurrentTime" render="Label" position="807,97" size="75,28" font="LCD; 25" halign="left" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
     </widget>
-    <widget source="global.CurrentTime" render="Label" position="23,9" size="110,28" font="LCD; 25" halign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1">
+    <widget source="global.CurrentTime" render="Label" position="377,97" size="110,28" font="LCD; 25" halign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1">
       <convert type="ClockToText">Format:%d.%m.%Y</convert>
     </widget>
-    <widget source="global.CurrentTime" render="Label" position="235,12" size="35,28" font="Regular; 17" valign="top" halign="left" backgroundColor="grey" transparent="1" foregroundColor="unc6e0f3">
+    <widget source="global.CurrentTime" render="Label" position="882,97" size="35,28" font="Regular; 17" valign="top" halign="left" backgroundColor="grey" transparent="1" foregroundColor="cyan">
       <convert type="ClockToText">Format::%S</convert>
     </widget>
     <ePixmap pixmap="Utopia_HD/icons/ico_dolby_off.png" position="895,10" size="70,25" zPosition="1" alphatest="blend" />
@@ -2349,7 +2351,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="Service" render="Label" position="1090,395" size="140,24" font="Regular;20" halign="right" backgroundColor="background" transparent="1">
       <convert type="MovieInfo">FileSize</convert>
     </widget>
-    <widget source="Service" render="Label" position="800,432" size="430,201" font="Regular;19" foregroundColor="grey" backgroundColor="background" transparent="1">
+    <widget source="Service" render="RunningText" position="800,432" zPosition="1" size="430,220" font="Regular; 19" halign="center" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" backgroundColor="transparent" alphatest="on" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <ePixmap pixmap="Utopia_HD/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
@@ -3007,7 +3009,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <widget source="Title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget name="list" position="65,98" size="710,500" zPosition="4" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1" />
-    <widget name="text" position="857,428" size="334, 160" zPosition="1" font="Regular;24" halign="center" valign="center" foregroundColor="green" transparent="1" />
+    <widget name="text" position="857,428" size="334, 160" zPosition="1" font="Regular;24" halign="center" valign="center" foregroundColor="cyan" transparent="1" backgroundColor="cyan" />
   </screen>
   <screen name="PositionerSetup" position="0,0" size="1280,720" title="Positioner setup..." flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
@@ -10594,7 +10596,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="list" position="65,88" size="600,546" itemHeight="49" foregroundColor="white" backgroundColor="black" transparent="1" scrollbarMode="showOnDemand" zPosition="2" enableWrapAround="1" />
     <widget name="status" position="702,128" size="518,442" scrollbarMode="showNever" font="Regular;16" halign="center" noWrap="1" transparent="1" />
     <eLabel name="" position="702,88" size="517,30" font="Regular; 22" text="Liste der zu Installierenden Plugins" zPosition="3" halign="center" transparent="1" />
-    <widget name="text" position="702,592" size="519,60" zPosition="1" font="Regular;20" halign="center" valign="center" foregroundColor="green" transparent="1" />
+    <widget name="text" position="701,592" size="519,60" zPosition="1" font="Regular;20" halign="center" valign="center" foregroundColor="cyan1" transparent="1" />
     <eLabel name="new eLabel" position="684,71" size="2,588" zPosition="5" foregroundColor="unc0c0c0" backgroundColor="darkgrey" />
     <ePixmap name="new ePixmap" position="671,72" size="26,588" zPosition="5" pixmap="Utopia_HD/menu/chanbar5.png" alphatest="blend" />
   </screen>
@@ -10614,7 +10616,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="list" position="65,88" size="600,546" itemHeight="49" foregroundColor="white" backgroundColor="black" transparent="1" scrollbarMode="showOnDemand" zPosition="2" enableWrapAround="1" />
     <widget name="status" position="702,128" size="518,442" scrollbarMode="showNever" font="Regular;16" halign="center" noWrap="1" transparent="1" />
     <eLabel name="" position="702,88" size="517,30" font="Regular; 22" text="Liste der zu Deinstallierenden Plugins" zPosition="3" halign="center" transparent="1" />
-    <widget name="text" position="702,592" size="519,60" zPosition="1" font="Regular;20" halign="center" valign="center" foregroundColor="green" transparent="1" />
+    <widget name="text" position="702,592" size="519,60" zPosition="1" font="Regular;20" halign="center" valign="center" foregroundColor="cyan1" transparent="1" />
     <eLabel name="new eLabel" position="684,71" size="2,588" zPosition="5" foregroundColor="unc0c0c0" backgroundColor="darkgrey" />
     <ePixmap name="new ePixmap" position="671,72" size="26,588" zPosition="5" pixmap="Utopia_HD/menu/chanbar5.png" alphatest="blend" />
   </screen>
