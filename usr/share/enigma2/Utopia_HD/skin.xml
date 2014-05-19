@@ -1626,6 +1626,7 @@
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="837,95" zPosition="-8" size="375,214" />
+
     <ePixmap position="848,596" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
@@ -10486,7 +10487,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <eLabel position="441,98" size="2,500" backgroundColor="darkgrey" zPosition="3" />
     <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" backgroundColor="transparent" zPosition="1" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
-    <widget name="description" position="839,476" size="373,110" zPosition="1" font="Regular;22" halign="center" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
+    <widget name="description" position="839,428" size="373,211" zPosition="1" font="Regular;22" halign="center" valign="center" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <ePixmap pixmap="Utopia_HD/buttons/key_red.png" position="70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="Utopia_HD/buttons/key_green.png" position="380,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="Utopia_HD/buttons/key_yellow.png" position="706,670" size="30,30" alphatest="blend" />
@@ -10547,6 +10548,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				],
 	"fonts": [gFont("Regular", 26),gFont("Regular", 12)],
 	"itemHeight": 50
+
 	}
 	</convert>
     </widget>
