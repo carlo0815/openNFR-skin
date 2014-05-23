@@ -1500,7 +1500,7 @@
     <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
   </screen>
   <!-- Swap Device Ctrl -->
-  <screen name="Swap" position="0,0" size="1280,720" title="Swap Manager" zPosition="1" flags="wfNoBorder">
+  <screen name="SwapOverviewScreen" position="0,0" size="1280,720" title="Swap Manager" zPosition="1" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="837,95" zPosition="-8" size="375,214" />
@@ -1512,13 +1512,19 @@
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <widget name="config" position="65,98" size="710,497" scrollbarMode="showOnDemand" transparent="1" />
-    <ePixmap name="red" position="70,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/red.png" transparent="1" alphatest="on" />
-    <ePixmap name="blue" position="620,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/blue.png" transparent="1" alphatest="on" />
-    <widget name="key_red" position="105,672" zPosition="5" size="200,25" valign="center" halign="left" font="Regular;21" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
-    <widget font="Regular;21" foregroundColor="white" halign="left" name="key_blue" position="657,672" shadowColor="black" shadowOffset="-1,-1" size="200,25" transparent="1" valign="center" zPosition="5" />
+    <widget name="swapstatus_label" position="65,607" size="250,30" foregroundColor="cyan1" font="Regular;20" transparent="1" />
+    <widget name="swapstatus_status" position="316,607" size="250,30" halign="right" foregroundColor="white" font="Regular;20" transparent="1" />
+    <widget name="ButtonRedtext" position="105,672" size="230,25" valign="center" halign="left" zPosition="10" font="Regular;18" transparent="1" />
+    <widget name="ButtonRed" position="70,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/red.png" transparent="1" alphatest="on" />
+    <widget name="ButtonGreentext" position="395,672" size="230,25" valign="center" halign="left" zPosition="10" font="Regular;18" transparent="1" />
+    <widget name="ButtonGreen" position="360,670" zPosition="4" size="30,30" pixmap="Utopia_HD/buttons/green.png" transparent="1" alphatest="on" />
+    <widget name="ButtonYellowtext" position="685,672" size="230,25" valign="center" halign="left" zPosition="10" font="Regular;18" transparent="1" />
+    <widget name="ButtonYellow" pixmap="Utopia_HD/buttons/yellow.png" position="650,670" zPosition="4" size="30,30" transparent="1" alphatest="on" />
+    <widget name="ButtonBluetext" position="975,672" size="230,25" valign="center" halign="left" zPosition="10" font="Regular;18" transparent="1" />
+    <widget name="ButtonBlue" pixmap="Utopia_HD/buttons/blue.png" position="940,670" zPosition="4" size="30,30" transparent="1" alphatest="on" />
     <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="Utopia_HD/icons/setup.png" transparent="1" alphatest="blend" />
-    <widget font="Regular; 22" halign="left" name="status" position="64,614" size="710,25" foregroundColor="cyan1" backgroundColor="black" transparent="1" />
+    <widget font="Regular; 22" halign="left" name="status" position="60,743" size="710,25" foregroundColor="cyan1" backgroundColor="black" transparent="1" />
   </screen>
   <screen name="InputDeviceSelection" position="0,0" size="1280,720" title="Select input device" zPosition="1" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
