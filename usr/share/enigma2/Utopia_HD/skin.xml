@@ -1632,7 +1632,6 @@
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="837,95" zPosition="-8" size="375,214" />
-
     <ePixmap position="848,596" size="350,44" pixmap="Utopia_HD/menu/db.png" transparent="1" alphatest="blend" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
@@ -2999,8 +2998,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="list" position="65,98" size="715,540" zPosition="4" scrollbarMode="showOnDemand" backgroundColor="background" selectionPixmap="Utopia_HD/menu/sel700x48.png" transparent="1" />
     <ePixmap pixmap="Utopia_HD/buttons/red.png" position="70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="Utopia_HD/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/yellow.png" position="650,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/blue.png" position="940,670" size="30,30" alphatest="blend" />
     <widget source="key_red" render="Label" position="105,672" size="200,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
     <widget source="key_green" render="Label" position="406,673" size="200,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_yellow" render="Label" position="685,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_blue" render="Label" position="975,672" size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <ePixmap position="950,430" size="150,150" pixmap="Utopia_HD/menu/plugin.png" alphatest="blend" transparent="1" />
   </screen>
   <screen name="PluginDownloadBrowser" position="0,0" size="1280,720" title="Downloadable plugins" flags="wfNoBorder">
@@ -11666,10 +11669,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <ePixmap pixmap="Utopia_HD/buttons/key_red.png" position="70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="Utopia_HD/buttons/key_green.png" position="380,670" size="30,30" alphatest="blend" />
-    <ePixmap pixmap="Utopia_HD/buttons/key_yellow.png" position="706,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/key_yellow.png" position="851,670" size="30,30" alphatest="blend" />
     <widget source="key_red" render="Label" position="105,672" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_green" render="Label" position="419,672" size="270,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_yellow" render="Label" position="747,672" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_green" render="Label" position="419,672" size="350,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_yellow" render="Label" position="891,672" size="200,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
     <eLabel text="Package Manager For NFR" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
     <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
@@ -11688,6 +11691,156 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</convert>
     </widget>
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
+  </screen>
+  <screen name="InstallTarGZ" position="center,center" size="1280,720" title="Package Manager For NFR" flags="wfNoBorder">
+    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
+    <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <ePixmap pixmap="Utopia_HD/buttons/key_red.png" position="70,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/key_green.png" position="360,670" size="30,30" alphatest="blend" />
+    <widget source="key_red" render="Label" position="105,672" size="240,24" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_green" render="Label" position="395,672" size="270,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <eLabel text="Package Manager For NFR" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
+    <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
+    <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
+    <ePixmap position="950,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="Utopia_HD/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
+    <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1">
+      <convert type="TemplatedMultiContent">
+		{"template": [
+		MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+		MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
+		MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
+		],
+		"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
+		"itemHeight": 60
+		}
+		</convert>
+    </widget>
+  </screen>
+  <screen name="InstallIpk" position="center,center" size="1280,720" title="Package Manager For NFR" flags="wfNoBorder">
+    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
+    <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <ePixmap pixmap="Utopia_HD/buttons/key_red.png" position="70,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/key_green.png" position="360,670" size="30,30" alphatest="blend" />
+    <widget source="key_red" render="Label" position="105,672" size="240,24" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_green" render="Label" position="395,672" size="270,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <eLabel text="Package Manager For NFR" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
+    <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
+    <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
+    <ePixmap position="950,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="Utopia_HD/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
+    <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1">
+      <convert type="TemplatedMultiContent">
+		{"template": [
+		MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+		MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
+		MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
+		],
+		"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
+		"itemHeight": 60
+		}
+		</convert>
+    </widget>
+  </screen>
+  <screen name="InstallZip" position="center,center" size="1280,720" title="Package Manager For NFR" flags="wfNoBorder">
+    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
+    <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <ePixmap pixmap="Utopia_HD/buttons/key_red.png" position="70,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/key_green.png" position="360,670" size="30,30" alphatest="blend" />
+    <widget source="key_red" render="Label" position="105,672" size="240,24" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_green" render="Label" position="395,672" size="270,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <eLabel text="Package Manager For NFR" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
+    <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
+    <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
+    <ePixmap position="950,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="Utopia_HD/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
+    <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1">
+      <convert type="TemplatedMultiContent">
+		{"template": [
+		MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+		MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
+		MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
+		],
+		"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
+		"itemHeight": 60
+		}
+                </convert>
+    </widget>
+  </screen>
+  <screen name="AdvInstallIpk" position="center,center" size="1280,720" title="Package Manager For NFR" flags="wfNoBorder">
+    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
+    <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <ePixmap pixmap="Utopia_HD/buttons/key_red.png" position="70,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/key_green.png" position="360,670" size="30,30" alphatest="blend" />
+    <widget source="key_red" render="Label" position="105,672" size="240,24" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_green" render="Label" position="395,672" size="270,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <eLabel text="Package Manager For NFR" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
+    <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
+    <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
+    <ePixmap position="950,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="Utopia_HD/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
+    <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1">
+      <convert type="TemplatedMultiContent">
+		{"template": [
+		MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+		MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
+		MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
+		],
+		"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
+		"itemHeight": 60
+		}
+		</convert>
+    </widget>
+  </screen>
+  <screen name="InstallRar" position="center,center" size="1280,720" title="Package Manager For NFR" flags="wfNoBorder">
+    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
+    <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <ePixmap pixmap="Utopia_HD/buttons/key_red.png" position="70,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/key_green.png" position="360,670" size="30,30" alphatest="blend" />
+    <widget source="key_red" render="Label" position="105,672" size="240,24" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_green" render="Label" position="395,672" size="270,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <eLabel text="Package Manager For NFR" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
+    <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
+    <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="Utopia_HD/icons/db.png" transparent="1" alphatest="blend" />
+    <ePixmap position="950,430" size="150,150" pixmap="Utopia_HD/menu/nfr.png" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="Utopia_HD/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
+    <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1">
+      <convert type="TemplatedMultiContent">
+		{"template": [
+		MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+		MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
+		MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
+		],
+		"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
+		"itemHeight": 60
+		}
+		</convert>
+    </widget>
   </screen>
   <screen name="Net_test" position="center,center" size="1280,720" title="Iperf-Net_test" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Utopia_HD/menu/back2b.png" />
