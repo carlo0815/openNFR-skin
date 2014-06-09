@@ -3054,10 +3054,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="Utopia_HD/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="Utopia_HD/buttons/yellow.png" position="650,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="Utopia_HD/buttons/blue.png" position="940,670" size="30,30" alphatest="blend" />
-    <widget source="key_red" render="Label" position="105,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_green" render="Label" position="395,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_yellow" render="Label" position="685,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_blue" render="Label" position="975,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="key_red" position="105,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="key_green" position="395,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="key_yellow" position="685,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="key_blue" render="Label" position="975,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
   </screen>
   <screen name="RdsInfoDisplay" position="0,0" size="1280,720" zPosition="-2" backgroundColor="transparent" flags="wfNoBorder">
     <widget name="RassLogo" pixmap="skin_default/icons/rass_logo.png" position="100,585" size="50,21" />
