@@ -3034,10 +3034,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <eLabel text="Positioner setup..." position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget name="list" position="160,98" size="500,220" itemHeight="30" backgroundColor="background" transparent="1" />
-    <widget name="red" position=" 70,330" size="170,100" backgroundColor="red" halign="center" valign="center" font="Regular;21" />
-    <widget name="green" position="240,330" size="170,100" backgroundColor="green" halign="center" valign="center" font="Regular;21" />
-    <widget name="yellow" position="410,330" size="170,100" backgroundColor="yellow" halign="center" valign="center" font="Regular;21" />
-    <widget name="blue" position="580,330" size="170,100" backgroundColor="blue" halign="center" valign="center" font="Regular;21" />
     <widget name="snr_db" position="160,455" size="200,25" halign="center" valign="center" font="Regular;21" backgroundColor="background" transparent="1" />
     <eLabel text="SNR:" position=" 70,490" size="80,25" font="Regular;21" backgroundColor="background" transparent="1" />
     <widget name="snr_bar" position="160,490" size="200,25" borderWidth="1" transparent="1" />
@@ -3054,6 +3050,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <eLabel text="FEC:" position="440,560" size="150,25" font="Regular;21" backgroundColor="background" transparent="1" />
     <widget name="fec_value" position="600,560" size="150,25" font="Regular;21" backgroundColor="background" transparent="1" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="Utopia_HD/icons/setup.png" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/red.png" position="70,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/yellow.png" position="650,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="Utopia_HD/buttons/blue.png" position="940,670" size="30,30" alphatest="blend" />
+    <widget source="key_red" render="Label" position="105,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_green" render="Label" position="395,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_yellow" render="Label" position="685,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_blue" render="Label" position="975,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
   </screen>
   <screen name="RdsInfoDisplay" position="0,0" size="1280,720" zPosition="-2" backgroundColor="transparent" flags="wfNoBorder">
     <widget name="RassLogo" pixmap="skin_default/icons/rass_logo.png" position="100,585" size="50,21" />
