@@ -2901,7 +2901,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="skin_default/buttons/key_green.png" position="330,670" size="30,30" alphatest="blend" />
     <widget name="ButtonRedtext" position="105,672" size="240,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
     <widget name="ButtonGreentext" position="365,672" size="540,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
-    <widget name="key_menu" position="365,672" size="540,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
     <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="skin_default/icons/db.png" transparent="1" alphatest="blend" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" />
   </screen>
@@ -11218,8 +11217,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="labpass" position="363,295" size="310,30" font="Regular;20" valign="center" backgroundColor="un4d5375" />
     <widget name="alias" position="185,346" size="150,30" font="Regular;20" valign="center" transparent="1" />
     <widget name="labalias" position="363,346" size="310,30" font="Regular;20" valign="center" backgroundColor="un4d5375" />
-    <widget name="sinactive" position="188,398" zPosition="1" pixmap="skin_default/skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
-    <widget name="sactive" position="188,398" zPosition="2" pixmap="skin_default/skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+    <widget name="sinactive" position="188,398" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+    <widget name="sactive" position="188,398" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
     <widget name="system" position="235,398" size="100,30" font="Regular;20" valign="center" transparent="1" />
     <widget name="labsys" position="363,398" size="310,30" font="Regular;20" valign="center" backgroundColor="un4d5375" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
@@ -11325,17 +11324,17 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="sharedir" position="174,380" size="150,26" font="Regular;20" valign="center" transparent="1" />
     <widget name="labsharedir" position="363,380" size="310,90" font="Regular;20" valign="center" backgroundColor="un4d5375" />
     <widget name="web" position="174,502" size="180,30" font="Regular;20" valign="center" transparent="1" />
-    <widget name="webinactive" position="363,502" zPosition="1" pixmap="skin_default/skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
-    <widget name="webactive" position="363,502" zPosition="2" pixmap="skin_default/skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+    <widget name="webinactive" position="363,502" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+    <widget name="webactive" position="363,502" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
     <widget name="telnet" position="174,552" size="180,30" font="Regular;20" valign="center" transparent="1" />
-    <widget name="telnetinactive" position="363,552" zPosition="1" pixmap="skin_default/skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
-    <widget name="telnetactive" position="363,552" zPosition="2" pixmap="skin_default/skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+    <widget name="telnetinactive" position="363,552" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+    <widget name="telnetactive" position="363,552" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
     <widget name="xbox" position="436,502" size="200,26" font="Regular;20" valign="center" transparent="1" />
-    <widget name="xboxinactive" position="650,502" zPosition="1" pixmap="skin_default/skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
-    <widget name="xboxactive" position="650,502" zPosition="2" pixmap="skin_default/skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+    <widget name="xboxinactive" position="650,502" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+    <widget name="xboxactive" position="650,502" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
     <widget name="dlna" position="438,552" size="200,30" font="Regular;20" valign="center" transparent="1" />
-    <widget name="dlnainactive" position="650,552" zPosition="1" pixmap="skin_default/skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
-    <widget name="dlnaactive" position="650,552" zPosition="2" pixmap="skin_default/skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+    <widget name="dlnainactive" position="650,552" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+    <widget name="dlnaactive" position="650,552" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
   </screen>
   <screen name="uShareSetup" position="center,center" size="1280,720" title="uShareSetup" flags="wfNoBorder">
@@ -11420,14 +11419,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="sharedir" position="174,380" size="150,26" font="Regular;20" valign="center" transparent="1" />
     <widget name="labsharedir" position="363,380" size="310,90" font="Regular;20" valign="top" backgroundColor="un4d5375" />
     <widget name="inotify" position="174,502" size="180,26" font="Regular;20" valign="center" transparent="1" />
-    <widget name="inotifyinactive" position="363,502" zPosition="1" pixmap="skin_default/skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
-    <widget name="inotifyactive" position="363,502" zPosition="2" pixmap="skin_default/skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+    <widget name="inotifyinactive" position="363,502" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+    <widget name="inotifyactive" position="363,502" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
     <widget name="tivo" position="174,552" size="180,26" font="Regular;20" valign="center" transparent="1" />
-    <widget name="tivoinactive" position="363,552" zPosition="1" pixmap="skin_default/skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
-    <widget name="tivoactive" position="363,552" zPosition="2" pixmap="skin_default/skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+    <widget name="tivoinactive" position="363,552" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+    <widget name="tivoactive" position="363,552" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
     <widget name="dlna" position="436,502" size="200,30" font="Regular;20" valign="center" transparent="1" />
-    <widget name="dlnainactive" position="650,502" zPosition="1" pixmap="skin_default/skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
-    <widget name="dlnaactive" position="650,502" zPosition="2" pixmap="skin_default/skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+    <widget name="dlnainactive" position="650,502" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+    <widget name="dlnaactive" position="650,502" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
   </screen>
   <screen name="MiniDLNASetup" position="center,center" size="1280,720" title="MiniDLNASetup" flags="wfNoBorder">
@@ -11663,9 +11662,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="skin_default/buttons/key_green.png" position="380,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/key_yellow.png" position="706,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/key_blue.png" position="1025,670" size="30,30" alphatest="blend" />
-    <widget name="key_red" position="105,672" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
-    <widget name="key_green" position="419,672" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
-    <widget name="key_yellow" position="747,672" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="key_red" position="105,672" size="200,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="key_green" position="419,672" size="200,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="key_yellow" position="747,672" size="200,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
     <widget name="key_blue" position="1066,672" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
     <eLabel text="E2log erstellen" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
@@ -12122,6 +12121,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <screen name="Screensaver" position="0,0" size="1280,720" flags="wfNoBorder" transparent="1">
     <eLabel position="0,0" size="128,72" backgroundColor="backtop" zPosition="0" transparent="1" />
-    <widget name="picture" pixmap="skin_default/distro-logo.png" position="center,center" size="500,500" alphatest="on" zPosition="1" transparent="1" />
+    <widget name="picture" pixmap="/usr/share/enigma2/distro-logo.png" position="center,center" size="500,500" alphatest="on" zPosition="1" transparent="1" />
   </screen>
 </skin>
