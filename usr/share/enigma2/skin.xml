@@ -5902,6 +5902,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
 
+
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <eLabel text="Plugin manager help" position="65,17" size="720,43" font="Regular; 35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
@@ -12147,8 +12148,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="836,99" size="370,210" zPosition="0" alphatest="blend" transparent="1" />
   </screen>
-  <screen name="PiPSetup" position="center,center" size="600,150" backgroundColor="transparent" flags="wfNoBorder">
-    <widget name="text" position="0,0" size="600,150" font="Regular;23" />
+  <screen name="PiPSetup" position="center,center" size="700,200" backgroundColor="transparent" flags="wfNoBorder">
+    <widget name="text" position="0,0" size="700,200" font="Regular;23" />
   </screen>
   <screen name="PictureInPicture" position="400,60" zPosition="-1" size="240,192" flags="wfNoBorder">
     <widget name="video" position="0,0" size="240,192" backgroundColor="transparent" />
