@@ -12211,4 +12211,29 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 <widget name="tries" position="10,70" size="480,25" font="Regular;20" halign="center" />
 <widget name="input" position="10,110" size="480,40" font="Regular;50" halign="center" />
 </screen>
+	<screen name="GraphicalInfoBarEPG" position="0,e-200" size="1280,200" backgroundColor="black" transparent="0" flags="wfNoBorder">
+		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,0" size="1280,50" zPosition="-1" />
+		<widget source="global.CurrentTime" render="Label" position="1160,7" size="100,28" font="Regular;24" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="infobar-bkgrnd" halign="right" transparent="1" zPosition="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="910,27" size="350,25" font="Regular;18" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="infobar-bkgrnd" halign="right" transparent="1" zPosition="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<widget source="Title" render="Label" position="20,10" size="850,43" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1" />
+		<widget name="lab1" position="0,50" size="1280,115" font="Regular;24" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0" />
+		<widget name="timeline_text" position="0,50" size="1280,30" backgroundColor="black" foregroundColor="orange" transparent="1" zPosition="0" />
+		<widget name="bouquetlist" position="0,75" size="1280,85" backgroundColor="black" scrollbarMode="showNever" zPosition="2" transparent="0" />
+		<widget name="list" position="0,75" size="1280,85" backgroundColor="black" scrollbarMode="showNever" zPosition="1" transparent="0" EntryFontWrap="no"/>
+		<widget name="timeline_now" position="0,75" zPosition="3" size="19,85" pixmap="epg/timeline-now.png" alphatest="on" />
+		<ePixmap pixmap="buttons/key_menu.png" position="20,166" size="35,25" alphatest="blend" transparent="1" zPosition="1" />
+		<ePixmap pixmap="buttons/red.png" position="90,166" size="25,25" alphatest="blend" transparent="1" zPosition="1" />
+		<widget name="key_red" position="130,166" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd" />
+		<ePixmap pixmap="buttons/green.png" position="380,166" size="25,25" alphatest="blend" transparent="1" zPosition="1" />
+		<widget name="key_green" position="420,166" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd" />
+		<ePixmap pixmap="buttons/yellow.png" position="670,166" size="25,25" alphatest="blend" transparent="1" zPosition="1" />
+		<widget name="key_yellow" position="710,166" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd" />
+		<ePixmap pixmap="buttons/blue.png" position="960,166" size="25,25" alphatest="blend" transparent="1" zPosition="1" />
+		<widget name="key_blue" position="1000,166" size="240,25" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="menu-buttons-frgrnd" backgroundColor="fullscreen-buttons-bkgrnd" />
+		<ePixmap pixmap="screens/fs-bg-bot.png" position="0,160" size="1280,40" zPosition="-1" />
+	</screen>
 </skin>
