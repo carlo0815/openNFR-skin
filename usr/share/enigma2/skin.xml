@@ -181,7 +181,7 @@
       <convert type="FrontendInfo">AGC</convert>
     </widget>
     <widget source="session.CurrentService" render="MaggyPiconEmu" path="skin_default/piconCam/" position="236,563" size="115,27" transparent="1" alphatest="blend" zPosition="3">
-      <convert type="MaggyEmuName">
+      <convert type="EmuName">
       </convert>
     </widget>
     <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/crypt/Betacrypt.png" position="835,563" size="115,27" zPosition="5" transparent="1" alphatest="blend">
@@ -405,7 +405,7 @@
       <convert type="FrontendInfo">AGC</convert>
     </widget>
     <widget source="session.CurrentService" render="MaggyPiconEmu" path="skin_default/piconCam/" position="236,563" size="115,27" transparent="1" alphatest="blend" zPosition="3">
-      <convert type="MaggyEmuName">
+      <convert type="EmuName">
       </convert>
     </widget>
     <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/crypt/Betacrypt.png" position="835,563" size="115,27" zPosition="5" transparent="1" alphatest="blend">
