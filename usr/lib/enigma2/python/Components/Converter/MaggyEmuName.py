@@ -81,6 +81,11 @@ class EmuName(Poll, Converter, object):
 			except:
 				camdname = None
 
+	# NFR SoftCam Manager
+		if config.NFRSoftcam.actcam.value:
+			if config.NFRSoftcam.actcam.value != "none":
+				camdlist = config.NFRSoftcam.actcam.value.split()
+
 		if cardname:
 			for line in cardname:
 				info2 = ""
