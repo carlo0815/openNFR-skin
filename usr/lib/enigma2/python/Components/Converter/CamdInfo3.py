@@ -1,4 +1,4 @@
-#
+# 2boom 2011-14
 #  CamdInfo3 - Converter
 # <widget source="session.CurrentService" render="Label" position="189,397" zPosition="4" size="350,20" noWrap="1" valign="center" halign="center" font="Regular;14" foregroundColor="clText" transparent="1"  backgroundColor="#20002450">
 #	<convert type="CamdInfo">Camd</convert>
@@ -25,6 +25,8 @@ class CamdInfo3(Poll, Converter, object):
 	def getText(self):
 		service = self.source.service
 		info = service and service.info()
+		if not service:
+			return None
 		camd = ""
 		serlist = None
 		camdlist = None
@@ -32,26 +34,81 @@ class CamdInfo3(Poll, Converter, object):
 		nameser = []
 		if not info:
 			return ""
-		# TS-Panel
-		if fileExists("/etc/startcam.sh"):
+		# Alternative SoftCam Manager 
+		if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/AlternativeSoftCamManager/plugin.py"): 
+			if config.plugins.AltSoftcam.actcam.value != "none": 
+				return config.plugins.AltSoftcam.actcam.value 
+			else: 
+				return None
+		#  GlassSysUtil 
+		elif fileExists("/tmp/ucm_cam.info"):
+			return open("/tmp/ucm_cam.info").read()
+		# Pli
+		elif fileExists("/etc/init.d/softcam") or fileExists("/etc/init.d/cardserver"):
+			try:
+				for line in open("/etc/init.d/softcam"):
+					if "echo" in line:
+						nameemu.append(line)
+				camdlist = "%s" % nameemu[1].split('"')[1]
+			except:
+				pass
+			try:
+				for line in open("/etc/init.d/cardserver"):
+					if "echo" in line:
+						nameser.append(line)
+				serlist = "%s" % nameser[1].split('"')[1]
+			except:
+				pass
+			if serlist is not None and camdlist is not None:
+				return ("%s %s" % (serlist, camdlist))
+			elif camdlist is not None:
+				return "%s" % camdlist
+			elif serlist is not None:
+				return "%s" % serlist
+			return ""
+		elif fileExists("/etc/startcam.sh"):
 			try:
 				for line in open("/etc/startcam.sh"):
-					if line.find("script") > -1:
+					if "script" in line:
 						return "%s" % line.split("/")[-1].split()[0][:-3]
 			except:
 				camdlist = None
-		# VTI 	
-		elif fileExists("/tmp/.emu.info"):
+		# domica 8120
+		elif fileExists("/etc/init.d/cam"):
+			if config.plugins.emuman.cam.value: 
+				return config.plugins.emuman.cam.value
+		#PKT
+		elif fileExists("//usr/lib/enigma2/python/Plugins/Extensions/PKT/plugin.pyo"):
+			if config.plugins.emuman.cam.value: 
+				return config.plugins.emuman.cam.value
+		#HDMU
+		elif fileExists("/etc/.emustart") and fileExists("/etc/image-version"):
 			try:
-				camdlist = open("/tmp/.emu.info", "r")
+				for line in open("/etc/.emustart"):
+					return line.split()[0].split('/')[-1]
 			except:
 				return None
-		# BlackHole	
-		elif fileExists("/etc/CurrentBhCamName"):
-			try:
-				camdlist = open("/etc/CurrentBhCamName", "r")
-			except:
-				return None
+	
+		# AAF & ATV & VTI 
+		elif fileExists("/etc/image-version") and not fileExists("/etc/.emustart"):
+			emu = ""
+			server = ""
+			for line in open("/etc/image-version"):
+				if "=AAF" in line or "=openATV" in line:
+					if config.softcam.actCam.value: 
+						emu = config.softcam.actCam.value
+					if config.softcam.actCam2.value: 
+						server = config.softcam.actCam2.value
+						if config.softcam.actCam2.value == "no CAM 2 active":
+							server = ""
+				elif "=vuplus" in line:
+					if fileExists("/tmp/.emu.info"):
+						for line in open("/tmp/.emu.info"):
+							emu = line.strip('\n')
+				# BlackHole	
+				elif "version=" in line and fileExists("/etc/CurrentBhCamName"):
+					emu = open("/etc/CurrentBhCamName").read()
+			return "%s %s" % (emu, server)
 		# Domica	
 		elif fileExists("/etc/active_emu.list"):
 			try:
@@ -60,35 +117,11 @@ class CamdInfo3(Poll, Converter, object):
 				return None
 		# Egami	
 		elif fileExists("/tmp/egami.inf","r"):
-			lines = open("/tmp/egami.inf", "r").readlines()
-			for line in lines:
+			for line in open("/tmp/egami.inf"):
 				item = line.split(":",1)
 				if item[0] == "Current emulator":
 					return item[1].strip()
-		#Pli
-		elif fileExists("/etc/init.d/softcam") or fileExists("/etc/init.d/cardserver"):
-			try:
-				for line in open("/etc/init.d/softcam"):
-					if line.find("echo") > -1:
-						nameemu.append(line)
-				camdlist = "%s" % nameemu[1].split('"')[1]
-			except:
-				pass
-			try:
-				for line in open("/etc/init.d/cardserver"):
-					if line.find("echo") > -1:
-						nameser.append(line)
-				serlist = "%s" % nameser[1].split('"')[1]
-			except:
-				pass
-			if serlist is None:
-				serlist = ""
-			elif camdlist is None:
-				camdlist = ""
-			elif serlist is None and camdlist is None:
-				serlist = ""
-				camdlist = ""
-			return ("%s %s" % (serlist, camdlist))
+		
 		# OoZooN
 		elif fileExists("/tmp/cam.info"):
 			try:

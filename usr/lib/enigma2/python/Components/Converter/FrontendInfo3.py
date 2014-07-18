@@ -3,7 +3,7 @@
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 
-class FrontendInfo2(Converter, object):
+class FrontendInfo3(Converter, object):
 	BER = 0
 	SNR = 1
 	AGC = 2

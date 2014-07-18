@@ -7,7 +7,7 @@ from os import popen, statvfs
 SIZE_UNITS = ["B", "KB", "MB", "GB", "TB", "PB", "EB"]
 
 
-class ProgressDiskSpaceInfo(Poll, Converter):
+class DiskSpaceInfo(Poll, Converter):
 	HDDTEMP = 0
 	LOADAVG = 1
 	MEMTOTAL = 2
@@ -17,6 +17,7 @@ class ProgressDiskSpaceInfo(Poll, Converter):
 	USBINFO = 6
 	HDDINFO = 7
 	FLASHINFO = 8
+	FLASHINFO2 = 9
 
 	def __init__(self, type):
 		Converter.__init__(self, type)
@@ -41,10 +42,12 @@ class ProgressDiskSpaceInfo(Poll, Converter):
 			self.type = self.USBINFO
 		elif "HddInfo" in type:
 			self.type = self.HDDINFO
+		elif "FlashInfo2" in type:
+			self.type = self.FLASHINFO2
 		else:
-			self.type = self.FLASHINFO
+			self.type = self.FLASHINFO	
 		
-		if self.type in (self.FLASHINFO,self.HDDINFO,self.USBINFO):
+		if self.type in (self.FLASHINFO,self.FLASHINFO2,self.HDDINFO,self.USBINFO):
 			self.poll_interval = 5000
 		else:
 			self.poll_interval = 1000
@@ -73,19 +76,20 @@ class ProgressDiskSpaceInfo(Poll, Converter):
 					self.USBINFO:   ("/media/usb","USB"),
 					self.HDDINFO:   ("/media/hdd","HDD"),
 					self.FLASHINFO: ("/","Flash"),
+					self.FLASHINFO2: ("/data","Flasherweiterung"),
 				}[self.type]
-			if self.type in (self.USBINFO,self.HDDINFO,self.FLASHINFO):
+			if self.type in (self.USBINFO,self.HDDINFO,self.FLASHINFO,self.FLASHINFO2):
 				list = self.getDiskInfo(entry[0])
 			else:
 				list = self.getMemInfo(entry[0])
 			if list[0] == 0:
 				text = "%s: Not Available"%(entry[1])
 			elif self.shortFormat:
-				text = "%s: %s, in use: %s%%" % (entry[1], self.getSizeStr(list[0]), list[3])
+				text = "%s: %s Belegt: %s%%" % (entry[1], self.getSizeStr(list[0]), list[3])
 			elif self.fullFormat:
-				text = "%s: %s Free:%s Used:%s (%s%%)" % (entry[1], self.getSizeStr(list[0]), self.getSizeStr(list[2]), self.getSizeStr(list[1]), list[3])
+				text = "%s: %s Frei: %s Belegt: %s (%s%%)" % (entry[1], self.getSizeStr(list[0]), self.getSizeStr(list[2]), self.getSizeStr(list[1]), list[3])
 			else:
-				text = "%s: %s Used:%s Free:%s" % (entry[1], self.getSizeStr(list[0]), self.getSizeStr(list[1]), self.getSizeStr(list[2]))
+				text = "%s: %s Belegt: %s Frei: %s" % (entry[1], self.getSizeStr(list[0]), self.getSizeStr(list[1]), self.getSizeStr(list[2]))
 		return text
 
 	@cached
@@ -94,8 +98,8 @@ class ProgressDiskSpaceInfo(Poll, Converter):
 		if self.type in (self.MEMTOTAL,self.MEMFREE,self.SWAPTOTAL,self.SWAPFREE):
 			entry = {self.MEMTOTAL: "Mem", self.MEMFREE: "Mem", self.SWAPTOTAL: "Swap", self.SWAPFREE: "Swap"}[self.type]
 			result = self.getMemInfo(entry)[3]
-		elif self.type in (self.USBINFO,self.HDDINFO,self.FLASHINFO):
-			path = {self.USBINFO: "/media/usb", self.HDDINFO: "/media/hdd", self.FLASHINFO: "/"}[self.type]
+		elif self.type in (self.USBINFO,self.HDDINFO,self.FLASHINFO,self.FLASHINFO2):
+			path = {self.USBINFO: "/media/usb", self.HDDINFO: "/media/hdd", self.FLASHINFO: "/", self.FLASHINFO2: "/data"}[self.type]
 			result = self.getDiskInfo(path)[3]
 		return result
 

@@ -1,5 +1,5 @@
-﻿#
-#  CaidDisplay - Converter
+#
+#  CaidDisplay - Converter mod Ligioner
 #
 #  Coded by Dr.Best & weazle (c) 2010
 #  Support: www.dreambox-tools.info
@@ -28,19 +28,8 @@ class CaidDisplay(Poll, Converter, object):
 		Poll.__init__(self)
 		Converter.__init__(self, type)
 		self.type = type
-		self.systemCaids = {
-			"06" : "I",
-			"01" : "S",
-			"18" : "N",
-			"05" : "V",
-			"0B" : "CO",
-			"17" : "BC",
-			"0D" : "CW",
-			"4A" : "DC",
-			"55" : "BG",
-			"09" : "NDS" }
-
-		self.poll_interval = 2000
+		self.systemCaids = {"26":"biss","4A":"dre","05":"via","01":"sec","06":"ird","17":"bet","18":"nag","09":"nds","0B":"con","0D":"crw"}
+		self.poll_interval = 1000
 		self.poll_enabled = True
 
 	@cached
@@ -65,7 +54,7 @@ class CaidDisplay(Poll, Converter, object):
 							
 					ecm_info = self.ecmfile()
 					if ecm_info:
-						emu_caid = ecm_info.get("caid", "")
+						emu_caid = ecm_info.get("caid","")
 						if emu_caid and emu_caid != "0x000":
 							c = emu_caid.lstrip("0x")
 							if len(c) == 3:
@@ -87,7 +76,7 @@ class CaidDisplay(Poll, Converter, object):
 					ecm_info = self.ecmfile()
 					if ecm_info:
 						# caid
-						caid = ecm_info.get("caid", "")
+						caid = ecm_info.get("caid","")
 						caid = caid.lstrip("0x")
 						caid = caid.upper()
 						caid = caid.zfill(4)
@@ -99,7 +88,7 @@ class CaidDisplay(Poll, Converter, object):
 						ecm_time = ecm_info.get("ecm time", None)
 						if ecm_time:
 							if "msec" in ecm_time:
-								ecm_time = "ECM: %s ms" % ecm_time						
+								ecm_time = "ECM: %s " % ecm_time						
 							else:
 								ecm_time = "ECM: %s s" % ecm_time
 						# address

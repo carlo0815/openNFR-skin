@@ -76,9 +76,9 @@ class Watches(Renderer):
 		y = y0
 		for x in range(x0, x1 + 1):
 			if steep:
-				self.instance.fillRect(eRect(y, x, 1, 3), self.fColor)
+				self.instance.fillRect(eRect(y, x, 2, 3), self.fColor)
 			else:          
-				self.instance.fillRect(eRect(x, y, 1, 3), self.fColor)
+				self.instance.fillRect(eRect(x, y, 2, 3), self.fColor)
 			error = error + deltay
 			if error > 0:
 				y = y + ystep

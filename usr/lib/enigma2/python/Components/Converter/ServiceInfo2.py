@@ -11,6 +11,7 @@
 # ver 0.4a 02/09/2012 added Framerate mod by 2boom
 # ver 0.4b 15/12/2012 added xATYPE mod by 2boom
 # ver 0.4c 16/12/2012 added xALLTYPE mod by 2boom
+# ver 0.5a 03/01/2013 speed opt. mod by 2boom
 from Poll import Poll
 from Components.Converter.Converter import Converter
 from enigma import iServiceInformation, iPlayableService
@@ -85,60 +86,56 @@ class ServiceInfo2(Poll, Converter, object):
 		info = service and service.info()
 		if not info:
 			return ""
-
 		if self.type == self.xAPID:
 			try:
 				return "%0.4X" % int(self.getServiceInfoString(info, iServiceInformation.sAudioPID))
 			except:
-				return " "
+				return "N/A"
 		elif self.type == self.xVTYPE:
-			try:
-				return ("MPEG2", "MPEG4", "MPEG1", "MPEG4-II", "VC1", "VC1-SM", "")[info.getInfo(iServiceInformation.sVideoType)]
-			except: 
-				return " "
+			return ("MPEG2", "MPEG4", "MPEG1", "MPEG4-II", "VC1", "VC1-SM", "")[info.getInfo(iServiceInformation.sVideoType)]
 		elif self.type == self.xALLTYPE:
 			audio = service.audioTracks()
 			try:
 				return "%s%s" % (("MPEG2/", "MPEG4/", "MPEG1/", "MPEG4-II/", "VC1/", "VC1-SM/", "")[info.getInfo(iServiceInformation.sVideoType)], str(audio.getTrackInfo(audio.getCurrentTrack()).getDescription()))
-			except: 
-				return " "
+			except:
+				return ""
 		elif self.type == self.xATYPE:
 			audio = service.audioTracks()
 			try:
 				return str(audio.getTrackInfo(audio.getCurrentTrack()).getDescription())
-			except: 
-				return " "
+			except:
+				return ""
 		elif self.type == self.xVPID:
 			try:
 				return "%0.4X" % int(self.getServiceInfoString(info, iServiceInformation.sVideoPID))
 			except:
-				return " "
+				return "N/A"
 		elif self.type == self.xSID:
 			try:
 				return "%0.4X" % int(self.getServiceInfoString(info, iServiceInformation.sSID))
 			except:
-				return " "
+				return "N/A"
 		elif self.type == self.xTSID:
 			try:
 				return "%0.4X" % int(self.getServiceInfoString(info, iServiceInformation.sTSID))
 			except:
-				return " "
+				return "N/A"
 		elif self.type == self.xONID:
 			try:
 				return "%0.4X" % int(self.getServiceInfoString(info, iServiceInformation.sONID))
 			except:
-				return " "
+				return "N/A"
 		elif self.type == self.sCAIDs:
 			try:
 				return self.getServiceInfoString(info, iServiceInformation.sCAIDs)
 			except:
-				return " "
+				return "N/A"
 		elif self.type == self.yAll:
 			try:
 				return "SID: %0.4X  VPID: %0.4X  APID: %0.4X  TSID: %0.4X  ONID: %0.4X" % (int(self.getServiceInfoString(info, iServiceInformation.sSID)), int(self.getServiceInfoString(info, iServiceInformation.sVideoPID)), int(self.getServiceInfoString(info, iServiceInformation.sAudioPID)), int(self.getServiceInfoString(info, iServiceInformation.sTSID)), int(self.getServiceInfoString(info, iServiceInformation.sONID)))
 			except:
 				try:
-					return "SID: %0.4X  VPID: %0.4X  TSID: %0.4X  ONID: %0.4X" % (int(self.getServiceInfoString(info, iServiceInformation.sSID)), int(self.getServiceInfoString(info, iServiceInformation.sVideoPID)), int(self.getServiceInfoString(info, iServiceInformation.sTSID)), int(self.getServiceInfoString(info, iServiceInformation.sONID)))
+					return "SID: %0.4X  APID: %0.4X  TSID: %0.4X  ONID: %0.4X" % (int(self.getServiceInfoString(info, iServiceInformation.sSID)), int(self.getServiceInfoString(info, iServiceInformation.sAudioPID)), int(self.getServiceInfoString(info, iServiceInformation.sTSID)), int(self.getServiceInfoString(info, iServiceInformation.sONID)))
 				except:
 					return " "
 		elif self.type == self.xAll:
@@ -168,9 +165,11 @@ class ServiceInfo2(Poll, Converter, object):
 
 	text = property(getText)
 
-
 	def changed(self, what):
-		if what[0] != self.CHANGED_SPECIFIC or what[1] in self.interesting_events:
+		if what[0] == self.CHANGED_SPECIFIC:
+			if what[1] == iPlayableService.evStart or what[1] == iPlayableService.evVideoSizeChanged or what[1] == iPlayableService.evUpdatedInfo:
+				Converter.changed(self, what)
+		elif what[0] != self.CHANGED_SPECIFIC or what[1] in self.interesting_events:
 			Converter.changed(self, what)
 		elif what[0] == self.CHANGED_POLL:
 			self.downstream_elements.changed(what)
