@@ -7495,7 +7495,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="lab2" position="392,98" size="150,24" font="Regular;20" valign="center" transparent="1" />
     <widget name="labstop" position="680,98" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="red" zPosition="1" />
     <widget name="labrun" position="680,98" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="green" zPosition="2" />
-    <widget name="config" position="65,98" scrollbarMode="showOnDemand" size="715,540" transparent="1" />
+    <widget source="list" render="Listbox" position="65,147" size="715,491" scrollbarMode="showOnDemand" transparent="1">
+      <convert type="StringList" />
+    </widget>
+    <eLabel name="new eLabel" position="65,132" size="715,2" foregroundColor="cyan1" backgroundColor="cyan1" />
   </screen>
   <screen name="CronTimersConfig" position="center,center" size="1280,720" title="CronTimersConfig" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
