@@ -6369,7 +6369,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="finished" render="FixedLabel" text="OK" position="375,672" size="120,25" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="backgroundable" render="Pixmap" pixmap="skin_default/buttons/key_blue.png" position="550,672" size="30,30" alphatest="blend">
+    <widget source="backgroundable" render="Pixmap" pixmap="skin_default/buttons/key_blue.png" position="550,635" size="30,30" alphatest="blend">
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="backgroundable" render="FixedLabel" text="Continue in background" position="585,670" size="280,25" font="Regular;22" halign="left" backgroundColor="black" transparent="1">
