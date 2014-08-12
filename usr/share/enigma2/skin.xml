@@ -2256,7 +2256,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="QuestionPixmap" pixmap="skin_default/icons/input_question.png" position="30,30" size="53,53" alphatest="blend" />
     <widget name="InfoPixmap" pixmap="skin_default/icons/input_info.png" position="30,30" size="53,53" alphatest="blend" />
     <widget name="list" position="20,95" size="760,320" itemHeight="32" transparent="1" />
-    <applet type="onLayoutFinish">
+    <!--applet type="onLayoutFinish">
 # this should be factored out into some helper code, but currently demonstrates applets.
 from enigma import eSize, ePoint
 orgwidth = self.instance.size().width()
@@ -2289,7 +2289,7 @@ self["list"].instance.resize(eSize(*listsize))
 # center window
 newwidth = wsize[0]
 self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
-		</applet>
+		</applet-->
   </screen>
   <screen name="MovieContextMenu" position="0,0" size="1280,720" title="Movielist menu" flags="wfNoBorder">
     <ePixmap position="center,2" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
