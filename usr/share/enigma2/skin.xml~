@@ -1363,7 +1363,7 @@
       <convert type="ConditionalShowHide" />
     </widget>
   </screen>
-  <!--screen name="ChoiceBox" position="0,0" size="1280,720" title="Input" flags="wfNoBorder">
+  <screen name="ChoiceBox" position="0,0" size="1280,720" title="Input" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
     <widget source="Title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <ePixmap position="848,596" size="350,44" pixmap="skin_default/menu/db.png" transparent="1" alphatest="blend" />
@@ -1381,7 +1381,7 @@
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="837,95" zPosition="-8" size="375,214" />
-  </screen-->
+  </screen>
   <screen name="Console" position="0,0" size="1280,720" title="Command execution..." flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
