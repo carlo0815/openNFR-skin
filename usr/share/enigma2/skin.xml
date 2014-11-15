@@ -12321,42 +12321,44 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="key_green" position="395,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <widget name="key_blue" position="975,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
   </screen>
-  <screen name="NFR4XBootImageChoose" position="0,0" size="1280,720" title="NFR4XBoot - Menu" flags="wfNoBorder">
-    <ePixmap position="center,center" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
-    <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
-      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
-    </widget>
-    <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
-    <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
-    <ePixmap pixmap="skin_default/buttons/yellow.png" position="650,670" size="30,30" alphatest="blend" />
-    <ePixmap pixmap="skin_default/buttons/blue.png" position="940,670" size="30,30" alphatest="blend" />
-    <eLabel text="NFR4XBoot - Menu" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
-    <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
-    <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="skin_default/icons/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
-    <widget name="label2" position="163,98" size="300,30" zPosition="1" font="Regular;20" backgroundColor="yellow" transparent="1" foregroundColor="yellow" />
-    <widget name="label3" position="163,150" size="300,30" zPosition="1" font="Regular;20" backgroundColor="yellow" transparent="1" foregroundColor="yellow" />
-    <widget name="label4" position="163,188" size="357,30" zPosition="1" font="Regular;20" backgroundColor="yellow" transparent="1" foregroundColor="yellow" />
-    <widget name="label5" position="163,225" size="357,30" zPosition="1" font="Regular;20" backgroundColor="yellow" transparent="1" foregroundColor="yellow" />
-    <widget name="label6" position="478,98" size="300,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="green" foregroundColor="green" transparent="1" />
-    <widget name="label7" position="478,150" size="300,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="green" foregroundColor="green" transparent="1" />
-    <widget name="label8" position="422,188" size="357,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="green" foregroundColor="green" transparent="1" />
-    <widget name="label9" position="421,225" size="357,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="green" foregroundColor="green" transparent="1" />
-    <widget name="label10" position="163,264" size="550,30" zPosition="1" font="Regular;20" backgroundColor="yellow" transparent="1" foregroundColor="yellow" />
-    <widget name="label11" position="677,264" size="103,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="green" foregroundColor="green" transparent="1" />
-    <widget name="label1" position="65,320" size="715,22" zPosition="1" halign="center" font="Regular;18" backgroundColor="cyan1" transparent="1" foregroundColor="cyan1" />
-    <widget name="device_icon" position="65,98" size="80,80" alphatest="on" />
-    <widget name="free_space_progressbar" position="163,132" size="615,13" borderWidth="1" zPosition="3" />
-    <widget name="config" position="65,370" size="715,268" scrollbarMode="showOnDemand" transparent="1" />
-    <widget name="key_red" position="105,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <widget name="key_green" position="395,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <widget name="key_yellow" position="685,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <widget name="key_blue" position="975,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-  </screen>
+<screen name="NFR4XBootImageChoose" position="0,0" size="1280,720" title="NFR4XBoot - Menu" flags="wfNoBorder">
+  <ePixmap position="center,center" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
+  <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+    <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+  </widget>
+  <ePixmap pixmap="skin_default/buttons/red.png" position="30,670" size="30,30" alphatest="blend" />
+  <ePixmap pixmap="skin_default/buttons/green.png" position="245,670" size="30,30" alphatest="blend" />
+  <ePixmap pixmap="skin_default/buttons/yellow.png" position="459,668" size="30,30" alphatest="blend" />
+  <ePixmap pixmap="skin_default/buttons/blue.png" position="675,670" size="30,30" alphatest="blend" />
+  <eLabel text="NFR4XBoot - Menu" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
+  <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
+  <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
+  <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="skin_default/icons/db.png" transparent="1" alphatest="blend" />
+  <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
+  <widget name="label2" position="163,98" size="300,30" zPosition="1" font="Regular;20" backgroundColor="yellow" transparent="1" foregroundColor="yellow" />
+  <widget name="label3" position="163,150" size="300,30" zPosition="1" font="Regular;20" backgroundColor="yellow" transparent="1" foregroundColor="yellow" />
+  <widget name="label4" position="163,188" size="357,30" zPosition="1" font="Regular;20" backgroundColor="yellow" transparent="1" foregroundColor="yellow" />
+  <widget name="label5" position="163,225" size="357,30" zPosition="1" font="Regular;20" backgroundColor="yellow" transparent="1" foregroundColor="yellow" />
+  <widget name="label6" position="478,98" size="300,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="green" foregroundColor="green" transparent="1" />
+  <widget name="label7" position="478,150" size="300,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="green" foregroundColor="green" transparent="1" />
+  <widget name="label8" position="422,188" size="357,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="green" foregroundColor="green" transparent="1" />
+  <widget name="label9" position="421,225" size="357,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="green" foregroundColor="green" transparent="1" />
+  <widget name="label10" position="163,264" size="550,30" zPosition="1" font="Regular;20" backgroundColor="yellow" transparent="1" foregroundColor="yellow" />
+  <widget name="label11" position="677,264" size="103,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="green" foregroundColor="green" transparent="1" />
+  <widget name="label1" position="65,320" size="715,22" zPosition="1" halign="center" font="Regular;18" backgroundColor="cyan1" transparent="1" foregroundColor="cyan1" />
+  <widget name="device_icon" position="65,98" size="80,80" alphatest="on" />
+  <widget name="free_space_progressbar" position="163,132" size="615,13" borderWidth="1" zPosition="3" />
+  <widget name="config" position="65,370" size="715,268" scrollbarMode="showOnDemand" transparent="1" />
+  <widget name="key_red" position="66,675" size="170,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="key_green" position="281,675" size="170,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="key_yellow" position="495,675" size="170,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="key_blue" position="713,675" size="170,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+  <ePixmap pixmap="skin_default/buttons/menu.png" position="895,670" size="30,30" alphatest="blend" />
+  <widget name="key_menu" position="930,675" size="170,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+</screen>
   <screen name="NFR4XBootImageInstall" position="0,0" size="1280,720" title="NFR4XBoot - Image Installation" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
