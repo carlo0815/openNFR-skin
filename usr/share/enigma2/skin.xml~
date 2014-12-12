@@ -4314,35 +4314,35 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="key_green" render="Label" position="395,672" size="240,24" zPosition="1" font="Regular;20" backgroundColor="black" transparent="1" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" />
   </screen>
-<screen name="DVDPlayer" position="35,535" size="1280,200" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
-  <ePixmap position="0,0" zPosition="-1" size="1280,200" pixmap="skin_default/infobar2.png" />
-  <widget source="session.CurrentService" render="Label" position="248,10" size="720,36" font="Regular;30" valign="top" noWrap="1" backgroundColor="black" transparent="1" halign="center" foregroundColor="cyan1">
-    <convert type="ServiceName">Name</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="1107,7" size=" 80,25" font="Regular;23" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
-    <convert type="ClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="987,8" size="120,22" font="Regular;18" halign="right" backgroundColor="backtop" foregroundColor="cyan1" transparent="1">
-    <convert type="ClockToText">Format:%d.%m.%Y</convert>
-  </widget>
-  <widget source="session.CurrentService" render="Label" position="150,135" size="100,28" font="Regular;24" halign="center" valign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1" foregroundColor="cyan1">
-    <convert type="ServicePosition">Position</convert>
-  </widget>
-  <ePixmap pixmap="skin_default/slider_bg.png" position="center,115" size="550,20" zPosition="7" alphatest="blend" />
-  <ePixmap pixmap="skin_default/slider.png" position="380,116" size="500,17" zPosition="2" alphatest="blend" />
-  <widget source="session.CurrentService" render="Progress" position="407,117" size="460,16" pixmap="skin_default/slider1.png" transparent="1" zPosition="5">
-    <convert type="ServicePosition">Position</convert>
-  </widget>
-  <widget source="session.CurrentService" render="Label" position="960,135" size="100,28" font="Regular;24" halign="center" valign="center" backgroundColor="background" transparent="1" foregroundColor="cyan1">
-    <convert type="ServicePosition">Remaining</convert>
-  </widget>
-  <widget source="session.CurrentService" render="Label" position="center,140" size="150,24" font="Regular;20" halign="center" valign="center" backgroundColor="background" transparent="1" foregroundColor="cyan1">
-    <convert type="ServicePosition">Length</convert>
-  </widget>
-  <widget name="chapterLabel" position="350,90" size="250,22" font="Regular;18" foregroundColor="yellow" backgroundColor="backtop" transparent="1" />
-  <widget name="audioLabel" position="150,90" size="200,22" font="Regular;18" foregroundColor="yellow" backgroundColor="backtop" transparent="1" />
-  <widget name="subtitleLabel" position="600,90" size="460,22" font="Regular;18" foregroundColor="yellow" backgroundColor="backtop" transparent="1" />
-</screen>
+  <screen name="DVDPlayer" position="center,535" size="1280,200" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap position="0,0" zPosition="-1" size="1280,200" pixmap="skin_default/infobar2.png" />
+    <widget source="session.CurrentService" render="Label" position="290,6" size="720,36" font="Regular;30" valign="top" noWrap="1" backgroundColor="black" transparent="1" halign="center" foregroundColor="cyan1">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="1140,6" size=" 80,25" font="Regular;23" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="1020,6" size="120,22" font="Regular;18" halign="right" backgroundColor="backtop" foregroundColor="cyan1" transparent="1">
+      <convert type="ClockToText">Format:%d.%m.%Y</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="150,135" size="100,28" font="Regular;24" halign="center" valign="center" backgroundColor="background" shadowColor="black" shadowOffset="-1,-1" transparent="1" foregroundColor="cyan1">
+      <convert type="ServicePosition">Position</convert>
+    </widget>
+    <ePixmap pixmap="skin_default/slider_bg.png" position="center,105" size="550,20" zPosition="7" alphatest="blend" />
+    <ePixmap pixmap="skin_default/slider.png" position="380,106" size="500,17" zPosition="2" alphatest="blend" />
+    <widget source="session.CurrentService" render="Progress" position="407,107" size="460,16" pixmap="skin_default/slider1.png" transparent="1" zPosition="5">
+      <convert type="ServicePosition">Position</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1010,135" size="100,28" font="Regular;24" halign="center" valign="center" backgroundColor="background" transparent="1" foregroundColor="cyan1">
+      <convert type="ServicePosition">Remaining</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="center,140" size="150,24" font="Regular;20" halign="center" valign="center" backgroundColor="background" transparent="1" foregroundColor="cyan1">
+      <convert type="ServicePosition">Length</convert>
+    </widget>
+    <widget name="chapterLabel" position="270,65" size="750,22" font="Regular;18" foregroundColor="yellow" backgroundColor="backtop" transparent="1" />
+    <widget name="audioLabel" position="143,65" size="750,22" font="Regular;18" foregroundColor="yellow" backgroundColor="backtop" transparent="1" />
+    <widget name="subtitleLabel" position="400,65" size="750,22" font="Regular;18" foregroundColor="yellow" backgroundColor="backtop" transparent="1" />
+  </screen>
   <screen name="ChapterZap" position="500,600" size="280,60" title="Chapter">
     <widget name="chapter" position="35,15" size="110,25" font="Regular;23" />
     <widget name="number" position="145,15" size="80,25" halign="right" font="Regular;23" />
