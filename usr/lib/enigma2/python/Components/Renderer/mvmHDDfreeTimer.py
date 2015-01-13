@@ -15,6 +15,8 @@ class mvmHDDfreeTimer(Renderer, VariableText):
 	def changed(self, what):
 		if not self.suspended:
 			try:
+                                if ('default') in config.usage.timer_path.value:
+                                        config.usage.timer_path.value = defaultMoviePath()				
 				if path.exists(config.usage.timer_path.value):
 					stat = statvfs(config.usage.timer_path.value)
 					free = (stat.f_bavail if stat.f_bavail!=0 else stat.f_bfree) * stat.f_bsize / 1048576
