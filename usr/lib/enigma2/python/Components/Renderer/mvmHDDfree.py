@@ -1,5 +1,6 @@
 from Components.VariableText import VariableText
 from Components.config import config
+from Components.UsageConfig import defaultMoviePath
 from enigma import eLabel
 from Renderer import Renderer
 from os import path, statvfs
@@ -15,15 +16,16 @@ class mvmHDDfree(Renderer, VariableText):
 	def changed(self, what):
 		if not self.suspended:
 			try:
-				if path.exists(config.movielist.last_videodir.value):
-					stat = statvfs(config.movielist.last_videodir.value)
+                                videodir_value = defaultMoviePath()
+				if path.exists(videodir_value):
+					stat = statvfs(videodir_value)
 					free = (stat.f_bavail if stat.f_bavail!=0 else stat.f_bfree) * stat.f_bsize / 1048576
 					if free >= 10240:
 						fdspace = "%d GB " %(free/1024)
-						self.text = fdspace + _(config.movielist.last_videodir.value)
+						self.text = fdspace + _(videodir_value)
 					else:
 						fdspace = "%d MB " %(free)
-						self.text = fdspace + _(config.movielist.last_videodir.value)
+						self.text = fdspace + _(videodir_value)
 				else:
 					self.text = '---'
 			except:
