@@ -3,7 +3,7 @@ from enigma import ePixmap, eServiceReference
 from Tools.Directories import fileExists, SCOPE_SKIN_IMAGE, SCOPE_CURRENT_SKIN, resolveFilename
 
 class Picon2(Renderer):
-    searchPaths = ('/usr/share/enigma2/%s/', '/media/sde1/%s/', '/media/hdd/%s/', '/media/cf/%s/', '/media/sdd1/%s/', '/media/usb/%s/', '/media/usb1/%s/', '/media/ba/%s/', '/mnt/ba/%s/', '/media/sda/%s/', '/etc/%s/')
+    searchPaths = ('/usr/share/enigma2/%s/', '/media/sde1/%s/', '/media/hdd/%s/', '/media/mmc/%s/', '/media/cf/%s/', '/media/sdd1/%s/', '/media/usb/%s/', '/media/usb1/%s/', '/media/ba/%s/', '/mnt/ba/%s/', '/media/sda/%s/', '/etc/%s/')
 
     def __init__(self):
         Renderer.__init__(self)
