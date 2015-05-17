@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <skin>
   <!-- skin_default Mod Skin by Maggy for NFR images  OE 2.0 -->
   <output id="0">
@@ -159,8 +160,7 @@
       <convert type="ClockToText">Format:%M</convert>
     </widget>
     <widget source="global.CurrentTime" render="FixedLabel" text=":" font="DIGI; 25" position="1074,558" size="20,28" halign="center" zPosition="3" valign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1">
-      <convert type="BlinkingClockDots">
-      </convert>
+      <convert type="BlinkingClockDots" />
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget source="global.CurrentTime" render="Label" position="37,558" size="150,28" font="DIGI; 25" halign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
@@ -181,8 +181,7 @@
       <convert type="FrontendInfo">AGC</convert>
     </widget>
     <widget source="session.CurrentService" render="MaggyPiconEmu" path="skin_default/piconCam/" position="236,563" size="115,27" transparent="1" alphatest="blend" zPosition="3">
-      <convert type="EmuName">
-      </convert>
+      <convert type="EmuName" />
     </widget>
     <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/crypt/Betacrypt.png" position="835,563" size="115,27" zPosition="5" transparent="1" alphatest="blend">
       <convert type="MaggyCryptInfo">BetaEcm</convert>
@@ -383,8 +382,7 @@
       <convert type="ClockToText">Format:%M</convert>
     </widget>
     <widget source="global.CurrentTime" render="FixedLabel" text=":" font="DIGI; 25" position="1074,558" size="20,28" halign="center" zPosition="3" valign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1">
-      <convert type="BlinkingClockDots">
-      </convert>
+      <convert type="BlinkingClockDots" />
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget source="global.CurrentTime" render="Label" position="37,558" size="150,28" font="DIGI; 25" halign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
@@ -405,8 +403,7 @@
       <convert type="FrontendInfo">AGC</convert>
     </widget>
     <widget source="session.CurrentService" render="MaggyPiconEmu" path="skin_default/piconCam/" position="236,563" size="115,27" transparent="1" alphatest="blend" zPosition="3">
-      <convert type="EmuName">
-      </convert>
+      <convert type="EmuName" />
     </widget>
     <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/crypt/Betacrypt.png" position="835,563" size="115,27" zPosition="5" transparent="1" alphatest="blend">
       <convert type="MaggyCryptInfo">BetaEcm</convert>
@@ -612,8 +609,7 @@
       <convert type="ClockToText">Format:%H</convert>
     </widget>
     <widget source="global.CurrentTime" render="FixedLabel" text=":" font="LCD; 25" position="588,451" size="20,28" halign="center" zPosition="3" valign="center" backgroundColor="backtop" foregroundColor="cyan1" transparent="1">
-      <convert type="BlinkingClockDots">
-      </convert>
+      <convert type="BlinkingClockDots" />
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget source="global.CurrentTime" render="Label" position="615,457" size="60,28" font="LCD; 25" halign="center" valign="center" noWrap="1" backgroundColor="backtop" foregroundColor="cyan1" transparent="1" zPosition="3">
@@ -695,12 +691,10 @@
     </widget>
     <widget source="title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="menu" render="Listbox" position="65,98" size="710,540" backgroundPixmap="skin_default/menu/sel_bg-fs8.png" selectionPixmap="skin_default/menu/sel_fg-fs8.png" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (51, 2), size = (600, 38), flags = RT_HALIGN_LEFT, text = 0) ],
+      <convert type="TemplatedMultiContent">{"template": [ MultiContentEntryText(pos = (51, 2), size = (600, 38), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 40
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap position="840,670" size="30,30" zPosition="10" pixmap="skin_default/buttons/key_ok.png" transparent="1" alphatest="blend" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" />
@@ -726,12 +720,10 @@
     </widget>
     <widget source="title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showNever" enableWrapAround="1" backgroundPixmap="skin_default/menu/sel_bg-fs8.png" selectionPixmap="skin_default/menu/sel_fg-fs8.png" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (51, 2), size = (600, 38), flags = RT_HALIGN_LEFT, text = 0) ],
+      <convert type="TemplatedMultiContent">{"template": [ MultiContentEntryText(pos = (51, 2), size = (600, 38), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 40
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget source="menu" render="Pixmap" pixmap="skin_default/menu/nfrmenu.png" position="950,430" size="150,150" alphatest="blend">
       <convert type="MenuEntryCompare">Infopanel</convert>
@@ -811,12 +803,10 @@
     </widget>
     <widget source="title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showNever" enableWrapAround="1" backgroundPixmap="skin_default/menu/sel_bg-fs8.png" selectionPixmap="skin_default/menu/sel_fg-fs8.png" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (51, 2), size = (600, 38), flags = RT_HALIGN_LEFT, text = 0) ],
+      <convert type="TemplatedMultiContent">{"template": [ MultiContentEntryText(pos = (51, 2), size = (600, 38), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 40
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
   </screen>
@@ -841,12 +831,10 @@
     </widget>
     <widget source="title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showNever" enableWrapAround="1" backgroundPixmap="skin_default/menu/sel_bg-fs8.png" selectionPixmap="skin_default/menu/sel_fg-fs8.png" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (51, 2), size = (600, 38), flags = RT_HALIGN_LEFT, text = 0) ],
+      <convert type="TemplatedMultiContent">{"template": [ MultiContentEntryText(pos = (51, 2), size = (600, 38), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 40
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget source="menu" render="Pixmap" pixmap="skin_default/menu/tuner.png" position="950,430" size="150,150" alphatest="blend" zPosition="1">
       <convert type="MenuEntryCompare">service_searching_selection</convert>
@@ -906,12 +894,10 @@
     </widget>
     <widget source="title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="menu" render="Listbox" position="65,98" size="715,530" scrollbarMode="showNever" enableWrapAround="1" backgroundPixmap="skin_default/menu/sel_bg-fs8.png" selectionPixmap="skin_default/menu/sel_fg-fs8.png" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (51, 2), size = (600, 38), flags = RT_HALIGN_LEFT, text = 0) ],
+      <convert type="TemplatedMultiContent">{"template": [ MultiContentEntryText(pos = (51, 2), size = (600, 38), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 40
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap pixmap="skin_default/menu/search.png" position="950,430" size="150,150" alphatest="blend" />
   </screen>
@@ -935,12 +921,10 @@
     </widget>
     <widget source="title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="menu" render="Listbox" position="65,98" size="715,520" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundPixmap="skin_default/menu/sel_bg-fs8.png" selectionPixmap="skin_default/menu/sel_fg-fs8.png" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (51, 2), size = (600, 38), flags = RT_HALIGN_LEFT, text = 0) ],
+      <convert type="TemplatedMultiContent">{"template": [ MultiContentEntryText(pos = (51, 2), size = (600, 38), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 40
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap pixmap="skin_default/menu/setup.png" position="950,430" size="150,150" alphatest="blend" />
     <ePixmap position="848,596" size="350,44" pixmap="skin_default/menu/db.png" transparent="1" alphatest="blend" />
@@ -966,12 +950,10 @@
     </widget>
     <widget source="title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showNever" enableWrapAround="1" backgroundPixmap="skin_default/menu/sel_bg-fs8.png" selectionPixmap="skin_default/menu/sel_fg-fs8.png" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (51, 2), size = (600, 38), flags = RT_HALIGN_LEFT, text = 0) ],
+      <convert type="TemplatedMultiContent">{"template": [ MultiContentEntryText(pos = (51, 2), size = (600, 38), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 40
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget source="menu" render="Pixmap" pixmap="skin_default/menu/hdd.png" position="950,430" size="150,150" alphatest="blend" zPosition="1">
       <convert type="MenuEntryCompare">harddisk_init</convert>
@@ -1007,12 +989,10 @@
     </widget>
     <widget source="title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showNever" enableWrapAround="1" backgroundPixmap="skin_default/menu/sel_bg-fs8.png" selectionPixmap="skin_default/menu/sel_fg-fs8.png" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (51, 2), size = (600, 38), flags = RT_HALIGN_LEFT, text = 0) ],
+      <convert type="TemplatedMultiContent">{"template": [ MultiContentEntryText(pos = (51, 2), size = (600, 38), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 40
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget source="menu" render="Pixmap" pixmap="skin_default/menu/shutdown.png" position="950,430" size="150,150" alphatest="blend" zPosition="1">
       <convert type="MenuEntryCompare">deep_standby</convert>
@@ -1074,24 +1054,20 @@
     </widget>
     <eLabel text="Softwaremanager" position="65,17" size="750,43" font="Regular;35" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <widget source="menu" render="Listbox" position="65,98" size="710,350" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 				   MultiContentEntryText(pos = (15,5),size = (383,30),flags = RT_HALIGN_LEFT,text = 1),# index 0 is the MenuText,
 					],
 				"fonts": [gFont("Regular",22)],
 				"itemHeight": 40
-				}
-		  </convert>
+				}</convert>
     </widget>
     <widget source="menu" render="Listbox" position="65,470" size="710,170" zPosition="3" scrollbarMode="showNever" selectionDisabled="1" foregroundColor="cyan1" backgroundColor="background" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 				   MultiContentEntryText(pos = (0,0),size = (715,150),flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP,text = 2),# index 2 is the Description,
 					],
 				"fonts": [gFont("Regular",20)],
 				"itemHeight": 150
-				}
-		  </convert>
+				}</convert>
     </widget>
     <ePixmap pixmap="skin_default/buttons/key_red.png" position="70,670" size="30,30" alphatest="blend" />
     <widget source="key_red" render="Label" position="105,672" size="240,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
@@ -1221,8 +1197,7 @@
     </widget>
     <widget source="ServiceEvent" render="Label" position="820,500" size="67,22" font="Regular;19" backgroundColor="unfcc000" transparent="1" foregroundColor="unfcc000">
       <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText">
-      </convert>
+      <convert type="ClockToText" />
     </widget>
     <widget source="ServiceEvent" render="Label" position="1146,500" size="75,22" font="Regular;19" backgroundColor="unfcc000" transparent="1" foregroundColor="unfcc000">
       <convert type="EventTime">EndTime</convert>
@@ -1447,8 +1422,7 @@
     <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
-    <widget name="showcrushlog" position="65,98" size="710,540" font="Regular;16" valign="left" halign="left" transparent="1">
-    </widget>
+    <widget name="showcrushlog" position="65,98" size="710,540" font="Regular;16" valign="left" halign="left" transparent="1" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" />
     <ePixmap position="860,670" size="30,30" zPosition="10" pixmap="skin_default/buttons/key_ok.png" transparent="1" alphatest="blend" />
     <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="skin_default/icons/db.png" transparent="1" alphatest="blend" />
@@ -1540,14 +1514,14 @@
     <widget source="list" render="Listbox" position="65,98" size="710,485" zPosition="10" scrollbarMode="showOnDemand" transparent="1">
       <convert type="TemplatedMultiContent">
         <!-- device,description,devicepng,divpng -->
-				{"template": [
+        {"template": [
 				   MultiContentEntryPixmapAlphaTest(pos = (2,8),size = (54,54),png = 2),# index 3 is the interface pixmap
 				   MultiContentEntryText(pos = (65,6),size = (650,60),font=0,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP,text = 1),# index 1 is the interfacename
 						],
 				   "fonts": [gFont("Regular",28),gFont("Regular",20)],
 				   "itemHeight": 75
-					}						
-		  </convert>
+					}
+      </convert>
     </widget>
     <ePixmap pixmap="skin_default/buttons/key_red.png" position="70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/key_green.png" position="610,670" size="30,30" alphatest="blend" />
@@ -1599,15 +1573,13 @@
     <eLabel position="800,130" size="420,440" zPosition="1" backgroundColor="white" />
     <eLabel position="802,132" size="416,436" zPosition="2" backgroundColor="background" />
     <widget source="cutlist" render="Listbox" position="810,140" size="400,420" zPosition="3" scrollbarMode="showOnDemand">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryText(pos=(0,4), size=(280, 22), text = 1, flags = RT_HALIGN_CENTER, backcolor = MultiContentTemplateColor(3)),
 						MultiContentEntryText(pos=(280,4), size=(100, 22), text = 2, flags = RT_HALIGN_CENTER, backcolor = MultiContentTemplateColor(3))
 					],
 				 "fonts": [gFont("Regular", 22)],
 				 "itemHeight": 30
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap pixmap="skin_default/mp_buttons.png" position="880,592" size="260,32" alphatest="blend" />
   </screen>
@@ -1872,7 +1844,7 @@
     </widget>
     <widget source="Event" render="Label" position="812,221" size=" 65, 22" font="Regular;19" halign="right" backgroundColor="background2" transparent="1">
       <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText">Format:%H:%M </convert>
+      <convert type="ClockToText">Format:%H:%M</convert>
     </widget>
     <widget source="Event" render="Label" position="1109,221" size=" 80, 22" font="Regular;19" backgroundColor="background2" transparent="1">
       <convert type="EventTime">EndTime</convert>
@@ -1950,8 +1922,7 @@
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <widget source="hddlist" render="Listbox" position="70,95" size="700,545" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryText(pos = (60,4), size = (660,30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0), # index 0 is the hdd_description
 						MultiContentEntryText(pos = (80,40), size = (640,22), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the device info
 						MultiContentEntryPixmapAlphaTest(pos = (2,8), size = (55,55), png = 7), # index 3 is the device pixmap
@@ -1960,8 +1931,7 @@
 					],
 				"fonts": [gFont("Regular",28),gFont("Regular",20)],
 				"itemHeight": 70
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap pixmap="skin_default/buttons/key_green.png" position="70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/key_yellow.png" position="360,670" size="30,30" alphatest="blend" />
@@ -2090,15 +2060,13 @@
     <eLabel text="Language selection" position="70,95" size="715,30" font="Regular;24" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <eLabel position="70,130" size="715,2" backgroundColor="grey" />
     <widget source="languages" render="Listbox" position="70,135" size="715,480" zPosition="3" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 				MultiContentEntryText(pos = (130, 17), size = (550, 60), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
 				MultiContentEntryPixmap(pos = (20, 10), size = (60, 40), png = 2), # index 2 is the pixmap
 				],
 				"fonts": [gFont("Regular", 24)],
 				"itemHeight": 60
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" />
   </screen>
@@ -2215,8 +2183,7 @@
     <widget name="QuestionPixmap" pixmap="skin_default/icons/input_question.png" position="30,30" size="53,53" alphatest="blend" />
     <widget name="InfoPixmap" pixmap="skin_default/icons/input_info.png" position="30,30" size="53,53" alphatest="blend" />
     <widget name="list" position="20,95" size="760,320" itemHeight="32" transparent="1" />
-    <applet type="onLayoutFinish">
-# this should be factored out into some helper code, but currently demonstrates applets.
+    <applet type="onLayoutFinish"># this should be factored out into some helper code, but currently demonstrates applets.
 from enigma import eSize, ePoint
 orgwidth = self.instance.size().width()
 orgpos = self.instance.position()
@@ -2247,8 +2214,7 @@ self["list"].instance.resize(eSize(*listsize))
 
 # center window
 newwidth = wsize[0]
-self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
-		</applet>
+self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))</applet>
   </screen>
   <!--screen name="MessageBoxSimple" position="240,175" size="800,10" title="MessageBoxSimple">
     <widget name="text" position="110,8" size="680,0" font="Regular;22" />
@@ -2487,12 +2453,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <widget source="Service" render="Label" position="800,410" size="70,24" font="Regular;20" halign="left" backgroundColor="background" transparent="1">
       <convert type="EMCServiceTime">StartTime</convert>
-      <convert type="EMCClockToText">Format:%H:%M </convert>
+      <convert type="EMCClockToText">Format:%H:%M</convert>
     </widget>
     <eLabel text="-" font="Regular;20" position="870,410" size="15,24" halign="center" foregroundColor="white" backgroundColor="black" transparent="1" />
     <widget source="Service" render="Label" position="885,410" size="70,24" font="Regular;20" backgroundColor="background" transparent="1">
       <convert type="EMCServiceTime">EndTime</convert>
-      <convert type="EMCClockToText">Format:%H:%M </convert>
+      <convert type="EMCClockToText">Format:%H:%M</convert>
     </widget>
     <widget source="Service" render="Label" position="970,410" size="100,24" font="Regular;20" halign="left" backgroundColor="background" transparent="1">
       <convert type="EMCServiceTime">Duration</convert>
@@ -2718,8 +2684,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <eLabel text="Select Network Adapter" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="list" render="Listbox" position="70,95" size="700,510" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 					MultiContentEntryPixmapAlphaTest(pos = (10, 10), size = (54, 54), png = 3), # index 3 is the interface pixmap
 					MultiContentEntryPixmapAlphaTest(pos = (71, 46), size = (15, 16), png = 4), # index 4 is the default pixmap
 					MultiContentEntryText(pos = (100, 2), size = (520, 35), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # index 1 is the interfacename
@@ -2727,8 +2692,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				],
 				"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
 				"itemHeight": 75
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget name="introduction" position="70,608" size="700,30" font="Regular; 25" halign="center" backgroundColor="black" transparent="1" foregroundColor="cyan1" />
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
@@ -2807,15 +2771,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <eLabel text="Choose Tuner" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="nimlist" render="Listbox" position="70,95" size="700,545" enableWrapAround="1" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryText(pos = (10, 8), size = (680, 30), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
 						MultiContentEntryText(pos = (50, 43), size = (640, 45), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 2), # index 2 is a description of the nim settings,
 					],
 				 "fonts": [gFont("Regular", 23), gFont("Regular", 20)],
 				 "itemHeight": 110
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" />
   </screen>
@@ -2902,16 +2864,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="Title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <widget name="config" position="65,98" size="710,45" scrollbarMode="showOnDemand" transparent="1" font="Regular; 20" />
     <widget source="exportlist" render="Listbox" position="65,155" size="710,487" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-					{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 					   MultiContentEntryText(pos = (0,13),size = (200,25),font=0,flags = RT_HALIGN_LEFT,text = 0),# index 0 is the exportdir
 					   MultiContentEntryText(pos = (210,3),size = (330,18),font=1,flags = RT_HALIGN_LEFT,text = 1),# index 1 is the client
 					   MultiContentEntryText(pos = (210,28),size = (330,18),font=1,flags = RT_HALIGN_LEFT,text = 2),# index 2 is the options
 					   ],
 					   "fonts": [gFont("Regular",20),gFont("Regular",14)],
 					   "itemHeight": 50
-		  			}
-		  </convert>
+		  			}</convert>
     </widget>
     <widget name="nfsdLabel" position="837,95" size="375,25" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget name="portmapLabel" position="839,132" size="375,25" font="Regular;22" backgroundColor="background" transparent="1" />
@@ -2993,7 +2953,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
     <widget source="key_red" render="Label" position="105,672" size="240,24" zPosition="1" font="Regular;20" backgroundColor="black" transparent="1" />
     <widget source="key_green" render="Label" position="395,672" size="240,24" zPosition="1" font="Regular;20" backgroundColor="black" transparent="1" />
-    <widget name="label1" position="66,600" size="715,200" zPosition="1" halign="center" font="Regular;20" backgroundColor="cyan1" transparent="1" foregroundColor="cyan1" />	
+    <widget name="label1" position="66,600" size="715,200" zPosition="1" halign="center" font="Regular;20" backgroundColor="cyan1" transparent="1" foregroundColor="cyan1" />
   </screen>
   <screen name="PluginHiderSetup" position="0,0" size="1280,720" title="PluginHider Setup" zPosition="1" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
@@ -3368,8 +3328,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="blue_text" position="140,400" size="600,27" font="Regular;22" halign="left" backgroundColor="background" transparent="1" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" />
   </screen>
-  <screen name="Standby" position="0,0" size="1280,720" title="Standby" flags="wfNoBorder">
-    </screen>
+  <screen name="Standby" position="0,0" size="1280,720" title="Standby" flags="wfNoBorder" />
   <screen name="SubservicesQuickzap" position="380,600" size="560,100" title="Subservices" backgroundColor="transparent" flags="wfNoBorder">
     <widget source="session.RecordState" render="Pixmap" pixmap="skin_default/icons/record.png" position="450,0" zPosition="2" size="14,14" alphatest="blend">
       <convert type="ConditionalShowHide">Blink</convert>
@@ -3668,8 +3627,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="info" render="Label" position="65,98" size="690,30" font="Regular;24" backgroundColor="background" transparent="1" />
     <eLabel position="65,135" size="710,2" backgroundColor="grey" />
     <widget source="list" render="Listbox" position="65,145" size="710,490" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryText(pos = (10, 8), size = (650, 35), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the essid
 						MultiContentEntryText(pos = (10, 43), size = (210, 25), font=1, flags = RT_HALIGN_LEFT, text = 5), # index 5 is the interface
 						MultiContentEntryText(pos = (230, 43), size = (210, 25), font=1, flags = RT_HALIGN_LEFT, text = 4), # index 0 is the encryption
@@ -3678,8 +3636,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 					],
 				"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
 				"itemHeight": 75
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
@@ -4023,8 +3980,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <widget source="Title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="timerlist" render="Listbox" position="65,98" size="710,540" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryText(pos=( 10, 5), size=(660,26), text = 3, font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER),
 						MultiContentEntryText(pos=( 10,32), size=(660,24), text = 0, font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER),
 						MultiContentEntryText(pos=(	10,57), size=(420,24), text = 4, font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER),
@@ -4032,8 +3988,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 					],
 				 "fonts": [gFont("Regular", 22),gFont("Regular", 20)],
 				 "itemHeight": 85
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
@@ -4087,12 +4042,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="languagetext" position="379,390" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
     <widget name="text" position="670,120" size="540,300" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget source="list" render="Listbox" position="510,430" size="700,160" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+      <convert type="TemplatedMultiContent">{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 32
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget name="config" position="510,430" size="700,160" itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="wizard" position="291,90" size="305,287" pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
@@ -4225,8 +4178,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="error_label" position="65,98" size="710,440" zPosition="3" font="Regular;20" backgroundColor="background" transparent="1" />
     <eLabel position="70,185" size="700,2" backgroundColor="grey" />
     <widget source="titles" render="Listbox" position="70,195" size="700,360" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryText(pos = ( 10,  2), size = (490, 28), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 Title,
 						MultiContentEntryText(pos = ( 15, 30), size = (370, 25), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 description,
 						MultiContentEntryText(pos = (505,  4), size = (150, 25), font = 1, flags = RT_HALIGN_RIGHT, text = 3), # index 3 begin time,
@@ -4235,8 +4187,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 					],
 				"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
 				"itemHeight": 60
-				}
-			</convert>
+				}</convert>
     </widget>
     <eLabel position="70,555" size="700,2" backgroundColor="grey" />
     <widget name="medium_label" position="70,563" size="700,25" font="Regular;19" halign="left" foregroundColors="white,yellow,red" backgroundColor="background" transparent="1" />
@@ -4275,15 +4226,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <eLabel position="800,130" size="420,440" zPosition="1" backgroundColor="white" />
     <eLabel position="802,132" size="416,436" zPosition="2" backgroundColor="background" />
     <widget source="cutlist" render="Listbox" position="810,140" size="400,420" zPosition="3" scrollbarMode="showOnDemand">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryText(pos=(0,4), size=(280, 22), text = 1, flags = RT_HALIGN_CENTER, backcolor = MultiContentTemplateColor(3)),
 						MultiContentEntryText(pos=(280,4), size=(100, 22), text = 2, flags = RT_HALIGN_CENTER, backcolor = MultiContentTemplateColor(3))
 					],
 				 "fonts": [gFont("Regular", 22)],
 				 "itemHeight": 30
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap pixmap="skin_default/mp_buttons.png" position="880,592" size="260,32" alphatest="blend" />
   </screen>
@@ -4757,14 +4706,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <!-- MyTubePlayer -->
   <screen name="MyTubeHistoryScreen" position="73,200" size="692,420" title="MyTubeHistoryScreen..." zPosition="6">
     <widget source="historylist" render="Listbox" position="10,10" zPosition="7" size="740,406" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryText(pos = (10, 2), size = (420, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 					],
 				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
 				"itemHeight": 30
-				}
-			</convert>
+				}</convert>
     </widget>
   </screen>
   <screen name="MyTubePlayer" position="center,530" size="1280,200" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
@@ -4813,8 +4760,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <eLabel text="MyTubePlayer" position="65,17" size="720,40" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget name="config" position="70,104" size="690,28" zPosition="3" scrollbarMode="showNever" transparent="1" />
     <widget source="feedlist" render="Listbox" position="70,150" size="710,480" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-			    {"templates":
+      <convert type="TemplatedMultiContent">{"templates":
 				   {"default": (105,[
 				   MultiContentEntryPixmapAlphaTest(pos = (10,12),size = (100,75),png = 4),# index 4 is the thumbnail
 				   MultiContentEntryText(pos = (120,10),size = (550,25),font=0,flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP,text = 1),# index 1 is the Title
@@ -4830,11 +4776,26 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				 },
 				   "fonts": [gFont("Regular",22),gFont("Regular",18),gFont("Regular",26),gFont("Regular",20)],
 				   "itemHeight": 105
-			     }
-		  </convert>
+			     }</convert>
     </widget>
-    <widget name="thumbnail" position="0,0" size="100,75" alphatest="blend" /> # fake entry for dynamic thumbnail resizing,currently there is no other way doing this.
-	<widget name="HelpWindow" position="135,500" size="1,1" zPosition="10" transparent="1" alphatest="blend" /><ePixmap pixmap="skin_default/buttons/key_red.png" position="70,670" size="30,30" alphatest="blend" /><ePixmap pixmap="skin_default/buttons/key_green.png" position="250,670" size="30,30" alphatest="blend" /><ePixmap pixmap="skin_default/buttons/key_yellow.png" position="440,670" size="30,30" alphatest="blend" /><ePixmap pixmap="skin_default/buttons/key_grey.png" position="630,670" size="30,30" alphatest="blend" /><widget name="ButtonBlue" pixmap="skin_default/buttons/key_blue.png" zPosition="2" position="630,670" size="30,30" alphatest="blend" /><widget name="key_red" position="105,672" size="180,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" /><widget name="key_green" position="285,672" size="180,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" /><widget name="key_yellow" position="475,672" size="180,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" /><eLabel text="Virtual KeyBoard" position="670,672" size="250,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" /><ePixmap position="920,670" size="30,30" zPosition="10" pixmap="skin_default/buttons/key_ok.png" transparent="1" alphatest="blend" /><ePixmap position="1000,670" size="30,30" zPosition="10" pixmap="skin_default/buttons/key_menu.png" transparent="1" alphatest="blend" /><ePixmap position="848,596" zPosition="2" size="350,44" pixmap="skin_default/icons/db.png" transparent="1" alphatest="blend" /><ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" /><widget name="VKeyIcon" position="0,0" size="0,0" /></screen>
+    <widget name="thumbnail" position="0,0" size="100,75" alphatest="blend" />
+    # fake entry for dynamic thumbnail resizing,currently there is no other way doing this.
+    <widget name="HelpWindow" position="135,500" size="1,1" zPosition="10" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="skin_default/buttons/key_red.png" position="70,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="skin_default/buttons/key_green.png" position="250,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="skin_default/buttons/key_yellow.png" position="440,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="skin_default/buttons/key_grey.png" position="630,670" size="30,30" alphatest="blend" />
+    <widget name="ButtonBlue" pixmap="skin_default/buttons/key_blue.png" zPosition="2" position="630,670" size="30,30" alphatest="blend" />
+    <widget name="key_red" position="105,672" size="180,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="key_green" position="285,672" size="180,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="key_yellow" position="475,672" size="180,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <eLabel text="Virtual KeyBoard" position="670,672" size="250,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <ePixmap position="920,670" size="30,30" zPosition="10" pixmap="skin_default/buttons/key_ok.png" transparent="1" alphatest="blend" />
+    <ePixmap position="1000,670" size="30,30" zPosition="10" pixmap="skin_default/buttons/key_menu.png" transparent="1" alphatest="blend" />
+    <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="skin_default/icons/db.png" transparent="1" alphatest="blend" />
+    <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" />
+    <widget name="VKeyIcon" position="0,0" size="0,0" />
+  </screen>
   <screen name="MyTubeSettingsScreen" position="0,0" size="1280,720" title="MyTubeSettingsScreen" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
@@ -4857,15 +4818,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <screen name="MyTubeSuggestionsListScreen" position="73,200" size="692,290" title="MyTubeSuggestionsListScreen..." zPosition="6">
     <widget source="suggestionslist" render="Listbox" position="10,10" zPosition="7" size="670,270" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryText(pos = (10, 2), size = (420, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 						MultiContentEntryText(pos = (440, 2), size = (180, 24), font=1, flags = RT_HALIGN_RIGHT, text = 1), # index 1 are the rtesults
 					],
 				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
 				"itemHeight": 27
-				}
-			</convert>
+				}</convert>
     </widget>
   </screen>
   <screen name="MyTubeTasksScreen" position="0,0" size="1280,720" title="MyTubeTasksScreen" flags="wfNoBorder">
@@ -4881,8 +4840,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <widget name="title" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="tasklist" render="Listbox" position="65,98" size="710,540" zPosition="3" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryText(pos = (10, 3), size = (250, 24), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the name
 						MultiContentEntryText(pos = (270, 3), size = (180, 24), font=1, flags = RT_HALIGN_RIGHT, text = 2), # index 2 is the state
 						MultiContentEntryProgress(pos = (460, 3), size = (100, 24), percent = -3), # index 3 should be progress
@@ -4890,8 +4848,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 					],
 				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
 				"itemHeight": 30
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap position="1050,460" size="100,40" zPosition="4" pixmap="~/plugin.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
@@ -4929,8 +4886,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <widget name="title" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="infolist" render="Listbox" position="70,115" size="700,130" zPosition="6" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
-      <convert type="TemplatedMultiContent">
-			{"templates":
+      <convert type="TemplatedMultiContent">{"templates":
 				{"default": (130,[
 						MultiContentEntryPixmapAlphaTest(pos = (10, 0), size = (170, 130), png = 0), # index 0 is the thumbnail
 						MultiContentEntryPixmapAlphaTest(pos = (180, 0), size = (170, 130), png = 1), # index 0 is the thumbnail
@@ -4943,8 +4899,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				},
 				"fonts": [gFont("Regular", 20),gFont("Regular", 14),gFont("Regular", 28)],
 				"itemHeight": 130
-			}
-			</convert>
+			}</convert>
     </widget>
     <widget name="author" position="80,255" size="300,25" zPosition="10" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget name="duration" position="80,285" size="300,25" zPosition="10" font="Regular;22" backgroundColor="background" transparent="1" />
@@ -4957,8 +4912,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="1050,460" size="100,40" zPosition="4" pixmap="~/plugin.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <widget name="key_red" position="105,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <widget name="thumbnail" position="0,0" size="170,130" alphatest="blend" /> # fake entry for dynamic thumbnail resizing, currently there is no other way doing this.
-<ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" /></screen>
+    <widget name="thumbnail" position="0,0" size="170,130" alphatest="blend" />
+    # fake entry for dynamic thumbnail resizing, currently there is no other way doing this.
+    <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
   <!-- YouTube Player by Maggy -->
   <screen name="SuggestionsListScreen" position="0,0" zPosition="2" size="1280,720" flags="wfNoBorder">
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
@@ -5214,16 +5171,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <eLabel text="AutoMountManager" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="config" render="Listbox" position="65,98" size="700,490" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryText(pos = (60, 5), size = (620, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
 						MultiContentEntryText(pos = (70, 35), size = (610, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 3 is the Description
 						MultiContentEntryPixmapAlphaTest(pos = (10, 6), size = (48, 48), png = 3), # index 4 is the pixmap
 					],
 				"fonts": [gFont("Regular", 22),gFont("Regular", 17)],
 				"itemHeight": 60
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget source="introduction" render="Label" position="65,598" size="700,30" font="Regular;22" halign="center" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
@@ -5247,8 +5202,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="legend3" render="Label" position="650,104" size="120,60" font="Regular;20" halign="center" valign="center" transparent="1" />
     <eLabel position="70,180" size="700,2" backgroundColor="grey" />
     <widget source="config" render="Listbox" position="70,200" size="700,380" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (40, 6), size = (48, 48), png = 0), # index 0 is the isMounted pixmap
 						MultiContentEntryText(pos = (210, 5), size = (200, 28), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the sharename
 						MultiContentEntryText(pos = (390, 8), size = (250, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the IPdescription
@@ -5258,8 +5212,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 					],
 				"fonts": [gFont("Regular", 22),gFont("Regular", 17)],
 				"itemHeight": 60
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget source="introduction" render="Label" position="70,598" size="700,30" font="Regular;22" halign="center" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
@@ -5281,8 +5234,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <widget source="Title" render="Label" position="60,17" size="740,43" font="Regular;35" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <widget source="list" render="Listbox" position="65,98" size="710,490" zPosition="3" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (10, 6), size = (48, 48), png = 1), # index 1 is the expandable/expanded/verticalline icon
 						MultiContentEntryText(pos = (70, 4), size = (600, 26), font=2, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the Hostname
 						MultiContentEntryText(pos = (160, 5), size = (510, 25), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is the sharename
@@ -5292,8 +5244,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 					],
 				"fonts": [gFont("Regular", 22),gFont("Regular", 17),gFont("Regular", 24)],
 				"itemHeight": 60
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget source="infotext" render="Label" position="65,605" size="690,30" zPosition="3" font="Regular;22" halign="center" transparent="1" foregroundColor="cyan1" />
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
@@ -5339,15 +5290,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <eLabel text="UserManager" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="config" render="Listbox" position="65,98" size="710,490" zPosition="3" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryText(pos = (80, 4), size = (590, 50), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 						MultiContentEntryPixmapAlphaTest(pos = (10, 6), size = (48, 48), png = 3), # index 4 is the status pixmap
 					],
 				"fonts": [gFont("Regular", 40)],
 				"itemHeight": 60
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget source="introduction" render="Label" position="65,605" size="700,30" font="Regular;22" halign="center" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
@@ -5392,14 +5341,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <eLabel text="Exif Info" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="menu" render="Listbox" position="65,98" size="710,540" scrollbarMode="showOnDemand" selectionDisabled="1" backgroundColor="background" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 					MultiContentEntryText(pos = (10, 5), size = (350, 30), flags = RT_HALIGN_LEFT, text = 0),
 					MultiContentEntryText(pos = (360, 7), size = (310, 30), flags = RT_HALIGN_LEFT, text = 1)],
 					"fonts": [gFont("Regular", 22)],
 					"itemHeight": 35
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <widget source="key_red" render="Label" position="105,672" size="240,24" zPosition="1" font="Regular;20" backgroundColor="black" transparent="1" />
@@ -5835,8 +5782,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <eLabel text="PacketManager" position="65,17" size="720,43" font="Regular; 35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="list" render="Listbox" position="65,98" size="710,540" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (18, 5), size = (48, 48), png = 4), # index 4 is the status pixmap
 						MultiContentEntryText(pos = (90, 5), size = (590, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 						MultiContentEntryText(pos = (100, 35), size = (590, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
@@ -5844,8 +5790,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 					],
 				"fonts": [gFont("Regular", 22),gFont("Regular", 16)],
 				"itemHeight": 60
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
@@ -5890,8 +5835,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <eLabel text="Plugin manager" position="65,17" size="720,43" font="Regular; 35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="list" render="Listbox" position="65,98" size="710,500" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-			{"templates":
+      <convert type="TemplatedMultiContent">{"templates":
 				{"default": (75,[
 						MultiContentEntryPixmapAlphaTest(pos = (18, 14), size = (48, 48), png = 5), # index 5 is the status pixmap
 						MultiContentEntryText(pos = (90, 5), size = (565, 26), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
@@ -5904,8 +5848,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				},
 				"fonts": [gFont("Regular", 22),gFont("Regular", 17)],
 				"itemHeight": 75
-			}
-			</convert>
+			}</convert>
     </widget>
     <widget source="status" render="Label" position="65,610" size="690,25" halign="center" font="Regular;22" shadowColor="black" shadowOffset="-2,-2" transparent="1" foregroundColor="cyan1" />
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
@@ -5931,16 +5874,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <eLabel text="Plugin manager activity information" position="65,17" size="720,43" font="Regular; 35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="list" render="Listbox" position="65,98" size="710,500" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (18, 14), size = (48, 48), png = 2), # index 2 is the status pixmap
 						MultiContentEntryText(pos = (90, 5), size = (565, 26), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 						MultiContentEntryText(pos = (90, 33), size = (565, 38), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the state
 					],
 				"fonts": [gFont("Regular", 22),gFont("Regular", 17)],
 				"itemHeight": 75
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget source="status" render="Label" position="65,610" size="690,28" halign="center" font="Regular;22" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
@@ -5962,16 +5903,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <eLabel text="Plugin manager help" position="65,17" size="720,43" font="Regular; 35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="list" render="Listbox" position="65,98" size="710,500" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryText(pos = (90, 5), size = (565, 26), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 						MultiContentEntryText(pos = (90, 33), size = (565, 38), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the state
 						MultiContentEntryPixmapAlphaTest(pos = (15, 5), size = (48, 48), png = 2), # index 2 is the status pixmap
 					],
 				"fonts": [gFont("Regular", 22),gFont("Regular", 17)],
 				"itemHeight": 75
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget source="status" render="Label" position="65,610" size="480,25" halign="center" font="Regular;22" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
@@ -6156,12 +6095,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="languagetext" position="379,390" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
     <widget name="text" position="670,120" size="540,300" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget source="list" render="Listbox" position="510,430" size="700,160" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+      <convert type="TemplatedMultiContent">{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 32
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget name="config" position="510,430" size="700,160" itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
   </screen>
@@ -6179,12 +6116,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="languagetext" position="379,390" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
     <widget name="text" position="670,120" size="540,300" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget source="list" render="Listbox" position="510,430" size="700,160" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+      <convert type="TemplatedMultiContent">{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 32
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget name="config" position="510,430" size="700,160" itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
   </screen>
@@ -6202,12 +6137,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="languagetext" position="379,390" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
     <widget name="text" position="670,120" size="540,300" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget source="list" render="Listbox" position="510,430" size="700,160" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+      <convert type="TemplatedMultiContent">{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 32
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget name="config" position="510,430" size="700,160" itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
   </screen>
@@ -6230,12 +6163,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="languagetext" position="379,390" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
     <widget name="text" position="670,120" size="540,300" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget source="list" render="Listbox" position="510,430" size="700,160" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+      <convert type="TemplatedMultiContent">{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 32
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget name="config" position="510,430" size="700,160" itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
   </screen>
@@ -6256,15 +6187,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="wizard" position="291,90" size="305,287" pixmap="skin_default/wizard.png" zPosition="10" transparent="1" alphatest="blend" />
     <widget name="text" position="670,120" size="540,300" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget source="languages" render="Listbox" position="510,430" size="700,180" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 				MultiContentEntryText(pos = (130, 17), size = (530, 60), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
 				MultiContentEntryPixmap(pos = (20, 10), size = (60, 40), png = 2), # index 2 is the pixmap
 				],
 				"fonts": [gFont("Regular", 24)],
 				"itemHeight": 60
-				}
-			</convert>
+				}</convert>
     </widget>
   </screen>
   <screen name="NetworkWizard" position="center,2" size="1280,720" title="Welcome..." flags="wfNoBorder">
@@ -6286,12 +6215,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="languagetext" position="379,390" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
     <widget name="text" position="670,120" size="540,519" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget source="list" render="Listbox" position="510,478" size="700,160" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+      <convert type="TemplatedMultiContent">{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 32
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget name="config" position="510,478" size="700,160" itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="HelpWindow" position="630,200" size="600,200" transparent="1" alphatest="blend" zPosition="2" />
@@ -6316,12 +6243,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="languagetext" position="379,390" size="150,23" font="Regular;21" backgroundColor="background" transparent="1" />
     <widget name="text" position="670,120" size="540,300" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget source="list" render="Listbox" position="510,430" size="700,160" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+      <convert type="TemplatedMultiContent">{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 32
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget name="config" position="510,430" size="700,160" itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
   </screen>
@@ -6345,12 +6270,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="text" position="670,120" size="540,300" font="Regular;22" backgroundColor="background" transparent="1" />
     <widget name="portpic" position="543,449" size="128,128" zPosition="10" transparent="1" alphatest="blend" />
     <widget source="list" render="Listbox" position="700,430" size="510,160" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+      <convert type="TemplatedMultiContent">{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 32
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget name="config" position="700,430" size="510,160" itemHeight="32" zPosition="14" scrollbarMode="showOnDemand" transparent="1" />
   </screen>
@@ -6438,7 +6361,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <!-- LCD StandBy-Clock -->
   <screen name="StandbySummary" position="0,0" size="132,64">
     <widget source="global.CurrentTime" render="Label" position="6,4" size="120,24" font="Regular;22" halign="center" valign="center">
-      <convert type="ClockToText">Format:%H:%M  </convert>
+      <convert type="ClockToText">Format:%H:%M</convert>
     </widget>
     <eLabel position="0,28" size="132,1" backgroundColor="white" />
     <widget source="global.CurrentTime" render="Label" position="6,32" size="120,32" font="Regular;28" halign="center" valign="center">
@@ -6490,8 +6413,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="config" position="120,104" size="650,210" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1" />
     <eLabel position="72,326" size="700,2" backgroundColor="grey" />
     <widget source="streams" render="Listbox" scrollbarMode="showOnDemand" position="72,338" size="700,302" zPosition="3" enableWrapAround="1" backgroundColor="background" transparent="1">
-      <convert type="TemplatedMultiContent">
-			{"templates":
+      <convert type="TemplatedMultiContent">{"templates":
 			    {"default": (25, [ 
 				MultiContentEntryText(pos = (40, 0),   size = (35, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
 				MultiContentEntryText(pos = (5, 0),  size = (60, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
@@ -6509,8 +6431,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 				},
 				"fonts": [gFont("Regular", 20), gFont("Regular", 18)],
 				"itemHeight": 25
-				}
-			</convert>
+				}</convert>
     </widget>
     <widget source="key_red" render="Pixmap" pixmap="skin_default/buttons/key_red.png" position="70,104" size="30,30" alphatest="blend">
       <convert type="ConditionalShowHide" />
@@ -6648,15 +6569,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <widget source="title" render="Label" position="65,17" size="720,43" font="Regular; 34" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="list" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" selectionPixmap="skin_default/menu/sel715x48.png" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 								MultiContentEntryText(pos = (35, 7), size = (650, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
 								MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (24, 24), png = 2) # index 4 is the status pixmap
 					],
 				"fonts": [gFont("Regular", 24),gFont("Regular", 16)],
 				"itemHeight": 48
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
@@ -6690,8 +6609,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <widget source="title" render="Label" position="65,17" size="720,43" font="Regular; 35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="list" render="Listbox" position="65,98" size="715,540" selectionPixmap="skin_default/menu/sel715x60.png" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (18, 5), size = (48, 48), png = 4), # index 4 is the status pixmap
 						MultiContentEntryText(pos = (90, 5), size = (590, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 0 is the name
 						MultiContentEntryText(pos = (100, 35), size = (590, 20), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), # index 2 is the description
@@ -6699,8 +6617,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 					],
 				"fonts": [gFont("Regular", 22),gFont("Regular", 16)],
 				"itemHeight": 60
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
@@ -6771,16 +6688,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <widget source="title" render="Label" position="65,17" size="720,43" font="Regular; 35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="menu" render="Listbox" position="65,98" size="715,540" selectionPixmap="skin_default/menu/sel715x48.png" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 							MultiContentEntryPixmapAlphaTest(pos = (2, 2), size = (44, 44), png = 3), # index 4 is the status pixmap
 							MultiContentEntryText(pos = (52, 2), size = (600, 24), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 0 is the MenuText,
 							MultiContentEntryText(pos = (52, 26), size = (600, 20), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 0 is the MenuText,
 					],
 				"fonts": [gFont("Regular", 22),gFont("Regular", 16)],
 				"itemHeight": 48
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
@@ -6841,16 +6756,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="title" render="Label" position="65,17" size="720,43" font="Regular; 35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget name="status" position="70,105" size="670,28" font="Regular;23" backgroundColor="background" transparent="1" />
     <widget source="menu" render="Listbox" position="70,143" size="700,490" selectionPixmap="skin_default/menu/sel700x48.png" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 							MultiContentEntryPixmapAlphaTest(pos = (2, 2), size = (44, 44), png = 3), # index 4 is the status pixmap
 							MultiContentEntryText(pos = (52, 2), size = (600, 24), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 0 is the MenuText,
 							MultiContentEntryText(pos = (52, 26), size = (600, 20), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 0 is the MenuText,
 					],
 				"fonts": [gFont("Regular", 22),gFont("Regular", 16)],
 				"itemHeight": 48
-				}
-			</convert>
+				}</convert>
     </widget>
     <eLabel position="70,135" size="670,2" backgroundColor="grey" />
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
@@ -6880,16 +6793,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <widget source="title" render="Label" position="65,17" size="720,43" font="Regular; 35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="downloadmenu" render="Listbox" position="65,98" size="715,540" selectionPixmap="skin_default/menu/sel715x48.png" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 							MultiContentEntryPixmapAlphaTest(pos = (2, 2), size = (44, 44), png = 3), # index 4 is the status pixmap
 							MultiContentEntryText(pos = (52, 2), size = (600, 24), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 0 is the MenuText,
 							MultiContentEntryText(pos = (52, 26), size = (600, 20), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 0 is the MenuText,
 					],
 				"fonts": [gFont("Regular", 22),gFont("Regular", 16)],
 				"itemHeight": 48
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
@@ -6947,8 +6858,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="EventTime">Progress</convert>
     </widget>
     <widget source="list" render="Listbox" position="65,98" size="715,540" selectionPixmap="skin_default/menu/sel715x60.png" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 
 						MultiContentEntryText(pos = (55, 2), size = (600, 24), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), # index 2 is the description
 						MultiContentEntryText(pos = (55, 26), size = (600, 16), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 0 is the name
@@ -6958,8 +6868,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 					],
 				"fonts": [gFont("Regular", 22),gFont("Regular", 14)],
 				"itemHeight": 61
-				}
-      </convert>
+				}</convert>
     </widget>
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
@@ -7310,12 +7219,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="progress" position="70,153" size="700,25" font="Regular;22" backgroundColor="background" transparent="1" />
     <eLabel position="70,185" size="700,2" backgroundColor="grey" />
     <widget source="list" render="Listbox" position="70,195" size="700,415" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
-      <convert type="TemplatedMultiContent">
-			{"template": [ MultiContentEntryText(pos = (0,0),size = (730,22),flags = RT_HALIGN_LEFT, text = 0) ],
+      <convert type="TemplatedMultiContent">{"template": [ MultiContentEntryText(pos = (0,0),size = (730,22),flags = RT_HALIGN_LEFT, text = 0) ],
 			 "fonts": [gFont("Regular", 19)],
 				"itemHeight": 25
-			}
-		</convert>
+			}</convert>
     </widget>
     <eLabel position="70,145" size="700,2" backgroundColor="grey" />
     <ePixmap pixmap="skin_default/buttons/key_green.png" position="70,670" size="30,30" alphatest="blend" />
@@ -7337,15 +7244,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <eLabel text="Extra Message Box" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1" zPosition="1">
-      <convert type="TemplatedMultiContent">
-                      {"template": [
+      <convert type="TemplatedMultiContent">{"template": [
                              MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (48, 48), png = 0),
                              MultiContentEntryText(pos = (60, 10), size = (450, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
                       ],
                             "fonts": [gFont("Regular", 22)],
                             "itemHeight": 50
-                      }
-                       </convert>
+                      }</convert>
     </widget>
   </screen>
   <screen name="ExtraActionBox" flags="wfNoBorder" position="0,0" size="1280,720" title="ExtraActionBox">
@@ -7431,16 +7336,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <eLabel text="Hard Drive Partitions" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 					MultiContentEntryPixmapAlphaTest(pos = (5, 7), size = (48, 48), png = 0),
 					MultiContentEntryText(pos = (70, 1), size = (630, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 					MultiContentEntryText(pos = (70, 25), size = (630, 38), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
 					],
 					"fonts": [gFont("Regular", 22), gFont("Regular", 20)],
 					"itemHeight": 50
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
@@ -7466,16 +7369,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <eLabel text="Hard Drive Setup" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" />
     <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 					MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
 					MultiContentEntryText(pos = (70, 3), size = (430, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 					MultiContentEntryText(pos = (515, 3), size = (135, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
 					],
 					"fonts": [gFont("Regular", 22)],
 					"itemHeight": 50
-				}
-                        </convert>
+				}</convert>
     </widget>
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
@@ -10407,8 +10308,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="ServiceInfo2">xAll</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="45,365" size="405,26" font="Regular; 20" backgroundColor="background" transparent="1" halign="center" noWrap="1" valign="top" text="V: 16123kb/s A: 136kb/s" foregroundColor="cyan1" zPosition="4">
-      <convert type="Bitrate2">
-      </convert>
+      <convert type="Bitrate2" />
     </widget>
     <eLabel text="Framerate:" zPosition="4" position="250,339" size="130,26" font="Regular; 20" halign="left" valign="center" transparent="1" backgroundColor="background" foregroundColor="orange" />
     <widget source="session.CurrentService" render="Label" text="25 fps" zPosition="4" position="370,339" size="80,26" font="Regular; 20" halign="left" valign="center" backgroundColor="background" transparent="1">
@@ -10585,8 +10485,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <widget source="Title" render="Label" position="65,17" size="700,43" zPosition="1" halign="left" font="Regular; 35" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <widget source="menu" render="Listbox" position="65,98" size="720,540" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryText(pos = (95, 0), size = (10, 60), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
 						MultiContentEntryText(pos = (115, 0), size = (320, 21), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2, color = 0x00ffffff),
 						MultiContentEntryText(pos = (115, 20), size = (320, 22), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3, color = 0x00ffc000),
@@ -10596,8 +10495,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 					],
 				 "fonts": [gFont("Regular", 22), gFont("Regular", 20), gFont("Regular", 17), gFont("Regular", 16)],
 				 "itemHeight": 60
-				}
-			</convert>
+				}</convert>
     </widget>
     <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="skin_default/icons/db.png" transparent="1" alphatest="blend" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" />
@@ -10615,8 +10513,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <widget source="Title" render="Label" position="65,17" size="700,43" zPosition="1" halign="left" font="Regular; 35" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <widget source="list" render="Listbox" position="65,98" size="720,500" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-		{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 			MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (100, 50), png = 1), 
 			MultiContentEntryText(pos = (120, 10), size = (275, 40), font=0, \
 				flags = RT_HALIGN_LEFT, text = 0), 
@@ -10626,8 +10523,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	"fonts": [gFont("Regular", 26),gFont("Regular", 12)],
 	"itemHeight": 50
 
-	}
-	</convert>
+	}</convert>
     </widget>
     <eLabel halign="center" position="908,331" size="210,35" font="Regular;20" text="Ecm info" transparent="1" foregroundColor="cyan1" />
     <widget name="status" position="837,368" size="375,272" font="Regular;16" halign="center" noWrap="1" transparent="1" foregroundColor="white" />
@@ -10719,9 +10615,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="key_green" position="419,672" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
     <eLabel text="Job Manager" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget name="list" position="65,152" size="720,491" scrollbarMode="showOnDemand" transparent="1" />
-    <applet type="onLayoutFinish">
-			self["list"].instance.setItemHeight(25)
-		</applet>
+    <applet type="onLayoutFinish">self["list"].instance.setItemHeight(25)</applet>
     <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
     <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="skin_default/icons/db.png" transparent="1" alphatest="blend" />
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
@@ -10749,9 +10643,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
     <widget name="LogsSize" position="65,599" zPosition="1" size="715,40" font="Regular;20" halign="left" valign="center" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <widget name="list" position="65,98" size="715,500" transparent="1" scrollbarMode="showOnDemand" />
-    <applet type="onLayoutFinish">
-                         self["list"].instance.setItemHeight(25)
-                      </applet>
+    <applet type="onLayoutFinish">self["list"].instance.setItemHeight(25)</applet>
     <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
@@ -10902,15 +10794,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
     <widget source="list" render="Listbox" position="65,98" size="715,500" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-			{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 				MultiContentEntryPixmapAlphaTest(pos = (12, 4), size = (32, 32), png = 0),
 				MultiContentEntryText(pos = (58, 5), size = (440, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 				],
 				"fonts": [gFont("Regular", 22)],
 				"itemHeight": 40
-			}
-		</convert>
+			}</convert>
     </widget>
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
   </screen>
@@ -10951,16 +10841,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
     <widget source="list" render="Listbox" position="65,98" size="715,450" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-					{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (10, 0), size = (32, 32), png = 0),
 						MultiContentEntryText(pos = (47, 0), size = (400, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 						MultiContentEntryText(pos = (450, 0), size = (120, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
 						],
 						"fonts": [gFont("Regular", 22)],
 						"itemHeight": 30
-					}
-				</convert>
+					}</convert>
     </widget>
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
   </screen>
@@ -10982,16 +10870,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
     <widget source="list" render="Listbox" position="65,98" size="715,450" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-					{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (10, 0), size = (32, 32), png = 0),
 						MultiContentEntryText(pos = (47, 0), size = (400, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 						MultiContentEntryText(pos = (450, 0), size = (120, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
 						],
 						"fonts": [gFont("Regular", 22)],
 						"itemHeight": 30
-					}
-				</convert>
+					}</convert>
     </widget>
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
   </screen>
@@ -11017,14 +10903,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
     <widget source="list" render="Listbox" position="65,98" size="715,360" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-					{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryText(pos = (12, 1), size = (440, 32), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 						],
 						"fonts": [gFont("Regular", 22)],
 						"itemHeight": 30
-					}
-				</convert>
+					}</convert>
     </widget>
     <widget name="pleasewait" position="65,98" size="715,140" font="Regular;18" halign="center" valign="center" transparent="1" zPosition="1" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
@@ -11139,8 +11023,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="packagetext" position="306,130" size="350,30" zPosition="1" font="Regular;25" halign="right" transparent="1" />
     <widget name="packagenr" position="657,130" size="50,30" zPosition="1" font="Regular;25" halign="right" transparent="1" />
     <widget source="list" render="Listbox" position="65,209" size="715,418" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-					{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 							MultiContentEntryText(pos = (5, 1), size = (540, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 							MultiContentEntryText(pos = (5, 26), size = (540, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
 							MultiContentEntryPixmapAlphaTest(pos = (545, 2), size = (48, 48), png = 4), # index 4 is the status pixmap
@@ -11148,8 +11031,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 						],
 					"fonts": [gFont("Regular", 22),gFont("Regular", 14)],
 					"itemHeight": 52
-					}
-				</convert>
+					}</convert>
     </widget>
     <widget name="key_green_pic" pixmap="skin_default/buttons/key_green.png" position="731,130" size="35,30" alphatest="blend" zPosition="1" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
@@ -11863,16 +11745,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
     <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 					MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
 					MultiContentEntryText(pos = (65, 3), size = (190, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 					MultiContentEntryText(pos = (65, 27), size = (190, 38), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
 					],
 					"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
 					"itemHeight": 50
-				}
-			</convert>
+				}</convert>
     </widget>
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
   </screen>
@@ -11896,16 +11776,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
     <widget source="menu" render="Listbox" position="65,98" size="715,440" transparent="1">
-      <convert type="TemplatedMultiContent">
-		{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 		MultiContentEntryText(pos = (120, 2), size = (580, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
 		MultiContentEntryText(pos = (120, 32), size = (580, 18), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 3 is the Description
 		MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (100, 100), png = 3), # index 4 is the pixmap
 		],
 		"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
 		"itemHeight": 110
-		}
-		</convert>
+		}</convert>
     </widget>
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
   </screen>
@@ -11927,16 +11805,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
     <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-		{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 		MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
 		MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
 		MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
 		],
 		"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
 		"itemHeight": 60
-		}
-		</convert>
+		}</convert>
     </widget>
   </screen>
   <screen name="InstallIpk" position="center,center" size="1280,720" title="Package Manager For NFR" flags="wfNoBorder">
@@ -11957,16 +11833,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
     <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-		{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 		MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
 		MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
 		MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
 		],
 		"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
 		"itemHeight": 60
-		}
-		</convert>
+		}</convert>
     </widget>
   </screen>
   <screen name="InstallZip" position="center,center" size="1280,720" title="Package Manager For NFR" flags="wfNoBorder">
@@ -11987,16 +11861,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
     <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-		{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 		MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
 		MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
 		MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
 		],
 		"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
 		"itemHeight": 60
-		}
-                </convert>
+		}</convert>
     </widget>
   </screen>
   <screen name="AdvInstallIpk" position="center,center" size="1280,720" title="Package Manager For NFR" flags="wfNoBorder">
@@ -12017,16 +11889,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
     <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-		{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 		MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
 		MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
 		MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
 		],
 		"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
 		"itemHeight": 60
-		}
-		</convert>
+		}</convert>
     </widget>
   </screen>
   <screen name="InstallRar" position="center,center" size="1280,720" title="Package Manager For NFR" flags="wfNoBorder">
@@ -12047,16 +11917,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="837,95" size="375,214" zPosition="0" alphatest="blend" transparent="1" />
     <widget source="menu" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-		{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 		MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
 		MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
 		MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
 		],
 		"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
 		"itemHeight": 60
-		}
-		</convert>
+		}</convert>
     </widget>
   </screen>
   <screen name="Net_test" position="center,center" size="1280,720" title="Iperf-Net_test" flags="wfNoBorder">
@@ -12170,8 +12038,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="836,99" size="370,210" zPosition="0" alphatest="blend" transparent="1" />
     <widget source="output" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"templates":
+      <convert type="TemplatedMultiContent">{"templates":
 					{"default": (55,[
 							MultiContentEntryText(pos = (0, 1), size = (80, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
 							MultiContentEntryText(pos = (90, 1), size = (150, 24), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
@@ -12200,8 +12067,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 					},
 					"fonts": [gFont("Regular", 18),gFont("Regular", 14),gFont("Regular", 24),gFont("Regular", 20)],
 					"itemHeight": 56
-				}
-				</convert>
+				}</convert>
     </widget>
   </screen>
   <screen name="oscReaderStats" position="center,center" size="1280,720" title="Client Info" flags="wfNoBorder">
@@ -12219,8 +12085,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="836,99" size="370,210" zPosition="0" alphatest="blend" transparent="1" />
     <widget source="output" render="Listbox" position="65,98" size="715,540" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"templates":
+      <convert type="TemplatedMultiContent">{"templates":
 					{"default": (25,[
 							MultiContentEntryText(pos = (0, 1), size = (100, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
 							MultiContentEntryText(pos = (100, 1), size = (50, 24), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
@@ -12244,8 +12109,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 					},
 					"fonts": [gFont("Regular", 14),gFont("Regular", 18),gFont("Regular", 24),gFont("Regular", 20)],
 					"itemHeight": 26
-				}
-				</convert>
+				}</convert>
     </widget>
   </screen>
   <screen name="EventViewSimple" position="center,350" size="980,350" title="EventViewSimple" flags="wfNoBorder">
@@ -12278,16 +12142,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
     <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="836,99" size="370,210" zPosition="0" alphatest="blend" transparent="1" />
     <widget name="menu" render="Listbox" position="65,98" size="715,540" foregroundColor="white" backgroundColor="backtop" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand">
-      <convert type="TemplatedMultiContent">
-				{"template": [	MultiContentEntryText(pos = (20,0), size = (465,38), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0	) ],
+      <convert type="TemplatedMultiContent">{"template": [	MultiContentEntryText(pos = (20,0), size = (465,38), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0	) ],
 				"fonts": [gFont("Regular",28)],
 				"itemHeight": 38
-				}
-			</convert>
+				}</convert>
     </widget>
   </screen>
-  <screen name="Screensaver" position="0,0" size="1280,720" flags="wfNoBorder" transparent="1">
-    <eLabel position="0,0" size="128,72" backgroundColor="backtop" zPosition="0" transparent="1" />
+  <screen name="ScreenSaver" position="0,0" size="1280,720" flags="wfNoBorder" transparent="1" backgroundColor="transparent">
     <widget name="picture" pixmap="/usr/share/enigma2/distro-logo.png" position="center,center" size="500,500" alphatest="on" zPosition="1" transparent="1" />
   </screen>
   <screen name="UserInterfacePositioner" position="0,0" size="1280,720" title="UserInterfacePositioner" flags="wfNoBorder">
@@ -12472,16 +12333,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <screen name="NFR4XChooseOnLineImage" position="0,0" size="1280,720" title="NFR4XBoot - Download OnLine Images" flags="wfNoBorder">
     <widget source="list" render="Listbox" position="190,98" size="890,520" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-{"template": [
+      <convert type="TemplatedMultiContent">{"template": [
 	MultiContentEntryText(pos = (0, 10), size = (830, 30), font=0, flags = RT_HALIGN_RIGHT, text = 0),
 	MultiContentEntryPixmapAlphaBlend(pos = (10, 0), size = (480, 60), png = 1),
 	MultiContentEntryText(pos = (0, 40), size = (830, 30), font=1, flags = RT_VALIGN_TOP | RT_HALIGN_RIGHT, text = 3),
 	],
 	"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
 	"itemHeight": 65
-	}
- </convert>
+	}</convert>
     </widget>
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back3.png" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
@@ -12557,15 +12416,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
     <widget source="menu" render="Listbox" position="65,100" size="715,500" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" scrollbarMode="showOnDemand" transparent="1" zPosition="1">
-      <convert type="TemplatedMultiContent"> 
-				{"template": [ 
+      <convert type="TemplatedMultiContent">{"template": [ 
  					MultiContentEntryText(pos = (50, 3), size = (650, 25), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0), 
  					MultiContentEntryPixmapAlphaBlend(pos = (5, 1), size = (24, 24), png = 1), 
  					], 
 					"fonts": [gFont("Regular",20), gFont("Regular",16)], 
 					"itemHeight": 30 
-				} 
-			</convert>
+				}</convert>
     </widget>
     <ePixmap position="0,2" zPosition="-10" size="1280,719" pixmap="skin_default/menu/back2b.png" />
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
@@ -12718,7 +12575,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="key_green" render="Label" position="395,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <widget source="key_blue" render="Label" position="975,672" size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <widget name="config" position="70,135" size="700,460" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1" />
-	</screen>  
+  </screen>
   <screen name="BootvideoSetupScreen" position="center,center" size="1280,720" title="INFO Panel" flags="wfNoBorder">
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1">
       <convert type="ClockToText">Default</convert>
@@ -12736,5 +12593,58 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="Title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" backgroundColor="transparent" zPosition="1" />
-  </screen>          
+  </screen>
+  <screen name="Disk_Speed" position="center,center" size="1280,720" title="INFO Panel" flags="wfNoBorder">
+    <ePixmap position="2,center" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
+    <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
+    <widget source="session.VideoPicture" render="Pig" position="837,95" zPosition="-8" size="375,214" />
+    <ePixmap position="848,596" size="350,44" pixmap="skin_default/menu/db.png" transparent="1" alphatest="blend" />
+    <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <eLabel text="Disk_Speed" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
+    <ePixmap position="center,center" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
+    <ePixmap pixmap="skin_default/menu/db.png" position="848,596" size="350,44" alphatest="blend" zPosition="1" />
+    <ePixmap pixmap="skin_default/menu/nfr.png" position="950,430" size="150,150" alphatest="on" zPosition="1" />
+    <eLabel backgroundColor="grey" position="66,602" size="715,1" zPosition="0" />
+    <widget name="label1" position="70,131" size="715,35" font="Regular;20" transparent="1" foregroundColor="cyan1" halign="left" backgroundColor="backtop" />
+    <widget name="label2" position="70,192" size="715,35" font="Regular;20" transparent="1" foregroundColor="cyan1" halign="left" backgroundColor="backtop" />
+    <widget name="config" position="70,252" size="700,343" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1" />
+    <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="skin_default/buttons/blue.png" position="940,670" size="30,30" alphatest="blend" />
+    <widget source="key_red" render="Label" position="105,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_green" render="Label" position="395,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_blue" render="Label" position="975,672" size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+  </screen>
+  <screen name="Disk_Test" position="center,center" size="1280,720" title="INFO Panel" flags="wfNoBorder">
+    <ePixmap position="2,center" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
+    <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
+    <widget source="session.VideoPicture" render="Pig" position="837,95" zPosition="-8" size="375,214" />
+    <ePixmap position="848,596" size="350,44" pixmap="skin_default/menu/db.png" transparent="1" alphatest="blend" />
+    <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <eLabel text="Disk_Test" position="66,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
+    <ePixmap position="center,center" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
+    <ePixmap pixmap="skin_default/menu/db.png" position="848,596" size="350,44" alphatest="blend" zPosition="1" />
+    <ePixmap pixmap="skin_default/menu/nfr.png" position="950,430" size="150,150" alphatest="on" zPosition="1" />
+    <eLabel backgroundColor="grey" position="66,602" size="715,1" zPosition="0" />
+    <eLabel name="spaceused" text="1 SD" position="70,498" size="60,20" font="Regular; 18" halign="left" backgroundColor="black" transparent="1" zPosition="5" />
+    <eLabel name="spaceused1" text=" 1 HD" position="105,498" size="60,20" font="Regular; 18" halign="left" backgroundColor="black" transparent="1" zPosition="5" />
+    <eLabel name="spaceused2" text=" 2 HD" position="150,498" size="60,20" font="Regular; 18" halign="left" backgroundColor="black" transparent="1" zPosition="5" />
+    <eLabel name="spaceused3" text=" More then 2 HD" position="447,498" size="220,20" font="Regular; 18" halign="left" backgroundColor="black" transparent="1" zPosition="5" />
+    <widget name="spaceused" position="70,556" size="715,40" zPosition="3" />
+    <ePixmap position="69,525" zPosition="2" size="715,25" pixmap="skin_default/disk_speed1.png" transparent="1" alphatest="blend" />
+    <widget name="label1" position="70,131" size="715,35" font="Regular;20" transparent="1" foregroundColor="cyan1" halign="left" backgroundColor="backtop" />
+    <widget name="label2" position="70,192" size="715,35" font="Regular;20" transparent="1" foregroundColor="cyan1" halign="left" backgroundColor="backtop" />
+    <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
+    <widget source="key_red" render="Label" position="105,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+  </screen>
 </skin>
