@@ -12607,7 +12607,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="skin_default/menu/nfr.png" position="950,430" size="150,150" alphatest="on" zPosition="1" />
     <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="837,95" size="379,216" alphatest="on" zPosition="1" />
     <eLabel backgroundColor="grey" position="66,602" size="715,1" zPosition="0" />
-    <widget name="Mlist" position="65,98" selectionPixmap="skin_default/menu/selc715x48.png" size="715,500" zPosition="1" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" />
+    <widget name="Mlist" position="65,98" selectionPixmap="skin_default/menu/selc715x92.png" size="715,500" zPosition="1" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" />
     <widget name="label1" position="64,608" size="715,25" font="Regular;20" transparent="0" foregroundColor="cyan1" halign="left" backgroundColor="backtop" />
     <widget source="Title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
@@ -12625,12 +12625,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="skin_default/menu/nfr.png" position="950,430" size="150,150" alphatest="on" zPosition="1" />
     <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="837,95" size="379,216" alphatest="on" zPosition="1" />
     <eLabel backgroundColor="grey" position="66,602" size="715,1" zPosition="0" />
-    <widget name="Mlist" position="65,98" selectionPixmap="skin_default/menu/selc715x48.png" size="715,500" zPosition="1" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" />
+    <widget name="Mlist" position="65,98" selectionPixmap="skin_default/menu/selc715x92.png" size="715,500" zPosition="1" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" />
     <widget name="label1" position="64,608" size="715,25" font="Regular;20" transparent="0" foregroundColor="cyan1" halign="left" backgroundColor="backtop" />
     <widget source="Title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
     <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" backgroundColor="transparent" zPosition="1" />
-  </screen>
+  </screen>   
   <screen name="Disk_Speed" position="center,center" size="1280,720" title="INFO Panel" flags="wfNoBorder">
     <ePixmap position="2,center" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
