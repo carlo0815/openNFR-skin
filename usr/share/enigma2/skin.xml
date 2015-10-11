@@ -4787,7 +4787,22 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <widget name="thumbnail" position="0,0" size="100,75" alphatest="blend" />
     # fake entry for dynamic thumbnail resizing,currently there is no other way doing this.
-    <widget name="HelpWindow" position="135,500" size="1,1" zPosition="10" transparent="1" alphatest="blend" /><ePixmap pixmap="skin_default/buttons/key_red.png" position="70,670" size="30,30" alphatest="blend" /><ePixmap pixmap="skin_default/buttons/key_green.png" position="250,670" size="30,30" alphatest="blend" /><ePixmap pixmap="skin_default/buttons/key_yellow.png" position="440,670" size="30,30" alphatest="blend" /><ePixmap pixmap="skin_default/buttons/key_grey.png" position="630,670" size="30,30" alphatest="blend" /><widget name="ButtonBlue" pixmap="skin_default/buttons/key_blue.png" zPosition="2" position="630,670" size="30,30" alphatest="blend" /><widget name="key_red" position="105,672" size="180,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" /><widget name="key_green" position="285,672" size="180,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" /><widget name="key_yellow" position="475,672" size="180,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" /><eLabel text="Virtual KeyBoard" position="670,672" size="250,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" /><ePixmap position="920,670" size="30,30" zPosition="10" pixmap="skin_default/buttons/key_ok.png" transparent="1" alphatest="blend" /><ePixmap position="1000,670" size="30,30" zPosition="10" pixmap="skin_default/buttons/key_menu.png" transparent="1" alphatest="blend" /><ePixmap position="848,596" zPosition="2" size="350,44" pixmap="skin_default/icons/db.png" transparent="1" alphatest="blend" /><ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" /><widget name="VKeyIcon" position="0,0" size="0,0" /></screen>
+    <widget name="HelpWindow" position="135,500" size="1,1" zPosition="10" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="skin_default/buttons/key_red.png" position="70,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="skin_default/buttons/key_green.png" position="250,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="skin_default/buttons/key_yellow.png" position="440,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="skin_default/buttons/key_grey.png" position="630,670" size="30,30" alphatest="blend" />
+    <widget name="ButtonBlue" pixmap="skin_default/buttons/key_blue.png" zPosition="2" position="630,670" size="30,30" alphatest="blend" />
+    <widget name="key_red" position="105,672" size="180,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="key_green" position="285,672" size="180,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="key_yellow" position="475,672" size="180,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <eLabel text="Virtual KeyBoard" position="670,672" size="250,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <ePixmap position="920,670" size="30,30" zPosition="10" pixmap="skin_default/buttons/key_ok.png" transparent="1" alphatest="blend" />
+    <ePixmap position="1000,670" size="30,30" zPosition="10" pixmap="skin_default/buttons/key_menu.png" transparent="1" alphatest="blend" />
+    <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="skin_default/icons/db.png" transparent="1" alphatest="blend" />
+    <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" />
+    <widget name="VKeyIcon" position="0,0" size="0,0" />
+  </screen>
   <screen name="MyTubeSettingsScreen" position="0,0" size="1280,720" title="MyTubeSettingsScreen" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
@@ -4906,7 +4921,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="key_red" position="105,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <widget name="thumbnail" position="0,0" size="170,130" alphatest="blend" />
     # fake entry for dynamic thumbnail resizing, currently there is no other way doing this.
-    <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" /></screen>
+    <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
   <!-- YouTube Player by Maggy -->
   <screen name="SuggestionsListScreen" position="0,0" zPosition="2" size="1280,720" flags="wfNoBorder">
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
@@ -12852,26 +12868,26 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="key_blue" position="975,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
   </screen>
   <screen name="AutoPin" position="0,0" size="1280,720" title="Auto Pin" flags="wfNoBorder">
-  <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
-  <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
-  <widget source="session.VideoPicture" render="Pig" position="837,95" zPosition="-8" size="375,214" />
-  <ePixmap position="848,596" size="350,44" pixmap="skin_default/menu/db.png" transparent="1" alphatest="blend" />
-  <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
-    <convert type="ClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
-    <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
-  </widget>
-  <widget source="Title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-  <widget name="config" position="65,98" size="710,540" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1" />
-  <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
-  <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
-  <ePixmap pixmap="skin_default/buttons/yellow.png" position="650,670" size="30,30" alphatest="blend" />
-  <ePixmap pixmap="skin_default/buttons/blue.png" position="940,670" size="30,30" alphatest="blend" />
-  <widget name="buttonred" position="105,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-  <widget name="buttongreen" position="395,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-  <widget name="buttonyellow" position="685,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-  <widget name="buttonblue" position="975,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-  <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" />
-</screen>
+    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
+    <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
+    <widget source="session.VideoPicture" render="Pig" position="837,95" zPosition="-8" size="375,214" />
+    <ePixmap position="848,596" size="350,44" pixmap="skin_default/menu/db.png" transparent="1" alphatest="blend" />
+    <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <widget source="Title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
+    <widget name="config" position="65,98" size="710,540" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1" />
+    <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="skin_default/buttons/yellow.png" position="650,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="skin_default/buttons/blue.png" position="940,670" size="30,30" alphatest="blend" />
+    <widget name="buttonred" position="105,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="buttongreen" position="395,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="buttonyellow" position="685,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="buttonblue" position="975,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
 </skin>
