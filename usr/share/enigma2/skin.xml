@@ -1216,7 +1216,9 @@
     <widget source="session.CurrentService" render="PiconProv" position="972,341" size="100,60" zPosition="2" transparent="1" alphatest="blend">
       <convert type="ServiceName2">Provider</convert>
     </widget>
-    <widget source="ServiceEvent" render="Picon2" position="832,341" size="100,60" zPosition="2" transparent="1" alphatest="blend" />
+    <widget source="ServiceEvent" render="Picon" position="832,341" zPosition="2" size="100,60" transparent="1" alphatest="blend">
+      <convert type="ServiceName2">Reference</convert>
+    </widget>
     <widget source="ServiceEvent" render="NextEvent2" position="65,580" size="685,60" font="Regular;18" foregroundColor="white" backgroundColor="black" noWrap="1" transparent="1" zPosition="2" halign="center" />
     <widget source="ServiceEvent" render="Label" position="433,96" size="325,21" font="Regular; 17" backgroundColor="background" transparent="1" halign="center" noWrap="1" valign="center" text="19.2E  1:0:1:6D66:437:1:C00000:0:0:0" foregroundColor="cyan1" zPosition="3">
       <convert type="ServiceName2">Reference</convert>
