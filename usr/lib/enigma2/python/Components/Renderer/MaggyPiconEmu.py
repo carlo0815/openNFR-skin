@@ -68,6 +68,42 @@ class MaggyPiconEmu(Renderer, Poll):
                     line = f.readline()
                     text = line.strip()
                     f.close()
+		elif config.NFRSoftcam.actcam.value:
+			if config.NFRSoftcam.actcam.value != "none":
+				camdlist = config.NFRSoftcam.actcam.value.split()
+			else: 
+                        	camdlist = 'none'	
+			for line in camdlist:
+				if 'mgcamd' in line.lower() and 'oscam' in line.lower():
+					text = 'oscammgcamd'
+					break
+				if 'cccam' in line.lower() and 'oscam' in line.lower():
+					text = 'oscamcccam'
+					break
+				elif 'mgcamd' in line.lower():
+					text = 'mgcamd'
+				elif 'oscam' in line.lower():
+					text = 'oscam'
+				elif 'wicard' in line.lower():
+					text = 'wicardd'
+				elif 'cccam' in line.lower():
+					text = 'cccam'
+				elif 'camd3' in line.lower():
+					text = 'camd3'
+				elif 'evocamd' in line.lower():
+					text = 'evocamd'
+				elif 'newcs' in line.lower():
+					text = 'newcs'
+				elif 'rqcamd' in line.lower():
+					text = 'rqcamd'
+				elif 'gbox' in line.lower():
+					text = 'gbox'
+				elif 'mpcs' in line.lower():
+					text = 'mpcs'
+				elif 'sbox' in line.lower():
+					text = 'sbox'
+                                else:
+					text = 'unknow'                                                                          
                 pngname = self.nameCache.get(text, '')
                 if pngname == '':
                     pngname = self.findEmu(text)
