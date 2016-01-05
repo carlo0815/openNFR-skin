@@ -13127,5 +13127,32 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="key_green" position="395,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <widget name="key_yellow" position="685,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
   </screen>
+  <screen name="QuickMenuDevices" position="center,center" size="1280,720" title="Devices" flags="wfNoBorder">
+    <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <ePixmap position="center,center" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
+    <ePixmap pixmap="skin_default/menu/db.png" position="848,596" size="350,44" alphatest="blend" zPosition="1" />
+    <ePixmap pixmap="skin_default/menu/nfr.png" position="950,430" size="150,150" alphatest="on" zPosition="1" />
+    <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="837,95" size="379,216" alphatest="on" zPosition="1" />
+    <widget name="lab1" zPosition="2" position="126,145" size="600,40" font="Regular;22" backgroundColor="backtop" halign="center" transparent="1" />
+    <widget source="devicelist" render="Listbox" position="65,143" size="718,425" zPosition="1" scrollbarMode="showOnDemand" transparent="1">
+      <convert type="TemplatedMultiContent">{"template": [
+				 MultiContentEntryText(pos = (90, 4), size = (600, 30), font=0, text = 0),
+				 MultiContentEntryText(pos = (110, 30), size = (600, 50), font=1, flags = RT_VALIGN_TOP, text = 1),
+				 MultiContentEntryPixmapAlphaBlend(pos = (5, 8), size = (80, 80), png = 2),
+				],
+				"fonts": [gFont("Regular",24),gFont("Regular",20)],
+				"itemHeight": 85
+				}</convert>
+    </widget>
+    <eLabel text="Detected Devices:" position="64,98" size="715,32" font="Regular;26" transparent="1" foregroundColor="cyan1" halign="left" backgroundColor="backtop" />
+    <widget source="Title" render="Label" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
+    <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
+    <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" backgroundColor="transparent" zPosition="1" />
+  </screen>
 </skin>
 
