@@ -2321,7 +2321,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="session.CurrentService" render="Label" font="Regular;18" position="603,566" size="55,18" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1">
       <convert type="ServiceInfo">VideoHeight</convert>
     </widget>
-    <widget source="session.RecordState" render="Pixmap" pixmap="skin_default/icons/ico_rec_on.png" position="882,10" size="33,20" zPosition="3" alphatest="blend">
+    <widget source="session.RecordState" render="Pixmap" pixmap="skin_default/icons/ico_rec_on.png" position="975,596" size="70,25" zPosition="2" alphatest="blend">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <ePixmap pixmap="skin_default/slider_bg.png" position="325,659" size="550,20" zPosition="7" alphatest="blend" />
