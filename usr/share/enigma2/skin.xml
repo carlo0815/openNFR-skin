@@ -12233,26 +12233,18 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="picture" pixmap="/usr/share/enigma2/distro-logo.png" position="center,center" size="500,500" alphatest="on" zPosition="1" transparent="1" />
   </screen>
   <screen name="UserInterfacePositioner" position="0,0" size="1280,720" title="UserInterfacePositioner" flags="wfNoBorder">
-    <ePixmap position="center,center" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
-    <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1" foregroundColor="cyan1">
-      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
-    </widget>
-    <eLabel text="UserInterfacePositioner" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="config" position="65,97" size="720,204" foregroundColor="white" backgroundColor="backtop" scrollbarMode="showOnDemand" transparent="1" />
-    <widget source="status" render="Label" position="65,380" zPosition="1" size="720,150" font="Regular;20" halign="center" valign="center" backgroundColor="backtop" transparent="1" />
-    <ePixmap pixmap="skin_default/buttons/key_red.png" position="70,670" size="30,30" alphatest="blend" />
-    <ePixmap pixmap="skin_default/buttons/key_green.png" position="380,670" size="30,30" alphatest="blend" />
-    <ePixmap pixmap="skin_default/buttons/key_yellow.png" position="706,670" size="30,30" alphatest="blend" />
-    <widget source="key_red" render="Label" position="105,672" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_green" render="Label" position="419,672" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_yellow" render="Label" position="747,672" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
-    <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="skin_default/icons/db.png" transparent="1" alphatest="blend" />
-    <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="skin_default/menu/opennfr_info.png" position="836,99" size="370,210" zPosition="0" alphatest="blend" transparent="1" />
-  </screen>
+    <ePixmap position="center,center" zPosition="-10" size="1280,720" pixmap="skin_default/menu/Testbild.png" />
+    <eLabel backgroundColor="black" font="Regular; 27" halign="center" position="310,45" size="653,62" text="Set the red angles in the corner from the tv-screen" valign="center" foregroundColor="red" />
+    <eLabel backgroundColor="black" font="Regular; 21" halign="center" position="453,185" size="374,43" text="To save push green button" valign="center" foregroundColor="green" />
+    <widget name="config" position="453,229" size="374,210" foregroundColor="white" backgroundColor="backtop" scrollbarMode="showOnDemand" transparent="1" />
+    <widget source="status" render="Label" position="453,434" zPosition="1" size="374,96" font="Regular;20" halign="center" valign="center" backgroundColor="backtop" transparent="1" />
+    <ePixmap pixmap="skin_default/buttons/key_red.png" position="326,675" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="skin_default/buttons/key_green.png" position="567,675" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="skin_default/buttons/key_yellow.png" position="778,675" size="30,30" alphatest="blend" />
+    <widget source="key_red" render="Label" position="366,677" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_green" render="Label" position="607,677" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_yellow" render="Label" position="817,677" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+  </screen> 
   <screen name="PiPSetup" position="center,center" size="700,200" backgroundColor="transparent" flags="wfNoBorder">
     <widget name="text" position="0,0" size="700,200" font="Regular;23" />
   </screen>
