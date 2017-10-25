@@ -285,39 +285,111 @@
       <convert type="ConditionalShowHide" />
     </widget>
     <!--TUNER STATUS B  -->
-    <ePixmap alphatest="blend" pixmap="skin_default/tuner/icon_b_no.png" size="30,30" position="1046,601" zPosition="1" />
-    <widget source="session.TunerInfo" render="Pixmap" pixmap="skin_default/tuner/icon_b_akt.png" size="30,30" position="1046,601" zPosition="2" alphatest="blend">
+    <ePixmap alphatest="blend" pixmap="skin_default/tuner/icon_b_no.png" size="30,30" position="1030,601" zPosition="1" />
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="skin_default/tuner/icon_b_akt.png" size="30,30" position="1030,601" zPosition="2" alphatest="blend">
       <convert type="TunerInfo">TunerUseMask</convert>
       <convert type="ValueBitTest">2</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" render="Pixmap" pixmap="skin_default/tuner/icon_b.png" size="30,30" position="1046,601" zPosition="3" alphatest="blend">
+    <widget source="session.FrontendInfo" render="Pixmap" pixmap="skin_default/tuner/icon_b.png" size="30,30" position="1030,601" zPosition="3" alphatest="blend">
       <convert type="FrontendInfo">NUMBER</convert>
       <convert type="ValueRange">1,1</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <!-- TUNER STATUS C -->
-    <ePixmap alphatest="blend" pixmap="skin_default/tuner/icon_c_no.png" size="30,30" position="1100,601" zPosition="1" />
-    <widget source="session.TunerInfo" render="Pixmap" pixmap="skin_default/tuner/icon_c_akt.png" size="30,30" position="1100,601" zPosition="2" alphatest="blend">
+    <ePixmap alphatest="blend" pixmap="skin_default/tuner/icon_c_no.png" size="30,30" position="1070,601" zPosition="1" />
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="skin_default/tuner/icon_c_akt.png" size="30,30" position="1070,601" zPosition="2" alphatest="blend">
       <convert type="TunerInfo">TunerUseMask</convert>
       <convert type="ValueBitTest">4</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" render="Pixmap" pixmap="skin_default/tuner/icon_c.png" size="30,30" position="1100,601" zPosition="3" alphatest="blend">
+    <widget source="session.FrontendInfo" render="Pixmap" pixmap="skin_default/tuner/icon_c.png" size="30,30" position="1070,601" zPosition="3" alphatest="blend">
       <convert type="FrontendInfo">NUMBER</convert>
       <convert type="ValueRange">2,2</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <!-- TUNER STATUS D -->
-    <ePixmap alphatest="blend" pixmap="skin_default/tuner/icon_d_no.png" size="30,30" position="1151,601" zPosition="1" />
-    <widget source="session.TunerInfo" render="Pixmap" pixmap="skin_default/tuner/icon_d_akt.png" size="30,30" position="1151,601" zPosition="2" alphatest="blend">
+    <ePixmap alphatest="blend" pixmap="skin_default/tuner/icon_d_no.png" size="30,30" position="1110,601" zPosition="1" />
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="skin_default/tuner/icon_d_akt.png" size="30,30" position="1110,601" zPosition="2" alphatest="blend">
       <convert type="TunerInfo">TunerUseMask</convert>
       <convert type="ValueBitTest">8</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.FrontendInfo" render="Pixmap" pixmap="skin_default/tuner/icon_d.png" size="30,30" position="1151,601" zPosition="3" alphatest="blend">
+    <widget source="session.FrontendInfo" render="Pixmap" pixmap="skin_default/tuner/icon_d.png" size="30,30" position="1110,601" zPosition="3" alphatest="blend">
       <convert type="FrontendInfo">NUMBER</convert>
       <convert type="ValueRange">3,3</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <!--TUNER STATUS E -->
+    <ePixmap alphatest="blend" pixmap="skin_default/tuner/icon_e_no.png" size="30,30" position="1150,601" zPosition="0" />
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="skin_default/tuner/icon_e_akt.png" size="30,30" position="1150,601" zPosition="2" alphatest="blend">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">16</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="Pixmap" pixmap="skin_default/tuner/icon_e.png" size="30,30" position="1150,601" zPosition="3" alphatest="blend">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">4,4</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <!--TUNER STATUS F  -->
+    <ePixmap alphatest="blend" pixmap="skin_default/tuner/icon_f_no.png" size="30,30" position="990,627" zPosition="1" />
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="skin_default/tuner/icon_f_akt.png" size="30,30" position="990,627" zPosition="2" alphatest="blend">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">32</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="Pixmap" pixmap="skin_default/tuner/icon_f.png" size="30,30" position="990,627" zPosition="3" alphatest="blend">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">5,5</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <!-- TUNER STATUS G -->
+    <ePixmap alphatest="blend" pixmap="skin_default/tuner/icon_g_no.png" size="30,30" position="1030,627" zPosition="1" />
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="skin_default/tuner/icon_g_akt.png" size="30,30" position="1030,627" zPosition="2" alphatest="blend">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">64</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="Pixmap" pixmap="skin_default/tuner/icon_g.png" size="30,30" position="1030,627" zPosition="3" alphatest="blend">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">6,6</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <!-- TUNER STATUS H -->
+    <ePixmap alphatest="blend" pixmap="skin_default/tuner/icon_h_no.png" size="30,30" position="1070,627" zPosition="1" />
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="skin_default/tuner/icon_h_akt.png" size="30,30" position="1070,627" zPosition="2" alphatest="blend">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">128</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="Pixmap" pixmap="skin_default/tuner/icon_h.png" size="30,30" position="1070,627" zPosition="3" alphatest="blend">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">7,7</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <!-- TUNER STATUS I -->
+    <ePixmap alphatest="blend" pixmap="skin_default/tuner/icon_i_no.png" size="30,30" position="1110,627" zPosition="1" />
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="skin_default/tuner/icon_i_akt.png" size="30,30" position="1110,627" zPosition="2" alphatest="blend">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">256</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="Pixmap" pixmap="skin_default/tuner/icon_i.png" size="30,30" position="1110,627" zPosition="3" alphatest="blend">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">6,6</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <!-- TUNER STATUS J -->
+    <ePixmap alphatest="blend" pixmap="skin_default/tuner/icon_j_no.png" size="30,30" position="1150,627" zPosition="1" />
+    <widget source="session.TunerInfo" render="Pixmap" pixmap="skin_default/tuner/icon_j_akt.png" size="30,30" position="1150,627" zPosition="2" alphatest="blend">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">512</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="Pixmap" pixmap="skin_default/tuner/icon_j.png" size="30,30" position="1150,627" zPosition="3" alphatest="blend">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">7,7</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <!-- TunerInfo end -->
