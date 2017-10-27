@@ -377,7 +377,7 @@
     </widget>
     <widget source="session.FrontendInfo" render="Pixmap" pixmap="skin_default/tuner/icon_i.png" size="30,30" position="1110,627" zPosition="3" alphatest="blend">
       <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">6,6</convert>
+      <convert type="ValueRange">8,8</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <!-- TUNER STATUS J -->
@@ -389,7 +389,7 @@
     </widget>
     <widget source="session.FrontendInfo" render="Pixmap" pixmap="skin_default/tuner/icon_j.png" size="30,30" position="1150,627" zPosition="3" alphatest="blend">
       <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">7,7</convert>
+      <convert type="ValueRange">9,9</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <!-- TunerInfo end -->
