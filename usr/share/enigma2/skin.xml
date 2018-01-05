@@ -12755,12 +12755,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" backgroundColor="transparent" zPosition="1" />
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/green.png" position="223,670" size="30,30" alphatest="blend" />
-    <ePixmap pixmap="skin_default/buttons/yellow.png" position="392,670" size="30,30" alphatest="blend" />
-    <ePixmap pixmap="skin_default/buttons/blue.png" position="646,670" size="30,30" alphatest="blend" />
     <widget source="key_red" render="Label" position="105,672" size="100,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <widget source="key_green" render="Label" position="260,672" size="100,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_yellow" render="Label" position="434,672" size="200,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_blue" render="Label" position="689,672" size="200,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
   </screen>
   <screen name="BootlogoSetupScreen" position="center,center" size="1280,720" title="INFO Panel" flags="wfNoBorder">
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1">
@@ -12781,12 +12777,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" backgroundColor="transparent" zPosition="1" />
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
-    <ePixmap pixmap="skin_default/buttons/yellow.png" position="650,670" size="30,30" alphatest="blend" />
-    <ePixmap pixmap="skin_default/buttons/blue.png" position="940,670" size="30,30" alphatest="blend" />
     <widget source="key_red" render="Label" position="105,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <widget source="key_green" render="Label" position="395,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_yellow" render="Label" position="685,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_blue" render="Label" position="975,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
   </screen>
   <screen name="RadiologoSetupScreen" position="center,center" size="1280,720" title="INFO Panel" flags="wfNoBorder">
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1">
@@ -12807,12 +12799,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" backgroundColor="transparent" zPosition="1" />
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
-    <ePixmap pixmap="skin_default/buttons/yellow.png" position="650,670" size="30,30" alphatest="blend" />
-    <ePixmap pixmap="skin_default/buttons/blue.png" position="940,670" size="30,30" alphatest="blend" />
     <widget source="key_red" render="Label" position="105,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <widget source="key_green" render="Label" position="395,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_yellow" render="Label" position="685,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_blue" render="Label" position="975,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
   </screen>
   <screen name="Disk_Speed" position="center,center" size="1280,720" title="INFO Panel" flags="wfNoBorder">
     <ePixmap position="2,center" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
@@ -12887,12 +12875,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" backgroundColor="transparent" zPosition="1" />
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
-    <ePixmap pixmap="skin_default/buttons/yellow.png" position="650,670" size="30,30" alphatest="blend" />
-    <ePixmap pixmap="skin_default/buttons/blue.png" position="940,670" size="30,30" alphatest="blend" />
     <widget source="key_red" render="Label" position="105,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <widget source="key_green" render="Label" position="395,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_yellow" render="Label" position="685,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="key_blue" render="Label" position="975,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
   </screen>
   <screen name="FindMovieList" position="center,center" size="1280,720" title=" " flags="wfNoBorder">
     <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1">
