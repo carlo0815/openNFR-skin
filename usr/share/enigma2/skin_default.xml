@@ -80,9 +80,11 @@
     <ePixmap pixmap="skin_default/buttons/red.png" position=" 70,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/green.png" position="360,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/yellow.png" position="650,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="skin_default/buttons/blue.png" position="940,670" size="30,30" alphatest="blend" />    
     <widget name="key_red" position="105,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <widget name="key_green" position="395,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <widget name="key_yellow" position="685,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="key_blue" position="975,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />    
     <widget name="lab1" position="60,95" size="560,50" font="Regular; 18" zPosition="2" transparent="1" halign="center" />
     <widget name="list" position="60,185" size="560,360" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="backupstatus" position="60,562" size="560,30" font="Regular;20" zPosition="5" transparent="1" />
