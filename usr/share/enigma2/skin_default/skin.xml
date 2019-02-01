@@ -243,6 +243,26 @@
       <convert type="ValueRange">721,1980</convert>
       <convert type="ConditionalShowHide" />
     </widget>
+    <ePixmap pixmap="skin_default/icons/ico_uhd_off.png" position="294,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_uhd_on.png" position="294,526" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">Is4K</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="skin_default/icons/ico_hdr_off.png" position="294,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_hdr_on.png" position="294,526" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">IsHDR</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="skin_default/icons/ico_hdr10_off.png" position="294,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_hdr10_on.png" position="294,526" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">IsHDR10</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="skin_default/icons/ico_hlg_off.png" position="294,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_hlg_on.png" position="294,526" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">IsHLG</convert>
+      <convert type="ConditionalShowHide" />  
+    </widget>
     <ePixmap pixmap="skin_default/icons/ico_crypt_off.png" position="915,526" size="70,25" zPosition="1" alphatest="blend" />
     <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_crypt_on.png" position="915,526" size="70,25" zPosition="2" alphatest="blend">
       <convert type="ServiceInfo">IsCrypted</convert>
@@ -535,6 +555,26 @@
     <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_hd_on.png" position="294,526" size="70,25" zPosition="2" alphatest="blend">
       <convert type="ServiceInfo">VideoWidth</convert>
       <convert type="ValueRange">721,1980</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="skin_default/icons/ico_uhd_off.png" position="294,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_uhd_on.png" position="294,526" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">Is4K</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="skin_default/icons/ico_hdr_off.png" position="294,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_hdr_on.png" position="294,526" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">IsHDR</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="skin_default/icons/ico_hdr10_off.png" position="294,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_hdr10_on.png" position="294,526" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">IsHDR10</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="skin_default/icons/ico_hlg_off.png" position="294,526" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_hlg_on.png" position="294,526" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">IsHLG</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <ePixmap pixmap="skin_default/icons/ico_crypt_off.png" position="915,526" size="70,25" zPosition="1" alphatest="blend" />
@@ -1309,7 +1349,7 @@
     </widget>
     <widget source="Title" render="Label" position="65,17" size="720,43" font="Regular; 35" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
     <eLabel position="65,119" size="688,2" backgroundColor="grey" />
-    <widget name="list" position="65,125" zPosition="3" size="715,450" scrollbarMode="showOnDemand" serviceItemHeight="30" serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;23" colorServiceDescription="myblue" transparent="1" />
+    <widget name="list" position="65,125" zPosition="3" size="715,450" scrollbarMode="showOnDemand" serviceItemHeight="30" colorServiceDescriptionSelected="yellow" serviceNumberFont="Regular;23" serviceNameFont="Regular;23" serviceInfoFont="Regular;23" colorServiceDescription="myblue" transparent="1" />
     <widget source="ServiceEvent" render="EmptyEpg" emptyText="Event data unavailable" position="820,420" size="400,25" font="Regular;22" foregroundColor="yellow" backgroundColor="yellow" transparent="1">
       <convert type="ServiceName">Name</convert>
     </widget>
@@ -2443,6 +2483,26 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="ValueRange">721,1980</convert>
       <convert type="ConditionalShowHide" />
     </widget>
+    <ePixmap pixmap="skin_default/icons/ico_uhd_off.png" position="1079,522" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_uhd_on.png" position="1079,522" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">Is4K</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="skin_default/icons/ico_hdr_off.png" position="1079,522" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_hdr_on.png" position="1079,522" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">IsHDR</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="skin_default/icons/ico_hdr10_off.png" position="1079,522" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_hdr10_on.png" position="1079,522" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">IsHDR10</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="skin_default/icons/ico_hlg_off.png" position="1079,522" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_hlg_on.png" position="1079,522" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">IsHLG</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
     <widget source="session.CurrentService" render="Label" font="Regular;18" position="533,566" size="55,18" halign="right" foregroundColor="yellow" backgroundColor="black" transparent="1">
       <convert type="ServiceInfo">VideoWidth</convert>
     </widget>
@@ -2547,6 +2607,26 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_hd_on.png" position="970,4" size="70,25" zPosition="2" alphatest="blend">
       <convert type="ServiceInfo">VideoWidth</convert>
       <convert type="ValueRange">721,1980</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="skin_default/icons/ico_uhd_off.png" position="970,4" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_uhd_on.png" position="970,4" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">Is4K</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="skin_default/icons/ico_hdr_off.png" position="970,4" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_hdr_on.png" position="970,4" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">IsHDR</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="skin_default/icons/ico_hdr10_off.png" position="970,4" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_hdr10_on.png" position="970,4" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">IsHDR10</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap pixmap="skin_default/icons/ico_hlg_off.png" position="970,4" size="70,25" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/ico_hlg_on.png" position="970,4" size="70,25" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">IsHLG</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <ePixmap pixmap="skin_default/icons/ico_rec_off.png" position="1050,4" size="70,25" zPosition="1" alphatest="blend" />
