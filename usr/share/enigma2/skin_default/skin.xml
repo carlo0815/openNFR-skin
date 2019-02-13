@@ -7454,6 +7454,31 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="800,670" size="30,30" zPosition="10" pixmap="skin_default/buttons/key_exit.png" transparent="1" alphatest="blend" />
     <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="skin_default/icons/db.png" transparent="1" alphatest="blend" />
   </screen>
+  <screen name="BlindscanState" position="0,0" size="1280,720" title="Satellite Blindscan" zPosition="1" flags="wfNoBorder">
+    <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
+    <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
+    <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
+    <widget source="global.CurrentTime" render="Label" position="1125,12" size="100,28" font="Regular; 26" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="905,37" size="320,25" font="Regular;20" halign="right" backgroundColor="background" transparent="1" foregroundColor="cyan1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <widget source="Title" render="Label" position="65,17" size="730,43" font="Regular;35" backgroundColor="background" transparent="1" foregroundColor="cyan1" />
+    <widget name="progress" position="70,110" size="700,80" font="Regular;22" backgroundColor="background" transparent="1" />
+    <eLabel position="70,200" size="700,2" backgroundColor="grey" />
+    <widget name="config" position="70,210" size="710,400" scrollbarMode="showOnDemand" transparent="1" />
+    <eLabel position="70,100" size="700,2" backgroundColor="grey" />
+    <widget name="post_action" position="870,430" size="300,180" font="Regular;20" halign="center" backgroundColor="black" transparent="1" />
+    <ePixmap pixmap="skin_default/buttons/key_red.png" position=" 70,670" size="30,30" alphatest="on" />
+    <ePixmap pixmap="skin_default/buttons/key_green.png" position="360,670" size="30,30" alphatest="on" />
+    <ePixmap pixmap="skin_default/buttons/yellow.png" position="650,670" size="30,30" alphatest="on" />
+    <ePixmap pixmap="skin_default/buttons/key_blue.png" position="940,670" size="30,30" alphatest="on" />
+    <widget source="key_red" render="Label" position="105,672" size="260,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_green" render="Label" position="395,672" size="260,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_yellow" render="Label" position="685,672" size="260,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_blue" render="Label" position="975,672" size="260,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+  </screen>
   <screen name="ExtraMessageBox" flags="wfNoBorder" position="0,0" size="1280,720" title="ExtraMessageBox">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
     <ePixmap position="848,596" size="350,44" pixmap="skin_default/menu/db.png" transparent="1" alphatest="blend" />
