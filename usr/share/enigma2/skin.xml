@@ -12491,6 +12491,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="session.VideoPicture" render="Pig" position="837,95" size="375,214" zPosition="-8" />
     <ePixmap position="848,596" zPosition="2" size="350,44" pixmap="skin_default/icons/db.png" transparent="1" alphatest="blend" />
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
+    <widget name="list" position="65,98" zPosition="1" size="715,500" font="Regular;20" halign="left" valign="top" transparent="1" />
+    <widget name="description" position="65,435" zPosition="1" size="715,200" font="Regular;20" halign="left" valign="top" transparent="1" />
+    <widget name="list" position="66,100" zPosition="1" size="719,500" font="Regular;20" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="info-online" position="65,98" zPosition="1" size="715,200" font="Regular;20" halign="left" valign="top" transparent="1" />
     <widget name="info-local" position="65,435" zPosition="1" size="715,200" font="Regular;20" halign="left" valign="top" transparent="1" />
   </screen>
