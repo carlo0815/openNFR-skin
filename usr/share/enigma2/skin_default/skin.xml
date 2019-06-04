@@ -13620,6 +13620,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/nfr.png" alphatest="blend" transparent="1" />
     <widget name="config" position="65,98" zPosition="1" size="715,500" font="Regular;20" halign="left" valign="top" transparent="1" />
     <widget source="description" render="Label" position="65,435" zPosition="1" size="715,200" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
-    <widget source="options" render="Label" position="65,500" size="680,40" halign="left" valign="center" font="Regular; 24" backgroundColor="background" foregroundColor="white" transparent="1" />
+    <widget source="options" render="Label" position="65,500" size="680,60" halign="left" valign="center" font="Regular; 24" backgroundColor="background" foregroundColor="white" transparent="1" />
 </screen>  
 </skin>
