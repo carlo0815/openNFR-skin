@@ -1,8 +1,8 @@
 #######################################################################
 #
-#    Converter CAID's for Dreambox/Enigma-2
-#    Version: 1.0
-#    Coded by Vali (c)2011
+#	Converter CAID's for Dreambox/Enigma-2
+#	Version: 1.0
+#	Coded by Vali (c)2011
 #
 #######################################################################
 
@@ -56,7 +56,7 @@ class valioCOCA(Poll, Converter, object):
 							c = "0%s" % c
 						c = c[:2].upper()
 						if self.systemCaids.has_key(c) and not caidlist.has_key(c):
-							caidlist[c] = (self.systemCaids.get(c),0)
+							caidlist[c] = (self.systemCaids.get(c), 0)
 					ecm_info = self.ecmfile()
 					if ecm_info:
 						emu_caid = ecm_info.get("caid", "")
@@ -65,7 +65,7 @@ class valioCOCA(Poll, Converter, object):
 							if len(c) == 3:
 								c = "0%s" % c
 							c = c[:2].upper()
-							caidlist[c] = (self.systemCaids.get(c),1)
+							caidlist[c] = (self.systemCaids.get(c), 1)
 						# caid
 						caid = ecm_info.get("caid", "")
 						caid = caid.lstrip("0x")
@@ -81,7 +81,7 @@ class valioCOCA(Poll, Converter, object):
 						ecm_time = ecm_info.get("ecm time", None)
 						if ecm_time:
 							if "msec" in ecm_time:
-								ecm_time = "%s -" % ecm_time						
+								ecm_time = "%s -" % ecm_time
 							elif ecm_time != "nan":
 								ecm_time = "%ss -" % ecm_time
 							else:
@@ -92,16 +92,16 @@ class valioCOCA(Poll, Converter, object):
 							if address == "/dev/sci0":
 								address = "Slot #1"
 							elif address == "/dev/sci1":
-								address = "Slot #2"								
+								address = "Slot #2"
 						# source	
 						using = ecm_info.get("using", "")
 						if using:
 							if using == "emu":
 								textvalue = " - %s %s" % (caid, ecm_time)
 							elif using == "CCcam-s2s":
-								textvalue = " - %s - %s %s %s" % (caid, ecm_time, hops, self.kurz(address))							
+								textvalue = " - %s - %s %s %s" % (caid, ecm_time, hops, self.kurz(address))
 							else:
-								textvalue = " - %s - %s %s" % (caid, ecm_time, self.kurz(address))		
+								textvalue = " - %s - %s %s" % (caid, ecm_time, self.kurz(address))
 						else:
 							# mgcamd
 							source = ecm_info.get("source", None)
@@ -152,7 +152,7 @@ class valioCOCA(Poll, Converter, object):
 							if not info.has_key("caid"):
 								x = line.lower().find("caid")
 								if x != -1:
-									y = line.find(",")
+									y = line.find(", ")
 									if y != -1:
 										info["caid"] = line[x+5:y]
 		return info

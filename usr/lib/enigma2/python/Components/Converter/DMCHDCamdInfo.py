@@ -19,7 +19,7 @@
 #
 
 
-# <widget source="session.CurrentService" render="Label" position="189,397" zPosition="4" size="350,20" noWrap="1" valign="center" halign="center" font="Regular;14" foregroundColor="clText" transparent="1"  backgroundColor="#20002450">
+# <widget source="session.CurrentService" render="Label" position="189, 397" zPosition="4" size="350, 20" noWrap="1" valign="center" halign="center" font="Regular;14" foregroundColor="clText" transparent="1"  backgroundColor="#20002450">
 #	<convert type="CamdInfo">Camd</convert>
 # </widget>			
 
@@ -39,7 +39,7 @@ class DMCHDCamdInfo(Converter, object):
 		if not info:
 		   return ""
 		camd = None
-                	
+					
 		# OoZooN
 		if fileExists("/tmp/cam.info"):
 			try:

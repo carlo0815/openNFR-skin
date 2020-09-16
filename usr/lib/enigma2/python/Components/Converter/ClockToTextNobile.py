@@ -3,46 +3,46 @@ from time import localtime, strftime
 from Components.Element import cached
 
 MONTHS = (_("Januar"),
-          _("Februar"),
-          _("Maerz"),
-          _("April"),
-          _("Mai"),
-          _("Juni"),
-          _("Juli"),
-          _("August"),
-          _("September"),
-          _("Oktober"),
-          _("November"),
-          _("Dezember"))
-          
+			_("Februar"),
+			_("Maerz"),
+			_("April"),
+			_("Mai"),
+			_("Juni"),
+			_("Juli"),
+			_("August"),
+			_("September"),
+			_("Oktober"),
+			_("November"),
+			_("Dezember"))
+			
 shortMONTHS = (_("Jan"),
-               _("Feb"),
-               _("Mar"),
-               _("Apr"),
-               _("May"),
-               _("Jun"),
-               _("Jul"),
-               _("Aug"),
-               _("Sep"),
-               _("Oct"),
-               _("Nov"),
-               _("Dec"))
-          
+				_("Feb"),
+				_("Mar"),
+				_("Apr"),
+				_("May"),
+				_("Jun"),
+				_("Jul"),
+				_("Aug"),
+				_("Sep"),
+				_("Oct"),
+				_("Nov"),
+				_("Dec"))
+			
 DAYWEEK = (_("Montag"),
-           _("Dienstag"),
-           _("Mittwoch"),
-           _("Donnerstag"),
-           _("Freitag"),
-           _("Samstag"),
-           _("Sonntag"))
-           
+			_("Dienstag"),
+			_("Mittwoch"),
+			_("Donnerstag"),
+			_("Freitag"),
+			_("Samstag"),
+			_("Sonntag"))
+			
 shortDAYWEEK = (_("Mo"),
-                _("Di"),
-                _("Mi"),
-                _("Do"),
-                _("Fr"),
-                _("Sa"),
-                _("So"))
+				_("Di"),
+				_("Mi"),
+				_("Do"),
+				_("Fr"),
+				_("Sa"),
+				_("So"))
 
 class ClockToTextNobile(Converter, object):
 	DEFAULT = 0
@@ -95,14 +95,14 @@ class ClockToTextNobile(Converter, object):
 		elif self.type == self.DEFAULT:
 			return "%2d:%02d" % (t.tm_hour, t.tm_min)
 		elif self.type == self.DATE:
-			return _(strftime("%A",t)) + " " + str(t[2]) + " " + MONTHS[t[1]-1] + " " + str(t[0])  
+			return _(strftime("%A", t)) + " " + str(t[2]) + " " + MONTHS[t[1]-1] + " " + str(t[0])	
 			#return strftime("%A %B %d, %Y", t)
 		elif self.type == self.FORMAT:
 			spos = self.fmt_string.find('%')
-			self.fmt_string = self.fmt_string.replace('%A',_(DAYWEEK[t.tm_wday]))
-		        self.fmt_string = self.fmt_string.replace('%B',_(MONTHS[t.tm_mon-1]))
-		        self.fmt_string = self.fmt_string.replace('%a',_(shortDAYWEEK[t.tm_wday]))
-		        self.fmt_string = self.fmt_string.replace('%b',_(shortMONTHS[t.tm_mon-1]))
+			self.fmt_string = self.fmt_string.replace('%A', _(DAYWEEK[t.tm_wday]))
+				self.fmt_string = self.fmt_string.replace('%B', _(MONTHS[t.tm_mon-1]))
+				self.fmt_string = self.fmt_string.replace('%a', _(shortDAYWEEK[t.tm_wday]))
+				self.fmt_string = self.fmt_string.replace('%b', _(shortMONTHS[t.tm_mon-1]))
 			if spos > 0:
 				s1 = self.fmt_string[:spos]
 				s2 = strftime(self.fmt_string[spos:], t)

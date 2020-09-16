@@ -14,12 +14,12 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
-# <widget source="session.CurrentService" render="Label" position="189,397" zPosition="4" size="50,20" valign="center" halign="center" font="Regular;14" foregroundColor="foreground" transparent="1"  backgroundColor="background">
+# <widget source="session.CurrentService" render="Label" position="189, 397" zPosition="4" size="50, 20" valign="center" halign="center" font="Regular;14" foregroundColor="foreground" transparent="1"  backgroundColor="background">
 #	<convert type="RouteInfo">Info</convert>
 # </widget>
-#<widget source="session.CurrentService" render="Pixmap" pixmap="750HD/icons/ico_lan_on.png" position="1103,35" zPosition="1" size="28,15" transparent="1" alphatest="blend">
-#    <convert type="RouteInfo">Lan  | Wifi | Modem</convert>
-#    <convert type="ConditionalShowHide" />
+#<widget source="session.CurrentService" render="Pixmap" pixmap="750HD/icons/ico_lan_on.png" position="1103, 35" zPosition="1" size="28, 15" transparent="1" alphatest="blend">
+#	<convert type="RouteInfo">Lan  | Wifi | Modem</convert>
+#	<convert type="ConditionalShowHide" />
 #  </widget>
 
 

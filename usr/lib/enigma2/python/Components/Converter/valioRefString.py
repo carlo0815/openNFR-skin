@@ -1,8 +1,8 @@
 #######################################################################
 #
-#    ReferenceToString for Dreambox/Enigma-2
-#    Version: 1.0
-#    Coded by Vali (c)2011
+#	ReferenceToString for Dreambox/Enigma-2
+#	Version: 1.0
+#	Coded by Vali (c)2011
 #
 #######################################################################
 

@@ -1,8 +1,8 @@
 # -*- coding: iso-8859-1 -*-
 #
-#    SmartInfo-Converter for Dreambox/Enigma-2
-#    Version: 1.0
-#    Coded by Vali (c)2009-2011
+#	SmartInfo-Converter for Dreambox/Enigma-2
+#	Version: 1.0
+#	Coded by Vali (c)2009-2011
 #
 #######################################################################
 
@@ -17,7 +17,7 @@ from Components.Element import cached
 class valioTunerInfo(Converter, object):
 	def __init__(self, type):
 		Converter.__init__(self, type)
-		self.ar_fec = ["Auto", "1/2", "2/3", "3/4", "5/6", "7/8", "8/9", "3/5", "4/5", "9/10","None","None","None","None","None"]
+		self.ar_fec = ["Auto", "1/2", "2/3", "3/4", "5/6", "7/8", "8/9", "3/5", "4/5", "9/10", "None", "None", "None", "None", "None"]
 		self.ar_pol = ["H", "V", "CL", "CR", "na", "na", "na", "na", "na", "na", "na", "na"]
 
 

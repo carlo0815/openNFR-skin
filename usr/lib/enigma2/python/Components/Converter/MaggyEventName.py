@@ -40,7 +40,7 @@ class MaggyEventName(Converter, object):
 		elif type == "DolbyB":
 			self.type = self.DolbyB
 		elif type == "NormInfo":
-			self.type = self.NormInfo	
+			self.type = self.NormInfo
 		else:
 			self.type = self.NAME
 

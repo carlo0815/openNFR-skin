@@ -3,7 +3,7 @@
 ## by AliAbdul
 ##
 ## Example usage in the skin.xml:
-##		<widget source="session.CurrentService" render="Label" position="164,435" size="390,28" font="Regular;26" transparent="1" >
+##		<widget source="session.CurrentService" render="Label" position="164, 435" size="390, 28" font="Regular;26" transparent="1" >
 ##			<convert type="ExtendedServiceInfo">Config</convert>
 ##		</widget>
 ##

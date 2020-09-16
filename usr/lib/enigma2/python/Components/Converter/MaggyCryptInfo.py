@@ -226,7 +226,7 @@ class MaggyCryptInfo(Poll, Converter, object):
 			self.poll_enabled = True
 			ecm_info = self.ecmfile()
 			if ecm_info:
-				caid = ("%0.4X" % int(ecm_info.get("caid", ""),16))[:2]
+				caid = ("%0.4X" % int(ecm_info.get("caid", ""), 16))[:2]
 				if self.type == self.SECA_C:
 					if caid == "01":
 						return True
@@ -316,7 +316,7 @@ class MaggyCryptInfo(Poll, Converter, object):
 					if self.type == self.CRYPT2:
 						if fileExists("/tmp/ecm.info"):
 							try:
-								caid = "%0.4X" % int(ecm_info.get("caid", ""),16)
+								caid = "%0.4X" % int(ecm_info.get("caid", ""), 16)
 								return "%s" % self.systemTxtCaids.get(caid[:2])
 							except:
 								return 'nondecode'
@@ -324,7 +324,7 @@ class MaggyCryptInfo(Poll, Converter, object):
 							return 'nondecode'
 					if ecm_info:
 						# caid
-						caid = "%0.4X" % int(ecm_info.get("caid", ""),16)
+						caid = "%0.4X" % int(ecm_info.get("caid", ""), 16)
 						if self.type == self.CAID:
 							return caid
 						# crypt
@@ -332,14 +332,14 @@ class MaggyCryptInfo(Poll, Converter, object):
 							return "%s" % self.systemTxtCaids.get(caid[:2].upper())
 						#pid
 						try:
-							pid = "%0.4X" % int(ecm_info.get("pid", ""),16)
+							pid = "%0.4X" % int(ecm_info.get("pid", ""), 16)
 						except:
 							pid = ""
 						if self.type == self.PID:
 							return pid
 						# oscam
 						try:
-							prov = "%0.6X" % int(ecm_info.get("prov", ""),16)
+							prov = "%0.6X" % int(ecm_info.get("prov", ""), 16)
 						except:
 							prov = ecm_info.get("prov", "")
 						if self.type == self.PROV:
@@ -347,7 +347,7 @@ class MaggyCryptInfo(Poll, Converter, object):
 						if ecm_info.get("ecm time", "").find("msec") > -1:
 							ecm_time = ecm_info.get("ecm time", "")
 						else:
-							ecm_time = ecm_info.get("ecm time", "").replace(".","").lstrip("0") + " msec"
+							ecm_time = ecm_info.get("ecm time", "").replace(".", "").lstrip("0") + " msec"
 						if self.type == self.DELAY:
 							return ecm_time
 						#protocol
@@ -538,11 +538,11 @@ class MaggyCryptInfo(Poll, Converter, object):
 								if item[1].strip()[:3] == "net":
 									it_tmp = item[1].strip().split(" ")
 									info["protocol"] = it_tmp[1][1:]
-									info["server"] = it_tmp[-1].split(":",1)[0]
-									info["port"] = it_tmp[-1].split(':',1)[1][:-1]
+									info["server"] = it_tmp[-1].split(":", 1)[0]
+									info["port"] = it_tmp[-1].split(':', 1)[1][:-1]
 									item[1] = "net"
 							elif item[0] == "prov":
-								y = item[1].find(",")
+								y = item[1].find(", ")
 								if y != -1:
 									item[1] = item[1][:y]
 							#old oscam block
@@ -576,7 +576,7 @@ class MaggyCryptInfo(Poll, Converter, object):
 							if not info.has_key("caid"):
 								x = line.lower().find("caid")
 								if x != -1:
-									y = line.find(",")
+									y = line.find(", ")
 									if y != -1:
 										info["caid"] = line[x+5:y]
 							if not info.has_key("pid"):
@@ -592,6 +592,6 @@ class MaggyCryptInfo(Poll, Converter, object):
 		return info
 
 	def changed(self, what):
-		Converter.changed(self, (self.CHANGED_POLL,))
+		Converter.changed(self, (self.CHANGED_POLL, ))
 
 

@@ -141,4 +141,4 @@ class EmuName(Poll, Converter, object):
 	text = property(getText)
 
 	def changed(self, what):
-		Converter.changed(self, (self.CHANGED_POLL,))
+		Converter.changed(self, (self.CHANGED_POLL, ))

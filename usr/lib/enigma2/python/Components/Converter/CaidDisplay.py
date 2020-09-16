@@ -28,7 +28,7 @@ class CaidDisplay(Poll, Converter, object):
 		Poll.__init__(self)
 		Converter.__init__(self, type)
 		self.type = type
-		self.systemCaids = {"26":"biss","4A":"dre","05":"via","01":"sec","06":"ird","17":"bet","18":"nag","09":"nds","0B":"con","0D":"crw"}
+		self.systemCaids = {"26":"biss", "4A":"dre", "05":"via", "01":"sec", "06":"ird", "17":"bet", "18":"nag", "09":"nds", "0B":"con", "0D":"crw"}
 		self.poll_interval = 1000
 		self.poll_enabled = True
 
@@ -38,29 +38,29 @@ class CaidDisplay(Poll, Converter, object):
 		service = self.source.service
 		if service:
 			info = service and service.info()
-			if info:        
+			if info:
 				caids = info.getInfoObject(iServiceInformation.sCAIDs)
 				if caids:
-				        for cs in self.systemCaids:
-			                        caidlist[cs] = (self.systemCaids.get(cs),0)
-			                
+						for cs in self.systemCaids:
+									caidlist[cs] = (self.systemCaids.get(cs), 0)
+							
 					for caid in caids:
 						c = "%x" % int(caid)
 						if len(c) == 3:
 							c = "0%s" % c
 						c = c[:2].upper()
 						if self.systemCaids.has_key(c):
-							caidlist[c] = (self.systemCaids.get(c),1)
+							caidlist[c] = (self.systemCaids.get(c), 1)
 							
 					ecm_info = self.ecmfile()
 					if ecm_info:
-						emu_caid = ecm_info.get("caid","")
+						emu_caid = ecm_info.get("caid", "")
 						if emu_caid and emu_caid != "0x000":
 							c = emu_caid.lstrip("0x")
 							if len(c) == 3:
 								c = "0%s" % c
 							c = c[:2].upper()
-							caidlist[c] = (self.systemCaids.get(c),2)
+							caidlist[c] = (self.systemCaids.get(c), 2)
 		return caidlist
 
 	getCaidlist = property(get_caidlist)
@@ -76,32 +76,32 @@ class CaidDisplay(Poll, Converter, object):
 					ecm_info = self.ecmfile()
 					if ecm_info:
 						# caid
-						caid = ecm_info.get("caid","")
+						caid = ecm_info.get("caid", "")
 						caid = caid.lstrip("0x")
 						caid = caid.upper()
 						caid = caid.zfill(4)
 						caid = "CAID: %s" % caid
 						# hops
 						hops = ecm_info.get("hops", None)
-                                                hops = "HOPS: %s" % hops
+												hops = "HOPS: %s" % hops
 						# ecm time	
 						ecm_time = ecm_info.get("ecm time", None)
 						if ecm_time:
 							if "msec" in ecm_time:
-								ecm_time = "ECM: %s " % ecm_time						
+								ecm_time = "ECM: %s " % ecm_time
 							else:
 								ecm_time = "ECM: %s s" % ecm_time
 						# address
-						address = ecm_info.get("address", "")								
+						address = ecm_info.get("address", "")
 						# source	
 						using = ecm_info.get("using", "")
 						if using:
 							if using == "emu":
 								textvalue = "(EMU) %s - %s" % (caid, ecm_time)
 							elif using == "CCcam-s2s":
-								textvalue = "(NET) %s - %s - %s - %s" % (caid, address, hops, ecm_time)							
+								textvalue = "(NET) %s - %s - %s - %s" % (caid, address, hops, ecm_time)
 							else:
-								textvalue = "%s - %s - %s - %s" % (caid, address, hops, ecm_time)		
+								textvalue = "%s - %s - %s - %s" % (caid, address, hops, ecm_time)
 						else:
 							# mgcamd
 							source = ecm_info.get("source", None)
@@ -153,7 +153,7 @@ class CaidDisplay(Poll, Converter, object):
 							if not info.has_key("caid"):
 								x = line.lower().find("caid")
 								if x != -1:
-									y = line.find(",")
+									y = line.find(", ")
 									if y != -1:
 										info["caid"] = line[x+5:y]
 

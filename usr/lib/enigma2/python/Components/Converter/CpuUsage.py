@@ -50,7 +50,7 @@ class CpuUsage(Converter, object):
 
 	def gotPercentage(self, list):
 		self.percentlist = list
-		self.changed((self.CHANGED_POLL,))
+		self.changed((self.CHANGED_POLL, ))
 
 	@cached
 	def getText(self):

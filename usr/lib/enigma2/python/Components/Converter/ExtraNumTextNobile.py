@@ -1,18 +1,18 @@
 #######################################################################
 #
-#    Converter for Dreambox-Enigma2
-#    Coded by shamann (c)2010
+#	Converter for Dreambox-Enigma2
+#	Coded by shamann (c)2010
 #
-#    This program is free software; you can redistribute it and/or
-#    modify it under the terms of the GNU General Public License
-#    as published by the Free Software Foundation; either version 2
-#    of the License, or (at your option) any later version.
+#	This program is free software; you can redistribute it and/or
+#	modify it under the terms of the GNU General Public License
+#	as published by the Free Software Foundation; either version 2
+#	of the License, or (at your option) any later version.
 #
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
-#    
+#	This program is distributed in the hope that it will be useful,
+#	but WITHOUT ANY WARRANTY; without even the implied warranty of
+#	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#	GNU General Public License for more details.
+#	
 #######################################################################
 
 from Components.Converter.Converter import Converter
@@ -74,17 +74,17 @@ class ExtraNumTextNobile(Converter, object):
 	@cached
 	def getValue(self):	
 		if self.type == self.SNRNUM:
-			count = self.source.snr		
+			count = self.source.snr
 			if count is None:
-				return 0	
+				return 0
 			return (count * 100 / 65536)
 		elif self.type == self.AGCNUM:
-			count = self.source.agc			
+			count = self.source.agc
 			if count is None:
-				return 0						
+				return 0
 			return (count * 100 / 65536)
 		elif self.type == self.BERNUM:
-			count = self.source.ber		
+			count = self.source.ber
 			if count < 320000:
 				return count
 			return 320000
@@ -119,7 +119,7 @@ class ExtraNumTextNobile(Converter, object):
 				return 0
 			t = localtime(time)
 			c = t.tm_min
-			return c			
+			return c
 		elif self.type == self.HOURHAND:
 			time = self.source.time
 			if time is None:

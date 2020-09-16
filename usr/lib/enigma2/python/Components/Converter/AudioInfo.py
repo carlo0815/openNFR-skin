@@ -20,7 +20,7 @@ class AudioInfo(Poll, Converter, object):
 		self.poll_enabled = True
 		self.feraw = self.fedata = self.updateFEdata = None
 
-	def createAudioCodec(self,info):
+	def createAudioCodec(self, info):
 		service = self.source.service
 		audio = service.audioTracks()
 		if audio:
