@@ -18,7 +18,7 @@
 #  distributed other than under the conditions noted above.
 #
 
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from enigma import eCanvas, eRect, gFont
 from skin import parseColor, parseFont
 
@@ -48,11 +48,11 @@ class DMCHDCaids(Renderer):
 		for key in caidlist:
 			if caidlist[key][0]:
 				if caidlist[key][1] == 0:
-				    foregroundColor = self.nocColor 					
+					foregroundColor = self.nocColor
 				elif caidlist[key][1] == 1:
-				    foregroundColor = self.emmColor
+					foregroundColor = self.emmColor
 				else:
-				    foregroundColor = self.ecmColor
+					foregroundColor = self.ecmColor
 				length = len(caidlist[key][0]) * (pointSize)
 				self.instance.writeText(eRect(offset, 0, length, pointSize), foregroundColor, self.backgroundColor, self.font, caidlist[key][0], 2)
 				offset = offset +  length
@@ -66,26 +66,26 @@ class DMCHDCaids(Renderer):
 		from enigma import eSize
 
 		def parseSize(str):
-			x, y = str.split(',')
+			x, y = str.split(', ')
 			return eSize(int(x), int(y))
 
 		for (attrib, value) in self.skinAttributes:
 			if attrib == "size":
-			    self.instance.setSize(parseSize(value))
-			    attribs.append((attrib,value))
+				self.instance.setSize(parseSize(value))
+				attribs.append((attrib, value))
 			elif attrib == "nocColor":
-			    self.nocColor = parseColor(value)
+				self.nocColor = parseColor(value)
 			elif attrib == "emmColor":
-			    self.emmColor = parseColor(value)
+				self.emmColor = parseColor(value)
 			elif attrib == "ecmColor":
-			    self.ecmColor = parseColor(value)
+				self.ecmColor = parseColor(value)
 			elif attrib == "font":
-			    self.font = parseFont(value, ((1,1),(1,1)))
+				self.font = parseFont(value, ((1, 1), (1, 1)))
 			elif attrib == "backgroundColor":
-			    self.backgroundColor = parseColor(value)
-			    self.instance.clear(self.backgroundColor)
-			    attribs.append((attrib,value))
+				self.backgroundColor = parseColor(value)
+				self.instance.clear(self.backgroundColor)
+				attribs.append((attrib, value))
 			else:
-			    attribs.append((attrib,value))
+				attribs.append((attrib, value))
 		self.skinAttributes = attribs
 		return Renderer.applySkin(self, desktop, parent)

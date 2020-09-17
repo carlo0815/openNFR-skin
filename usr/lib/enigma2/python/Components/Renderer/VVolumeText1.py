@@ -1,9 +1,9 @@
 ﻿#######################################################################
 #
 #
-#    Volume Text Renderer for Dreambox/Enigma-2
-#    Coded by Vali (c)2010
-#    Support: www.dreambox-tools.info
+#	Volume Text Renderer for Dreambox/Enigma-2
+#	Coded by Vali (c)2010
+#	Support: www.dreambox-tools.info
 #
 #
 #  This plugin is licensed under the Creative Commons 
@@ -24,7 +24,7 @@
 
 from Components.VariableText import VariableText
 from enigma import eLabel, eDVBVolumecontrol, eTimer
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 
 class VVolumeText1(Renderer, VariableText):
 	def __init__(self):

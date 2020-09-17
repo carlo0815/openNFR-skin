@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 #
-#    Maximum Temperature Renderer for Dreambox/Enigma-2
-#    Version: 1.0
-#    Coded by Vali (c)2010-2011
+#	Maximum Temperature Renderer for Dreambox/Enigma-2
+#	Version: 1.0
+#	Coded by Vali (c)2010-2011
 #
 #######################################################################
 
 from Components.VariableText import VariableText
 from enigma import eLabel
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 
 class valioPosition(Renderer, VariableText):
 	def __init__(self):

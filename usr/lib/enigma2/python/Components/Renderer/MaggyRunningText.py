@@ -1,21 +1,21 @@
 ################################################################################
-#    RunningText.py - Running Text Renderer for Enigma2
-#    Version: 1.5 (04.04.2012 23:40)
-#    Copyright (C) 2010-2012 vlamo <vlamodev@gmail.com>
+#	RunningText.py - Running Text Renderer for Enigma2
+#	Version: 1.5 (04.04.2012 23:40)
+#	Copyright (C) 2010-2012 vlamo <vlamodev@gmail.com>
 #
-#    This program is free software; you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation; either version 2 of the License, or
-#    (at your option) any later version.
+#	This program is free software; you can redistribute it and/or modify
+#	it under the terms of the GNU General Public License as published by
+#	the Free Software Foundation; either version 2 of the License, or
+#	(at your option) any later version.
 #
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
+#	This program is distributed in the hope that it will be useful,
+#	but WITHOUT ANY WARRANTY; without even the implied warranty of
+#	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#	GNU General Public License for more details.
 #
-#    You should have received a copy of the GNU General Public License along
-#    with this program; if not, write to the Free Software Foundation, Inc.,
-#    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+#	You should have received a copy of the GNU General Public License along
+#	with this program; if not, write to the Free Software Foundation, Inc.,
+#	51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ################################################################################
 
 ################################################################################
@@ -28,7 +28,7 @@
 # take a look at the discussion: http://board.dreambox-tools.info/showthread.php?6050-Erweiterung-Running-Text-render
 ################################################################################
 
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from skin import parseColor, parseFont
 from enigma import eWidget, eCanvas, eLabel, eTimer, eRect, ePoint, eSize, gRGB, gFont, \
 	RT_HALIGN_LEFT, RT_HALIGN_CENTER, RT_HALIGN_RIGHT, RT_HALIGN_BLOCK, \
@@ -55,7 +55,7 @@ class MaggyRunningText(Renderer):
 		Renderer.__init__(self)
 		self.type     = NONE
 		self.txfont   = gFont("Regular", 14)
-		self.soffset  = (0,0)
+		self.soffset  = (0, 0)
 		self.txtflags = 0
 		self.txtext   = ""
 		self.scroll_label = self.mTimer = self.mStartPoint = None
@@ -76,10 +76,10 @@ class MaggyRunningText(Renderer):
 	def postWidgetCreate(self, instance):
 		for (attrib, value) in self.skinAttributes:
 			if attrib == "size":
-				x, y = value.split(',')
+				x, y = value.split(', ')
 				self.W, self.H = int(x), int(y)
-		self.instance.move(ePoint(0,0))
-		self.instance.resize( eSize(self.W,self.H) )
+		self.instance.move(ePoint(0, 0))
+		self.instance.resize( eSize(self.W, self.H) )
 		self.scroll_label = eLabel(instance)
 		self.mTimer = eTimer()
 		self.mTimer.callback.append(self.movingLoop)
@@ -112,27 +112,27 @@ class MaggyRunningText(Renderer):
 			attribs = [ ]
 			for (attrib, value) in self.skinAttributes:
 				if attrib == "font":
-					self.txfont = parseFont(value, ((1,1),(1,1)))
+					self.txfont = parseFont(value, ((1, 1), (1, 1)))
 				elif attrib == "foregroundColor":
 					self.scroll_label.setForegroundColor(parseColor(value))
-				elif attrib in ("shadowColor","borderColor"):	# fake for openpli-enigma2
+				elif attrib in ("shadowColor", "borderColor"):	# fake for openpli-enigma2
 					self.scroll_label.setShadowColor(parseColor(value))
 				elif attrib == "shadowOffset":
-					x, y = value.split(',')
-					self.soffset = (int(x),int(y))
+					x, y = value.split(', ')
+					self.soffset = (int(x), int(y))
 					self.scroll_label.setShadowOffset(ePoint(self.soffset))
 				elif attrib == "borderWidth":			# fake for openpli-enigma2
-					self.soffset = (-int(value),-int(value))
-				elif attrib == "valign" and value in ("top","center","bottom"):
+					self.soffset = (-int(value), -int(value))
+				elif attrib == "valign" and value in ("top", "center", "bottom"):
 					valign = { "top": eLabel.alignTop, "center": eLabel.alignCenter, "bottom": eLabel.alignBottom }[value]
 					self.txtflags |= { "top": RT_VALIGN_TOP, "center": RT_VALIGN_CENTER, "bottom": RT_VALIGN_BOTTOM }[value]
-				elif attrib == "halign" and value in ("left","center","right","block"):
+				elif attrib == "halign" and value in ("left", "center", "right", "block"):
 					self.halign = { "left": eLabel.alignLeft, "center": eLabel.alignCenter, "right": eLabel.alignRight, "block": eLabel.alignBlock }[value]
 					self.txtflags |= { "left": RT_HALIGN_LEFT, "center": RT_HALIGN_CENTER, "right": RT_HALIGN_RIGHT, "block": RT_HALIGN_BLOCK }[value]
 				elif attrib == "noWrap":
 					setWrapFlag(attrib, value)
 				elif attrib == "options":
-					options = value.split(',')
+					options = value.split(', ')
 					for o in options:
 						if o.find('=') != -1:
 							opt, val = (x.strip() for x in o.split('=', 1))
@@ -143,9 +143,9 @@ class MaggyRunningText(Renderer):
 							continue
 						elif opt in ("wrap", "nowrap"):
 							setWrapFlag(opt, val)
-						elif opt == "movetype" and val in ("none","running","swimming"):
+						elif opt == "movetype" and val in ("none", "running", "swimming"):
 							self.type = {"none": NONE, "running": RUNNING, "swimming": SWIMMING}[val]
-						elif opt =="direction" and val in ("left","right","top","bottom"):
+						elif opt =="direction" and val in ("left", "right", "top", "bottom"):
 							self.direction = { "left": LEFT, "right": RIGHT, "top": TOP, "bottom": BOTTOM }[val]
 						elif opt == "step" and val:
 							self.mStep = retValue(val, 1, self.mStep)
@@ -168,7 +168,7 @@ class MaggyRunningText(Renderer):
 						elif opt == "pagelength" and val:
 							self.mPageLength = retValue(val, 0, self.mPageLength)
 				else:
-					attribs.append((attrib,value))
+					attribs.append((attrib, value))
 					if attrib == "backgroundColor":
 						self.scroll_label.setBackgroundColor(parseColor(value))
 					elif attrib == "transparent":
@@ -188,10 +188,10 @@ class MaggyRunningText(Renderer):
 			self.scroll_label.setNoWrap(1)
 		self.scroll_label.setVAlign(valign)
 		self.scroll_label.setHAlign(self.halign)
-		self.scroll_label.move( ePoint(0,0) )
-		self.scroll_label.resize( eSize(self.W,self.H) )
+		self.scroll_label.move( ePoint(0, 0) )
+		self.scroll_label.resize( eSize(self.W, self.H) )
 		# test for auto correction text height:
-		if self.direction in (TOP,BOTTOM):
+		if self.direction in (TOP, BOTTOM):
 			from enigma import fontRenderClass
 			flh = int(fontRenderClass.getInstance().getLineHeight(self.txfont) or self.txfont.pointSize/6 + self.txfont.pointSize)
 			self.scroll_label.setText("WQq")
@@ -203,9 +203,9 @@ class MaggyRunningText(Renderer):
 	def doSuspend(self, suspended):
 		self.mShown = 1 - suspended
 		if suspended:
-			self.changed((self.CHANGED_CLEAR,))
+			self.changed((self.CHANGED_CLEAR, ))
 		else:
-			self.changed((self.CHANGED_DEFAULT,))
+			self.changed((self.CHANGED_DEFAULT, ))
 
 	def connect(self, source):
 		Renderer.connect(self, source)
@@ -220,7 +220,7 @@ class MaggyRunningText(Renderer):
 			if self.mShown:
 				self.txtext = self.source.text or ""
 				if self.instance and not self.calcMoving():
-					self.scroll_label.resize(eSize(self.W,self.H))
+					self.scroll_label.resize(eSize(self.W, self.H))
 					self.moveLabel(self.X, self.Y)
 
 	def moveLabel(self, X, Y):
@@ -229,7 +229,7 @@ class MaggyRunningText(Renderer):
 	def calcMoving(self):
 		self.X = self.Y = 0
 		if not (self.txtflags & RT_WRAP):
-			self.txtext = self.txtext.replace("\xe0\x8a"," ").replace(chr(0x8A)," ").replace("\n"," ").replace("\r"," ")
+			self.txtext = self.txtext.replace("\xe0\x8a", " ").replace(chr(0x8A), " ").replace("\n", " ").replace("\r", " ")
 
 		self.scroll_label.setText(self.txtext)
 	
@@ -238,19 +238,19 @@ class MaggyRunningText(Renderer):
 		   self.scroll_label is None:
 			return False
 
-		if self.direction in (LEFT,RIGHT) or not (self.txtflags & RT_WRAP):
-			self.scroll_label.resize(eSize(self.txfont.pointSize * len(self.txtext),self.H)) # stupid workaround, have no better idea right now...
+		if self.direction in (LEFT, RIGHT) or not (self.txtflags & RT_WRAP):
+			self.scroll_label.resize(eSize(self.txfont.pointSize * len(self.txtext), self.H)) # stupid workaround, have no better idea right now...
 		
 		text_size = self.scroll_label.calculateSize()
 		text_width = text_size.width()
 		text_height = text_size.height()
 
-		if self.direction in (LEFT,RIGHT) or not (self.txtflags & RT_WRAP):
+		if self.direction in (LEFT, RIGHT) or not (self.txtflags & RT_WRAP):
 			text_width +=10
 		
 		self.mStop = None
 		# text height correction if necessary:
-		if self.lineHeight and self.direction in (TOP,BOTTOM):
+		if self.lineHeight and self.direction in (TOP, BOTTOM):
 			text_height = max(text_height, (text_height + self.lineHeight - 1) / self.lineHeight * self.lineHeight)
 			
 		
@@ -258,7 +258,7 @@ class MaggyRunningText(Renderer):
 #		self.direction =	0 - LEFT; 1 - RIGHT;   2 - TOP;      3 - BOTTOM
 #		self.halign =		0 - LEFT; 1 - RIGHT;   2 - CENTER;   3 - BLOCK
 
-		if self.direction in (LEFT,RIGHT):
+		if self.direction in (LEFT, RIGHT):
 			if not self.mAlways and text_width <= self.W:
 				return False
 			if self.type == RUNNING:
@@ -306,7 +306,7 @@ class MaggyRunningText(Renderer):
 						self.mStep = (self.direction == RIGHT) and abs(self.mStep) or -abs(self.mStep)
 			else:
 				return False
-		elif self.direction in (TOP,BOTTOM):
+		elif self.direction in (TOP, BOTTOM):
 			if not self.mAlways and text_height <= self.H:
 				return False
 			if self.type == RUNNING:
@@ -356,25 +356,25 @@ class MaggyRunningText(Renderer):
 		self.xW = max(self.W, text_width)
 		self.xH = max(self.H, text_height)
 		
-		self.scroll_label.resize(eSize(self.xW,self.xH))
+		self.scroll_label.resize(eSize(self.xW, self.xH))
 		
 		if self.mStartDelay:
-			if self.direction in (LEFT,RIGHT):
+			if self.direction in (LEFT, RIGHT):
 				self.moveLabel(self.P, self.Y)
-			else: # if self.direction in (TOP,BOTTOM):
+			else: # if self.direction in (TOP, BOTTOM):
 				self.moveLabel(self.X, self.P)
 				
 		
 				
 		self.mCount = self.mRepeat
-		self.mTimer.start(self.mStartDelay,True)
+		self.mTimer.start(self.mStartDelay, True)
 		return True
 
 	def movingLoop(self):
 		if self.A <= self.P <= self.B:
-			if self.direction in (LEFT,RIGHT):
+			if self.direction in (LEFT, RIGHT):
 				self.moveLabel(self.P, self.Y)
-			else: # if self.direction in (TOP,BOTTOM)
+			else: # if self.direction in (TOP, BOTTOM)
 				self.moveLabel(self.X, self.P)
 			timeout = self.mStepTimeout
 			if (self.mStop != None) and (self.mStop + abs(self.mStep) > self.P >= self.mStop):
@@ -406,6 +406,6 @@ class MaggyRunningText(Renderer):
 				self.mStep = -self.mStep
 		
 		self.P += self.mStep
-		self.mTimer.start(timeout,True)
+		self.mTimer.start(timeout, True)
 
 

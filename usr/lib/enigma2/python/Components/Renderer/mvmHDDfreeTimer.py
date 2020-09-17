@@ -2,7 +2,7 @@ from Components.VariableText import VariableText
 from Components.config import config
 from Components.UsageConfig import defaultMoviePath
 from enigma import eLabel
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from os import path, statvfs
 
 
@@ -16,8 +16,8 @@ class mvmHDDfreeTimer(Renderer, VariableText):
 	def changed(self, what):
 		if not self.suspended:
 			try:
-                                if ('default') in config.usage.timer_path.value:
-                                        config.usage.timer_path.value = defaultMoviePath()				
+								if ('default') in config.usage.timer_path.value:
+										config.usage.timer_path.value = defaultMoviePath()				
 				if path.exists(config.usage.timer_path.value):
 					stat = statvfs(config.usage.timer_path.value)
 					free = (stat.f_bavail if stat.f_bavail!=0 else stat.f_bfree) * stat.f_bsize / 1048576

@@ -2,7 +2,7 @@ from Components.VariableText import VariableText
 from Components.config import config
 from Components.UsageConfig import defaultMoviePath
 from enigma import eLabel
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from os import path, statvfs
 
 
@@ -16,7 +16,7 @@ class mvmHDDfree(Renderer, VariableText):
 	def changed(self, what):
 		if not self.suspended:
 			try:
-                                videodir_value = defaultMoviePath()
+								videodir_value = defaultMoviePath()
 				if path.exists(videodir_value):
 					stat = statvfs(videodir_value)
 					free = (stat.f_bavail if stat.f_bavail!=0 else stat.f_bfree) * stat.f_bsize / 1048576

@@ -1,22 +1,22 @@
 #######################################################################
 #
-#    Renderer for Dreambox-Enigma2
-#    Coded by shamann (c)2010
+#	Renderer for Dreambox-Enigma2
+#	Coded by shamann (c)2010
 #
-#    This program is free software; you can redistribute it and/or
-#    modify it under the terms of the GNU General Public License
-#    as published by the Free Software Foundation; either version 2
-#    of the License, or (at your option) any later version.
+#	This program is free software; you can redistribute it and/or
+#	modify it under the terms of the GNU General Public License
+#	as published by the Free Software Foundation; either version 2
+#	of the License, or (at your option) any later version.
 #
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
-#    
+#	This program is distributed in the hope that it will be useful,
+#	but WITHOUT ANY WARRANTY; without even the implied warranty of
+#	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#	GNU General Public License for more details.
+#	
 #######################################################################
 
 import math
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from skin import parseColor
 from enigma import eCanvas, eSize, gRGB, eRect
 from Components.VariableText import VariableText
@@ -55,7 +55,7 @@ class Watches(Renderer):
 		width = self.instance.size().width()
 		height = self.instance.size().height()
 		r = (min(width, height) / 2)
-		(endX, endY,) = self.calculate(self.numval, r, r)
+		(endX, endY, ) = self.calculate(self.numval, r, r)
 		self.draw_line(r, r, endX, endY)
 
 	def draw_line(self, x0, y0, x1, y1):
@@ -77,13 +77,13 @@ class Watches(Renderer):
 		for x in range(x0, x1 + 1):
 			if steep:
 				self.instance.fillRect(eRect(y, x, 2, 3), self.fColor)
-			else:          
+			else:
 				self.instance.fillRect(eRect(x, y, 2, 3), self.fColor)
 			error = error + deltay
 			if error > 0:
 				y = y + ystep
 				error = error - deltax
-        
+		
 	def changed(self, what):
 		sss = self.source.value
 		if what[0] == self.CHANGED_CLEAR:
@@ -98,12 +98,12 @@ class Watches(Renderer):
 	def postWidgetCreate(self, instance):
 
 		def parseSize(str):
-			(x, y,) = str.split(',')
+			(x, y, ) = str.split(', ')
 			return eSize(int(x), int(y))
 
-		for (attrib, value,) in self.skinAttributes:
+		for (attrib, value, ) in self.skinAttributes:
 			if ((attrib == 'size') and self.instance.setSize(parseSize(value))):
 				pass
 		self.instance.clear(self.bColor)
 
-        
+

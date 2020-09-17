@@ -1,4 +1,4 @@
-from Renderer import Renderer 
+from Components.Renderer.Renderer import Renderer 
 from enigma import ePixmap
 from Tools.Directories import fileExists, SCOPE_SKIN_IMAGE, SCOPE_CURRENT_SKIN, resolveFilename
 
@@ -24,7 +24,7 @@ class PiconSatTV(Renderer):
 			elif (attrib == 'picon_default'):
 				self.picon_default = value
 			elif attrib == "pixmaps":
-				self.pixmaps = value.split(',')
+				self.pixmaps = value.split(', ')
 			elif attrib == "pixdelay":
 				self.pixdelay = int(value)
 			else:

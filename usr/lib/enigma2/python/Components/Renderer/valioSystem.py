@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 #
-#    System Data Renderer for Dreambox/Enigma-2
-#    Version: 1.0
-#    Coded by Vali (c)2010-2011
+#	System Data Renderer for Dreambox/Enigma-2
+#	Version: 1.0
+#	Coded by Vali (c)2010-2011
 #
 #######################################################################
 
@@ -10,7 +10,7 @@ from Components.VariableText import VariableText
 from Components.Sensors import sensors
 from Tools.HardwareInfo import HardwareInfo
 from enigma import eLabel
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 
 class valioSystem(Renderer, VariableText):
 	def __init__(self):
@@ -42,7 +42,7 @@ class valioSystem(Renderer, VariableText):
 					loada = out_line[:4]
 				else:
 					loada = out_line[:9]
-					loada = loada.replace(" ","\n")
+					loada = loada.replace(" ", "\n")
 			except:
 				pass
 			fan = 0

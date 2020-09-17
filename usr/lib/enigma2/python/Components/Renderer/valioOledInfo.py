@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 #
-#    OLED-Info Renderer for Dreambox/Enigma-2
-#    Version: 1.0
-#    Coded by Vali (c)2011
+#	OLED-Info Renderer for Dreambox/Enigma-2
+#	Version: 1.0
+#	Coded by Vali (c)2011
 #
 #######################################################################
 
 from enigma import eLabel
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from os import popen
 from time import localtime, strftime
 from Components.VariableText import VariableText

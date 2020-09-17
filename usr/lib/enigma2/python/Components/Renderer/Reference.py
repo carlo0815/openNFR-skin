@@ -1,21 +1,21 @@
 #######################################################################
 #
-#    Renderer for Enigma2
-#    Coded by shamann (c)2010
+#	Renderer for Enigma2
+#	Coded by shamann (c)2010
 #
-#    This program is free software; you can redistribute it and/or
-#    modify it under the terms of the GNU General Public License
-#    as published by the Free Software Foundation; either version 2
-#    of the License, or (at your option) any later version.
+#	This program is free software; you can redistribute it and/or
+#	modify it under the terms of the GNU General Public License
+#	as published by the Free Software Foundation; either version 2
+#	of the License, or (at your option) any later version.
 #
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
-#    
+#	This program is distributed in the hope that it will be useful,
+#	but WITHOUT ANY WARRANTY; without even the implied warranty of
+#	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#	GNU General Public License for more details.
+#	
 #######################################################################
 
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from enigma import eLabel
 from Components.VariableText import VariableText
 from enigma import eServiceReference
@@ -30,7 +30,7 @@ class Reference(VariableText, Renderer):
 
 	def connect(self, source):
 		Renderer.connect(self, source)
-		self.changed((self.CHANGED_DEFAULT,))
+		self.changed((self.CHANGED_DEFAULT, ))
 		
 	def changed(self, what):
 		if self.instance:

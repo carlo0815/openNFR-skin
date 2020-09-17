@@ -1,5 +1,5 @@
 import os
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from enigma import ePixmap, ePicLoad
 from Tools.Alternatives import GetWithAlternative
 from Tools.Directories import pathExists, SCOPE_SKIN_IMAGE, SCOPE_ACTIVE_SKIN, resolveFilename
@@ -93,7 +93,7 @@ class PiconRes(Renderer):
 		Renderer.__init__(self)
 		self.PicLoad = ePicLoad()
 		self.PicLoad.PictureData.get().append(self.updatePicon)
-		self.piconsize = (0,0)
+		self.piconsize = (0, 0)
 		self.pngname = ""
 		self.lastPath = None
 		pngname = findPicon("picon_default")
@@ -122,7 +122,7 @@ class PiconRes(Renderer):
 		for (attrib, value) in self.skinAttributes:
 			if attrib == "path":
 				self.addPath(value)
-				attribs.remove((attrib,value))
+				attribs.remove((attrib, value))
 			elif attrib == "size":
 				self.piconsize = value
 		self.skinAttributes = attribs
@@ -131,7 +131,7 @@ class PiconRes(Renderer):
 	GUI_WIDGET = ePixmap
 
 	def postWidgetCreate(self, instance):
-		self.changed((self.CHANGED_DEFAULT,))
+		self.changed((self.CHANGED_DEFAULT, ))
 
 	def updatePicon(self, picInfo=None):
 		ptr = self.PicLoad.getData()

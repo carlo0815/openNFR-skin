@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 #
-#    Maximum Temperature Renderer for Dreambox/Enigma-2
-#    Coded by Vali, Mod by Maggy for VU+DUO (c)2010
-#    Support: www.dreambox-tools.info
+#	Maximum Temperature Renderer for Dreambox/Enigma-2
+#	Coded by Vali, Mod by Maggy for VU+DUO (c)2010
+#	Support: www.dreambox-tools.info
 #
 #
 #  This plugin is licensed under the Creative Commons 
@@ -25,7 +25,7 @@ from Components.VariableText import VariableText
 from Components.Sensors import sensors
 from Tools.HardwareInfo import HardwareInfo
 from enigma import eLabel
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from os import popen
 
 class MaxTempNobile(Renderer, VariableText):

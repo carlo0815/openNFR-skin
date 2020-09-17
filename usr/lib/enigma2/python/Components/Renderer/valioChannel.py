@@ -1,14 +1,14 @@
 #######################################################################
 #
-#    Channel Number Renderer for Dreambox/Enigma-2
-#    Version: 1.0
-#    Coded by Vali (c)2010
+#	Channel Number Renderer for Dreambox/Enigma-2
+#	Version: 1.0
+#	Coded by Vali (c)2010
 #
 #######################################################################
 
 from Components.VariableText import VariableText
 from enigma import eLabel, eServiceCenter
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from Screens.InfoBar import InfoBar
 
 MYCHANSEL = InfoBar.instance.servicelist

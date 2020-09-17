@@ -1,7 +1,7 @@
 ##
 ## Picon renderer by Gruffy .. some speedups by Ghost
 ##
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from enigma import ePixmap, eEnv
 from Tools.Directories import fileExists, SCOPE_SKIN_IMAGE, SCOPE_CURRENT_SKIN, resolveFilename
 
@@ -23,7 +23,7 @@ class LCDPicon(Renderer):
 			if attrib == "path":
 				self.path = value
 			else:
-				attribs.append((attrib,value))
+				attribs.append((attrib, value))
 		self.skinAttributes = attribs
 		return Renderer.applySkin(self, desktop, parent)
 
@@ -37,7 +37,7 @@ class LCDPicon(Renderer):
 				# strip all after last :
 				pos = sname.rfind(':')
 				if pos != -1:
-					sname = sname[:pos].rstrip(':').replace(':','_')
+					sname = sname[:pos].rstrip(':').replace(':', '_')
 				pngname = self.nameCache.get(sname, "")
 				if pngname == "":
 					pngname = self.findPicon(sname)
