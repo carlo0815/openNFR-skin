@@ -10,6 +10,7 @@ from enigma import iServiceInformation, iPlayableService
 from Tools.Directories import fileExists
 from Components.Element import cached
 from Components.Converter.Poll import Poll
+from string import ascii_lowercase
 import os
 
 info = {}
@@ -462,7 +463,7 @@ class MaggyCryptInfo(Poll, Converter, object):
                 if ecm_mtime == old_ecm_mtime:
                     return info
                 old_ecm_mtime = ecm_mtime
-                ecmf = open("/tmp/ecm.info", "rb")
+                ecmf = open("/tmp/ecm.info", "r+")
                 ecm = ecmf.readlines()
             except:
                 old_ecm_mtime = None
