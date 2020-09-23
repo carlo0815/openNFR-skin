@@ -2,7 +2,7 @@ from Components.VariableText import VariableText
 from Components.config import config
 from Components.UsageConfig import defaultMoviePath
 from enigma import eLabel
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from os import path, statvfs
 
 

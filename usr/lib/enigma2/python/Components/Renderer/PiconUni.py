@@ -25,7 +25,7 @@
 # 02.04.2014 added iptv ref code
 # 17.04.2014 added path in plugin dir...
 
-from Renderer import Renderer 
+from Components.Renderer.Renderer import Renderer
 from enigma import ePixmap
 from Tools.Directories import fileExists, SCOPE_SKIN_IMAGE, SCOPE_CURRENT_SKIN, SCOPE_PLUGINS, resolveFilename 
 

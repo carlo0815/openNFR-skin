@@ -4,11 +4,11 @@
 #
 #  Coded by bigroma & 2boom
 
-from Components.Converter.Converter import Converter
 from enigma import iServiceInformation, iPlayableService
 from Tools.Directories import fileExists
 from Components.Element import cached
-from Poll import Poll
+from Components.Converter.Poll import Poll
+from Components.Converter.Converter import Converter
 import os
 
 info = {}

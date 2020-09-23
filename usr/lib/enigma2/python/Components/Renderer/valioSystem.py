@@ -10,7 +10,7 @@ from Components.VariableText import VariableText
 from Components.Sensors import sensors
 from Tools.HardwareInfo import HardwareInfo
 from enigma import eLabel
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 
 class valioSystem(Renderer, VariableText):
 	def __init__(self):

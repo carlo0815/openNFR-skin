@@ -1,6 +1,7 @@
 # coders by Nikolasi for INDB IPBOX HD
 
-from Components.Converter.Converter import Converter 
+from Components.Converter.Poll import Poll
+from Components.Converter.Converter import Converter
 from Components.Element import cached 
 from ServiceReference import ServiceReference 
 from enigma import eServiceCenter, eServiceReference, iServiceInformation, iPlayableService, eDVBFrontendParametersSatellite, eDVBFrontendParametersCable 
@@ -10,7 +11,6 @@ from Tools.Directories import fileExists, resolveFilename
 from os import environ, listdir, remove, rename, system 
 from Components.ServiceEventTracker import ServiceEventTracker 
 import gettext
-from Poll import Poll
 
 class ExtremeInfo(Poll, Converter,
  object):
@@ -990,8 +990,8 @@ class ExtremeInfo(Poll, Converter,
 
 
 	def getCamName(self):
-	self.poll_interval = 2000
-	self.poll_enabled = True
+		self.poll_interval = 2000
+		self.poll_enabled = True
 		emu = ""
 		cs = ""
 		try:
@@ -1062,15 +1062,15 @@ class ExtremeInfo(Poll, Converter,
 					
 						# hops
 						reader = ecm_info.get("reader", None)
-											reader = "%s" % reader
-											# oscam
+						reader = "%s" % reader
+						# oscam
 						prov = ecm_info.get("prov", "")
 						prov = prov.lstrip("0x")
 						prov = prov.upper()
 						prov = prov.zfill(6)
 						prov = "%s" % prov
 						from2 = ecm_info.get("from", None)
-											from2 = "%s" % from2
+						from2 = "%s" % from2
 						# ecm time	
 						ecm_time = ecm_info.get("ecm time", None)
 						if ecm_time:
@@ -1103,7 +1103,7 @@ class ExtremeInfo(Poll, Converter,
 															if oscsource == "emu":
 																	textvalue = "Source:EMU %s" % (caid)
 															else:
-									textvalue = "%s - %s - %s - %s - %s" % (caid, from2, prov, reader, ecm_time)
+																	textvalue = "%s - %s - %s - %s - %s" % (caid, from2, prov, reader, ecm_time)
 									# wicardd
 							wicarddsource = ecm_info.get("response time", None)
 							if wicarddsource:
@@ -1398,8 +1398,8 @@ class ExtremeInfo(Poll, Converter,
 
 
 	def getMgcamd(self):
-	self.poll_interval = 2000
-	self.poll_enabled = True
+		self.poll_interval = 2000
+		self.poll_enabled = True
 		using = ""
 		try:
 			f = open("/etc/CurrentBhCamName", "r")
@@ -1418,8 +1418,8 @@ class ExtremeInfo(Poll, Converter,
 		return False
 
 	def getOscam(self):
-	self.poll_interval = 2000
-	self.poll_enabled = True
+		self.poll_interval = 2000
+		self.poll_enabled = True
 		using = ""
 		try:
 			f = open("/etc/CurrentBhCamName", "r")
@@ -1437,8 +1437,8 @@ class ExtremeInfo(Poll, Converter,
 		return False
 
 	def getCamd3(self):
-	self.poll_interval = 2000
-	self.poll_enabled = True
+		self.poll_interval = 2000
+		self.poll_enabled = True
 		using = ""
 		try:
 			f = open("/etc/CurrentBhCamName", "r")
@@ -1456,8 +1456,8 @@ class ExtremeInfo(Poll, Converter,
 		return False
 
 	def getCcam(self):
-	self.poll_interval = 2000
-	self.poll_enabled = True
+		self.poll_interval = 2000
+		self.poll_enabled = True
 		using = ""
 		try:
 			f = open("/etc/CurrentBhCamName", "r")
@@ -1475,8 +1475,8 @@ class ExtremeInfo(Poll, Converter,
 		return False
 
 	def getMbox(self):
-	self.poll_interval = 2000
-	self.poll_enabled = True
+		self.poll_interval = 2000
+		self.poll_enabled = True
 		using = ""
 		try:
 			f = open("/etc/CurrentBhCamName", "r")
@@ -1494,8 +1494,8 @@ class ExtremeInfo(Poll, Converter,
 		return False
 
 	def getGbox(self):
-	self.poll_interval = 2000
-	self.poll_enabled = True
+		self.poll_interval = 2000
+		self.poll_enabled = True
 		using = ""
 		try:
 			f = open("/etc/CurrentBhCamName", "r")
@@ -1513,8 +1513,8 @@ class ExtremeInfo(Poll, Converter,
 		return False
 
 	def getIncubus(self):
-	self.poll_interval = 2000
-	self.poll_enabled = True
+		self.poll_interval = 2000
+		self.poll_enabled = True
 		using = ""
 		try:
 			f = open("/etc/CurrentBhCamName", "r")
@@ -1532,8 +1532,8 @@ class ExtremeInfo(Poll, Converter,
 		return False
 
 	def getWicardd(self):
-	self.poll_interval = 2000
-	self.poll_enabled = True
+		self.poll_interval = 2000
+		self.poll_enabled = True
 		using = ""
 		try:
 			f = open("/etc/CurrentBhCamName", "r")

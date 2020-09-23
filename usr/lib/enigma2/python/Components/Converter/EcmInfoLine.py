@@ -15,10 +15,10 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 from enigma import iServiceInformation
+from Components.Converter.Poll import Poll
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Tools.Directories import fileExists
-from Poll import Poll
 import time
 import os
 

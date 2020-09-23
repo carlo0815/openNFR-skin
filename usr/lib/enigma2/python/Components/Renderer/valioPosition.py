@@ -8,7 +8,7 @@
 
 from Components.VariableText import VariableText
 from enigma import eLabel
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 
 class valioPosition(Renderer, VariableText):
 	def __init__(self):

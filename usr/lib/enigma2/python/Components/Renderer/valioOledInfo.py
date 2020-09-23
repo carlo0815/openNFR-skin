@@ -7,7 +7,7 @@
 #######################################################################
 
 from enigma import eLabel
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from os import popen
 from time import localtime, strftime
 from Components.VariableText import VariableText
