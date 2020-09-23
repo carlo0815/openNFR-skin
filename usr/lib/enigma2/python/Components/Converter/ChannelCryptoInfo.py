@@ -5,7 +5,7 @@ from enigma import iServiceInformation
 from Components.Element import cached
 from Components.Converter.Poll import Poll
 from Components.Converter.Converter import Converter
-
+from string import ascii_uppercase, ascii_lowercase
 import os
 
 ECM_INFO = '/tmp/ecm.info'

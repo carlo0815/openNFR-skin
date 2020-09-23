@@ -14,7 +14,7 @@ from Components.Converter.Converter import Converter
 from enigma import iServiceInformation, iPlayableService
 from Components.Element import cached
 from Components.config import config
-
+from string import ascii_uppercase, ascii_lowercase
 
 
 class valioCOCA(Poll, Converter, object):

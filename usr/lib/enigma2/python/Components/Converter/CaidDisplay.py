@@ -22,6 +22,7 @@ from enigma import iServiceInformation, iPlayableService
 from Components.Element import cached
 from Components.Converter.Poll import Poll
 from Components.Converter.Converter import Converter
+from string import ascii_uppercase, ascii_lowercase
 
 class CaidDisplay(Poll, Converter, object):
 	def __init__(self, type):

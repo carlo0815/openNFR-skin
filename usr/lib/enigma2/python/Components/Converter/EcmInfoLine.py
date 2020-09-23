@@ -21,6 +21,7 @@ from Components.Element import cached
 from Tools.Directories import fileExists
 import time
 import os
+from string import ascii_uppercase, ascii_lowercase
 
 class EcmInfoLine(Poll, Converter, object):
 

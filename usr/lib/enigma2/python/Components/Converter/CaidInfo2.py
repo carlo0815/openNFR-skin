@@ -10,7 +10,7 @@ from Components.Element import cached
 from Components.Converter.Poll import Poll
 from Components.Converter.Converter import Converter
 import os
-
+from string import ascii_uppercase, ascii_lowercase
 info = {}
 old_ecm_mtime = None
 
