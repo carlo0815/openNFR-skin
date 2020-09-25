@@ -179,9 +179,9 @@
 		<widget source="session.FrontendStatus" render="Label" position="1028,654" zPosition="4" size="50,18" font="LCD; 16" halign="center" foregroundColor="yellow" backgroundColor="black" transparent="1">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<widget source="session.CurrentService" render="MaggyPiconEmu" path="skin_default/piconCam/" position="236,563" size="115,27" transparent="1" alphatest="blend" zPosition="3">
-			<convert type="EmuName" />
-		</widget>
+	<widget font="Regular;16" borderColor="black" borderWidth="1" foregroundColor="red" backgroundColor="black"  shadowColor="black" shadowOffset="1,1" halign="left" position="236,563" size="170,27" render="Label" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+    <convert type="EmuInfo">Emu</convert>
+	</widget>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/crypt/Betacrypt.png" position="835,563" size="115,27" zPosition="5" transparent="1" alphatest="blend">
 			<convert type="MaggyCryptInfo">BetaEcm</convert>
 			<convert type="ConditionalShowHide" />
@@ -489,9 +489,9 @@
 		<widget source="session.FrontendStatus" render="Label" position="1028,654" zPosition="4" size="50,18" font="LCD; 16" halign="center" foregroundColor="yellow" backgroundColor="black" transparent="1">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<widget source="session.CurrentService" render="MaggyPiconEmu" path="skin_default/piconCam/" position="236,563" size="115,27" transparent="1" alphatest="blend" zPosition="3">
-			<convert type="EmuName" />
-		</widget>
+	<widget font="Regular;16" borderColor="black" borderWidth="1" foregroundColor="red" backgroundColor="black"  shadowColor="black" shadowOffset="1,1" halign="left" position="236,563" size="170,27" render="Label" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+    <convert type="EmuInfo">Emu</convert>
+	</widget>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/crypt/Betacrypt.png" position="835,563" size="115,27" zPosition="5" transparent="1" alphatest="blend">
 			<convert type="MaggyCryptInfo">BetaEcm</convert>
 			<convert type="ConditionalShowHide" />
