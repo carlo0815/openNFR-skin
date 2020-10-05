@@ -934,6 +934,12 @@
 			<convert type="MenuEntryCompare">run_kodi</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
+		<ePixmap pixmap="skin_default/buttons/key_green.png" position="220,672" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="skin_default/buttons/key_yellow.png" position="423,672" size="30,30" alphatest="blend" />
+		<ePixmap pixmap="skin_default/buttons/key_blue.png" position="599,672" size="30,30" alphatest="blend" />
+		<widget name="green" position="255,672" size="160,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="yellow" position="458,672" size="135,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+		<widget name="blue" position="631,672" size="135,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="menu_information" position="0,0" size="1280,720" title="Main menu" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back1.png" />
