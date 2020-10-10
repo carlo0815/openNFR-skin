@@ -3631,18 +3631,21 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <eLabel text="Timer entry" position="65,17" size="720,43" font="Regular;35" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
-    <widget name="config" position="65,98" size="710,540" itemHeight="25" font="Regular;23" valign="bottom" scrollbarMode="showOnDemand" transparent="1" />
-    <widget name="cancel" pixmap="skin_default/buttons/red.png" position="837,670" size="30,30" alphatest="blend" />
-    <widget name="ok" pixmap="skin_default/buttons/green.png" position="1086,670" size="30,30" alphatest="blend" />
-    <widget name="canceltext" position="873,672" size="200,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
-    <widget name="oktext" position="1120,672" size="100,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="config" position="65,98" size="710,280" itemHeight="25" font="Regular;23" valign="bottom" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="cancel" pixmap="skin_default/buttons/red.png" position="1020,670" size="30,30" alphatest="blend" />
+    <widget name="ok" pixmap="skin_default/buttons/green.png" position="1166,670" size="30,30" alphatest="blend" />
+    <widget name="canceltext" position="1050,672" size="200,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="oktext" position="1210,672" size="100,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <ePixmap position="962,431" size="128,128" zPosition="2" pixmap="skin_default/icons/setup.png" transparent="1" alphatest="blend" />
-    <widget name="HelpWindow" position="125,450" size="600,200" transparent="1" alphatest="blend" zPosition="2" />
-    <eLabel text="FreeDiskSpace:" position="62,672" size="150,24" font="Regular; 20" transparent="1" halign="left" zPosition="6" foregroundColor="cyan1" backgroundColor="cyan1" />
-    <widget render="mvmHDDfreeTimer" source="global.CurrentTime" position="221,672" size="250,24" font="Regular;18" foregroundColor="white" zPosition="6" halign="left" />
-    <ePixmap pixmap="skin_default/buttons/key_blue.png" position="509,670" size="30,30" alphatest="blend" zPosition="2" />
-    <widget name="key_blue" position="544,672" size="250,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="HelpWindow" position="125,400" size="600,200" transparent="1" alphatest="blend" zPosition="2" />
+    <widget name="locationdescription" position="30,672" size="250,30" font="Regular;22" foregroundColor="white" halign="left" backgroundColor="background" valign="center" transparent="1"/>
+    <widget name="locationfreespace" position="200,672" size="415,30" font="Regular;22" foregroundColor="cyan1" halign="left" backgroundColor="background" valign="center" transparent="1"/>
+   <widget name="description" position="65,450" size="710,200" font="Regular;22" foregroundColor="cyan1" halign="center" backgroundColor="background" valign="center" transparent="1"/>
+    <eLabel position="65,390" zPosition="3" size="710,2" backgroundColor="grey" />
+    <ePixmap pixmap="skin_default/buttons/txt.png" position="700,670" size="70,40" alphatest="blend" />
+    <eLabel text= "= VirtualKeybord" position="790,673" size="250,24" font="Regular;22" backgroundColor="backtop" transparent="1" foregroundColor="cyan1" />
   </screen>
+
   <screen name="TimerLog" position="0,0" size="1280,720" title="Timer log" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="skin_default/menu/back2b.png" />
     <eLabel position="837,95" zPosition="3" size="375,214" backgroundColor="unff000000" />
