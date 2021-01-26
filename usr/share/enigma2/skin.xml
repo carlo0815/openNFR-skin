@@ -3219,11 +3219,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="skin_default/buttons/green.png" position="250,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/yellow.png" position="520,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/blue.png" position="780,670" size="30,30" alphatest="blend" />
-    <ePixmap pixmap="skin_default/buttons/key_info.png" position="1050,670" size="30,30" alphatest="blend" />
+    <ePixmap pixmap="skin_default/buttons/key_info.png" position="1030,670" size="30,30" alphatest="blend" />
     <ePixmap pixmap="skin_default/buttons/key_menu.png" position="10,600" size="30,30" zPosition="10" alphatest="blend" />
-    <widget name="key_info" render="Label" position="1030,670" size="255,34" zPosition="1" font="Regular; 22" halign="center" valign="center" backgroundColor="white" foregroundColor="yellow" transparent="1" />
-    <widget source="key_red" render="Label" position="55,672" size="200,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
-    <widget name="key_green" render="Label" position="285,673" size="200,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="key_info" render="Label" position="1060,672" size="255,34" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget source="key_red" render="Label" position="55,672" size="200,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
+    <widget name="key_green" render="Label" position="285,672" size="200,25" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <widget name="key_yellow" render="Label" position="550,672" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <widget name="key_blue" render="Label" position="810,672" size="260,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="black" transparent="1" />
     <ePixmap position="950,430" size="150,150" pixmap="skin_default/menu/plugin.png" alphatest="blend" transparent="1" />
