@@ -1,4 +1,4 @@
-from Components.Converter.Converter import Converter
+from .Converter import Converter
 from time import localtime, strftime
 from Components.Element import cached
 
@@ -28,7 +28,7 @@ class valioClockToText(Converter, object):
 			self.type = self.DATETIME
 		elif type == "AsLength":
 			self.type = self.AS_LENGTH
-		elif type == "Timestamp":
+		elif type == "Timestamp":	
 			self.type = self.TIMESTAMP
 		elif str(type).find("Format") != -1:
 			self.type = self.FORMAT
@@ -42,9 +42,9 @@ class valioClockToText(Converter, object):
 		if time is None:
 			return ""
 		if self.type == self.IN_MINUTES:
-			return "%d min" % (time / 60)
+			return "%d min" % (time // 60)
 		elif self.type == self.AS_LENGTH:
-			return "%d:%02d" % (time / 60, time % 60)
+			return "%d:%02d" % (time // 60, time % 60)
 		elif self.type == self.TIMESTAMP:
 			return str(time)
 		t = localtime(time)

@@ -5,10 +5,10 @@
 
 
 from enigma import iServiceInformation
-from Components.Converter.Poll import Poll
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Components.config import config
+from .Poll import Poll
 
 
 
@@ -22,7 +22,7 @@ class SmartInfo(Poll, Converter, object):
 			}[type]
 		self.poll_interval = 30000
 		self.poll_enabled = True
-		self.ar_fec = ["Auto", "1/2", "2/3", "3/4", "5/6", "7/8", "3/5", "4/5", "8/9", "9/10", "None", "None", "None", "None", "None"]
+		self.ar_fec = ["Auto", "1/2", "2/3", "3/4", "5/6", "7/8", "3/5", "4/5", "8/9", "9/10","None","None","None","None","None"]
 		self.ar_pol = ["H", "V", "CL", "CR", "na", "na", "na", "na", "na", "na", "na", "na"]
 
 
@@ -33,7 +33,7 @@ class SmartInfo(Poll, Converter, object):
 		service = self.source.service
 		info = service and service.info()
 		if not info:
-			return ""
+			return ""	
 		Ret_Text = ""
 		Sec_Text = ""
 		if (self.type == self.SMART_INFO_H): # HORIZONTAL
@@ -57,8 +57,8 @@ class SmartInfo(Poll, Converter, object):
 				frontendData = (feinfo and feinfo.getAll(True))
 				if (frontendData is not None):
 					if ((frontendData.get("tuner_type") == "DVB-S") or (frontendData.get("tuner_type") == "DVB-C")):
-						frequency = (str((frontendData.get("frequency") / 1000)) + " MHz")
-						symbolrate = (str((frontendData.get("symbol_rate") / 1000)) + "")
+						frequency = (str((frontendData.get("frequency") // 1000)) + " MHz")
+						symbolrate = (str((frontendData.get("symbol_rate") // 1000)) + "")
 						try:
 							if (frontendData.get("tuner_type") == "DVB-S"):
 								polarisation_i = frontendData.get("polarization")
@@ -129,13 +129,13 @@ class SmartInfo(Poll, Converter, object):
 								elif orbital_pos == 3592:
 									orb_pos = 'Thor/Intelsat (0.8W)'
 								elif orbital_pos == 2985:
-									orb_pos = 'Echostar 3, 12 (61.5W)'
+									orb_pos = 'Echostar 3,12 (61.5W)'
 								elif orbital_pos == 2830:
 									orb_pos = 'Echostar 8 (77.0W)'
 								elif orbital_pos == 2630:
 									orb_pos = 'Galaxy 19 (97.0W)'
 								elif orbital_pos == 2500:
-									orb_pos = 'Echostar 10, 11 (110.0W)'
+									orb_pos = 'Echostar 10,11 (110.0W)'
 								elif orbital_pos == 2502:
 									orb_pos = 'DirectTV 5 (110.0W)'
 								elif orbital_pos == 2410:
@@ -153,22 +153,22 @@ class SmartInfo(Poll, Converter, object):
 								elif orbital_pos == 2120:
 									orb_pos = 'Echostar 2 (148.0W)'
 								else:
-									orb_pos = str((float(3600 - orbital_pos))/10.0) + "W"
+									orb_pos = str((float(3600 - orbital_pos))//10.0) + "W"
 							elif orbital_pos > 0:
 								if orbital_pos == 192:
 									orb_pos = 'Astra 1F (19.2E)'
 								elif orbital_pos == 130:
-									orb_pos = 'Hot Bird 6, 7A, 8 (13.0E)'
+									orb_pos = 'Hot Bird 6,7A,8 (13.0E)'
 								elif orbital_pos == 235:
 									orb_pos = 'Astra 1E (23.5E)'
 								elif orbital_pos == 1100:
-									orb_pos = 'BSat 1A, 2A (110.0E)'
+									orb_pos = 'BSat 1A,2A (110.0E)'
 								elif orbital_pos == 1101:
 									orb_pos = 'N-Sat 110 (110.0E)'
 								elif orbital_pos == 1131:
 									orb_pos = 'KoreaSat 5 (113.0E)'
 								elif orbital_pos == 1440:
-									orb_pos = 'SuperBird 7, C2 (144.0E)'
+									orb_pos = 'SuperBird 7,C2 (144.0E)'
 								elif orbital_pos == 1006:
 									orb_pos = 'AsiaSat 2 (100.5E)'
 								elif orbital_pos == 1030:
@@ -274,10 +274,10 @@ class SmartInfo(Poll, Converter, object):
 								elif orbital_pos == 30:
 									orb_pos = 'Telecom 2 (3.0E)'
 								else:
-									orb_pos = str((float(orbital_pos))/10.0) + "E"
+									orb_pos = str((float(orbital_pos))//10.0) + "E"
 						Ret_Text = Ret_Text + "" + orb_pos + ""
 					elif (frontendData.get("tuner_type") == "DVB-T"):
-						frequency = (str((frontendData.get("frequency") / 1000)) + " MHz")
+						frequency = (str((frontendData.get("frequency") // 1000)) + " MHz")
 						Ret_Text = Ret_Text + "Frequency: " + frequency
 				prvd = info.getInfoString(iServiceInformation.sProvider)
 				#Ret_Text = prvd + "  " + Ret_Text

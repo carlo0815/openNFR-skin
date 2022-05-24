@@ -1,9 +1,9 @@
 #######################################################################
 #
 #
-#	ReferenceToString for Dreambox/Enigma-2
-#	Coded by Vali (c)2011
-#	Support: www.dreambox-tools.info
+#    ReferenceToString for Dreambox/Enigma-2
+#    Coded by Vali (c)2011
+#    Support: www.dreambox-tools.info
 #
 #
 #  This plugin is licensed under the Creative Commons 

@@ -18,8 +18,7 @@ from Components.Converter.Converter import Converter
 from Components.config import config
 from Components.Element import cached
 from Tools.Directories import fileExists
-from Components.Converter.Poll import Poll
-from string import ascii_lowercase
+from .Poll import Poll
 import os
 
 class EmuName(Poll, Converter, object):
@@ -142,4 +141,4 @@ class EmuName(Poll, Converter, object):
 	text = property(getText)
 
 	def changed(self, what):
-		Converter.changed(self, (self.CHANGED_POLL, ))
+		Converter.changed(self, (self.CHANGED_POLL,))

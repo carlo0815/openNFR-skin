@@ -1,14 +1,4 @@
-﻿# WifiInfo2
-#<widget source="session.CurrentService" render="Progress" pixmap="750HD/icons/linkq_ico.png" position="1103,35" zPosition="3" size="28,15" transparent="1" >
-#    <convert type="WiFiInfo">linkqua</convert>
-#  </widget>
-#
-#<widget source="session.CurrentService" render="Label" position="462,153" size="50,22" font="Regular; 17" zPosition="2" backgroundColor="background1" foregroundColor="white" transparent="1">
-#    <convert type="WiFiInfo">link | level | noise | bitrate | ssid | encryption</convert>
-#  </widget>
-
-
-from Components.Converter.Poll import Poll
+from .Poll import Poll
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from pythonwifi.iwlibs import  Wireless
@@ -80,7 +70,7 @@ class WiFiInfo2(Poll, Converter, object):
 		for line in open("/proc/net/wireless"):
 			if self.type == self.link and (line.split()[0] == "wlan0:" or line.split()[0] == "ra0:"):
 				try:
-					linkq = int(int(line.split()[2][:-1]) * 100) / int(ifobj.getQualityMax().quality)
+					linkq = int(int(line.split()[2][:-1]) * 100) // int(ifobj.getQualityMax().quality)
 				except:
 					linkq = 0
 				if linkq == 0:
@@ -167,7 +157,7 @@ class WiFiInfo2(Poll, Converter, object):
 		for line in open("/proc/net/wireless"):
 			if self.type == self.linkqua and (line.split()[0] == "wlan0:" or line.split()[0] == "ra0:"):
 				try:
-					linkq = int(int(line.split()[2][:-1]) * 100) / int(ifobj.getQualityMax().quality)
+					linkq = int(int(line.split()[2][:-1]) * 100) // int(ifobj.getQualityMax().quality)
 				except:
 					linkq = 0
 		return linkq

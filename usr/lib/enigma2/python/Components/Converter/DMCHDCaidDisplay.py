@@ -18,11 +18,10 @@
 #  distributed other than under the conditions noted above.
 #
 
-from Components.Converter.Poll import Poll
 from Components.Converter.Converter import Converter
 from enigma import iServiceInformation, iPlayableService
 from Components.Element import cached
-from string import ascii_uppercase, ascii_lowercase
+from .Poll import Poll
 
 class DMCHDCaidDisplay(Poll, Converter, object):
 	def __init__(self, type):
@@ -50,19 +49,19 @@ class DMCHDCaidDisplay(Poll, Converter, object):
 		service = self.source.service
 		if service:
 			info = service and service.info()
-			if info:
+			if info:        
 				caids = info.getInfoObject(iServiceInformation.sCAIDs)
 				if caids:
 					for cs in self.systemCaids:
-						caidlist[cs] = (self.systemCaids.get(cs), 0)
-							
+						caidlist[cs] = (self.systemCaids.get(cs),0)
+			                
 					for caid in caids:
 						c = "%x" % int(caid)
 						if len(c) == 3:
 							c = "0%s" % c
 						c = c[:2].upper()
-						if self.systemCaids.has_key(c):
-							caidlist[c] = (self.systemCaids.get(c), 1)
+						if c in self.systemCaids:
+							caidlist[c] = (self.systemCaids.get(c),1)
 							
 					ecm_info = self.ecmfile()
 					if ecm_info:
@@ -72,7 +71,7 @@ class DMCHDCaidDisplay(Poll, Converter, object):
 							if len(c) == 3:
 								c = "0%s" % c
 							c = c[:2].upper()
-							caidlist[c] = (self.systemCaids.get(c), 2)
+							caidlist[c] = (self.systemCaids.get(c),2)
 		return caidlist
 
 	getCaidlist = property(get_caidlist)
@@ -100,20 +99,20 @@ class DMCHDCaidDisplay(Poll, Converter, object):
 						ecm_time = ecm_info.get("ecm time", None)
 						if ecm_time:
 							if "msec" in ecm_time:
-								ecm_time = "ECM: %s" % ecm_time
+								ecm_time = "ECM: %s" % ecm_time						
 							else:
 								ecm_time = "ECM: %s s" % ecm_time
 						# address
-						address = ecm_info.get("address", "")
+						address = ecm_info.get("address", "")								
 						# source	
 						using = ecm_info.get("using", "")
 						if using:
 							if using == "emu":
 								textvalue = "(EMU) %s - %s" % (caid, ecm_time)
 							elif using == "CCcam-s2s":
-								textvalue = "(NET) %s - %s - %s - %s" % (caid, address, hops, ecm_time)
+								textvalue = "(NET) %s - %s - %s - %s" % (caid, address, hops, ecm_time)							
 							else:
-								textvalue = "%s - %s - %s - %s" % (caid, address, hops, ecm_time)
+								textvalue = "%s - %s - %s - %s" % (caid, address, hops, ecm_time)		
 						else:
 							# mgcamd
 							source = ecm_info.get("source", None)
@@ -162,10 +161,10 @@ class DMCHDCaidDisplay(Poll, Converter, object):
 						if len(item) > 1:
 							info[item[0].strip().lower()] = item[1].strip()
 						else:
-							if not info.has_key("caid"):
+							if "caid" not in info:
 								x = line.lower().find("caid")
 								if x != -1:
-									y = line.find(", ")
+									y = line.find(",")
 									if y != -1:
 										info["caid"] = line[x+5:y]
 

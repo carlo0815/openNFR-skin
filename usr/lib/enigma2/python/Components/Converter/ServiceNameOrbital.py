@@ -41,21 +41,21 @@ class ServiceNameOrbital (Converter, object):
 				transponder_info = info.getInfoObject(ref, iServiceInformation.sTransponderData)
 			else:
 				transponder_info = info.getInfoObject(iServiceInformation.sTransponderData)
-			if transponder_info and "orbital_position" in transponder_info.keys():
+			if transponder_info and "orbital_position" in list(transponder_info.keys()):
 				pos = int(transponder_info["orbital_position"])
 				#print "-----------------------------------------------------"
 				#print pos
-				#print "-----------------------------------------------------"
+				#print "-----------------------------------------------------"				
 				direction = 'E'
 				if pos > 1800:
 					pos = 3600 - pos
-					direction = 'W'
-					orb = "(%d.%d%s)" % (pos/10, pos%10, direction)
-				elif pos > 0:
-					orb = "(%d.%d%s)" % (pos/10, pos%10, direction)
+					direction = 'W'					
+					orb = "(%d.%d%s)" % (pos//10, pos%10, direction)
+				elif pos > 0:				
+					orb = "(%d.%d%s)" % (pos//10, pos%10, direction)
 					#print "-----------------------------------------------------"
 					#print orb
-					#print "-----------------------------------------------------"
+					#print "-----------------------------------------------------"					
 			name = ref and info.getName(ref)
 			if name is None:
 				name = info.getName()
@@ -73,5 +73,5 @@ class ServiceNameOrbital (Converter, object):
 	text = property(getText)
 
 	def changed(self, what):
-		if what[0] != self.CHANGED_SPECIFIC or what[1] in (iPlayableService.evStart, ):
+		if what[0] != self.CHANGED_SPECIFIC or what[1] in (iPlayableService.evStart,):
 			Converter.changed(self, what)

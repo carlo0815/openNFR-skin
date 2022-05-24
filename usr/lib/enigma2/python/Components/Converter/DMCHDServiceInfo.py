@@ -3,7 +3,7 @@
 ## by AliAbdul
 ##
 ## Example usage in the skin.xml:
-##		<widget source="session.CurrentService" render="Label" position="164, 435" size="390, 28" font="Regular;26" transparent="1" >
+##		<widget source="session.CurrentService" render="Label" position="164,435" size="390,28" font="Regular;26" transparent="1" >
 ##			<convert type="ExtendedServiceInfo">Config</convert>
 ##		</widget>
 ##
@@ -141,13 +141,13 @@ class DMCHDServiceInfo(Converter, object):
 		if transponderData is not None:
 			if isinstance(transponderData, float):
 				return ""
-			if transponderData.has_key("tuner_type"):
+			if "tuner_type" in transponderData:
 				if (transponderData["tuner_type"] == "DVB-S") or (transponderData["tuner_type"] == "DVB-S2"):
 					orbital = transponderData["orbital_position"]
 					orbital = int(orbital)
 					if orbital > 1800:
-						orbital = str((float(3600 - orbital))/10.0) + "W"
+						orbital = str((float(3600 - orbital))//10.0) + "W"
 					else:
-						orbital = str((float(orbital))/10.0) + "E"
+						orbital = str((float(orbital))//10.0) + "E"
 					return orbital
 		return ""

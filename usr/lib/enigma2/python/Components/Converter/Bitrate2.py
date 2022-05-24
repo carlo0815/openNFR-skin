@@ -107,7 +107,7 @@ class Bitrate2(Converter, object):
 		else:
 			self.videoBitrate = None
 			self.video = 0
-		Converter.changed(self, (self.CHANGED_POLL, ))
+		Converter.changed(self, (self.CHANGED_POLL,))
 
 	def getAudioBitrateData(self, value, status):
 		if status:
@@ -115,7 +115,7 @@ class Bitrate2(Converter, object):
 		else:
 			self.audioBitrate = None
 			self.audio = 0
-		Converter.changed(self, (self.CHANGED_POLL, ))
+		Converter.changed(self, (self.CHANGED_POLL,))
 
 	def changed(self, what):
 		if what[0] == self.CHANGED_SPECIFIC:
@@ -123,5 +123,5 @@ class Bitrate2(Converter, object):
 				self.initTimer.start(100, True)
 			elif what[1] == iPlayableService.evEnd:
 				self.clearData()
-				#Converter.changed(self, (self.CHANGED_POLL, ))
+				#Converter.changed(self, (self.CHANGED_POLL,))
 				Converter.changed(self, what)

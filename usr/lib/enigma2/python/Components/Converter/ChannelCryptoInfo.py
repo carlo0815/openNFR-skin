@@ -2,10 +2,10 @@
 # ChannelCryptoInfo Converter by mcbain // v0.1 // 20111109
 #
 from enigma import iServiceInformation
-from Components.Element import cached
-from Components.Converter.Poll import Poll
 from Components.Converter.Converter import Converter
-from string import ascii_uppercase, ascii_lowercase
+from Components.Element import cached
+from .Poll import Poll
+
 import os
 
 ECM_INFO = '/tmp/ecm.info'

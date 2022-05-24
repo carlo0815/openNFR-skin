@@ -15,13 +15,12 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 from enigma import iServiceInformation
-from Components.Converter.Poll import Poll
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Tools.Directories import fileExists
+from .Poll import Poll
 import time
 import os
-from string import ascii_uppercase, ascii_lowercase
 
 class EcmInfoLine(Poll, Converter, object):
 
@@ -74,7 +73,7 @@ class EcmInfoLine(Poll, Converter, object):
 					if len(caid_data) < 4:
 						caid_data = caid_mask[len(caid_data):] + caid_data
 				elif "CaID" in line or "CAID" in line:
-					caid_data = line.split(', ')[0].split()[-1][2:]
+					caid_data = line.split(',')[0].split()[-1][2:]
 				if not caid_data is '':
 					out_data['caid'] = caid_data.upper()
 				##### get reader
@@ -100,7 +99,7 @@ class EcmInfoLine(Poll, Converter, object):
 				elif ('prov:' in line or 'Provider:' in line) and 'pkey:' not in line:
 					prov_data = line.split()[-1].replace('0x', '')
 				elif 'prov:' in line and 'pkey:' in line:
-					prov_data = line.split(', ')[0].split()[-1]
+					prov_data = line.split(',')[0].split()[-1]
 				if not prov_data is '':
 					out_data['prov'] = prov_data
 				##### get ecm time
@@ -169,7 +168,7 @@ class EcmInfoLine(Poll, Converter, object):
 				return _('No parse cannot emu')
 
 		if out_data.get('source', '') is 'emu':
-			return 'emu - %s (Prov: %s, Caid: %s)' % (self.TxtCaids.get(out_data.get('caid')[:2]), out_data.get('prov', ''), out_data.get('caid', ''))
+			return 'emu - %s (Prov: %s, Caid: %s)' % (self.TxtCaids.get(out_data.get('caid')[:2]),out_data.get('prov', ''), out_data.get('caid', ''))
 
 		elif out_data.get('source', '') is 'sci':
 			if not out_data.get('reader', '') is '':

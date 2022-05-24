@@ -62,7 +62,7 @@ class ChannelSelectionInfo(Converter, object):
 					t_stop = localtime(eventNext[1]+eventNext[2])
 					eventStartTime = '%02d:%02d' % (t_start.tm_hour, t_start.tm_min)
 					eventStopTime = '%02d:%02d' % (t_stop.tm_hour, t_stop.tm_min)
-					duration = '%d min' % (eventNext[2] / 60)
+					duration = '%d min' % (eventNext[2] // 60)
 
 					if self.type == self.NextEventStartTime:
 						return eventStartTime
@@ -81,5 +81,5 @@ class ChannelSelectionInfo(Converter, object):
 	text = property(getText)
 
 	def changed(self, what):
-		if what[0] != self.CHANGED_SPECIFIC or what[1] in (iPlayableService.evStart, ):
+		if what[0] != self.CHANGED_SPECIFIC or what[1] in (iPlayableService.evStart,):
 			Converter.changed(self, what)

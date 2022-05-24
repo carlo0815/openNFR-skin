@@ -1,16 +1,16 @@
 # 2boom 2011-14
 #  CamdInfo3 - Converter
-# <widget source="session.CurrentService" render="Label" position="189, 397" zPosition="4" size="350, 20" noWrap="1" valign="center" halign="center" font="Regular;14" foregroundColor="clText" transparent="1"  backgroundColor="#20002450">
+# <widget source="session.CurrentService" render="Label" position="189,397" zPosition="4" size="350,20" noWrap="1" valign="center" halign="center" font="Regular;14" foregroundColor="clText" transparent="1"  backgroundColor="#20002450">
 #	<convert type="CamdInfo">Camd</convert>
-# </widget>
+# </widget>			
 
 from enigma import iServiceInformation
+from Components.Converter.Converter import Converter
 from Components.ConfigList import ConfigListScreen
 from Components.config import config, getConfigListEntry, ConfigText, ConfigPassword, ConfigClock, ConfigSelection, ConfigSubsection, ConfigYesNo, configfile, NoSave
 from Components.Element import cached
 from Tools.Directories import fileExists
-from Components.Converter.Poll import Poll
-from Components.Converter.Converter import Converter
+from .Poll import Poll
 import os
 
 
@@ -116,9 +116,9 @@ class CamdInfo3(Poll, Converter, object):
 			except:
 				return None
 		# Egami	
-		elif fileExists("/tmp/egami.inf", "r"):
+		elif fileExists("/tmp/egami.inf","r"):
 			for line in open("/tmp/egami.inf"):
-				item = line.split(":", 1)
+				item = line.split(":",1)
 				if item[0] == "Current emulator":
 					return item[1].strip()
 		

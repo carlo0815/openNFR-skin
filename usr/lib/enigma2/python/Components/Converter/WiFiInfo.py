@@ -7,7 +7,7 @@
 #  </widget>
 
 
-from Components.Converter.Poll import Poll
+from .Poll import Poll
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from pythonwifi.iwlibs import  Wireless
@@ -55,7 +55,7 @@ class WiFiInfo(Poll, Converter, object):
 		for line in open("/proc/net/wireless"):
 			if self.type == self.link and (line.split()[0] == "wlan0:" or line.split()[0] == "ra0:"):
 				try:
-					linkq = int(int(line.split()[2][:-1]) * 100) / int(ifobj.getQualityMax().quality)
+					linkq = int(int(line.split()[2][:-1]) * 100) // int(ifobj.getQualityMax().quality)
 				except:
 					linkq = 0
 				wifi = "%s%%" % linkq
@@ -95,7 +95,7 @@ class WiFiInfo(Poll, Converter, object):
 		for line in open("/proc/net/wireless"):
 			if self.type == self.linkqua and (line.split()[0] == "wlan0:" or line.split()[0] == "ra0:"):
 				try:
-					linkq = int(int(line.split()[2][:-1]) * 100) / int(ifobj.getQualityMax().quality)
+					linkq = int(int(line.split()[2][:-1]) * 100) // int(ifobj.getQualityMax().quality)
 				except:
 					linkq = 0
 		return linkq

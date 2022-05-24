@@ -1,18 +1,18 @@
 #######################################################################
 #
-#	Converter for Enigma2
-#	Coded by shamann (c)2012
+#    Converter for Enigma2
+#    Coded by shamann (c)2012
 #
-#	This program is free software; you can redistribute it and/or
-#	modify it under the terms of the GNU General Public License
-#	as published by the Free Software Foundation; either version 2
-#	of the License, or (at your option) any later version.
+#    This program is free software; you can redistribute it and/or
+#    modify it under the terms of the GNU General Public License
+#    as published by the Free Software Foundation; either version 2
+#    of the License, or (at your option) any later version.
 #
-#	This program is distributed in the hope that it will be useful,
-#	but WITHOUT ANY WARRANTY; without even the implied warranty of
-#	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#	GNU General Public License for more details.
-#	
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#    
 #######################################################################
 from Components.Converter.Converter import Converter
 from enigma import iServiceInformation, iPlayableService, iPlayableServicePtr, eServiceReference, eEPGCache
@@ -28,7 +28,7 @@ class g16ServiceNameEventNobile(Converter, object):
 	ENDTIME = 4
 	EXTENDED_DESCRIPTION = 5
 	EXTENDED_DESCRIPTION_EVENT = 6
-		  	
+          	
 	def __init__(self, type):
 		Converter.__init__(self, type)
 		self.epgQuery = eEPGCache.getInstance().lookupEventTime
@@ -39,14 +39,14 @@ class g16ServiceNameEventNobile(Converter, object):
 		elif type == "StartTime":
 			self.type = self.STARTTIME
 		elif type == "Duration":
-			self.type = self.DURATION
+			self.type = self.DURATION			
 		elif type == "EndTime":
 			self.type = self.ENDTIME
 		elif type == "ExtendedDescription":
 			self.type = self.EXTENDED_DESCRIPTION
 		elif type == "ExtendedDescriptionEvent" or type == "ExtendedDescriptionEventSingle":
 			self.type = self.EXTENDED_DESCRIPTION_EVENT
-				
+      			
 	@cached
 	def getText(self):
 		no_desc = ""
@@ -73,7 +73,7 @@ class g16ServiceNameEventNobile(Converter, object):
 					return "%s - %s" % (name, no_desc)
 				else:
 					return "%s - %s" % (name, act_event.getEventName())
-			act_event = None
+			act_event = None				
 			try:
 				act_event = self.epgQuery(eServiceReference(service.toString()), -1, 1)
 			except: pass
@@ -92,7 +92,7 @@ class g16ServiceNameEventNobile(Converter, object):
 			t = localtime(act_event.getBeginTime() + act_event.getDuration())
 			return "%02d:%02d" % (t.tm_hour, t.tm_min)
 		elif self.type == self.DURATION:
-			return "%d min" % (int(act_event.getDuration() / 60))
+			return "%d min" % (int(act_event.getDuration() // 60))
 		elif self.type == self.EXTENDED_DESCRIPTION or self.type == self.EXTENDED_DESCRIPTION_EVENT:
 			short = act_event.getShortDescription()
 			tmp = act_event.getExtendedDescription()
@@ -109,12 +109,12 @@ class g16ServiceNameEventNobile(Converter, object):
 						if not short[:-2] in tmp:
 							tmp = short.strip() + "..." + tmp
 			tmp = tmp.replace("\r", " ").replace("\n", " ").replace("\xc2\x8a", " ")
-			return re.sub('[\s\t]+', ' ', tmp)
+			return re.sub('[\s\t]+', ' ',tmp)
 		else:
 			return "Error reading EPG data"
 
 	text = property(getText)
 
 	def changed(self, what):
-		if what[0] != self.CHANGED_SPECIFIC or what[1] in (iPlayableService.evStart, iPlayableService.evUpdatedEventInfo, ):
+		if what[0] != self.CHANGED_SPECIFIC or what[1] in (iPlayableService.evStart, iPlayableService.evUpdatedEventInfo,):
 			Converter.changed(self, what)

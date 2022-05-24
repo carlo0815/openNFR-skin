@@ -1,10 +1,10 @@
 from enigma import iServiceInformation, iPlayableService
+from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Components.config import config
 from Tools.Transponder import ConvertToHumanReadable
 from Tools.ISO639 import LanguageCodes
-from Components.Converter.Poll import Poll
-from Components.Converter.Converter import Converter
+from .Poll import Poll
 
 def addspace(text):
 	if text:
@@ -20,7 +20,7 @@ class AudioInfo(Poll, Converter, object):
 		self.poll_enabled = True
 		self.feraw = self.fedata = self.updateFEdata = None
 
-	def createAudioCodec(self, info):
+	def createAudioCodec(self,info):
 		service = self.source.service
 		audio = service.audioTracks()
 		if audio:

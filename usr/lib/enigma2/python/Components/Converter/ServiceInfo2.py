@@ -12,11 +12,10 @@
 # ver 0.4b 15/12/2012 added xATYPE mod by 2boom
 # ver 0.4c 16/12/2012 added xALLTYPE mod by 2boom
 # ver 0.5a 03/01/2013 speed opt. mod by 2boom
-from Components.Converter.Poll import Poll
+from .Poll import Poll
 from Components.Converter.Converter import Converter
 from enigma import iServiceInformation, iPlayableService
 from Components.Element import cached
-from string import ascii_uppercase, ascii_lowercase
 
 class ServiceInfo2(Poll, Converter, object):
 
@@ -40,21 +39,21 @@ class ServiceInfo2(Poll, Converter, object):
 		Converter.__init__(self, type)
 		Poll.__init__(self)
 		self.type, self.interesting_events = {
-				"xAPID": (self.xAPID, (iPlayableService.evUpdatedInfo, )),
-				"xVPID": (self.xVPID, (iPlayableService.evUpdatedInfo, )),
-				"xSID": (self.xSID, (iPlayableService.evUpdatedInfo, )),
-				"xONID": (self.xONID, (iPlayableService.evUpdatedInfo, )),
-				"xTSID": (self.xTSID, (iPlayableService.evUpdatedInfo, )),
-				"sCAIDs": (self.sCAIDs, (iPlayableService.evUpdatedInfo, )),
-				"yAll": (self.yAll, (iPlayableService.evUpdatedInfo, )),
-				"xAll": (self.xAll, (iPlayableService.evUpdatedInfo, )),
-				"xVTYPE": (self.xVTYPE, (iPlayableService.evUpdatedInfo, )),
-				"xATYPE": (self.xATYPE, (iPlayableService.evUpdatedInfo, )),
-				"xALLTYPE": (self.xALLTYPE, (iPlayableService.evUpdatedInfo, )),
-				"VideoHeight": (self.VideoHeight, (iPlayableService.evUpdatedInfo, )),
-				"VideoWidth": (self.VideoWidth, (iPlayableService.evUpdatedInfo, )),
-				"Framerate": (self.Framerate, (iPlayableService.evVideoSizeChanged, iPlayableService.evUpdatedInfo, )),
-				"Provider": (self.Provider, (iPlayableService.evUpdatedInfo, )),
+				"xAPID": (self.xAPID, (iPlayableService.evUpdatedInfo,)),
+				"xVPID": (self.xVPID, (iPlayableService.evUpdatedInfo,)),
+				"xSID": (self.xSID, (iPlayableService.evUpdatedInfo,)),
+				"xONID": (self.xONID, (iPlayableService.evUpdatedInfo,)),
+				"xTSID": (self.xTSID, (iPlayableService.evUpdatedInfo,)),
+				"sCAIDs": (self.sCAIDs, (iPlayableService.evUpdatedInfo,)),
+				"yAll": (self.yAll, (iPlayableService.evUpdatedInfo,)),
+				"xAll": (self.xAll, (iPlayableService.evUpdatedInfo,)),
+				"xVTYPE": (self.xVTYPE, (iPlayableService.evUpdatedInfo,)),
+				"xATYPE": (self.xATYPE, (iPlayableService.evUpdatedInfo,)),
+				"xALLTYPE": (self.xALLTYPE, (iPlayableService.evUpdatedInfo,)),
+				"VideoHeight": (self.VideoHeight, (iPlayableService.evUpdatedInfo,)),
+				"VideoWidth": (self.VideoWidth, (iPlayableService.evUpdatedInfo,)),
+				"Framerate": (self.Framerate, (iPlayableService.evVideoSizeChanged,iPlayableService.evUpdatedInfo,)),
+				"Provider": (self.Provider, (iPlayableService.evUpdatedInfo,)),
 			}[type]
 		self.poll_interval = 1000
 		self.poll_enabled = True
@@ -159,7 +158,7 @@ class ServiceInfo2(Poll, Converter, object):
 				return " "
 			return str(xres)
 		elif self.type == self.Framerate:
-			return self.getServiceInfoString(info, iServiceInformation.sFrameRate, lambda x: "%d" % ((x+500)/1000))
+			return self.getServiceInfoString(info, iServiceInformation.sFrameRate, lambda x: "%d" % ((x+500)//1000))
 		elif self.type == self.Provider:
 			return self.getServiceInfoString(info, iServiceInformation.sProvider).upper()
 		return ""

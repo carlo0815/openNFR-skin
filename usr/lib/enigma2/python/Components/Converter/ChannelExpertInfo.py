@@ -58,8 +58,8 @@ class ChannelExpertInfo(Converter, object):
 			frontendData = (feinfo and feinfo.getAll(True))
 			if (frontendData is not None):
 				if ((frontendData.get('tuner_type') == 'DVB-S') or (frontendData.get('tuner_type') == 'DVB-C')):
-					frequency = (str((frontendData.get('frequency') / 1000)) + ' MHz')
-					symbolrate = str(int((frontendData.get('symbol_rate', 0) / 1000)))
+					frequency = (str((frontendData.get('frequency') // 1000)) + ' MHz')
+					symbolrate = str(int((frontendData.get('symbol_rate', 0) // 1000)))
 					if (frontendData.get('tuner_type') == 'DVB-S'):
 						try:
 							orb = {
@@ -91,10 +91,10 @@ class ChannelExpertInfo(Converter, object):
 							 2780: "NIMIQ 4 (82.0W)",
 							 2690: "NIMIQ 1 (91.0W)",
 							 3592: "Thor/Intelsat (0.8W)",
-							 2985: "Echostar 3, 12 (61.5W)",
+							 2985: "Echostar 3,12 (61.5W)",
 							 2830: "Echostar 8 (77.0W)",
 							 2630: "Galaxy 19 (97.0W)",
-							 2500: "Echostar 10, 11 (110.0W)",
+							 2500: "Echostar 10,11 (110.0W)",
 							 2502: "DirectTV 5 (110.0W)",
 							 2410: "Echostar 7 Anik F3 (119.0W)",
 							 2391: "Galaxy 23 (121.0W)",
@@ -103,10 +103,10 @@ class ChannelExpertInfo(Converter, object):
 							 2310: "Galaxy 27 (129.0W)",
 							 2311: "Ciel 2 (129.0W)",
 							 2120: "Echostar 2 (148.0W)",
-							 1100: "BSat 1A, 2A (110.0E)",
+							 1100: "BSat 1A,2A (110.0E)",
 							 1101: "N-Sat 110 (110.0E)",
 							 1131: "KoreaSat 5 (113.0E)",
-							 1440: "SuperBird 7, C2 (144.0E)",
+							 1440: "SuperBird 7,C2 (144.0E)",
 							 1006: "AsiaSat 2 (100.5E)",
 							 1030: "Express A2 (103.0E)",
 							 1056: "Asiasat 3S (105.5E)",
@@ -155,7 +155,7 @@ class ChannelExpertInfo(Converter, object):
 							 210: "AfriStar 1 (21.0E)",
 							 192: "Astra 1F (19.2E)",
 							 160: "Eutelsat W2 (16.0E)",
-							 130: "Hot Bird 6, 7A, 8 (13.0E)",
+							 130: "Hot Bird 6,7A,8 (13.0E)",
 							 100: "Eutelsat W1 (10.0E)",
 							 90: "Eurobird 9 (9.0E)",
 							 70: "Eutelsat W3A (7.0E)",
@@ -166,9 +166,9 @@ class ChannelExpertInfo(Converter, object):
 						except:
 							orbital_pos = float(frontendData["orbital_position"])
 							if orbital_pos > 1800:
-								orb_pos = str((float(3600 - orbital_pos)) / 10.0) + "° W"
+								orb_pos = str((float(3600 - orbital_pos)) // 10.0) + "° W"
 							elif orbital_pos > 0:
-								orb_pos = str((float(orbital_pos)) / 10.0) + "° E"
+								orb_pos = str((float(orbital_pos)) // 10.0) + "° E"
 							orb = ('Unsupported SAT (%s)' % str(orb_pos))
 						if (self.tunertype == 'linelist'):
 							pol = {
@@ -297,12 +297,12 @@ class ChannelExpertInfo(Converter, object):
 		if transponderData is not None:
 			if isinstance(transponderData, float):
 				return ''
-			if transponderData.has_key('tuner_type'):
+			if 'tuner_type' in transponderData:
 				if transponderData['tuner_type'] == 'DVB-S':
 					orbital = float(transponderData['orbital_position'])
 					if orbital > 1800:
-						orbital = str((float(3600 - orbital)) / 10.0) + '° W'
+						orbital = str((float(3600 - orbital)) // 10.0) + '° W'
 					else:
-						orbital = str((float(orbital)) / 10.0) + '° E'
+						orbital = str((float(orbital)) // 10.0) + '° E'
 					return orbital
 		return ''

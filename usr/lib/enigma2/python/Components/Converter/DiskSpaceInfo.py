@@ -1,7 +1,7 @@
 # coders by Vlamo 2012 (version: 0.2)
-from Components.Converter.Poll import Poll
 from Components.Converter.Converter import Converter
 from Components.Element import cached
+from .Poll import Poll
 from os import popen, statvfs
 
 SIZE_UNITS = ["B", "KB", "MB", "GB", "TB", "PB", "EB"]
@@ -22,8 +22,8 @@ class DiskSpaceInfo(Poll, Converter):
 	def __init__(self, type):
 		Converter.__init__(self, type)
 		Poll.__init__(self)
-		
-		type = type.split(', ')
+        
+		type = type.split(',')
 		self.shortFormat = "Short" in type
 		self.fullFormat  = "Full"  in type
 		if "HddTemp" in type:
@@ -47,7 +47,7 @@ class DiskSpaceInfo(Poll, Converter):
 		else:
 			self.type = self.FLASHINFO	
 		
-		if self.type in (self.FLASHINFO, self.FLASHINFO2, self.HDDINFO, self.USBINFO):
+		if self.type in (self.FLASHINFO,self.FLASHINFO2,self.HDDINFO,self.USBINFO):
 			self.poll_interval = 5000
 		else:
 			self.poll_interval = 1000
@@ -57,7 +57,7 @@ class DiskSpaceInfo(Poll, Converter):
 		if suspended:
 			self.poll_enabled = False
 		else:
-			self.downstream_elements.changed((self.CHANGED_POLL, ))
+			self.downstream_elements.changed((self.CHANGED_POLL,))
 			self.poll_enabled = True
 
 	@cached
@@ -69,16 +69,16 @@ class DiskSpaceInfo(Poll, Converter):
 			text = self.getLoadAvg()
 		else:
 			entry = {
-					self.MEMTOTAL:  ("Mem", "Ram"),
-					self.MEMFREE:   ("Mem", "Ram"),
-					self.SWAPTOTAL: ("Swap", "Swap"),
-					self.SWAPFREE:  ("Swap", "Swap"),
-					self.USBINFO:   ("/media/usb", "USB"),
-					self.HDDINFO:   ("/media/hdd", "HDD"),
-					self.FLASHINFO: ("/", "Flash"),
-					self.FLASHINFO2: ("/data", "Flasherweiterung"),
+					self.MEMTOTAL:  ("Mem","Ram"),
+					self.MEMFREE:   ("Mem","Ram"),
+					self.SWAPTOTAL: ("Swap","Swap"),
+					self.SWAPFREE:  ("Swap","Swap"),
+					self.USBINFO:   ("/media/usb","USB"),
+					self.HDDINFO:   ("/media/hdd","HDD"),
+					self.FLASHINFO: ("/","Flash"),
+					self.FLASHINFO2: ("/data","Flasherweiterung"),
 				}[self.type]
-			if self.type in (self.USBINFO, self.HDDINFO, self.FLASHINFO, self.FLASHINFO2):
+			if self.type in (self.USBINFO,self.HDDINFO,self.FLASHINFO,self.FLASHINFO2):
 				list = self.getDiskInfo(entry[0])
 			else:
 				list = self.getMemInfo(entry[0])
@@ -95,10 +95,10 @@ class DiskSpaceInfo(Poll, Converter):
 	@cached
 	def getValue(self):
 		result = 0
-		if self.type in (self.MEMTOTAL, self.MEMFREE, self.SWAPTOTAL, self.SWAPFREE):
+		if self.type in (self.MEMTOTAL,self.MEMFREE,self.SWAPTOTAL,self.SWAPFREE):
 			entry = {self.MEMTOTAL: "Mem", self.MEMFREE: "Mem", self.SWAPTOTAL: "Swap", self.SWAPFREE: "Swap"}[self.type]
 			result = self.getMemInfo(entry)[3]
-		elif self.type in (self.USBINFO, self.HDDINFO, self.FLASHINFO, self.FLASHINFO2):
+		elif self.type in (self.USBINFO,self.HDDINFO,self.FLASHINFO,self.FLASHINFO2):
 			path = {self.USBINFO: "/media/usb", self.HDDINFO: "/media/hdd", self.FLASHINFO: "/", self.FLASHINFO2: "/data"}[self.type]
 			result = self.getDiskInfo(path)[3]
 		return result
@@ -130,7 +130,7 @@ class DiskSpaceInfo(Poll, Converter):
 		return textvalue
 
 	def getMemInfo(self, value):
-		result = [0, 0, 0, 0]	# (size, used, avail, use%)
+		result = [0,0,0,0]	# (size, used, avail, use%)
 		try:
 			check = 0
 			fd = open("/proc/meminfo")
@@ -144,7 +144,7 @@ class DiskSpaceInfo(Poll, Converter):
 				if check > 1:
 					if result[0] > 0:
 						result[1] = result[0] - result[2]	# used
-						result[3] = result[1] * 100 / result[0]	# use%
+						result[3] = result[1] * 100 // result[0]	# use%
 					break
 			fd.close()
 		except:
@@ -164,7 +164,7 @@ class DiskSpaceInfo(Poll, Converter):
 				return None
 			return False
 		
-		result = [0, 0, 0, 0]	# (size, used, avail, use%)
+		result = [0,0,0,0]	# (size, used, avail, use%)
 		if isMountPoint():
 			try:
 				st = statvfs(path)
@@ -174,7 +174,7 @@ class DiskSpaceInfo(Poll, Converter):
 				result[0] = st.f_bsize * st.f_blocks	# size
 				result[2] = st.f_bsize * st.f_bavail	# avail
 				result[1] = result[0] - result[2]	# used
-				result[3] = result[1] * 100 / result[0]	# use%
+				result[3] = result[1] * 100 // result[0]	# use%
 		return result
 
 	def getSizeStr(self, value, u=0):
@@ -183,7 +183,7 @@ class DiskSpaceInfo(Poll, Converter):
 			fmt = "%(size)u.%(frac)d %(unit)s"
 			while (value >= 1024) and (u < len(SIZE_UNITS)):
 				(value, mod) = divmod(value, 1024)
-				fractal = mod * 10 / 1024
+				fractal = mod * 10 // 1024
 				u += 1
 		else:
 			fmt = "%(size)u %(unit)s"
@@ -193,5 +193,6 @@ class DiskSpaceInfo(Poll, Converter):
 		if suspended:
 			self.poll_enabled = False
 		else:
-			self.downstream_elements.changed((self.CHANGED_POLL, ))
+			self.downstream_elements.changed((self.CHANGED_POLL,))
 			self.poll_enabled = True
+	        
