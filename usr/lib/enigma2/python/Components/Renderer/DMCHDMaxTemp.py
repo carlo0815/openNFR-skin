@@ -25,7 +25,7 @@ from Components.VariableText import VariableText
 from Components.Sensors import sensors
 from Tools.HardwareInfo import HardwareInfo
 from enigma import eLabel
-from Components.Renderer.Renderer import Renderer
+from Renderer import Renderer
 from os import popen
 
 class DMCHDMaxTemp(Renderer, VariableText):

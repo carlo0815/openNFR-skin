@@ -9,7 +9,7 @@
 
 
 from Components.VariableText import VariableText
-from Components.Renderer.Renderer import Renderer
+from .Renderer import Renderer
 from enigma import eLabel
 
 

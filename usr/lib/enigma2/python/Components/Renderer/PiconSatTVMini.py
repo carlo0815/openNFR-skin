@@ -1,4 +1,4 @@
-from Components.Renderer.Renderer import Renderer
+from .Renderer import Renderer 
 from enigma import ePixmap
 from Tools.Directories import fileExists, SCOPE_SKIN_IMAGE, SCOPE_CURRENT_SKIN, resolveFilename
 
@@ -150,7 +150,7 @@ class PiconSatTVMini(Renderer):
 								 49: "48E",
 								 48: "48E",
 								 30: "30E"}[frontendData.get("orbital_position", "None")]
-							except Exception, e:
+							except Exception as e:
 								pass
 				
 				pos = sname.rfind(':')

@@ -2,12 +2,11 @@
 # coders Nikolasi
 from Tools.LoadPixmap import LoadPixmap
 from Components.Pixmap import Pixmap
-from Components.Renderer.Renderer import Renderer
+from .Renderer import Renderer
 from enigma import ePixmap, loadPic, eTimer, iServiceInformation, iPlayableService, eDVBFrontendParametersSatellite, eDVBFrontendParametersCable
 from Tools.Directories import fileExists, SCOPE_SKIN_IMAGE, SCOPE_CURRENT_SKIN, resolveFilename
 from Components.config import *
 from Components.Converter.Poll import Poll
-from string import ascii_uppercase, ascii_lowercase
 
 class PiconRefPS2(Renderer, Poll):
     searchPaths = ('/usr/share/enigma2/%s/', '/media/ba/%s/', '/media/hdd/%s/', '/media/sda1/%s/', '/media/sda/%s/', '/media/usb/%s/')

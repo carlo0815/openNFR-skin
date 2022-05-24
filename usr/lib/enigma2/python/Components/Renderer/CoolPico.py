@@ -1,6 +1,6 @@
 #Embedded file name: /usr/lib/enigma2/python/Components/Renderer/CoolPico.py
 from enigma import ePixmap, ePicLoad, eServiceReference, eServiceCenter
-from Renderer import Renderer
+from .Renderer import Renderer
 from ServiceReference import ServiceReference
 from Tools.Directories import fileExists
 zrlpzx = None

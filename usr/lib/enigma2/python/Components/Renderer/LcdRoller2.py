@@ -6,7 +6,7 @@
 #######################################################################
 
 from Components.VariableText import VariableText
-from Components.Renderer.Renderer import Renderer
+from .Renderer import Renderer
 from enigma import ePoint, eTimer
 
 from enigma import eLabel
@@ -42,8 +42,8 @@ class LcdRoller2(VariableText, Renderer):
 				self.c = len(self.text) # bereken hoelang de tekst is characters
 				self.a = self.c
 				self.c = self.c * 18    # vermenigvuldig de tekst om pixels te krijgen
-				self.x2 = self.c /5     # deelt de totale aantal pixels van de tekst door 8 +/-(helft van font="16") voor als de tekst niet scrolt
-				self.c = ((self.c /2) + (175)) # deelt de lengte ( pixels) tekst door 4 en tel er 175 bij op.
+				self.x2 = self.c //5     # deelt de totale aantal pixels van de tekst door 8 +/-(helft van font="16") voor als de tekst niet scrolt
+				self.c = ((self.c //2) + (175)) # deelt de lengte ( pixels) tekst door 4 en tel er 175 bij op.
 				self.x = 135            # start pixel x  van de scrollende tekst
 				self.y = 0              # Y positie van de tekst
 				self.instance.move(ePoint(150,self.posY)) # reset de tekst naar x 150 (buiten het display)

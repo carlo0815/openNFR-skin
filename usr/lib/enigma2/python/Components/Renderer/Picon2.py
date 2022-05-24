@@ -1,4 +1,4 @@
-from Components.Renderer.Renderer import Renderer
+from .Renderer import Renderer
 from enigma import ePixmap, eServiceReference
 from Tools.Directories import fileExists, SCOPE_SKIN_IMAGE, SCOPE_CURRENT_SKIN, resolveFilename
 
@@ -31,8 +31,8 @@ class Picon2(Renderer):
                 service = self.source.service
                 marker = service.flags & eServiceReference.isMarker == eServiceReference.isMarker
                 bouquet = service.flags & eServiceReference.flagDirectory == eServiceReference.flagDirectory
-                print marker
-                print bouquet
+                print(marker)
+                print(bouquet)
                 if marker:
                     pngname = self.nameCache.get('marker', '')
                     if pngname == '':

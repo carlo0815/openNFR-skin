@@ -1,6 +1,6 @@
 from Components.VariableText import VariableText
 from enigma import eLabel, eEPGCache
-from Components.Renderer.Renderer import Renderer
+from .Renderer import Renderer
 from time import localtime
 
 class NextEvent2(Renderer, VariableText):

@@ -24,7 +24,7 @@
 
 from Components.VariableText import VariableText
 from enigma import eLabel, eServiceCenter
-from Components.Renderer.Renderer import Renderer
+from .Renderer import Renderer
 from Screens.InfoBar import InfoBar
 
 MYCHANSEL = InfoBar.instance.servicelist
