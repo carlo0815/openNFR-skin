@@ -1,3 +1,4 @@
+from __future__ import print_function
 from Components.Converter.Converter import Converter
 from enigma import iServiceInformation, iPlayableService
 from Tools.Directories import fileExists
@@ -226,7 +227,7 @@ class MaggyCryptInfo(Poll, Converter, object):
 			self.poll_enabled = True
 			ecm_info = self.ecmfile()
 			if ecm_info:
-				caid = ("%0.4X" % int(ecm_info.get("caid", ""),16))[:2]
+				caid = ("%0.4X" % int(ecm_info.get(b"caid", ""),0))[:2]
 				if self.type == self.SECA_C:
 					if caid == "01":
 						return True
@@ -491,12 +492,13 @@ class MaggyCryptInfo(Poll, Converter, object):
 
 			if ecm:
 				for line in ecm:
-					x = line.lower().find("msec")
+					milisec = bytes("msec",'UTF-8')
+					x = line.lower().find(milisec)
 					#ecm time for mgcamd and oscam
 					if x != -1:
 						info["ecm time"] = line[0:x+4]
 					else:
-						item = line.split(":", 1)
+						item = line.split(b":", 1)
 						if len(item) > 1:
 							#wicard block
 							if item[0] == "Provider":
